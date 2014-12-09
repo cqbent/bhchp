@@ -264,6 +264,13 @@ function redirect_update_7000(&$sandbox) {
 }
 
 /**
+ * Empty update to trigger registry and entity info rebuild.
+ */
+function redirect_update_7100() {
+  // Do nothing.
+}
+
+/**
  * Migrate a path redirect redirect to a redirect redirect.
  */
 function _redirect_migrate_path_redirect_redirect($old_redirect) {
