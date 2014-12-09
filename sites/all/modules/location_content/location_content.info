@@ -1,0 +1,10 @@
+name = location_content
+description = the location content
+core = 7.x
+package = bhchp
+version = 7.x-1.0
+project = location_content
+dependencies[] = ctools
+dependencies[] = geofield
+dependencies[] = geophp
+features[features_api][] = api:2
