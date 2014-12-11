@@ -1,4 +1,5 @@
 .DS_Store
+error_log
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 
