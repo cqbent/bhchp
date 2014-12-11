@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the location_content feature.
  */
+
+include_once 'location_content.features.inc';
