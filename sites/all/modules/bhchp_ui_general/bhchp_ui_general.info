@@ -1,0 +1,16 @@
+name = bhchp_ui_general
+description = main UI modules dependencies
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = bhchp_ui_general
+dependencies[] = admin_menu
+dependencies[] = block
+dependencies[] = features
+dependencies[] = image
+dependencies[] = menu
+dependencies[] = options
+dependencies[] = path
+dependencies[] = token
+dependencies[] = views
+features[features_api][] = api:2
