@@ -10,50 +10,6 @@
 function bhchp_jobs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-job_posting-body'
-  $field_instances['node-job_posting-body'] = array(
-    'bundle' => 'job_posting',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
-    ),
-  );
-
   // Exported field_instance: 'node-job_posting-field_hours'
   $field_instances['node-job_posting-field_hours'] = array(
     'bundle' => 'job_posting',
@@ -296,50 +252,6 @@ Sat: 2PM-6PM',
     ),
   );
 
-  // Exported field_instance: 'node-video-body'
-  $field_instances['node-video-body'] = array(
-    'bundle' => 'video',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
-    ),
-  );
-
   // Exported field_instance: 'node-video-field_video'
   $field_instances['node-video-field_video'] = array(
     'bundle' => 'video',
@@ -400,7 +312,6 @@ Sat: 2PM-6PM',
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('HTML is ok.');
   t('Hours');
   t('Job duties');
