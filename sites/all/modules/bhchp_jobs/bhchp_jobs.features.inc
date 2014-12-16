@@ -24,14 +24,6 @@ function bhchp_jobs_node_info() {
       'title_label' => t('Job Title'),
       'help' => t('Please use "date published" set to indicate "date posted" for job posting.'),
     ),
-    'video' => array(
-      'name' => t('Video'),
-      'base' => 'node_content',
-      'description' => t('Embedded video'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
   drupal_alter('node_info', $items);
   return $items;

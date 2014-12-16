@@ -252,64 +252,6 @@ Sat: 2PM-6PM',
     ),
   );
 
-  // Exported field_instance: 'node-video-field_video'
-  $field_instances['node-video-field_video'] = array(
-    'bundle' => 'video',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_video',
-    'label' => 'Video',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'txt',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-          'youtube' => 'youtube',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 0,
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 'media_internet',
-          'upload' => 'upload',
-          'youtube' => 'youtube',
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => -3,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('HTML is ok.');
@@ -326,7 +268,6 @@ Sat: 2PM-6PM',
 
 Mon-Fri: 6AM-12PM
 Sat: 2PM-6PM');
-  t('Video');
   t('person/role to report to . text field.');
 
   return $field_instances;
