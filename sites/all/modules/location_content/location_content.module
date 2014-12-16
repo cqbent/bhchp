@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the location_content feature.
- */
-
-include_once 'location_content.features.inc';

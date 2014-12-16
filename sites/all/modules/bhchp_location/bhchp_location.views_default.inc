@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * location_content.views_default.inc
+ * bhchp_location.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function location_content_views_default_views() {
+function bhchp_location_views_default_views() {
   $export = array();
 
   $view = new view();

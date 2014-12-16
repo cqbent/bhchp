@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the bhchp_patientstories feature.
+ */
+
+include_once 'bhchp_patientstories.features.inc';

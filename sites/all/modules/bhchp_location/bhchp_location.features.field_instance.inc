@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * location_content.features.field_instance.inc
+ * bhchp_location.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function location_content_field_default_field_instances() {
+function bhchp_location_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-location-body'

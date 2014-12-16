@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * location_content.features.field_base.inc
+ * bhchp_location.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function location_content_field_default_field_bases() {
+function bhchp_location_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'body'

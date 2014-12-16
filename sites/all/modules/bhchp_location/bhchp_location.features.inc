@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * location_content.features.inc
+ * bhchp_location.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function location_content_ctools_plugin_api($module = NULL, $api = NULL) {
+function bhchp_location_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "feeds" && $api == "feeds_importer_default") {
     return array("version" => "1");
   }
@@ -16,14 +16,14 @@ function location_content_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function location_content_views_api($module = NULL, $api = NULL) {
+function bhchp_location_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_node_info().
  */
-function location_content_node_info() {
+function bhchp_location_node_info() {
   $items = array(
     'location' => array(
       'name' => t('Location'),

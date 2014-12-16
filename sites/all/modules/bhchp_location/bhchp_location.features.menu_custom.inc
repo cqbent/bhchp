@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * location_content.features.menu_custom.inc
+ * bhchp_location.features.menu_custom.inc
  */
 
 /**
  * Implements hook_menu_default_menu_custom().
  */
-function location_content_menu_default_menu_custom() {
+function bhchp_location_menu_default_menu_custom() {
   $menus = array();
 
   // Exported menu: main-menu.
