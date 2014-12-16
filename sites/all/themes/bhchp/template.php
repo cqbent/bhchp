@@ -52,9 +52,8 @@ function bhchp_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function bhchp_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+    drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700', 'external');    
 }
 // */
 
