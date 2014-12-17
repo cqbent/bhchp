@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * bhchp_patientstories.features.field_instance.inc
+ * bhchp_articles.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function bhchp_patientstories_field_default_field_instances() {
+function bhchp_articles_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-patient_story-body'
-  $field_instances['node-patient_story-body'] = array(
-    'bundle' => 'patient_story',
+  // Exported field_instance: 'node-article-body'
+  $field_instances['node-article-body'] = array(
+    'bundle' => 'article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -22,7 +22,7 @@ function bhchp_patientstories_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -50,106 +50,108 @@ function bhchp_patientstories_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => -4,
     ),
   );
 
-  // Exported field_instance: 'node-patient_story-field_patientstory_mainimage'
-  $field_instances['node-patient_story-field_patientstory_mainimage'] = array(
-    'bundle' => 'patient_story',
+  // Exported field_instance: 'node-article-field_image'
+  $field_instances['node-article-field_image'] = array(
+    'bundle' => 'article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload an image to go with this article.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_patientstory_mainimage',
-    'label' => 'Main story image',
-    'required' => 0,
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => FALSE,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => TRUE,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'field/image',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'image',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => -1,
     ),
   );
 
-  // Exported field_instance: 'node-patient_story-field_patientstory_subtitle'
-  $field_instances['node-patient_story-field_patientstory_subtitle'] = array(
-    'bundle' => 'patient_story',
+  // Exported field_instance: 'node-article-field_tags'
+  $field_instances['node-article-field_tags'] = array(
+    'bundle' => 'article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter a comma-separated list of words to describe your content.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_patientstory_subtitle',
-    'label' => 'Subtitle',
-    'required' => 0,
+    'field_name' => 'field_tags',
+    'label' => 'Tags',
+    'required' => FALSE,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
+      'module' => 'taxonomy',
       'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'text_textfield',
-      'weight' => 1,
+      'type' => 'taxonomy_autocomplete',
+      'weight' => -4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Main story image');
-  t('Subtitle');
+  t('Enter a comma-separated list of words to describe your content.');
+  t('Image');
+  t('Tags');
+  t('Upload an image to go with this article.');
 
   return $field_instances;
 }

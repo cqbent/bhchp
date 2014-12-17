@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * bhchp_patientstories.features.field_base.inc
+ * bhchp_articles.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function bhchp_patientstories_field_default_field_bases() {
+function bhchp_articles_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_patientstory_mainimage'
-  $field_bases['field_patientstory_mainimage'] = array(
+  // Exported field_base: 'field_image'
+  $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_patientstory_mainimage',
+    'field_name' => 'field_image',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -33,40 +33,45 @@ function bhchp_patientstories_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 0,
+      'default_image' => FALSE,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_patientstory_subtitle'
-  $field_bases['field_patientstory_subtitle'] = array(
+  // Exported field_base: 'field_tags'
+  $field_bases['field_tags'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_patientstory_subtitle',
+    'field_name' => 'field_tags',
     'foreign keys' => array(
-      'format' => array(
+      'tid' => array(
         'columns' => array(
-          'format' => 'format',
+          'tid' => 'tid',
         ),
-        'table' => 'filter_format',
+        'table' => 'taxonomy_term_data',
       ),
     ),
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'tid' => array(
+        0 => 'tid',
       ),
     ),
     'locked' => 0,
-    'module' => 'text',
+    'module' => 'taxonomy',
     'settings' => array(
-      'max_length' => 255,
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'tags',
+          'parent' => 0,
+        ),
+      ),
     ),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'taxonomy_term_reference',
   );
 
   return $field_bases;
