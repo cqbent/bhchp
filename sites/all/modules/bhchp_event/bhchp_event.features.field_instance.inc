@@ -22,7 +22,7 @@ function bhchp_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -71,7 +71,7 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'Optional: address for event.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'addressfield',
         'settings' => array(
           'format_handlers' => array(
@@ -80,7 +80,7 @@ function bhchp_event_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -123,7 +123,7 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'Set a date and optional end date.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -134,7 +134,7 @@ function bhchp_event_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -180,11 +180,11 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'text string for the preferred presentation of date/location. plain text',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -221,58 +221,9 @@ function bhchp_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'leaflet',
-        'settings' => array(
-          'height' => 400,
-          'icon' => array(
-            'html' => '',
-            'htmlClass' => '',
-            'iconAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconImageStyle' => '',
-            'iconSize' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconType' => 'marker',
-            'iconUrl' => '',
-            'popupAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowUrl' => '',
-          ),
-          'leaflet_map' => 'google-satellite',
-          'popup' => array(
-            'show' => 0,
-            'text' => '',
-          ),
-          'vector_display' => array(
-            'clickable' => 0,
-            'color' => '',
-            'dashArray' => '',
-            'fill' => 0,
-            'fillColor' => '',
-            'fillOpacity' => '',
-            'opacity' => '',
-            'stroke' => 0,
-            'stroke_override' => 0,
-            'weight' => '',
-          ),
-          'zoom' => array(
-            'initialZoom' => -1,
-            'maxZoom' => -1,
-            'minZoom' => 1,
-          ),
-        ),
-        'type' => 'geofield_leaflet',
-        'weight' => 7,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -321,11 +272,11 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'Link field to external signup form. post URL  like HTTPS://signup.com...  and title like "Sign up today"',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -378,13 +329,13 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'Optional. Select a location node as the spot for the event. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -416,14 +367,14 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'For the main image on event should be 220 x 175 for main display on events list',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -470,11 +421,11 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'The html list for supporters list.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -509,14 +460,14 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'For multiple sponsor logos',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
