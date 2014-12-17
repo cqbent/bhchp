@@ -7,3 +7,27 @@ bhchp custom styles
         color: $blue;
     }
 }
+// icon styles
+[class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
+    font-family: 'bhchp_icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.bhchp_icons_stethoscope:before { content: "\e600"; }
+.bhchp_icons_heart:before { content: "\e601"; }
+.bhchp_icons_people:before { content: "\e602"; }
+.bhchp_icons_meds:before { content: "\e603"; }
+.bhchp_icons_medical:before { content: "\e604"; }
+.bhchp_icons_sox:before { content: "\e605"; }
+.bhchp_icons_fb:before { content: "\e606"; }
+.bhchp_icons_video:before { content: "\e607"; }
+.bhchp_icons_twitter:before { content: "\e608"; }
+.bhchp_icons_gift:before { content: "\e609"; }
+.bhchp_icons_apple:before { content: "\e60a"; }

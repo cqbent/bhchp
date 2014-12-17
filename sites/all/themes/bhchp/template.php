@@ -54,6 +54,7 @@ function bhchp_preprocess_html(&$variables, $hook) {
  */
 function bhchp_preprocess_page(&$variables, $hook) {
     drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700', 'external');    
+    drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', 'external');    
 }
 // */
 
@@ -129,3 +130,16 @@ function bhchp_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+// alter search block form
+function bhchp_form_alter (&$form, &$form_state, $form_id) {
+    if ($form_id == 'search_block_form') {
+        $form['actions']['submit'] = array(
+            '#type' => 'submit',
+            '#value' => '',
+            '#attributes' => array( 'style' => array( 'display: none' )), // hide the input field
+            '#prefix' => '<button type="submit" class="btn btn-primary"><i class="fa fa-search">',
+            '#suffix' => '</i></button>',
+        );
+    }
+}
