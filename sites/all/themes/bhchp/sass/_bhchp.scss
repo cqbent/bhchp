@@ -6,7 +6,163 @@ bhchp custom styles
     a {
         color: $blue;
     }
+    #header {
+        position:relative;
+        padding-bottom:20px; 
+        #logo { 
+            float: left;
+            img { width: 215px; }
+        }
+        .region-header {
+            float: right; clear: none;
+            margin-top:20px;
+            .social-icons {
+                float: right; font-size: 24px;
+                margin: 0;
+                ul {
+                    margin: 0; padding: 0;
+                    li {
+                        list-style: none; float: left; 
+                        padding: 0; margin: 0;
+                        a { text-decoration: none; }
+                    }
+                }
+            }
+            .block-search {
+                float: right; 
+                padding-left: 10px; 
+                border-left: 1px $blue solid;
+                button {
+                    background: none; border: none;
+                    font-size:18px; padding-top:0;
+                    color: $blue;
+                }
+                input[type=text] {
+                    border: 1px $blue solid;
+                    /*
+                    position: absolute; top:15px; right: 0; 
+                    */
+                }
+            }
+            .block-menu-block {
+                position: absolute; bottom: 20px; right: 10px; 
+                margin:0;
+                .menu {
+                    li {
+                        float: left; list-style: none;
+                        margin-left: 20px; text-transform: uppercase;
+                        a {
+                            text-decoration: none;
+                            &.active {
+                                text-decoration: underline;
+                            }
+                        }
+                        &#home-link {
+                            width:24px; height:22px; overflow: hidden;
+                            a {
+                                color: #fff;
+                                &:before {
+                                    content: "\f015"; font-family: 'FontAwesome';
+                                    font-size:24px; color: $blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #navigation {
+        background-color:$blue; font-size:17px;
+        &:before {
+            content: ""; display: block; border-top: 1px #d8dad9 solid;
+            height: 10px; background-color: #fff; margin: 0 -10px;
+        }
+        #main-menu {
+            .links {
+                display: block; text-align: center;
+                li {
+                   float: none; display: inline-block; 
+                   border-right: 1px #0066cc solid;
+                   a {
+                       display: block; color: #fff; padding:30px;
+                       text-decoration: none;
+                       text-transform: uppercase; 
+                       letter-spacing: 1px;
+                       &:hover, &.active {
+                           color: $lightblue;
+                       }
+                       &:before {
+                           font-family: 'bhchp_icons'; font-size:20px;
+                           display: inline-block; margin-right:20px;
+                       }
+                       &.donate:before { content: "\e601"; }
+                       &.get-involved:before { content: "\e602"; }
+                       &.services:before { content: "\e600"; }
+                   }
+                   &.last {
+                       border: none;
+                   }
+                }
+            }
+        }
+    }
+    #main {
+        h1, h2 {
+            color: $blue;
+        }
+        .breadcrumb {
+            padding: 0 10px; margin-bottom: 50px;
+            color: $textgray;
+            a {
+                color: $textgray; text-decoration: none;
+            }
+        }
+        .region-sidebar-first {
+            .block-menu-block {
+                h2 {
+                    font-size:13px; text-transform: uppercase;
+                }
+                .menu {
+                    padding: 0; margin: 0;
+                    li {
+                        list-style: none;
+                        padding: 0; margin: 0;
+                        border-bottom: 1px #d8dad9 solid;
+                        font-weight: 700; font-size:13px;
+                        a {
+                            display: block; padding: 5px 0;
+                            text-decoration: none;
+                            &:hover, &.active {
+                                text-decoration: underline;
+                            }
+                        }
+                        &.is-expanded {
+                            > a {
+                                &:after { content: "+"; float: right; }
+                            }
+                            &:hover, &.active-trail {
+                                > a:after { content: ""; }
+                                .menu { display: block; }
+                            }
+                        }
+                        .menu {
+                            margin-left: 20px; display: none;
+                            li {
+                                border:none;
+                                font-weight: normal;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
 // icon styles
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
     font-family: 'bhchp_icons';
