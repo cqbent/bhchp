@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the bhchp_ui_general feature.
  */
+
+include_once 'bhchp_ui_general.features.inc';
