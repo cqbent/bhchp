@@ -1,119 +1,103 @@
 <?php
 /**
  * @file
- * bhchp_jobs.strongarm.inc
+ * bhchp_location.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function bhchp_jobs_strongarm() {
+function bhchp_location_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_job_posting';
+  $strongarm->name = 'comment_anonymous_location';
   $strongarm->value = 0;
-  $export['comment_anonymous_job_posting'] = $strongarm;
+  $export['comment_anonymous_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_job_posting';
+  $strongarm->name = 'comment_default_mode_location';
   $strongarm->value = 1;
-  $export['comment_default_mode_job_posting'] = $strongarm;
+  $export['comment_default_mode_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_job_posting';
+  $strongarm->name = 'comment_default_per_page_location';
   $strongarm->value = '50';
-  $export['comment_default_per_page_job_posting'] = $strongarm;
+  $export['comment_default_per_page_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_job_posting';
+  $strongarm->name = 'comment_form_location_location';
   $strongarm->value = 1;
-  $export['comment_form_location_job_posting'] = $strongarm;
+  $export['comment_form_location_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_job_posting';
-  $strongarm->value = '0';
-  $export['comment_job_posting'] = $strongarm;
+  $strongarm->name = 'comment_location';
+  $strongarm->value = '2';
+  $export['comment_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_job_posting';
+  $strongarm->name = 'comment_preview_location';
   $strongarm->value = '1';
-  $export['comment_preview_job_posting'] = $strongarm;
+  $export['comment_preview_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_job_posting';
+  $strongarm->name = 'comment_subject_field_location';
   $strongarm->value = 1;
-  $export['comment_subject_field_job_posting'] = $strongarm;
+  $export['comment_subject_field_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__job_posting';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '-5',
-        ),
-      ),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_node__job_posting'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_job_posting';
+  $strongarm->name = 'menu_options_location';
   $strongarm->value = array(
     0 => 'main-menu',
   );
-  $export['menu_options_job_posting'] = $strongarm;
+  $export['menu_options_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_job_posting';
+  $strongarm->name = 'menu_parent_location';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_job_posting'] = $strongarm;
+  $export['menu_parent_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_job_posting';
+  $strongarm->name = 'node_options_location';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'promote',
   );
-  $export['node_options_job_posting'] = $strongarm;
+  $export['node_options_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_job_posting';
+  $strongarm->name = 'node_preview_location';
   $strongarm->value = '1';
-  $export['node_preview_job_posting'] = $strongarm;
+  $export['node_preview_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_job_posting';
+  $strongarm->name = 'node_submitted_location';
   $strongarm->value = 0;
-  $export['node_submitted_job_posting'] = $strongarm;
+  $export['node_submitted_location'] = $strongarm;
 
   return $export;
 }
