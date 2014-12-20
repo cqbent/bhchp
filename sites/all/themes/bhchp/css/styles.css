@@ -2057,33 +2057,37 @@ bhchp custom styles
   display: table-cell;
   padding-right: 20px;
 }
-/* line 167, ../sass/_bhchp.scss */
+/* line 166, ../sass/_bhchp.scss */
+#page #main #content .entityform .form-type-radios .form-disabled {
+  display: none;
+}
+/* line 173, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 170, ../sass/_bhchp.scss */
+/* line 176, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 175, ../sass/_bhchp.scss */
+/* line 181, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
   background-color: whitesmoke;
   padding: 20px;
 }
-/* line 180, ../sass/_bhchp.scss */
+/* line 186, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 183, ../sass/_bhchp.scss */
+/* line 189, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 185, ../sass/_bhchp.scss */
+/* line 191, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2092,41 +2096,41 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 190, ../sass/_bhchp.scss */
+/* line 196, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 193, ../sass/_bhchp.scss */
+/* line 199, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 199, ../sass/_bhchp.scss */
+/* line 205, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 202, ../sass/_bhchp.scss */
+/* line 208, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 203, ../sass/_bhchp.scss */
+/* line 209, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 206, ../sass/_bhchp.scss */
+/* line 212, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 208, ../sass/_bhchp.scss */
+/* line 214, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
 
-/* line 224, ../sass/_bhchp.scss */
+/* line 230, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2140,57 +2144,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 236, ../sass/_bhchp.scss */
+/* line 242, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 237, ../sass/_bhchp.scss */
+/* line 243, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 238, ../sass/_bhchp.scss */
+/* line 244, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 239, ../sass/_bhchp.scss */
+/* line 245, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 240, ../sass/_bhchp.scss */
+/* line 246, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 241, ../sass/_bhchp.scss */
+/* line 247, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 242, ../sass/_bhchp.scss */
+/* line 248, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 243, ../sass/_bhchp.scss */
+/* line 249, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 244, ../sass/_bhchp.scss */
+/* line 250, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 245, ../sass/_bhchp.scss */
+/* line 251, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 246, ../sass/_bhchp.scss */
+/* line 252, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }

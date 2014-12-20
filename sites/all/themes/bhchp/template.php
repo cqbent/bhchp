@@ -143,3 +143,12 @@ function bhchp_form_alter (&$form, &$form_state, $form_id) {
         );
     }
 }
+
+// disable the N/A option in radio fields to trigger hiding them
+function bhchp_form_element(&$variables) {
+    $element = $variables['element'];
+    if ($element['#type'] == 'radio' && $element['#return_value'] === '_none') {
+        $variables['element']['#attributes']['disabled'] = TRUE;
+    }
+    return theme_form_element($variables);
+}
