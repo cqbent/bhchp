@@ -57,7 +57,7 @@ function bhchp_video_field_default_field_instances() {
   // Exported field_instance: 'node-video-field_video'
   $field_instances['node-video-field_video'] = array(
     'bundle' => 'video',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'Post a video URL for youtube or vimeo.',
     'display' => array(

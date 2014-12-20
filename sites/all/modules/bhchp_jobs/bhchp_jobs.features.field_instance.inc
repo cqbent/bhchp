@@ -10,6 +10,49 @@
 function bhchp_jobs_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-job_posting-field_hours'
+  $field_instances['node-job_posting-field_hours'] = array(
+    'bundle' => 'job_posting',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Use plain text w line breaks. ie:
+
+Mon-Fri: 6AM-12PM
+Sat: 2PM-6PM',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_hours',
+    'label' => 'Hours',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -2,
+    ),
+  );
+
   // Exported field_instance: 'node-job_posting-field_job_department'
   $field_instances['node-job_posting-field_job_department'] = array(
     'bundle' => 'job_posting',
@@ -307,6 +350,10 @@ function bhchp_jobs_field_default_field_instances() {
   t('Qualifications');
   t('Reports to');
   t('Text for the job summary. Select filtered HTML if you need clickable links.');
+  t('Use plain text w line breaks. ie:
+
+Mon-Fri: 6AM-12PM
+Sat: 2PM-6PM');
   t('full time, part time, per diem, days, hrs.');
   t('i.e Housekeeping, BMC Clinic');
   t('person/role to report to . text field.');

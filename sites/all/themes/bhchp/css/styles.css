@@ -1814,58 +1814,62 @@ tr.selected td {
 /*
 bhchp custom styles
 */
-/* line 6, ../sass/_bhchp.scss */
+/* line 5, ../sass/_bhchp.scss */
+#page {
+  color: #3e4543;
+}
+/* line 7, ../sass/_bhchp.scss */
 #page a {
   color: #003594;
 }
-/* line 9, ../sass/_bhchp.scss */
+/* line 10, ../sass/_bhchp.scss */
 #page #header {
   position: relative;
   padding-bottom: 20px;
 }
-/* line 12, ../sass/_bhchp.scss */
+/* line 13, ../sass/_bhchp.scss */
 #page #header #logo {
   float: left;
 }
-/* line 14, ../sass/_bhchp.scss */
+/* line 15, ../sass/_bhchp.scss */
 #page #header #logo img {
   width: 215px;
 }
-/* line 16, ../sass/_bhchp.scss */
+/* line 17, ../sass/_bhchp.scss */
 #page #header .region-header {
   float: right;
   clear: none;
   margin-top: 20px;
 }
-/* line 19, ../sass/_bhchp.scss */
+/* line 20, ../sass/_bhchp.scss */
 #page #header .region-header .social-icons {
   float: right;
   font-size: 24px;
   margin: 0;
 }
-/* line 22, ../sass/_bhchp.scss */
+/* line 23, ../sass/_bhchp.scss */
 #page #header .region-header .social-icons ul {
   margin: 0;
   padding: 0;
 }
-/* line 24, ../sass/_bhchp.scss */
+/* line 25, ../sass/_bhchp.scss */
 #page #header .region-header .social-icons ul li {
   list-style: none;
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 27, ../sass/_bhchp.scss */
+/* line 28, ../sass/_bhchp.scss */
 #page #header .region-header .social-icons ul li a {
   text-decoration: none;
 }
-/* line 31, ../sass/_bhchp.scss */
+/* line 32, ../sass/_bhchp.scss */
 #page #header .region-header .block-search {
   float: right;
   padding-left: 10px;
   border-left: 1px #003594 solid;
 }
-/* line 35, ../sass/_bhchp.scss */
+/* line 36, ../sass/_bhchp.scss */
 #page #header .region-header .block-search button {
   background: none;
   border: none;
@@ -1873,58 +1877,58 @@ bhchp custom styles
   padding-top: 0;
   color: #003594;
 }
-/* line 40, ../sass/_bhchp.scss */
+/* line 41, ../sass/_bhchp.scss */
 #page #header .region-header .block-search input[type=text] {
   border: 1px #003594 solid;
   /*
   position: absolute; top:15px; right: 0; 
   */
 }
-/* line 47, ../sass/_bhchp.scss */
+/* line 48, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block {
   position: absolute;
   bottom: 20px;
   right: 10px;
   margin: 0;
 }
-/* line 51, ../sass/_bhchp.scss */
+/* line 52, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li {
   float: left;
   list-style: none;
   margin-left: 20px;
   text-transform: uppercase;
 }
-/* line 54, ../sass/_bhchp.scss */
+/* line 55, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li a {
   text-decoration: none;
 }
-/* line 56, ../sass/_bhchp.scss */
+/* line 57, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 60, ../sass/_bhchp.scss */
+/* line 61, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li#home-link {
   width: 24px;
   height: 22px;
   overflow: hidden;
 }
-/* line 62, ../sass/_bhchp.scss */
+/* line 63, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li#home-link a {
   color: #fff;
 }
-/* line 64, ../sass/_bhchp.scss */
+/* line 65, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li#home-link a:before {
   content: "\f015";
   font-family: 'FontAwesome';
   font-size: 24px;
   color: #003594;
 }
-/* line 75, ../sass/_bhchp.scss */
+/* line 76, ../sass/_bhchp.scss */
 #page #navigation {
   background-color: #003594;
   font-size: 17px;
 }
-/* line 77, ../sass/_bhchp.scss */
+/* line 78, ../sass/_bhchp.scss */
 #page #navigation:before {
   content: "";
   display: block;
@@ -1933,18 +1937,18 @@ bhchp custom styles
   background-color: #fff;
   margin: 0 -10px;
 }
-/* line 82, ../sass/_bhchp.scss */
+/* line 83, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links {
   display: block;
   text-align: center;
 }
-/* line 84, ../sass/_bhchp.scss */
+/* line 85, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li {
   float: none;
   display: inline-block;
   border-right: 1px #0066cc solid;
 }
-/* line 87, ../sass/_bhchp.scss */
+/* line 88, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a {
   display: block;
   color: #fff;
@@ -1953,59 +1957,133 @@ bhchp custom styles
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 92, ../sass/_bhchp.scss */
+/* line 93, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a:hover, #page #navigation #main-menu .links li a.active {
   color: #b3c2df;
 }
-/* line 95, ../sass/_bhchp.scss */
+/* line 96, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a:before {
   font-family: 'bhchp_icons';
   font-size: 20px;
   display: inline-block;
   margin-right: 20px;
 }
-/* line 99, ../sass/_bhchp.scss */
+/* line 100, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a.donate:before {
   content: "\e601";
 }
-/* line 100, ../sass/_bhchp.scss */
+/* line 101, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a.get-involved:before {
   content: "\e602";
 }
-/* line 101, ../sass/_bhchp.scss */
+/* line 102, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a.services:before {
   content: "\e600";
 }
-/* line 103, ../sass/_bhchp.scss */
+/* line 104, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li.last {
   border: none;
 }
-/* line 111, ../sass/_bhchp.scss */
+/* line 112, ../sass/_bhchp.scss */
 #page #main h1, #page #main h2 {
   color: #003594;
 }
-/* line 114, ../sass/_bhchp.scss */
+/* line 115, ../sass/_bhchp.scss */
+#page #main h2, #page #main h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+/* line 118, ../sass/_bhchp.scss */
+#page #main p {
+  margin-top: 0;
+}
+/* line 122, ../sass/_bhchp.scss */
+#page #main #content .quote {
+  color: #003594;
+  font-weight: 700;
+  margin-left: 20px;
+  border-left: 1px #3e4543 solid;
+  padding-left: 20px;
+  font-style: italic;
+}
+/* line 129, ../sass/_bhchp.scss */
+#page #main #content .view-eventslist h2 {
+  margin-top: 0;
+}
+/* line 130, ../sass/_bhchp.scss */
+#page #main #content .view-eventslist .group-left {
+  width: 33%;
+}
+/* line 133, ../sass/_bhchp.scss */
+#page #main #content .view-eventslist .group-right {
+  width: 67%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+/* line 138, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-event-mainimage {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* line 140, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-event-mainimage img {
+  width: 100%;
+}
+/* line 143, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-event-mainimage .caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* line 150, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-event-datelocation {
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+/* line 153, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-sponsor-logos {
+  border-top: 1px whitesmoke solid;
+}
+/* line 155, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-sponsor-logos .field-items {
+  display: table;
+}
+/* line 157, ../sass/_bhchp.scss */
+.node-type-event #page #main #content .field-name-field-sponsor-logos .field-items .field-item {
+  display: table-cell;
+  padding-right: 20px;
+}
+/* line 167, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 117, ../sass/_bhchp.scss */
+/* line 170, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 123, ../sass/_bhchp.scss */
+/* line 175, ../sass/_bhchp.scss */
+#page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+/* line 180, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 126, ../sass/_bhchp.scss */
+/* line 183, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 128, ../sass/_bhchp.scss */
+/* line 185, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2014,41 +2092,41 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 133, ../sass/_bhchp.scss */
+/* line 190, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 136, ../sass/_bhchp.scss */
+/* line 193, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 142, ../sass/_bhchp.scss */
+/* line 199, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 145, ../sass/_bhchp.scss */
+/* line 202, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 146, ../sass/_bhchp.scss */
+/* line 203, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 149, ../sass/_bhchp.scss */
+/* line 206, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 151, ../sass/_bhchp.scss */
+/* line 208, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
 
-/* line 167, ../sass/_bhchp.scss */
+/* line 224, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2062,57 +2140,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 179, ../sass/_bhchp.scss */
+/* line 236, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 180, ../sass/_bhchp.scss */
+/* line 237, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 181, ../sass/_bhchp.scss */
+/* line 238, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 182, ../sass/_bhchp.scss */
+/* line 239, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 183, ../sass/_bhchp.scss */
+/* line 240, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 184, ../sass/_bhchp.scss */
+/* line 241, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 185, ../sass/_bhchp.scss */
+/* line 242, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 186, ../sass/_bhchp.scss */
+/* line 243, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 187, ../sass/_bhchp.scss */
+/* line 244, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 188, ../sass/_bhchp.scss */
+/* line 245, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 189, ../sass/_bhchp.scss */
+/* line 246, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }

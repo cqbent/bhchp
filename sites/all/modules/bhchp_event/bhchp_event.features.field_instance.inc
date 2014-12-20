@@ -26,11 +26,9 @@ function bhchp_event_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'module' => 'custom_formatters',
+        'settings' => array(),
+        'type' => 'custom_formatters_teaser_text_body',
         'weight' => 3,
       ),
     ),
@@ -354,7 +352,7 @@ function bhchp_event_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'large',
+          'image_style' => '',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -389,6 +387,20 @@ function bhchp_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -478,6 +490,27 @@ function bhchp_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 'imce',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),

@@ -3,6 +3,7 @@ bhchp custom styles
 */
 
 #page {
+    color: $textgray;
     a {
         color: $blue;
     }
@@ -111,6 +112,58 @@ bhchp custom styles
         h1, h2 {
             color: $blue;
         }
+        h2, h3 {
+            font-size:1rem; margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+        #content {
+            .quote {
+                color: $blue; font-weight: 700;
+                margin-left:20px; border-left: 1px $textgray solid;
+                padding-left: 20px; font-style: italic;
+            }
+            // event gala stuff
+            .view-eventslist {
+                h2 { margin-top: 0; }
+                .group-left {
+                    width: 33%;
+                }
+                .group-right {
+                    width: 67%; box-sizing: border-box; padding-left:20px;
+                }
+            }
+            .node-type-event & {
+                .field-name-field-event-mainimage {
+                    position: relative; margin-bottom: 20px;
+                    img {
+                        width: 100%;
+                    }
+                    .caption {
+                        position: absolute; bottom: 0;
+                        background: rgba(0,0,0,.8);
+                        color: #fff; padding: 10px 20px; 
+                        width: 100%; box-sizing: border-box;
+                    }
+                }
+                .field-name-field-event-datelocation {
+                    font-weight: 700; margin-bottom:1em;
+                }
+                .field-name-field-sponsor-logos {
+                    border-top: 1px $lightgray solid;
+                    .field-items {
+                        display: table;
+                        .field-item {
+                            display: table-cell;
+                            padding-right:20px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
         .breadcrumb {
             padding: 0 10px; margin-bottom: 50px;
             color: $textgray;
@@ -119,6 +172,10 @@ bhchp custom styles
             }
         }
         .region-sidebar-first {
+            .block-block, .block-views {
+                background-color: $lightgray;
+                padding:20px;
+            }
             .block-menu-block {
                 h2 {
                     font-size:13px; text-transform: uppercase;
