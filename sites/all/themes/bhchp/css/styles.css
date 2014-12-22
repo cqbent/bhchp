@@ -2111,8 +2111,7 @@ bhchp custom styles
   clear: both;
 }
 /* line 199, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row.last {
-  margin: 0;
+#page #main #content .view-leadership-staff-list .views-row.views-row-last {
   border: none;
 }
 /* line 40, ../sass/_mixins.scss */
@@ -2158,33 +2157,48 @@ bhchp custom styles
     padding-left: 2em;
   }
 }
-/* line 229, ../sass/_bhchp.scss */
+/* line 227, ../sass/_bhchp.scss */
+#page #main #content .view-locationlist .views-row {
+  padding-bottom: 1.5em;
+  border-bottom: 1px #d8dad9 solid;
+  margin-bottom: 1.5em;
+  clear: both;
+}
+/* line 230, ../sass/_bhchp.scss */
+#page #main #content .view-locationlist .views-row.views-row-last {
+  border-bottom: none;
+}
+/* line 233, ../sass/_bhchp.scss */
+#page #main #content .view-locationlist .views-row .views-field-title {
+  font-weight: bold;
+}
+/* line 241, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 232, ../sass/_bhchp.scss */
+/* line 244, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 237, ../sass/_bhchp.scss */
+/* line 249, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
   background-color: whitesmoke;
   padding: 20px;
 }
-/* line 242, ../sass/_bhchp.scss */
+/* line 254, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 245, ../sass/_bhchp.scss */
+/* line 257, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 247, ../sass/_bhchp.scss */
+/* line 259, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2193,41 +2207,41 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 252, ../sass/_bhchp.scss */
+/* line 264, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 255, ../sass/_bhchp.scss */
+/* line 267, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 261, ../sass/_bhchp.scss */
+/* line 273, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 264, ../sass/_bhchp.scss */
+/* line 276, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 265, ../sass/_bhchp.scss */
+/* line 277, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 268, ../sass/_bhchp.scss */
+/* line 280, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 270, ../sass/_bhchp.scss */
+/* line 282, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
 
-/* line 286, ../sass/_bhchp.scss */
+/* line 298, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2241,57 +2255,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 298, ../sass/_bhchp.scss */
+/* line 310, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 299, ../sass/_bhchp.scss */
+/* line 311, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 300, ../sass/_bhchp.scss */
+/* line 312, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 301, ../sass/_bhchp.scss */
+/* line 313, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 302, ../sass/_bhchp.scss */
+/* line 314, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 303, ../sass/_bhchp.scss */
+/* line 315, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 304, ../sass/_bhchp.scss */
+/* line 316, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 305, ../sass/_bhchp.scss */
+/* line 317, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 306, ../sass/_bhchp.scss */
+/* line 318, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 307, ../sass/_bhchp.scss */
+/* line 319, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 308, ../sass/_bhchp.scss */
+/* line 320, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }

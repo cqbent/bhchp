@@ -196,8 +196,8 @@ bhchp custom styles
                 .views-row {
                     padding-bottom: 1em; border-bottom: 1px $bordergray solid;
                     margin-bottom: 2em; clear: both;
-                    &.last {
-                        margin: 0; border: none;
+                    &.views-row-last {
+                        border: none;
                     }
                     @include clearafter();
                     .left, .right {
@@ -221,6 +221,18 @@ bhchp custom styles
                             padding-left: 2em;
                         }
                     } 
+                }
+            }
+            .view-locationlist {
+                .views-row {
+                    padding-bottom: 1.5em; border-bottom: 1px $bordergray solid;
+                    margin-bottom: 1.5em; clear: both;
+                    &.views-row-last {
+                        border-bottom: none;
+                    }
+                    .views-field-title {
+                        font-weight: bold;
+                    }
                 }
             }
         }
