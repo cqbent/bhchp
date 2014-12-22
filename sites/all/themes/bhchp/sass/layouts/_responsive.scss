@@ -58,24 +58,27 @@ $zen-auto-include-item-base: false;
 }
 
 /* Navigation bar */
-@media all and (min-width: 480px) {
-  #main {
-    /* Move all the children of #main down to make room. */
-    padding-top: 20px;
-    position: relative;
-  }
-  #navigation {
-    /* Move the navbar up inside #main's padding. */
-    /* disable
-    position: absolute;
-    top: 0;
-    height: $nav-height;
-    width: $zen-grid-width;
-    */
-    #main-menu {
-        
+@media all and (min-width: 780px) {
+    #main {
+        /* Move all the children of #main down to make room. */
+        padding-top: 20px;
+        position: relative;
+        #content {
+            
+        }
     }
-  }
+    #navigation {
+        /* Move the navbar up inside #main's padding. */
+        /* disable
+        position: absolute;
+        top: 0;
+        height: $nav-height;
+        width: $zen-grid-width;
+        */
+        #main-menu {
+
+        }
+    }
 }
 
 } // End of @if $zen-reverse-all-floats == true
@@ -83,7 +86,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (min-width: 780px) and (max-width: 959px) {
 
   $zen-column-count: 3;
 

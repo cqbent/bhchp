@@ -119,6 +119,17 @@ bhchp custom styles
             margin-top: 0;
         }
         #content {
+            img {
+                padding: 5px;
+                border: 1px #d8dad9 solid;
+                &.img-left {
+                    float: left; margin: 0 20px 0px 0;
+                }
+            }
+            .feature {
+                font-size: 15px; line-height: 22px; color: $blue;
+                font-style: italic; font-weight: 700;
+            }
             .quote {
                 color: $blue; font-weight: 700;
                 margin-left:20px; border-left: 1px $textgray solid;
@@ -167,8 +178,53 @@ bhchp custom styles
                         display: none;
                     }
                 }
+                input[type=submit], button {
+                    background-color: $blue; border: none;
+                    color: #fff; text-transform: uppercase;
+                    padding: 5px 10px;
+                }
+                fieldset {
+                    padding: 0; margin: 0; border: none;
+                    legend {
+                        font-weight: 700; color: $textgray; 
+                        a { text-decoration: none; color: $textgray; }
+                    }
+                }
+            }
+            // leadership staff list view
+            .view-leadership-staff-list {
+                .views-row {
+                    padding-bottom: 1em; border-bottom: 1px $bordergray solid;
+                    margin-bottom: 2em; clear: both;
+                    &.last {
+                        margin: 0; border: none;
+                    }
+                    @include clearafter();
+                    .left, .right {
+                        box-sizing: border-box;
+                    }
+                    .image {
+                        img { box-sizing: border-box; }
+                    }
+                    .name, .email { font-weight: 700; }
+                    .bio {
+                        margin-top:1em; 
+                        p { margin: 0 0 1em 0; }
+                    }
+                    @include breakpoint(minsmall) {
+                        $zen-column-count: 4;
+                        .left {
+                            @include zen-grid-item(1, 1);
+                        }
+                        .right {
+                            @include zen-grid-item(3, 2);
+                            padding-left: 2em;
+                        }
+                    } 
+                }
             }
         }
+        
         
         .breadcrumb {
             padding: 0 10px; margin-bottom: 50px;

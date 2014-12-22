@@ -650,7 +650,7 @@ table {
 }
 
 /* Navigation bar */
-@media all and (min-width: 480px) {
+@media all and (min-width: 780px) {
   /* line 62, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
@@ -658,7 +658,7 @@ table {
     position: relative;
   }
 
-  /* line 67, ../sass/layouts/_responsive.scss */
+  /* line 70, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     /* disable
@@ -672,23 +672,23 @@ table {
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (min-width: 780px) and (max-width: 959px) {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 93, ../sass/layouts/_responsive.scss */
+  /* line 96, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 95, ../sass/layouts/_responsive.scss */
+  /* line 98, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 100, ../sass/layouts/_responsive.scss */
+  /* line 103, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -699,19 +699,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 108, ../sass/layouts/_responsive.scss */
+  /* line 111, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 110, ../sass/layouts/_responsive.scss */
+  /* line 113, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-  /* line 115, ../sass/layouts/_responsive.scss */
+  /* line 118, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -722,27 +722,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 123, ../sass/layouts/_responsive.scss */
+  /* line 126, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 125, ../sass/layouts/_responsive.scss */
+  /* line 128, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 130, ../sass/layouts/_responsive.scss */
+  /* line 133, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 135, ../sass/layouts/_responsive.scss */
+  /* line 138, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -756,7 +756,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 141, ../sass/layouts/_responsive.scss */
+  /* line 144, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -766,7 +766,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 145, ../sass/layouts/_responsive.scss */
+  /* line 148, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -774,14 +774,14 @@ table {
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 150, ../sass/layouts/_responsive.scss */
+  /* line 153, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 154, ../sass/layouts/_responsive.scss */
+  /* line 157, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -793,7 +793,7 @@ table {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-  /* line 170, ../sass/layouts/_responsive.scss */
+  /* line 173, ../sass/layouts/_responsive.scss */
   #page #main #content {
     padding-left: 50px;
   }
@@ -801,19 +801,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 179, ../sass/layouts/_responsive.scss */
+  /* line 182, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 181, ../sass/layouts/_responsive.scss */
+  /* line 184, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 75%;
     margin-left: 25%;
     margin-right: -100%;
   }
-  /* line 186, ../sass/layouts/_responsive.scss */
+  /* line 189, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 25%;
@@ -824,19 +824,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 194, ../sass/layouts/_responsive.scss */
+  /* line 197, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 196, ../sass/layouts/_responsive.scss */
+  /* line 199, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 75%;
     margin-left: 0%;
     margin-right: -75%;
   }
-  /* line 201, ../sass/layouts/_responsive.scss */
+  /* line 204, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 25%;
@@ -847,27 +847,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 209, ../sass/layouts/_responsive.scss */
+  /* line 212, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 211, ../sass/layouts/_responsive.scss */
+  /* line 214, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 50%;
     margin-left: 25%;
     margin-right: -75%;
   }
-  /* line 216, ../sass/layouts/_responsive.scss */
+  /* line 219, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 25%;
     margin-left: 0%;
     margin-right: -25%;
   }
-  /* line 221, ../sass/layouts/_responsive.scss */
+  /* line 224, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 25%;
@@ -1998,6 +1998,24 @@ bhchp custom styles
   margin-top: 0;
 }
 /* line 122, ../sass/_bhchp.scss */
+#page #main #content img {
+  padding: 5px;
+  border: 1px #d8dad9 solid;
+}
+/* line 125, ../sass/_bhchp.scss */
+#page #main #content img.img-left {
+  float: left;
+  margin: 0 20px 0px 0;
+}
+/* line 129, ../sass/_bhchp.scss */
+#page #main #content .feature {
+  font-size: 15px;
+  line-height: 22px;
+  color: #003594;
+  font-style: italic;
+  font-weight: 700;
+}
+/* line 133, ../sass/_bhchp.scss */
 #page #main #content .quote {
   color: #003594;
   font-weight: 700;
@@ -2006,30 +2024,30 @@ bhchp custom styles
   padding-left: 20px;
   font-style: italic;
 }
-/* line 129, ../sass/_bhchp.scss */
+/* line 140, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist h2 {
   margin-top: 0;
 }
-/* line 130, ../sass/_bhchp.scss */
+/* line 141, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist .group-left {
   width: 33%;
 }
-/* line 133, ../sass/_bhchp.scss */
+/* line 144, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist .group-right {
   width: 67%;
   box-sizing: border-box;
   padding-left: 20px;
 }
-/* line 138, ../sass/_bhchp.scss */
+/* line 149, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage {
   position: relative;
   margin-bottom: 20px;
 }
-/* line 140, ../sass/_bhchp.scss */
+/* line 151, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage img {
   width: 100%;
 }
-/* line 143, ../sass/_bhchp.scss */
+/* line 154, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage .caption {
   position: absolute;
   bottom: 0;
@@ -2039,55 +2057,134 @@ bhchp custom styles
   width: 100%;
   box-sizing: border-box;
 }
-/* line 150, ../sass/_bhchp.scss */
+/* line 161, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-datelocation {
   font-weight: 700;
   margin-bottom: 1em;
 }
-/* line 153, ../sass/_bhchp.scss */
+/* line 164, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos {
   border-top: 1px whitesmoke solid;
 }
-/* line 155, ../sass/_bhchp.scss */
+/* line 166, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos .field-items {
   display: table;
 }
-/* line 157, ../sass/_bhchp.scss */
+/* line 168, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos .field-items .field-item {
   display: table-cell;
   padding-right: 20px;
 }
-/* line 166, ../sass/_bhchp.scss */
+/* line 177, ../sass/_bhchp.scss */
 #page #main #content .entityform .form-type-radios .form-disabled {
   display: none;
 }
-/* line 173, ../sass/_bhchp.scss */
+/* line 181, ../sass/_bhchp.scss */
+#page #main #content .entityform input[type=submit], #page #main #content .entityform button {
+  background-color: #003594;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+/* line 186, ../sass/_bhchp.scss */
+#page #main #content .entityform fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+/* line 188, ../sass/_bhchp.scss */
+#page #main #content .entityform fieldset legend {
+  font-weight: 700;
+  color: #3e4543;
+}
+/* line 190, ../sass/_bhchp.scss */
+#page #main #content .entityform fieldset legend a {
+  text-decoration: none;
+  color: #3e4543;
+}
+/* line 196, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row {
+  padding-bottom: 1em;
+  border-bottom: 1px #d8dad9 solid;
+  margin-bottom: 2em;
+  clear: both;
+}
+/* line 199, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row.last {
+  margin: 0;
+  border: none;
+}
+/* line 40, ../sass/_mixins.scss */
+#page #main #content .view-leadership-staff-list .views-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 203, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .right {
+  box-sizing: border-box;
+}
+/* line 207, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .image img {
+  box-sizing: border-box;
+}
+/* line 209, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .name, #page #main #content .view-leadership-staff-list .views-row .email {
+  font-weight: 700;
+}
+/* line 210, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .bio {
+  margin-top: 1em;
+}
+/* line 212, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .bio p {
+  margin: 0 0 1em 0;
+}
+@media (min-width: 780px) {
+  /* line 216, ../sass/_bhchp.scss */
+  #page #main #content .view-leadership-staff-list .views-row .left {
+    float: left;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: -25%;
+  }
+  /* line 219, ../sass/_bhchp.scss */
+  #page #main #content .view-leadership-staff-list .views-row .right {
+    float: left;
+    width: 75%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 2em;
+  }
+}
+/* line 229, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 176, ../sass/_bhchp.scss */
+/* line 232, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 181, ../sass/_bhchp.scss */
+/* line 237, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
   background-color: whitesmoke;
   padding: 20px;
 }
-/* line 186, ../sass/_bhchp.scss */
+/* line 242, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 189, ../sass/_bhchp.scss */
+/* line 245, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 191, ../sass/_bhchp.scss */
+/* line 247, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2096,41 +2193,41 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 196, ../sass/_bhchp.scss */
+/* line 252, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 199, ../sass/_bhchp.scss */
+/* line 255, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 205, ../sass/_bhchp.scss */
+/* line 261, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 208, ../sass/_bhchp.scss */
+/* line 264, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 209, ../sass/_bhchp.scss */
+/* line 265, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 212, ../sass/_bhchp.scss */
+/* line 268, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 214, ../sass/_bhchp.scss */
+/* line 270, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
 
-/* line 230, ../sass/_bhchp.scss */
+/* line 286, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2144,57 +2241,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 242, ../sass/_bhchp.scss */
+/* line 298, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 243, ../sass/_bhchp.scss */
+/* line 299, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 244, ../sass/_bhchp.scss */
+/* line 300, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 245, ../sass/_bhchp.scss */
+/* line 301, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 246, ../sass/_bhchp.scss */
+/* line 302, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 247, ../sass/_bhchp.scss */
+/* line 303, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 248, ../sass/_bhchp.scss */
+/* line 304, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 249, ../sass/_bhchp.scss */
+/* line 305, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 250, ../sass/_bhchp.scss */
+/* line 306, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 251, ../sass/_bhchp.scss */
+/* line 307, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 252, ../sass/_bhchp.scss */
+/* line 308, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }
