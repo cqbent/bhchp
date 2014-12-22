@@ -17,20 +17,15 @@ function bhchp_articles_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'article';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'post_date' => array(
+    'author' => array(
       'weight' => '1',
       'label' => 'hidden',
-      'format' => 'ds_post_date_long',
+      'format' => 'author',
     ),
-    'submitted_by' => array(
+    'post_date' => array(
       'weight' => '2',
       'label' => 'hidden',
-      'format' => 'ds_time_ago',
+      'format' => 'ds_post_date_month_year',
     ),
   );
   $export['node|article|default'] = $ds_fieldsetting;
@@ -43,14 +38,34 @@ function bhchp_articles_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'post_date' => array(
       'weight' => '1',
       'label' => 'hidden',
-      'format' => 'ds_post_date_long',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+      ),
+    ),
+    'node_link' => array(
+      'weight' => '5',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Read more',
+        'wrapper' => '',
+        'class' => '',
+      ),
+    ),
+    'author' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'author',
+    ),
+    'post_date' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'ds_post_date_month_year',
     ),
   );
   $export['node|article|teaser'] = $ds_fieldsetting;
@@ -70,34 +85,25 @@ function bhchp_articles_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col_stacked_fluid';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'header' => array(
-        0 => 'title',
-      ),
-      'left' => array(
-        1 => 'post_date',
-        2 => 'submitted_by',
+      'ds_content' => array(
+        0 => 'field_image',
+        1 => 'author',
+        2 => 'post_date',
         3 => 'body',
-      ),
-      'right' => array(
-        4 => 'field_image',
       ),
     ),
     'fields' => array(
-      'title' => 'header',
-      'post_date' => 'left',
-      'submitted_by' => 'left',
-      'body' => 'left',
-      'field_image' => 'right',
+      'field_image' => 'ds_content',
+      'author' => 'ds_content',
+      'post_date' => 'ds_content',
+      'body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'header' => 'div',
-      'left' => 'div',
-      'right' => 'div',
-      'footer' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -113,32 +119,32 @@ function bhchp_articles_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'ds_2col_stacked_fluid';
+  $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'header' => array(
-        0 => 'title',
-      ),
       'left' => array(
-        1 => 'post_date',
-        2 => 'body',
+        0 => 'field_image',
       ),
       'right' => array(
-        3 => 'field_image',
+        1 => 'title',
+        2 => 'author',
+        3 => 'post_date',
+        4 => 'body',
+        5 => 'node_link',
       ),
     ),
     'fields' => array(
-      'title' => 'header',
-      'post_date' => 'left',
-      'body' => 'left',
-      'field_image' => 'right',
+      'field_image' => 'left',
+      'title' => 'right',
+      'author' => 'right',
+      'post_date' => 'right',
+      'body' => 'right',
+      'node_link' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'header' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

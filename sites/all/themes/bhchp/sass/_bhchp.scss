@@ -191,8 +191,10 @@ bhchp custom styles
                     }
                 }
             }
-            // leadership staff list view
-            .view-leadership-staff-list {
+            // leadership staff list view, patient stories list 
+            // news list
+            .view-leadership-staff-list, .view-patient-stories, 
+            .view-news-list {
                 .views-row {
                     padding-bottom: 1em; border-bottom: 1px $bordergray solid;
                     margin-bottom: 2em; clear: both;
@@ -207,16 +209,16 @@ bhchp custom styles
                         img { box-sizing: border-box; }
                     }
                     .name, .email { font-weight: 700; }
-                    .bio {
+                    .bio, .field-name-body {
                         margin-top:1em; 
                         p { margin: 0 0 1em 0; }
                     }
                     @include breakpoint(minsmall) {
                         $zen-column-count: 4;
-                        .left {
+                        .left, .group-left {
                             @include zen-grid-item(1, 1);
                         }
-                        .right {
+                        .right, .group-right {
                             @include zen-grid-item(3, 2);
                             padding-left: 2em;
                         }
@@ -233,6 +235,31 @@ bhchp custom styles
                     .views-field-title {
                         font-weight: bold;
                     }
+                }
+            }
+            .view-news-list {
+                .views-row {
+                    .field-name-author {
+                        float: left; 
+                        font-style: italic; 
+                        .field-item:after { 
+                            content: ", "; display: inline-block;
+                            padding-right: 5px; margin-left: -2px;
+                        }
+                    }
+                    .field-name-post-date {
+                        
+                    }
+                    @include breakpoint(minsmall) {
+                        $zen-column-count: 3;
+                        .left, .group-left {
+                            @include zen-grid-item(1, 1);
+                        }
+                        .right, .group-right {
+                            @include zen-grid-item(2, 2);
+                            padding-left: 2em;
+                        }
+                    } 
                 }
             }
         }
