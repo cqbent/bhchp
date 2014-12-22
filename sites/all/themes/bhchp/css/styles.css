@@ -1997,17 +1997,22 @@ bhchp custom styles
 #page #main p {
   margin-top: 0;
 }
-/* line 122, ../sass/_bhchp.scss */
-#page #main #content img {
+/* line 123, ../sass/_bhchp.scss */
+#page #main #content .node img {
   padding: 5px;
   border: 1px #d8dad9 solid;
 }
-/* line 125, ../sass/_bhchp.scss */
-#page #main #content img.img-left {
+/* line 126, ../sass/_bhchp.scss */
+#page #main #content .node img.img-left {
   float: left;
   margin: 0 20px 0px 0;
 }
 /* line 129, ../sass/_bhchp.scss */
+#page #main #content .node img.img-right {
+  float: right;
+  margin: 0 0 0 20px;
+}
+/* line 135, ../sass/_bhchp.scss */
 #page #main #content .feature {
   font-size: 15px;
   line-height: 22px;
@@ -2015,7 +2020,7 @@ bhchp custom styles
   font-style: italic;
   font-weight: 700;
 }
-/* line 133, ../sass/_bhchp.scss */
+/* line 139, ../sass/_bhchp.scss */
 #page #main #content .quote {
   color: #003594;
   font-weight: 700;
@@ -2024,30 +2029,30 @@ bhchp custom styles
   padding-left: 20px;
   font-style: italic;
 }
-/* line 140, ../sass/_bhchp.scss */
+/* line 146, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist h2 {
   margin-top: 0;
 }
-/* line 141, ../sass/_bhchp.scss */
+/* line 147, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist .group-left {
   width: 33%;
 }
-/* line 144, ../sass/_bhchp.scss */
+/* line 150, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist .group-right {
   width: 67%;
   box-sizing: border-box;
   padding-left: 20px;
 }
-/* line 149, ../sass/_bhchp.scss */
+/* line 155, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage {
   position: relative;
   margin-bottom: 20px;
 }
-/* line 151, ../sass/_bhchp.scss */
+/* line 157, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage img {
   width: 100%;
 }
-/* line 154, ../sass/_bhchp.scss */
+/* line 160, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage .caption {
   position: absolute;
   bottom: 0;
@@ -2057,29 +2062,29 @@ bhchp custom styles
   width: 100%;
   box-sizing: border-box;
 }
-/* line 161, ../sass/_bhchp.scss */
+/* line 167, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-datelocation {
   font-weight: 700;
   margin-bottom: 1em;
 }
-/* line 164, ../sass/_bhchp.scss */
+/* line 170, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos {
   border-top: 1px whitesmoke solid;
 }
-/* line 166, ../sass/_bhchp.scss */
+/* line 172, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos .field-items {
   display: table;
 }
-/* line 168, ../sass/_bhchp.scss */
+/* line 174, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos .field-items .field-item {
   display: table-cell;
   padding-right: 20px;
 }
-/* line 177, ../sass/_bhchp.scss */
+/* line 183, ../sass/_bhchp.scss */
 #page #main #content .entityform .form-type-radios .form-disabled {
   display: none;
 }
-/* line 181, ../sass/_bhchp.scss */
+/* line 187, ../sass/_bhchp.scss */
 #page #main #content .entityform input[type=submit], #page #main #content .entityform button {
   background-color: #003594;
   border: none;
@@ -2087,23 +2092,23 @@ bhchp custom styles
   text-transform: uppercase;
   padding: 5px 10px;
 }
-/* line 186, ../sass/_bhchp.scss */
+/* line 192, ../sass/_bhchp.scss */
 #page #main #content .entityform fieldset {
   padding: 0;
   margin: 0;
   border: none;
 }
-/* line 188, ../sass/_bhchp.scss */
+/* line 194, ../sass/_bhchp.scss */
 #page #main #content .entityform fieldset legend {
   font-weight: 700;
   color: #3e4543;
 }
-/* line 190, ../sass/_bhchp.scss */
+/* line 196, ../sass/_bhchp.scss */
 #page #main #content .entityform fieldset legend a {
   text-decoration: none;
   color: #3e4543;
 }
-/* line 198, ../sass/_bhchp.scss */
+/* line 204, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row, #page #main #content .view-patient-stories .views-row,
 #page #main #content .view-news-list .views-row {
   padding-bottom: 1em;
@@ -2111,7 +2116,7 @@ bhchp custom styles
   margin-bottom: 2em;
   clear: both;
 }
-/* line 201, ../sass/_bhchp.scss */
+/* line 207, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row.views-row-last, #page #main #content .view-patient-stories .views-row.views-row-last,
 #page #main #content .view-news-list .views-row.views-row-last {
   border: none;
@@ -2123,37 +2128,37 @@ bhchp custom styles
   display: block;
   clear: both;
 }
-/* line 205, ../sass/_bhchp.scss */
+/* line 211, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .right,
 #page #main #content .view-news-list .views-row .left,
 #page #main #content .view-news-list .views-row .right {
   box-sizing: border-box;
 }
-/* line 209, ../sass/_bhchp.scss */
+/* line 215, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .image img, #page #main #content .view-patient-stories .views-row .image img,
 #page #main #content .view-news-list .views-row .image img {
   box-sizing: border-box;
 }
-/* line 211, ../sass/_bhchp.scss */
+/* line 217, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .name, #page #main #content .view-leadership-staff-list .views-row .email, #page #main #content .view-patient-stories .views-row .name, #page #main #content .view-patient-stories .views-row .email,
 #page #main #content .view-news-list .views-row .name,
 #page #main #content .view-news-list .views-row .email {
   font-weight: 700;
 }
-/* line 212, ../sass/_bhchp.scss */
+/* line 218, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .bio, #page #main #content .view-leadership-staff-list .views-row .field-name-body, #page #main #content .view-patient-stories .views-row .bio, #page #main #content .view-patient-stories .views-row .field-name-body,
 #page #main #content .view-news-list .views-row .bio,
 #page #main #content .view-news-list .views-row .field-name-body {
   margin-top: 1em;
 }
-/* line 214, ../sass/_bhchp.scss */
+/* line 220, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .bio p, #page #main #content .view-leadership-staff-list .views-row .field-name-body p, #page #main #content .view-patient-stories .views-row .bio p, #page #main #content .view-patient-stories .views-row .field-name-body p,
 #page #main #content .view-news-list .views-row .bio p,
 #page #main #content .view-news-list .views-row .field-name-body p {
   margin: 0 0 1em 0;
 }
 @media (min-width: 780px) {
-  /* line 218, ../sass/_bhchp.scss */
+  /* line 224, ../sass/_bhchp.scss */
   #page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .group-left, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .group-left,
   #page #main #content .view-news-list .views-row .left,
   #page #main #content .view-news-list .views-row .group-left {
@@ -2162,7 +2167,7 @@ bhchp custom styles
     margin-left: 0%;
     margin-right: -25%;
   }
-  /* line 221, ../sass/_bhchp.scss */
+  /* line 227, ../sass/_bhchp.scss */
   #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-leadership-staff-list .views-row .group-right, #page #main #content .view-patient-stories .views-row .right, #page #main #content .view-patient-stories .views-row .group-right,
   #page #main #content .view-news-list .views-row .right,
   #page #main #content .view-news-list .views-row .group-right {
@@ -2173,27 +2178,27 @@ bhchp custom styles
     padding-left: 2em;
   }
 }
-/* line 229, ../sass/_bhchp.scss */
+/* line 235, ../sass/_bhchp.scss */
 #page #main #content .view-locationlist .views-row {
   padding-bottom: 1.5em;
   border-bottom: 1px #d8dad9 solid;
   margin-bottom: 1.5em;
   clear: both;
 }
-/* line 232, ../sass/_bhchp.scss */
+/* line 238, ../sass/_bhchp.scss */
 #page #main #content .view-locationlist .views-row.views-row-last {
   border-bottom: none;
 }
-/* line 235, ../sass/_bhchp.scss */
+/* line 241, ../sass/_bhchp.scss */
 #page #main #content .view-locationlist .views-row .views-field-title {
   font-weight: bold;
 }
-/* line 242, ../sass/_bhchp.scss */
+/* line 248, ../sass/_bhchp.scss */
 #page #main #content .view-news-list .views-row .field-name-author {
   float: left;
   font-style: italic;
 }
-/* line 245, ../sass/_bhchp.scss */
+/* line 251, ../sass/_bhchp.scss */
 #page #main #content .view-news-list .views-row .field-name-author .field-item:after {
   content: ", ";
   display: inline-block;
@@ -2201,14 +2206,14 @@ bhchp custom styles
   margin-left: -2px;
 }
 @media (min-width: 780px) {
-  /* line 255, ../sass/_bhchp.scss */
+  /* line 261, ../sass/_bhchp.scss */
   #page #main #content .view-news-list .views-row .left, #page #main #content .view-news-list .views-row .group-left {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 258, ../sass/_bhchp.scss */
+  /* line 264, ../sass/_bhchp.scss */
   #page #main #content .view-news-list .views-row .right, #page #main #content .view-news-list .views-row .group-right {
     float: left;
     width: 66.66667%;
@@ -2217,33 +2222,85 @@ bhchp custom styles
     padding-left: 2em;
   }
 }
-/* line 268, ../sass/_bhchp.scss */
+/* line 273, ../sass/_bhchp.scss */
+#page #main #content .view-publications-list .views-row {
+  clear: both;
+  margin-bottom: 20px;
+}
+/* line 40, ../sass/_mixins.scss */
+#page #main #content .view-publications-list .views-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 276, ../sass/_bhchp.scss */
+#page #main #content .view-publications-list .views-row .views-column {
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+}
+/* line 279, ../sass/_bhchp.scss */
+#page #main #content .view-publications-list .views-row .views-column .views-field-field-image img {
+  box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.4);
+}
+/* line 283, ../sass/_bhchp.scss */
+#page #main #content .view-publications-list .views-row .views-column .views-field-title {
+  margin-top: 10px;
+  font-weight: 700;
+}
+/* line 285, ../sass/_bhchp.scss */
+#page #main #content .view-publications-list .views-row .views-column .views-field-title a {
+  text-decoration: none;
+}
+@media (min-width: 780px) {
+  /* line 290, ../sass/_bhchp.scss */
+  #page #main #content .view-publications-list .views-row .views-column-1 {
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 293, ../sass/_bhchp.scss */
+  #page #main #content .view-publications-list .views-row .views-column-2 {
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+  /* line 296, ../sass/_bhchp.scss */
+  #page #main #content .view-publications-list .views-row .views-column-3 {
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+}
+/* line 305, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 271, ../sass/_bhchp.scss */
+/* line 308, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 276, ../sass/_bhchp.scss */
+/* line 313, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
   background-color: whitesmoke;
   padding: 20px;
 }
-/* line 281, ../sass/_bhchp.scss */
+/* line 318, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 284, ../sass/_bhchp.scss */
+/* line 321, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 286, ../sass/_bhchp.scss */
+/* line 323, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2252,41 +2309,41 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 291, ../sass/_bhchp.scss */
+/* line 328, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 294, ../sass/_bhchp.scss */
+/* line 331, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 300, ../sass/_bhchp.scss */
+/* line 337, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 303, ../sass/_bhchp.scss */
+/* line 340, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 304, ../sass/_bhchp.scss */
+/* line 341, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 307, ../sass/_bhchp.scss */
+/* line 344, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 309, ../sass/_bhchp.scss */
+/* line 346, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
 
-/* line 325, ../sass/_bhchp.scss */
+/* line 362, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2300,57 +2357,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 337, ../sass/_bhchp.scss */
+/* line 374, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 338, ../sass/_bhchp.scss */
+/* line 375, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 339, ../sass/_bhchp.scss */
+/* line 376, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 340, ../sass/_bhchp.scss */
+/* line 377, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 341, ../sass/_bhchp.scss */
+/* line 378, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 342, ../sass/_bhchp.scss */
+/* line 379, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 343, ../sass/_bhchp.scss */
+/* line 380, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 344, ../sass/_bhchp.scss */
+/* line 381, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 345, ../sass/_bhchp.scss */
+/* line 382, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 346, ../sass/_bhchp.scss */
+/* line 383, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 347, ../sass/_bhchp.scss */
+/* line 384, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }

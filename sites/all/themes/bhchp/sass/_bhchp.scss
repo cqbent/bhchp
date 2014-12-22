@@ -119,13 +119,19 @@ bhchp custom styles
             margin-top: 0;
         }
         #content {
-            img {
-                padding: 5px;
-                border: 1px #d8dad9 solid;
-                &.img-left {
-                    float: left; margin: 0 20px 0px 0;
+            .node {
+                img {
+                    padding: 5px;
+                    border: 1px #d8dad9 solid;
+                    &.img-left {
+                        float: left; margin: 0 20px 0px 0;
+                    }
+                    &.img-right {
+                        float: right; margin: 0 0 0 20px;
+                    }
                 }
             }
+            
             .feature {
                 font-size: 15px; line-height: 22px; color: $blue;
                 font-style: italic; font-weight: 700;
@@ -258,6 +264,37 @@ bhchp custom styles
                         .right, .group-right {
                             @include zen-grid-item(2, 2);
                             padding-left: 2em;
+                        }
+                    } 
+                }
+            }
+            // publications list
+            .view-publications-list {
+                .views-row {
+                    clear: both; margin-bottom: 20px;
+                    @include clearafter();
+                    .views-column {
+                        padding: 0 20px 0 0; box-sizing: border-box;
+                        .views-field-field-image {
+                            img {
+                                box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.4);
+                            }
+                        }
+                        .views-field-title {
+                            margin-top: 10px; font-weight: 700; 
+                            a { text-decoration: none; }
+                        }
+                    }
+                    @include breakpoint(minsmall) {
+                        $zen-column-count: 3;
+                        .views-column-1 {
+                            @include zen-grid-item(1, 1);
+                        }
+                        .views-column-2 {
+                            @include zen-grid-item(1, 2);
+                        }
+                        .views-column-3 {
+                            @include zen-grid-item(1, 3);
                         }
                     } 
                 }
