@@ -130,6 +130,11 @@ bhchp custom styles
                         float: right; margin: 0 0 0 20px;
                     }
                 }
+                &.node-job-posting {
+                    .field {
+                        margin-bottom: 20px;
+                    }
+                }
             }
             
             .feature {
@@ -197,22 +202,32 @@ bhchp custom styles
                     }
                 }
             }
+            // standard content view list styling
+            .view {
+                .views-row {
+                    padding-bottom: 1em; border-bottom: 1px $bordergray solid;
+                    margin-bottom: 2em; clear: both;
+                    @include clearafter();
+                    &.views-row-last {
+                        border: none;
+                    }
+                    img { box-sizing: border-box; }
+                    .views-field-title {
+                        font-weight: 700; 
+                        a { text-decoration: none; }
+                    }
+                    .views-label {
+                        float: left; padding-right: 5px; font-weight: 700;
+                    }
+                }
+            }
             // leadership staff list view, patient stories list 
             // news list
             .view-leadership-staff-list, .view-patient-stories, 
             .view-news-list {
                 .views-row {
-                    padding-bottom: 1em; border-bottom: 1px $bordergray solid;
-                    margin-bottom: 2em; clear: both;
-                    &.views-row-last {
-                        border: none;
-                    }
-                    @include clearafter();
                     .left, .right {
                         box-sizing: border-box;
-                    }
-                    .image {
-                        img { box-sizing: border-box; }
                     }
                     .name, .email { font-weight: 700; }
                     .bio, .field-name-body {
@@ -233,14 +248,6 @@ bhchp custom styles
             }
             .view-locationlist {
                 .views-row {
-                    padding-bottom: 1.5em; border-bottom: 1px $bordergray solid;
-                    margin-bottom: 1.5em; clear: both;
-                    &.views-row-last {
-                        border-bottom: none;
-                    }
-                    .views-field-title {
-                        font-weight: bold;
-                    }
                 }
             }
             .view-news-list {
@@ -252,9 +259,6 @@ bhchp custom styles
                             content: ", "; display: inline-block;
                             padding-right: 5px; margin-left: -2px;
                         }
-                    }
-                    .field-name-post-date {
-                        
                     }
                     @include breakpoint(minsmall) {
                         $zen-column-count: 3;
@@ -271,8 +275,7 @@ bhchp custom styles
             // publications list
             .view-publications-list {
                 .views-row {
-                    clear: both; margin-bottom: 20px;
-                    @include clearafter();
+                    border-bottom: none;
                     .views-column {
                         padding: 0 20px 0 0; box-sizing: border-box;
                         .views-field-field-image {
