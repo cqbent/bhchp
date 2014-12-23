@@ -454,9 +454,9 @@ bhchp custom styles
                     position:relative; z-index:2;
                     border: none;
                 }
-                .node {
+                article.node {
                     .field-name-body {
-                    font-size: 15px; line-height: 25px;
+                        font-size: 15px; line-height: 25px;
                     }
                     .feature {
                         color: $textgray; font-style: normal; font-size: 19px;

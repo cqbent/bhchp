@@ -2561,12 +2561,12 @@ bhchp custom styles
   border: none;
 }
 /* line 458, ../sass/_bhchp.scss */
-.front #page #main #content .node .field-name-body {
+.front #page #main #content article .field-name-body {
   font-size: 15px;
   line-height: 25px;
 }
 /* line 461, ../sass/_bhchp.scss */
-.front #page #main #content .node .feature {
+.front #page #main #content article .feature {
   color: #3e4543;
   font-style: normal;
   font-size: 19px;
