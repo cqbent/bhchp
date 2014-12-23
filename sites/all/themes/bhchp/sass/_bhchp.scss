@@ -454,11 +454,13 @@ bhchp custom styles
                     position:relative; z-index:2;
                     border: none;
                 }
-                .field-name-body {
+                .node {
+                    .field-name-body {
                     font-size: 15px; line-height: 25px;
-                }
-                .feature {
-                    color: $textgray; font-style: normal; font-size: 19px;
+                    }
+                    .feature {
+                        color: $textgray; font-style: normal; font-size: 19px;
+                    }
                 }
                 
                 .block {

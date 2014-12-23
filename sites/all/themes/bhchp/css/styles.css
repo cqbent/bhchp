@@ -2560,18 +2560,18 @@ bhchp custom styles
   z-index: 2;
   border: none;
 }
-/* line 457, ../sass/_bhchp.scss */
-.front #page #main #content .field-name-body {
+/* line 458, ../sass/_bhchp.scss */
+.front #page #main #content .node .field-name-body {
   font-size: 15px;
   line-height: 25px;
 }
-/* line 460, ../sass/_bhchp.scss */
-.front #page #main #content .feature {
+/* line 461, ../sass/_bhchp.scss */
+.front #page #main #content .node .feature {
   color: #3e4543;
   font-style: normal;
   font-size: 19px;
 }
-/* line 465, ../sass/_bhchp.scss */
+/* line 467, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title {
   color: #3e4543;
   text-transform: uppercase;
@@ -2580,7 +2580,7 @@ bhchp custom styles
   margin-bottom: 20px;
   overflow-x: hidden;
 }
-/* line 469, ../sass/_bhchp.scss */
+/* line 471, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title:after {
   content: "";
   height: 2px;
@@ -2590,38 +2590,38 @@ bhchp custom styles
   border-top: 1px #d8dad9 solid;
   margin-left: 10px;
 }
-/* line 477, ../sass/_bhchp.scss */
+/* line 479, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field {
   margin: 0 0 5px 0;
 }
-/* line 479, ../sass/_bhchp.scss */
+/* line 481, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field h2, .front #page #main #content .block .view-news-list .field p {
   margin: 0;
   display: inline;
   line-height: normal;
 }
-/* line 480, ../sass/_bhchp.scss */
+/* line 482, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field a {
   text-decoration: none;
   font-weight: 700;
 }
-/* line 484, ../sass/_bhchp.scss */
+/* line 486, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-sponsor-logos {
   overflow-x: hidden;
 }
-/* line 489, ../sass/_bhchp.scss */
+/* line 491, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li {
   display: table;
   height: 100px;
 }
-/* line 491, ../sass/_bhchp.scss */
+/* line 493, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li .views-field {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
 }
 
-/* line 508, ../sass/_bhchp.scss */
+/* line 510, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2635,57 +2635,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 520, ../sass/_bhchp.scss */
+/* line 522, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 521, ../sass/_bhchp.scss */
+/* line 523, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 522, ../sass/_bhchp.scss */
+/* line 524, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 523, ../sass/_bhchp.scss */
+/* line 525, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 524, ../sass/_bhchp.scss */
+/* line 526, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 525, ../sass/_bhchp.scss */
+/* line 527, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 526, ../sass/_bhchp.scss */
+/* line 528, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 527, ../sass/_bhchp.scss */
+/* line 529, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 528, ../sass/_bhchp.scss */
+/* line 530, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 529, ../sass/_bhchp.scss */
+/* line 531, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 530, ../sass/_bhchp.scss */
+/* line 532, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }
