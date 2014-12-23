@@ -119,24 +119,26 @@ bhchp custom styles
             margin-top: 0;
         }
         #content {
+            padding-bottom: 20px;
+            // image styling in content
+            img.img-border, .img-border img, .view-patient-stories img
+            {
+                padding: 5px;
+                border: 1px #d8dad9 solid;
+            }
+            .img-left {
+                float: left; margin: 0 20px 0px 0;
+            }
+            .img-right {
+                float: right; margin: 0 0 0 20px;
+            }
             .node {
-                img {
-                    padding: 5px;
-                    border: 1px #d8dad9 solid;
-                    &.img-left {
-                        float: left; margin: 0 20px 0px 0;
-                    }
-                    &.img-right {
-                        float: right; margin: 0 0 0 20px;
-                    }
-                }
                 &.node-job-posting {
                     .field {
                         margin-bottom: 20px;
                     }
                 }
             }
-            
             .feature {
                 font-size: 15px; line-height: 22px; color: $blue;
                 font-style: italic; font-weight: 700;
@@ -145,6 +147,20 @@ bhchp custom styles
                 color: $blue; font-weight: 700;
                 margin-left:20px; border-left: 1px $textgray solid;
                 padding-left: 20px; font-style: italic;
+            }
+            .border-list {
+                padding: 0; margin: 0;
+                li {
+                    list-style:none; 
+                    padding: 10px 0; border-bottom: 1px $bordergray solid;
+                    &.last { border: none; }
+                }
+            }
+            .bigtext {
+                font-size: 17px; font-weight: 700; 
+            }
+            .bhchp-icons {
+                font-size: 24px; color: $lightblue;
             }
             // event gala stuff
             .view-eventslist {
@@ -221,6 +237,9 @@ bhchp custom styles
                     }
                 }
             }
+            .view-patient-stories {
+                
+            }
             // leadership staff list view, patient stories list 
             // news list
             .view-leadership-staff-list, .view-patient-stories, 
@@ -229,6 +248,7 @@ bhchp custom styles
                     .left, .right {
                         box-sizing: border-box;
                     }
+                    img
                     .name, .email { font-weight: 700; }
                     .bio, .field-name-body {
                         margin-top:1em; 
@@ -430,7 +450,7 @@ bhchp custom styles
                     .home_bk_img {
                         height:100%;
                         width:100%;
-                        background-size: cover;
+                        background-size: cover; background-position-y: center;
                         .title { display: none; }
                     }
                     
