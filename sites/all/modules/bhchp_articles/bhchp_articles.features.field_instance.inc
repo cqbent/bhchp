@@ -24,6 +24,13 @@ function bhchp_articles_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'module' => 'custom_formatters',
+        'settings' => array(),
+        'type' => 'custom_formatters_teaser_text_body',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -65,6 +72,16 @@ function bhchp_articles_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
           'image_style' => 'medium',
         ),
         'type' => 'image',
@@ -141,6 +158,12 @@ function bhchp_articles_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',

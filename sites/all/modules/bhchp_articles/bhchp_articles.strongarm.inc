@@ -89,6 +89,9 @@ function bhchp_articles_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'list_fields_mode' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),

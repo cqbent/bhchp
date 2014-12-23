@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the BHCHP Homepage Images feature.
+ */
+
+include_once 'bhchp_homepage_images.features.inc';

@@ -51,7 +51,7 @@ $zen-auto-include-item-base: false;
 /* Containers for grid items and flow items. */
 #header,
 #main,
-#footer, #navigation #main-menu {
+#footer .inner, #navigation #main-menu {
   @include zen-grid-container();
   max-width: 980px;
   margin: 0 auto;
@@ -78,6 +78,15 @@ $zen-auto-include-item-base: false;
         #main-menu {
 
         }
+    }
+    // default styling for views responsive grid items
+    .views-responsive-grid {
+        .views-column {
+            box-sizing: border-box; padding: 0 20px 0 0;
+            &.views-column-last { padding-right: 0; }
+        }
+        @include responsive-grid(3);
+        @include responsive-grid(4);
     }
 }
 

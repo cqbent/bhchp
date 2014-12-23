@@ -357,8 +357,151 @@ bhchp custom styles
             }
         }
     }
+    #footer {
+        background-color: $lightgray; 
+        .inner { padding: 0 10px; box-sizing: border-box; }
+        .footer-address {
+            float: left; width: 35%;
+        }
+        .footer-email-signup {
+            float: left; width: 40%;
+        }
+        .footer-social-links { 
+            float: right; 
+            ul {
+                margin: 0; padding: 0; font-size: 24px;
+                li {
+                    list-style: none; float: left; 
+                    padding: 0; margin: 0;
+                    a { text-decoration: none; }
+                }
+            }
+        }
+        .block-menu-block {
+            clear: both; padding: 10px 0; 
+            border-top: 1px $bordergray solid; border-bottom: 1px $bordergray solid;
+            .menu {
+                margin: 0; padding: 0;
+                @include clearafter();
+                li { 
+                    float: left; list-style: none; text-transform: uppercase; 
+                    font-weight: 700; margin: 0 20px 0 0; padding: 0;
+                    a { 
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }
-
+// home page styles
+.front {
+    #page {
+        .breadcrumb, h1.title { display: none; }
+        #navigation {
+            background: none; position: relative; padding: 0; margin: 0;
+            &:before { display: none; }
+            #main-menu {
+                max-width: 1200px;
+                background: $blue;
+                position: absolute; right: 0; top: 0;
+                width: 245px; box-sizing: border-box;
+                height:375px;
+                .links {
+                    text-align: left;
+                    li {
+                        display: block; border-bottom: 1px #0066cc solid;
+                        border-right: none;
+                        a {
+                            padding: 50px 30px;
+                        }
+                        &.last {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .region-navigation {
+                width: 100%; box-sizing: border-box; 
+                padding: 0 245px 0 0; margin: 0;
+                .flexslider {
+                    padding: 0; border: 0; border-radius: 0; box-shadow: none;
+                    margin: 0;
+                    .home_bk_img {
+                        height:100%;
+                        width:100%;
+                        background-size: cover;
+                        .title { display: none; }
+                    }
+                    
+                    .flex-control-nav {
+                        right: 20px; width: auto;
+                        bottom: 20px; z-index: 3;
+                        li {
+                            a { 
+                                color: #868687; background: #868687;
+                                &.flex-active { color: #fff; background: #fff; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #main {
+            #content {
+                #thirty-years {
+                    float:left; margin-top:-80px; margin-left:-40px;
+                    position:relative; z-index:2;
+                    border: none;
+                }
+                .field-name-body {
+                    font-size: 15px; line-height: 25px;
+                }
+                .feature {
+                    color: $textgray; font-style: normal; font-size: 19px;
+                }
+                
+                .block {
+                    .block__title {
+                        color: $textgray; text-transform: uppercase;
+                        font-size:17px; position: relative; margin-bottom: 20px;
+                        overflow-x: hidden;
+                        &:after { 
+                            content: ""; height: 2px; position: absolute;
+                            width: 100%; top:15px; border-top:1px $bordergray solid;
+                            margin-left: 10px;
+                        }
+                    }
+                    // homepage news stying
+                    .view-news-list {
+                        .field {
+                            margin: 0 0 5px 0;
+                            h2, p { margin: 0; display: inline; line-height: normal; }
+                            a { text-decoration: none; font-weight: 700; }
+                        }
+                    }
+                    // sponsor styling
+                    .view-sponsor-logos {
+                        overflow-x: hidden; 
+                    }
+                    .jcarousel-container {
+                        ul {
+                            li {
+                                display: table; height:100px;
+                                .views-field { 
+                                    display: table-cell; vertical-align: middle;
+                                    padding: 0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
 
 
 // icon styles
