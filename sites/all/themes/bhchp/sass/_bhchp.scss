@@ -7,28 +7,28 @@ bhchp custom styles
     a {
         color: $blue;
     }
+    .social-icons { 
+        ul {
+            margin: 0; padding: 0; font-size: 24px;
+            li {
+                list-style: none; float: left; 
+                padding: 0; margin: 0;
+                a { 
+                    text-decoration: none; 
+                    &:hover { color: $lightblue; }
+                }
+            }
+        }
+    }
     #header {
         position:relative;
         padding-bottom:20px; 
         #logo { 
-            float: left;
+            margin-top:13px;
             img { width: 215px; }
         }
         .region-header {
-            float: right; clear: none;
             margin-top:20px;
-            .social-icons {
-                float: right; font-size: 24px;
-                margin: 0;
-                ul {
-                    margin: 0; padding: 0;
-                    li {
-                        list-style: none; float: left; 
-                        padding: 0; margin: 0;
-                        a { text-decoration: none; }
-                    }
-                }
-            }
             .block-search {
                 float: right; 
                 padding-left: 10px; 
@@ -46,7 +46,6 @@ bhchp custom styles
                 }
             }
             .block-menu-block {
-                position: absolute; bottom: 20px; right: 10px; 
                 margin:0;
                 .menu {
                     li {
@@ -66,11 +65,45 @@ bhchp custom styles
                                     content: "\f015"; font-family: 'FontAwesome';
                                     font-size:24px; color: $blue;
                                 }
+                                &:hover:before { color: $lightblue; }
+                            }
+                        }
+                        &#patient-portal {
+                            a {
+                                background-color: $green; padding: 5px 10px;
+                                color: #fff; 
                             }
                         }
                     }
                 }
             }
+        }
+        @include breakpoint(maxsmall) {
+            margin-bottom:0;
+            #logo { float: none; display: block; }
+            .region-header {
+                .block-search { display: none; }
+                .social-icons { float:left; }
+                .block-menu-block {
+                    float: right; margin-top:-20px;
+                    li {
+                        display: none; 
+                        &#patient-portal { display: block; }
+                    }
+                }
+            }
+        }
+        @include breakpoint(minsmall) {
+            .region-header {
+                float: right; clear: none;
+                .social-icons {
+                    float: right;
+                }
+            }
+            .block-menu-block {
+                position: absolute; bottom: 20px; right: 10px; 
+            }
+            
         }
     }
     #navigation {
@@ -108,6 +141,29 @@ bhchp custom styles
             }
         }
     }
+    .entityform {
+        .form-type-radios {
+            .form-disabled {
+                display: none;
+            }
+        }
+        input[type=submit], button {
+            background-color: $blue; border: none;
+            color: #fff; text-transform: uppercase;
+            padding: 5px 10px;
+        }
+        input[type=text] {
+            border: 1px $bordergray solid;
+            padding: 5px 10px;
+        }
+        fieldset {
+            padding: 0; margin: 0; border: none;
+            legend {
+                font-weight: 700; color: $textgray; 
+                a { text-decoration: none; color: $textgray; }
+            }
+        }
+    }
     #main {
         h1, h2 {
             color: $blue;
@@ -118,13 +174,20 @@ bhchp custom styles
         p {
             margin-top: 0;
         }
+        h1.page__title { margin-bottom: 1em; }
         #content {
             padding-bottom: 20px;
+            a { 
+                text-decoration: none;
+                &:hover { text-decoration: underline; }
+            }
             // image styling in content
-            img.img-border, .img-border img, .view-patient-stories img
+            img.img-border, .img-border img, .view-patient-stories img,
+            .field-name-field-patientstory-mainimage img
             {
                 padding: 5px;
                 border: 1px #d8dad9 solid;
+                box-sizing: border-box;
             }
             .img-left {
                 float: left; margin: 0 20px 0px 0;
@@ -133,6 +196,12 @@ bhchp custom styles
                 float: right; margin: 0 0 0 20px;
             }
             .node {
+                .group-left, .group-right {
+                    box-sizing: border-box;
+                }
+                .group-left {
+                    padding-right: 20px; 
+                }
                 &.node-job-posting {
                     .field {
                         margin-bottom: 20px;
@@ -162,6 +231,15 @@ bhchp custom styles
             .bhchp-icons {
                 font-size: 24px; color: $lightblue;
             }
+            .button {
+                border: 1px $bordergray solid; border-radius: 0;
+                padding: 5px 10px; 
+                font-weight: 700; 
+                text-transform: uppercase;
+                background: #fff;
+                -webkit-appearance: none; -moz-appearance: none;
+                text-decoration: none;
+            }
             // event gala stuff
             .view-eventslist {
                 h2 { margin-top: 0; }
@@ -169,7 +247,7 @@ bhchp custom styles
                     width: 33%;
                 }
                 .group-right {
-                    width: 67%; box-sizing: border-box; padding-left:20px;
+                    width: 67%; 
                 }
             }
             .node-type-event & {
@@ -199,25 +277,6 @@ bhchp custom styles
                     }
                 }
             }
-            .entityform {
-                .form-type-radios {
-                    .form-disabled {
-                        display: none;
-                    }
-                }
-                input[type=submit], button {
-                    background-color: $blue; border: none;
-                    color: #fff; text-transform: uppercase;
-                    padding: 5px 10px;
-                }
-                fieldset {
-                    padding: 0; margin: 0; border: none;
-                    legend {
-                        font-weight: 700; color: $textgray; 
-                        a { text-decoration: none; color: $textgray; }
-                    }
-                }
-            }
             // standard content view list styling
             .view {
                 .views-row {
@@ -228,27 +287,44 @@ bhchp custom styles
                         border: none;
                     }
                     img { box-sizing: border-box; }
-                    .views-field-title {
+                    .views-field-title, .field-name-title {
                         font-weight: 700; 
-                        a { text-decoration: none; }
+                        a { 
+                            text-decoration: none; 
+                            &:hover { text-decoration: underline; }
+                        }
                     }
                     .views-label {
                         float: left; padding-right: 5px; font-weight: 700;
                     }
+                    .field-name-body {
+                        margin-top:10px;
+                        p { margin: 0; display: inline; }
+                        a { font-weight: 700; }
+                    }
+                    .field-name-node-link {
+                        a { font-weight: 700; }
+                    }
                 }
-            }
-            .view-patient-stories {
                 
+            }
+            .node-patient-story {
+                .field-name-body {
+                    margin-top:1em; 
+                    p { margin: 0 0 1em 0; }
+                }
             }
             // leadership staff list view, patient stories list 
             // news list
             .view-leadership-staff-list, .view-patient-stories, 
             .view-news-list {
                 .views-row {
+                    h2 {
+                        margin: 0;
+                    }
                     .left, .right {
                         box-sizing: border-box;
                     }
-                    img
                     .name, .email { font-weight: 700; }
                     .bio, .field-name-body {
                         margin-top:1em; 
@@ -261,7 +337,6 @@ bhchp custom styles
                         }
                         .right, .group-right {
                             @include zen-grid-item(3, 2);
-                            padding-left: 2em;
                         }
                     } 
                 }
@@ -287,9 +362,20 @@ bhchp custom styles
                         }
                         .right, .group-right {
                             @include zen-grid-item(2, 2);
-                            padding-left: 2em;
                         }
                     } 
+                }
+                .view-footer {
+                    .button {
+                        display: block; float: right;
+                    }
+                    @include clearafter();
+                }
+                .front & {
+                    border-bottom: 1px $bordergray solid; padding-bottom: 2em;
+                    .views-row { 
+                        border: none; padding-bottom: 0; margin-bottom: 0;
+                    }
                 }
             }
             // publications list
@@ -386,16 +472,8 @@ bhchp custom styles
         .footer-email-signup {
             float: left; width: 40%;
         }
-        .footer-social-links { 
+        .social-icons { 
             float: right; 
-            ul {
-                margin: 0; padding: 0; font-size: 24px;
-                li {
-                    list-style: none; float: left; 
-                    padding: 0; margin: 0;
-                    a { text-decoration: none; }
-                }
-            }
         }
         .block-menu-block {
             clear: both; padding: 10px 0; 

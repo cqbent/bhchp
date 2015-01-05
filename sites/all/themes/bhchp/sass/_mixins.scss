@@ -45,7 +45,7 @@
 
 @mixin breakpoint($point) {
     @if $point == maxsmall {
-        @media (max-width: 780px) { @content; }
+        @media (max-width: 779px) { @content; }
     }
     @if $point == minsmall {
         @media (min-width: 780px) { @content; }

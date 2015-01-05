@@ -657,8 +657,22 @@ table {
     padding-top: 20px;
     position: relative;
   }
+  /* line 69, ../sass/layouts/_responsive.scss */
+  #main #content .view-mode-full .group-left {
+    float: left;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: -25%;
+  }
+  /* line 72, ../sass/layouts/_responsive.scss */
+  #main #content .view-mode-full .group-right {
+    float: left;
+    width: 75%;
+    margin-left: 25%;
+    margin-right: -100%;
+  }
 
-  /* line 70, ../sass/layouts/_responsive.scss */
+  /* line 79, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     /* disable
@@ -669,12 +683,12 @@ table {
     */
   }
 
-  /* line 84, ../sass/layouts/_responsive.scss */
+  /* line 93, ../sass/layouts/_responsive.scss */
   .views-responsive-grid .views-column {
     box-sizing: border-box;
     padding: 0 20px 0 0;
   }
-  /* line 86, ../sass/layouts/_responsive.scss */
+  /* line 95, ../sass/layouts/_responsive.scss */
   .views-responsive-grid .views-column.views-column-last {
     padding-right: 0;
   }
@@ -735,19 +749,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 105, ../sass/layouts/_responsive.scss */
+  /* line 114, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 107, ../sass/layouts/_responsive.scss */
+  /* line 116, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 112, ../sass/layouts/_responsive.scss */
+  /* line 121, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -758,19 +772,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 120, ../sass/layouts/_responsive.scss */
+  /* line 129, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 122, ../sass/layouts/_responsive.scss */
+  /* line 131, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-  /* line 127, ../sass/layouts/_responsive.scss */
+  /* line 136, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -781,27 +795,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 135, ../sass/layouts/_responsive.scss */
+  /* line 144, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 137, ../sass/layouts/_responsive.scss */
+  /* line 146, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 142, ../sass/layouts/_responsive.scss */
+  /* line 151, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 147, ../sass/layouts/_responsive.scss */
+  /* line 156, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -815,7 +829,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 153, ../sass/layouts/_responsive.scss */
+  /* line 162, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -825,7 +839,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 157, ../sass/layouts/_responsive.scss */
+  /* line 166, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -833,14 +847,14 @@ table {
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 162, ../sass/layouts/_responsive.scss */
+  /* line 171, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 166, ../sass/layouts/_responsive.scss */
+  /* line 175, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -852,7 +866,7 @@ table {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-  /* line 182, ../sass/layouts/_responsive.scss */
+  /* line 191, ../sass/layouts/_responsive.scss */
   #page #main #content {
     padding-left: 50px;
   }
@@ -860,19 +874,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 191, ../sass/layouts/_responsive.scss */
+  /* line 200, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 193, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 75%;
     margin-left: 25%;
     margin-right: -100%;
   }
-  /* line 198, ../sass/layouts/_responsive.scss */
+  /* line 207, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 25%;
@@ -883,19 +897,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 206, ../sass/layouts/_responsive.scss */
+  /* line 215, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 208, ../sass/layouts/_responsive.scss */
+  /* line 217, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 75%;
     margin-left: 0%;
     margin-right: -75%;
   }
-  /* line 213, ../sass/layouts/_responsive.scss */
+  /* line 222, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 25%;
@@ -906,27 +920,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 221, ../sass/layouts/_responsive.scss */
+  /* line 230, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 223, ../sass/layouts/_responsive.scss */
+  /* line 232, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 50%;
     margin-left: 25%;
     margin-right: -75%;
   }
-  /* line 228, ../sass/layouts/_responsive.scss */
+  /* line 237, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 25%;
     margin-left: 0%;
     margin-right: -25%;
   }
-  /* line 233, ../sass/layouts/_responsive.scss */
+  /* line 242, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 25%;
@@ -1881,46 +1895,43 @@ bhchp custom styles
 #page a {
   color: #003594;
 }
-/* line 10, ../sass/_bhchp.scss */
-#page #header {
-  position: relative;
-  padding-bottom: 20px;
-}
-/* line 13, ../sass/_bhchp.scss */
-#page #header #logo {
-  float: left;
-}
-/* line 15, ../sass/_bhchp.scss */
-#page #header #logo img {
-  width: 215px;
-}
-/* line 17, ../sass/_bhchp.scss */
-#page #header .region-header {
-  float: right;
-  clear: none;
-  margin-top: 20px;
-}
-/* line 20, ../sass/_bhchp.scss */
-#page #header .region-header .social-icons {
-  float: right;
-  font-size: 24px;
-  margin: 0;
-}
-/* line 23, ../sass/_bhchp.scss */
-#page #header .region-header .social-icons ul {
+/* line 11, ../sass/_bhchp.scss */
+#page .social-icons ul {
   margin: 0;
   padding: 0;
+  font-size: 24px;
 }
-/* line 25, ../sass/_bhchp.scss */
-#page #header .region-header .social-icons ul li {
+/* line 13, ../sass/_bhchp.scss */
+#page .social-icons ul li {
   list-style: none;
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 28, ../sass/_bhchp.scss */
-#page #header .region-header .social-icons ul li a {
+/* line 16, ../sass/_bhchp.scss */
+#page .social-icons ul li a {
   text-decoration: none;
+}
+/* line 18, ../sass/_bhchp.scss */
+#page .social-icons ul li a:hover {
+  color: #b3c2df;
+}
+/* line 23, ../sass/_bhchp.scss */
+#page #header {
+  position: relative;
+  padding-bottom: 20px;
+}
+/* line 26, ../sass/_bhchp.scss */
+#page #header #logo {
+  margin-top: 13px;
+}
+/* line 28, ../sass/_bhchp.scss */
+#page #header #logo img {
+  width: 215px;
+}
+/* line 30, ../sass/_bhchp.scss */
+#page #header .region-header {
+  margin-top: 20px;
 }
 /* line 32, ../sass/_bhchp.scss */
 #page #header .region-header .block-search {
@@ -1945,49 +1956,105 @@ bhchp custom styles
 }
 /* line 48, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block {
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
   margin: 0;
 }
-/* line 52, ../sass/_bhchp.scss */
+/* line 51, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li {
   float: left;
   list-style: none;
   margin-left: 20px;
   text-transform: uppercase;
 }
-/* line 55, ../sass/_bhchp.scss */
+/* line 54, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li a {
   text-decoration: none;
 }
-/* line 57, ../sass/_bhchp.scss */
+/* line 56, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 61, ../sass/_bhchp.scss */
+/* line 60, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li#home-link {
   width: 24px;
   height: 22px;
   overflow: hidden;
 }
-/* line 63, ../sass/_bhchp.scss */
+/* line 62, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li#home-link a {
   color: #fff;
 }
-/* line 65, ../sass/_bhchp.scss */
+/* line 64, ../sass/_bhchp.scss */
 #page #header .region-header .block-menu-block .menu li#home-link a:before {
   content: "\f015";
   font-family: 'FontAwesome';
   font-size: 24px;
   color: #003594;
 }
-/* line 76, ../sass/_bhchp.scss */
+/* line 68, ../sass/_bhchp.scss */
+#page #header .region-header .block-menu-block .menu li#home-link a:hover:before {
+  color: #b3c2df;
+}
+/* line 72, ../sass/_bhchp.scss */
+#page #header .region-header .block-menu-block .menu li#patient-portal a {
+  background-color: #6db33f;
+  padding: 5px 10px;
+  color: #fff;
+}
+@media (max-width: 779px) {
+  /* line 23, ../sass/_bhchp.scss */
+  #page #header {
+    margin-bottom: 0;
+  }
+  /* line 83, ../sass/_bhchp.scss */
+  #page #header #logo {
+    float: none;
+    display: block;
+  }
+  /* line 85, ../sass/_bhchp.scss */
+  #page #header .region-header .block-search {
+    display: none;
+  }
+  /* line 86, ../sass/_bhchp.scss */
+  #page #header .region-header .social-icons {
+    float: left;
+  }
+  /* line 87, ../sass/_bhchp.scss */
+  #page #header .region-header .block-menu-block {
+    float: right;
+    margin-top: -20px;
+  }
+  /* line 89, ../sass/_bhchp.scss */
+  #page #header .region-header .block-menu-block li {
+    display: none;
+  }
+  /* line 91, ../sass/_bhchp.scss */
+  #page #header .region-header .block-menu-block li#patient-portal {
+    display: block;
+  }
+}
+@media (min-width: 780px) {
+  /* line 97, ../sass/_bhchp.scss */
+  #page #header .region-header {
+    float: right;
+    clear: none;
+  }
+  /* line 99, ../sass/_bhchp.scss */
+  #page #header .region-header .social-icons {
+    float: right;
+  }
+  /* line 103, ../sass/_bhchp.scss */
+  #page #header .block-menu-block {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+/* line 109, ../sass/_bhchp.scss */
 #page #navigation {
   background-color: #003594;
   font-size: 17px;
 }
-/* line 78, ../sass/_bhchp.scss */
+/* line 111, ../sass/_bhchp.scss */
 #page #navigation:before {
   content: "";
   display: block;
@@ -1996,18 +2063,18 @@ bhchp custom styles
   background-color: #fff;
   margin: 0 -10px;
 }
-/* line 83, ../sass/_bhchp.scss */
+/* line 116, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links {
   display: block;
   text-align: center;
 }
-/* line 85, ../sass/_bhchp.scss */
+/* line 118, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li {
   float: none;
   display: inline-block;
   border-right: 1px #0066cc solid;
 }
-/* line 88, ../sass/_bhchp.scss */
+/* line 121, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a {
   display: block;
   color: #fff;
@@ -2016,70 +2083,125 @@ bhchp custom styles
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 93, ../sass/_bhchp.scss */
+/* line 126, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a:hover, #page #navigation #main-menu .links li a.active {
   color: #b3c2df;
 }
-/* line 96, ../sass/_bhchp.scss */
+/* line 129, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a:before {
   font-family: 'bhchp_icons';
   font-size: 20px;
   display: inline-block;
   margin-right: 20px;
 }
-/* line 100, ../sass/_bhchp.scss */
+/* line 133, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a.donate:before {
   content: "\e601";
 }
-/* line 101, ../sass/_bhchp.scss */
+/* line 134, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a.get-involved:before {
   content: "\e602";
 }
-/* line 102, ../sass/_bhchp.scss */
+/* line 135, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li a.services:before {
   content: "\e600";
 }
-/* line 104, ../sass/_bhchp.scss */
+/* line 137, ../sass/_bhchp.scss */
 #page #navigation #main-menu .links li.last {
   border: none;
 }
-/* line 112, ../sass/_bhchp.scss */
+/* line 146, ../sass/_bhchp.scss */
+#page .entityform .form-type-radios .form-disabled {
+  display: none;
+}
+/* line 150, ../sass/_bhchp.scss */
+#page .entityform input[type=submit], #page .entityform button {
+  background-color: #003594;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+/* line 155, ../sass/_bhchp.scss */
+#page .entityform input[type=text] {
+  border: 1px #d8dad9 solid;
+  padding: 5px 10px;
+}
+/* line 159, ../sass/_bhchp.scss */
+#page .entityform fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+/* line 161, ../sass/_bhchp.scss */
+#page .entityform fieldset legend {
+  font-weight: 700;
+  color: #3e4543;
+}
+/* line 163, ../sass/_bhchp.scss */
+#page .entityform fieldset legend a {
+  text-decoration: none;
+  color: #3e4543;
+}
+/* line 168, ../sass/_bhchp.scss */
 #page #main h1, #page #main h2 {
   color: #003594;
 }
-/* line 115, ../sass/_bhchp.scss */
+/* line 171, ../sass/_bhchp.scss */
 #page #main h2, #page #main h3 {
   font-size: 1rem;
   margin-bottom: 0;
 }
-/* line 118, ../sass/_bhchp.scss */
+/* line 174, ../sass/_bhchp.scss */
 #page #main p {
   margin-top: 0;
 }
-/* line 121, ../sass/_bhchp.scss */
+/* line 177, ../sass/_bhchp.scss */
+#page #main h1.page__title {
+  margin-bottom: 1em;
+}
+/* line 178, ../sass/_bhchp.scss */
 #page #main #content {
   padding-bottom: 20px;
 }
-/* line 125, ../sass/_bhchp.scss */
-#page #main #content img.img-border, #page #main #content .img-border img, #page #main #content .view-patient-stories img {
+/* line 180, ../sass/_bhchp.scss */
+#page #main #content a {
+  text-decoration: none;
+}
+/* line 182, ../sass/_bhchp.scss */
+#page #main #content a:hover {
+  text-decoration: underline;
+}
+/* line 187, ../sass/_bhchp.scss */
+#page #main #content img.img-border, #page #main #content .img-border img, #page #main #content .view-patient-stories img,
+#page #main #content .field-name-field-patientstory-mainimage img {
   padding: 5px;
   border: 1px #d8dad9 solid;
+  box-sizing: border-box;
 }
-/* line 129, ../sass/_bhchp.scss */
+/* line 192, ../sass/_bhchp.scss */
 #page #main #content .img-left {
   float: left;
   margin: 0 20px 0px 0;
 }
-/* line 132, ../sass/_bhchp.scss */
+/* line 195, ../sass/_bhchp.scss */
 #page #main #content .img-right {
   float: right;
   margin: 0 0 0 20px;
 }
-/* line 137, ../sass/_bhchp.scss */
+/* line 199, ../sass/_bhchp.scss */
+#page #main #content .node .group-left, #page #main #content .node .group-right {
+  box-sizing: border-box;
+}
+/* line 202, ../sass/_bhchp.scss */
+#page #main #content .node .group-left {
+  padding-right: 20px;
+}
+/* line 206, ../sass/_bhchp.scss */
 #page #main #content .node.node-job-posting .field {
   margin-bottom: 20px;
 }
-/* line 142, ../sass/_bhchp.scss */
+/* line 211, ../sass/_bhchp.scss */
 #page #main #content .feature {
   font-size: 15px;
   line-height: 22px;
@@ -2087,7 +2209,7 @@ bhchp custom styles
   font-style: italic;
   font-weight: 700;
 }
-/* line 146, ../sass/_bhchp.scss */
+/* line 215, ../sass/_bhchp.scss */
 #page #main #content .quote {
   color: #003594;
   font-weight: 700;
@@ -2096,55 +2218,65 @@ bhchp custom styles
   padding-left: 20px;
   font-style: italic;
 }
-/* line 151, ../sass/_bhchp.scss */
+/* line 220, ../sass/_bhchp.scss */
 #page #main #content .border-list {
   padding: 0;
   margin: 0;
 }
-/* line 153, ../sass/_bhchp.scss */
+/* line 222, ../sass/_bhchp.scss */
 #page #main #content .border-list li {
   list-style: none;
   padding: 10px 0;
   border-bottom: 1px #d8dad9 solid;
 }
-/* line 156, ../sass/_bhchp.scss */
+/* line 225, ../sass/_bhchp.scss */
 #page #main #content .border-list li.last {
   border: none;
 }
-/* line 159, ../sass/_bhchp.scss */
+/* line 228, ../sass/_bhchp.scss */
 #page #main #content .bigtext {
   font-size: 17px;
   font-weight: 700;
 }
-/* line 162, ../sass/_bhchp.scss */
+/* line 231, ../sass/_bhchp.scss */
 #page #main #content .bhchp-icons {
   font-size: 24px;
   color: #b3c2df;
 }
-/* line 167, ../sass/_bhchp.scss */
+/* line 234, ../sass/_bhchp.scss */
+#page #main #content .button {
+  border: 1px #d8dad9 solid;
+  border-radius: 0;
+  padding: 5px 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-decoration: none;
+}
+/* line 245, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist h2 {
   margin-top: 0;
 }
-/* line 168, ../sass/_bhchp.scss */
+/* line 246, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist .group-left {
   width: 33%;
 }
-/* line 171, ../sass/_bhchp.scss */
+/* line 249, ../sass/_bhchp.scss */
 #page #main #content .view-eventslist .group-right {
   width: 67%;
-  box-sizing: border-box;
-  padding-left: 20px;
 }
-/* line 176, ../sass/_bhchp.scss */
+/* line 254, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage {
   position: relative;
   margin-bottom: 20px;
 }
-/* line 178, ../sass/_bhchp.scss */
+/* line 256, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage img {
   width: 100%;
 }
-/* line 181, ../sass/_bhchp.scss */
+/* line 259, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-mainimage .caption {
   position: absolute;
   bottom: 0;
@@ -2154,53 +2286,25 @@ bhchp custom styles
   width: 100%;
   box-sizing: border-box;
 }
-/* line 188, ../sass/_bhchp.scss */
+/* line 266, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-event-datelocation {
   font-weight: 700;
   margin-bottom: 1em;
 }
-/* line 191, ../sass/_bhchp.scss */
+/* line 269, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos {
   border-top: 1px whitesmoke solid;
 }
-/* line 193, ../sass/_bhchp.scss */
+/* line 271, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos .field-items {
   display: table;
 }
-/* line 195, ../sass/_bhchp.scss */
+/* line 273, ../sass/_bhchp.scss */
 .node-type-event #page #main #content .field-name-field-sponsor-logos .field-items .field-item {
   display: table-cell;
   padding-right: 20px;
 }
-/* line 204, ../sass/_bhchp.scss */
-#page #main #content .entityform .form-type-radios .form-disabled {
-  display: none;
-}
-/* line 208, ../sass/_bhchp.scss */
-#page #main #content .entityform input[type=submit], #page #main #content .entityform button {
-  background-color: #003594;
-  border: none;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 5px 10px;
-}
-/* line 213, ../sass/_bhchp.scss */
-#page #main #content .entityform fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-/* line 215, ../sass/_bhchp.scss */
-#page #main #content .entityform fieldset legend {
-  font-weight: 700;
-  color: #3e4543;
-}
-/* line 217, ../sass/_bhchp.scss */
-#page #main #content .entityform fieldset legend a {
-  text-decoration: none;
-  color: #3e4543;
-}
-/* line 223, ../sass/_bhchp.scss */
+/* line 282, ../sass/_bhchp.scss */
 #page #main #content .view .views-row {
   padding-bottom: 1em;
   border-bottom: 1px #d8dad9 solid;
@@ -2213,57 +2317,88 @@ bhchp custom styles
   display: block;
   clear: both;
 }
-/* line 227, ../sass/_bhchp.scss */
+/* line 286, ../sass/_bhchp.scss */
 #page #main #content .view .views-row.views-row-last {
   border: none;
 }
-/* line 230, ../sass/_bhchp.scss */
+/* line 289, ../sass/_bhchp.scss */
 #page #main #content .view .views-row img {
   box-sizing: border-box;
 }
-/* line 231, ../sass/_bhchp.scss */
-#page #main #content .view .views-row .views-field-title {
+/* line 290, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .views-field-title, #page #main #content .view .views-row .field-name-title {
   font-weight: 700;
 }
-/* line 233, ../sass/_bhchp.scss */
-#page #main #content .view .views-row .views-field-title a {
+/* line 292, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .views-field-title a, #page #main #content .view .views-row .field-name-title a {
   text-decoration: none;
 }
-/* line 235, ../sass/_bhchp.scss */
+/* line 294, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .views-field-title a:hover, #page #main #content .view .views-row .field-name-title a:hover {
+  text-decoration: underline;
+}
+/* line 297, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .views-label {
   float: left;
   padding-right: 5px;
   font-weight: 700;
 }
-/* line 248, ../sass/_bhchp.scss */
+/* line 300, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .field-name-body {
+  margin-top: 10px;
+}
+/* line 302, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .field-name-body p {
+  margin: 0;
+  display: inline;
+}
+/* line 303, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .field-name-body a {
+  font-weight: 700;
+}
+/* line 306, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .field-name-node-link a {
+  font-weight: 700;
+}
+/* line 312, ../sass/_bhchp.scss */
+#page #main #content .node-patient-story .field-name-body {
+  margin-top: 1em;
+}
+/* line 314, ../sass/_bhchp.scss */
+#page #main #content .node-patient-story .field-name-body p {
+  margin: 0 0 1em 0;
+}
+/* line 322, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row h2, #page #main #content .view-patient-stories .views-row h2,
+#page #main #content .view-news-list .views-row h2 {
+  margin: 0;
+}
+/* line 325, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .right,
 #page #main #content .view-news-list .views-row .left,
 #page #main #content .view-news-list .views-row .right {
   box-sizing: border-box;
 }
-/* line 252, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row img
-.name, #page #main #content .view-leadership-staff-list .views-row .email, #page #main #content .view-patient-stories .views-row img
-.name, #page #main #content .view-patient-stories .views-row .email,
-#page #main #content .view-news-list .views-row img
-.name,
+/* line 328, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .name, #page #main #content .view-leadership-staff-list .views-row .email, #page #main #content .view-patient-stories .views-row .name, #page #main #content .view-patient-stories .views-row .email,
+#page #main #content .view-news-list .views-row .name,
 #page #main #content .view-news-list .views-row .email {
   font-weight: 700;
 }
-/* line 253, ../sass/_bhchp.scss */
+/* line 329, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .bio, #page #main #content .view-leadership-staff-list .views-row .field-name-body, #page #main #content .view-patient-stories .views-row .bio, #page #main #content .view-patient-stories .views-row .field-name-body,
 #page #main #content .view-news-list .views-row .bio,
 #page #main #content .view-news-list .views-row .field-name-body {
   margin-top: 1em;
 }
-/* line 255, ../sass/_bhchp.scss */
+/* line 331, ../sass/_bhchp.scss */
 #page #main #content .view-leadership-staff-list .views-row .bio p, #page #main #content .view-leadership-staff-list .views-row .field-name-body p, #page #main #content .view-patient-stories .views-row .bio p, #page #main #content .view-patient-stories .views-row .field-name-body p,
 #page #main #content .view-news-list .views-row .bio p,
 #page #main #content .view-news-list .views-row .field-name-body p {
   margin: 0 0 1em 0;
 }
 @media (min-width: 780px) {
-  /* line 259, ../sass/_bhchp.scss */
+  /* line 335, ../sass/_bhchp.scss */
   #page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .group-left, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .group-left,
   #page #main #content .view-news-list .views-row .left,
   #page #main #content .view-news-list .views-row .group-left {
@@ -2272,7 +2407,7 @@ bhchp custom styles
     margin-left: 0%;
     margin-right: -25%;
   }
-  /* line 262, ../sass/_bhchp.scss */
+  /* line 338, ../sass/_bhchp.scss */
   #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-leadership-staff-list .views-row .group-right, #page #main #content .view-patient-stories .views-row .right, #page #main #content .view-patient-stories .views-row .group-right,
   #page #main #content .view-news-list .views-row .right,
   #page #main #content .view-news-list .views-row .group-right {
@@ -2280,15 +2415,14 @@ bhchp custom styles
     width: 75%;
     margin-left: 25%;
     margin-right: -100%;
-    padding-left: 2em;
   }
 }
-/* line 275, ../sass/_bhchp.scss */
+/* line 350, ../sass/_bhchp.scss */
 #page #main #content .view-news-list .views-row .field-name-author {
   float: left;
   font-style: italic;
 }
-/* line 278, ../sass/_bhchp.scss */
+/* line 353, ../sass/_bhchp.scss */
 #page #main #content .view-news-list .views-row .field-name-author .field-item:after {
   content: ", ";
   display: inline-block;
@@ -2296,60 +2430,81 @@ bhchp custom styles
   margin-left: -2px;
 }
 @media (min-width: 780px) {
-  /* line 285, ../sass/_bhchp.scss */
+  /* line 360, ../sass/_bhchp.scss */
   #page #main #content .view-news-list .views-row .left, #page #main #content .view-news-list .views-row .group-left {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 288, ../sass/_bhchp.scss */
+  /* line 363, ../sass/_bhchp.scss */
   #page #main #content .view-news-list .views-row .right, #page #main #content .view-news-list .views-row .group-right {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
-    padding-left: 2em;
   }
 }
-/* line 297, ../sass/_bhchp.scss */
+/* line 369, ../sass/_bhchp.scss */
+#page #main #content .view-news-list .view-footer .button {
+  display: block;
+  float: right;
+}
+/* line 40, ../sass/_mixins.scss */
+#page #main #content .view-news-list .view-footer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 374, ../sass/_bhchp.scss */
+.front #page #main #content .view-news-list {
+  border-bottom: 1px #d8dad9 solid;
+  padding-bottom: 2em;
+}
+/* line 376, ../sass/_bhchp.scss */
+.front #page #main #content .view-news-list .views-row {
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+/* line 383, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row {
   border-bottom: none;
 }
-/* line 299, ../sass/_bhchp.scss */
+/* line 385, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column {
   padding: 0 20px 0 0;
   box-sizing: border-box;
 }
-/* line 302, ../sass/_bhchp.scss */
+/* line 388, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column .views-field-field-image img {
   box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.4);
 }
-/* line 306, ../sass/_bhchp.scss */
+/* line 392, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column .views-field-title {
   margin-top: 10px;
   font-weight: 700;
 }
-/* line 308, ../sass/_bhchp.scss */
+/* line 394, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column .views-field-title a {
   text-decoration: none;
 }
 @media (min-width: 780px) {
-  /* line 313, ../sass/_bhchp.scss */
+  /* line 399, ../sass/_bhchp.scss */
   #page #main #content .view-publications-list .views-row .views-column-1 {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 316, ../sass/_bhchp.scss */
+  /* line 402, ../sass/_bhchp.scss */
   #page #main #content .view-publications-list .views-row .views-column-2 {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 319, ../sass/_bhchp.scss */
+  /* line 405, ../sass/_bhchp.scss */
   #page #main #content .view-publications-list .views-row .views-column-3 {
     float: left;
     width: 33.33333%;
@@ -2357,33 +2512,33 @@ bhchp custom styles
     margin-right: -100%;
   }
 }
-/* line 328, ../sass/_bhchp.scss */
+/* line 414, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 331, ../sass/_bhchp.scss */
+/* line 417, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 336, ../sass/_bhchp.scss */
+/* line 422, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
   background-color: whitesmoke;
   padding: 20px;
 }
-/* line 341, ../sass/_bhchp.scss */
+/* line 427, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 344, ../sass/_bhchp.scss */
+/* line 430, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 346, ../sass/_bhchp.scss */
+/* line 432, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2392,87 +2547,70 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 351, ../sass/_bhchp.scss */
+/* line 437, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 354, ../sass/_bhchp.scss */
+/* line 440, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 360, ../sass/_bhchp.scss */
+/* line 446, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 363, ../sass/_bhchp.scss */
+/* line 449, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 364, ../sass/_bhchp.scss */
+/* line 450, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 367, ../sass/_bhchp.scss */
+/* line 453, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 369, ../sass/_bhchp.scss */
+/* line 455, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
-/* line 380, ../sass/_bhchp.scss */
+/* line 466, ../sass/_bhchp.scss */
 #page #footer {
   background-color: whitesmoke;
 }
-/* line 382, ../sass/_bhchp.scss */
+/* line 468, ../sass/_bhchp.scss */
 #page #footer .inner {
   padding: 0 10px;
   box-sizing: border-box;
 }
-/* line 383, ../sass/_bhchp.scss */
+/* line 469, ../sass/_bhchp.scss */
 #page #footer .footer-address {
   float: left;
   width: 35%;
 }
-/* line 386, ../sass/_bhchp.scss */
+/* line 472, ../sass/_bhchp.scss */
 #page #footer .footer-email-signup {
   float: left;
   width: 40%;
 }
-/* line 389, ../sass/_bhchp.scss */
-#page #footer .footer-social-links {
+/* line 475, ../sass/_bhchp.scss */
+#page #footer .social-icons {
   float: right;
 }
-/* line 391, ../sass/_bhchp.scss */
-#page #footer .footer-social-links ul {
-  margin: 0;
-  padding: 0;
-  font-size: 24px;
-}
-/* line 393, ../sass/_bhchp.scss */
-#page #footer .footer-social-links ul li {
-  list-style: none;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-/* line 396, ../sass/_bhchp.scss */
-#page #footer .footer-social-links ul li a {
-  text-decoration: none;
-}
-/* line 400, ../sass/_bhchp.scss */
+/* line 478, ../sass/_bhchp.scss */
 #page #footer .block-menu-block {
   clear: both;
   padding: 10px 0;
   border-top: 1px #d8dad9 solid;
   border-bottom: 1px #d8dad9 solid;
 }
-/* line 403, ../sass/_bhchp.scss */
+/* line 481, ../sass/_bhchp.scss */
 #page #footer .block-menu-block .menu {
   margin: 0;
   padding: 0;
@@ -2483,7 +2621,7 @@ bhchp custom styles
   display: block;
   clear: both;
 }
-/* line 406, ../sass/_bhchp.scss */
+/* line 484, ../sass/_bhchp.scss */
 #page #footer .block-menu-block .menu li {
   float: left;
   list-style: none;
@@ -2492,27 +2630,27 @@ bhchp custom styles
   margin: 0 20px 0 0;
   padding: 0;
 }
-/* line 409, ../sass/_bhchp.scss */
+/* line 487, ../sass/_bhchp.scss */
 #page #footer .block-menu-block .menu li a {
   text-decoration: none;
 }
 
-/* line 420, ../sass/_bhchp.scss */
+/* line 498, ../sass/_bhchp.scss */
 .front #page .breadcrumb, .front #page h1.title {
   display: none;
 }
-/* line 421, ../sass/_bhchp.scss */
+/* line 499, ../sass/_bhchp.scss */
 .front #page #navigation {
   background: none;
   position: relative;
   padding: 0;
   margin: 0;
 }
-/* line 423, ../sass/_bhchp.scss */
+/* line 501, ../sass/_bhchp.scss */
 .front #page #navigation:before {
   display: none;
 }
-/* line 424, ../sass/_bhchp.scss */
+/* line 502, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu {
   max-width: 1200px;
   background: #003594;
@@ -2523,32 +2661,32 @@ bhchp custom styles
   box-sizing: border-box;
   height: 375px;
 }
-/* line 430, ../sass/_bhchp.scss */
+/* line 508, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links {
   text-align: left;
 }
-/* line 432, ../sass/_bhchp.scss */
+/* line 510, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li {
   display: block;
   border-bottom: 1px #0066cc solid;
   border-right: none;
 }
-/* line 435, ../sass/_bhchp.scss */
+/* line 513, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li a {
   padding: 50px 30px;
 }
-/* line 438, ../sass/_bhchp.scss */
+/* line 516, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li.last {
   border-bottom: none;
 }
-/* line 444, ../sass/_bhchp.scss */
+/* line 522, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation {
   width: 100%;
   box-sizing: border-box;
   padding: 0 245px 0 0;
   margin: 0;
 }
-/* line 447, ../sass/_bhchp.scss */
+/* line 525, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider {
   padding: 0;
   border: 0;
@@ -2556,35 +2694,35 @@ bhchp custom styles
   box-shadow: none;
   margin: 0;
 }
-/* line 450, ../sass/_bhchp.scss */
+/* line 528, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .home_bk_img {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position-y: center;
 }
-/* line 454, ../sass/_bhchp.scss */
+/* line 532, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .home_bk_img .title {
   display: none;
 }
-/* line 457, ../sass/_bhchp.scss */
+/* line 535, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav {
   right: 20px;
   width: auto;
   bottom: 20px;
   z-index: 3;
 }
-/* line 461, ../sass/_bhchp.scss */
+/* line 539, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav li a {
   color: #868687;
   background: #868687;
 }
-/* line 463, ../sass/_bhchp.scss */
+/* line 541, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav li a.flex-active {
   color: #fff;
   background: #fff;
 }
-/* line 472, ../sass/_bhchp.scss */
+/* line 550, ../sass/_bhchp.scss */
 .front #page #main #content #thirty-years {
   float: left;
   margin-top: -80px;
@@ -2593,18 +2731,18 @@ bhchp custom styles
   z-index: 2;
   border: none;
 }
-/* line 478, ../sass/_bhchp.scss */
+/* line 556, ../sass/_bhchp.scss */
 .front #page #main #content article.node .field-name-body {
   font-size: 15px;
   line-height: 25px;
 }
-/* line 481, ../sass/_bhchp.scss */
+/* line 559, ../sass/_bhchp.scss */
 .front #page #main #content article.node .feature {
   color: #3e4543;
   font-style: normal;
   font-size: 19px;
 }
-/* line 487, ../sass/_bhchp.scss */
+/* line 565, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title {
   color: #3e4543;
   text-transform: uppercase;
@@ -2613,7 +2751,7 @@ bhchp custom styles
   margin-bottom: 20px;
   overflow-x: hidden;
 }
-/* line 491, ../sass/_bhchp.scss */
+/* line 569, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title:after {
   content: "";
   height: 2px;
@@ -2623,38 +2761,38 @@ bhchp custom styles
   border-top: 1px #d8dad9 solid;
   margin-left: 10px;
 }
-/* line 499, ../sass/_bhchp.scss */
+/* line 577, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field {
   margin: 0 0 5px 0;
 }
-/* line 501, ../sass/_bhchp.scss */
+/* line 579, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field h2, .front #page #main #content .block .view-news-list .field p {
   margin: 0;
   display: inline;
   line-height: normal;
 }
-/* line 502, ../sass/_bhchp.scss */
+/* line 580, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field a {
   text-decoration: none;
   font-weight: 700;
 }
-/* line 506, ../sass/_bhchp.scss */
+/* line 584, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-sponsor-logos {
   overflow-x: hidden;
 }
-/* line 511, ../sass/_bhchp.scss */
+/* line 589, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li {
   display: table;
   height: 100px;
 }
-/* line 513, ../sass/_bhchp.scss */
+/* line 591, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li .views-field {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
 }
 
-/* line 530, ../sass/_bhchp.scss */
+/* line 608, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2668,57 +2806,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 542, ../sass/_bhchp.scss */
+/* line 620, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 543, ../sass/_bhchp.scss */
+/* line 621, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 544, ../sass/_bhchp.scss */
+/* line 622, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 545, ../sass/_bhchp.scss */
+/* line 623, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 546, ../sass/_bhchp.scss */
+/* line 624, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 547, ../sass/_bhchp.scss */
+/* line 625, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 548, ../sass/_bhchp.scss */
+/* line 626, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 549, ../sass/_bhchp.scss */
+/* line 627, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 550, ../sass/_bhchp.scss */
+/* line 628, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 551, ../sass/_bhchp.scss */
+/* line 629, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 552, ../sass/_bhchp.scss */
+/* line 630, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }

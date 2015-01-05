@@ -78,7 +78,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -124,7 +124,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -172,9 +172,9 @@ function bhchp_event_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'custom_formatters',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'custom_formatters_date_plus_location',
+        'type' => 'text_default',
         'weight' => 2,
       ),
     ),
@@ -213,7 +213,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'node',
@@ -266,7 +266,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'node',
@@ -322,7 +322,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'node',
@@ -426,7 +426,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'node',
@@ -451,6 +451,7 @@ function bhchp_event_field_default_field_instances() {
   // Exported field_instance: 'node-event-field_sponsor_logos'
   $field_instances['node-event-field_sponsor_logos'] = array(
     'bundle' => 'event',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'For multiple sponsor logos',
     'display' => array(
@@ -468,7 +469,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -488,11 +489,18 @@ function bhchp_event_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'image' => 'image',
+        ),
+        'browser_plugins' => array(),
         'filefield_sources' => array(
           'filefield_sources' => array(
-            'attach' => 0,
+            'attach' => 'attach',
             'clipboard' => 0,
             'imce' => 'imce',
             'reference' => 0,
@@ -505,7 +513,7 @@ function bhchp_event_field_default_field_instances() {
             'path' => 'file_attach',
           ),
           'source_imce' => array(
-            'imce_mode' => 0,
+            'imce_mode' => 1,
           ),
           'source_reference' => array(
             'autocomplete' => 0,
@@ -514,7 +522,7 @@ function bhchp_event_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 6,
     ),
   );

@@ -54,7 +54,11 @@ function bhchp_preprocess_html(&$variables, $hook) {
  */
 function bhchp_preprocess_page(&$variables, $hook) {
     drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', 'external');    
-    drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', 'external');    
+    drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', 'external');  
+    if ($variables['node']->type == 'patient_story') {
+        drupal_set_title('Patient Stories');
+        
+    }
 }
 // */
 
@@ -66,7 +70,6 @@ function bhchp_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function bhchp_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
@@ -76,6 +79,10 @@ function bhchp_preprocess_node(&$variables, $hook) {
   if (function_exists($function)) {
     $function($variables, $hook);
   }
+}
+
+function bhchp_preprocess_node_patient_story(&$variables, $hook) {
+    
 }
 // */
 

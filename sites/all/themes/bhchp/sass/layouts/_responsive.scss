@@ -64,7 +64,16 @@ $zen-auto-include-item-base: false;
         padding-top: 20px;
         position: relative;
         #content {
-            
+            .view-mode-full {
+                $zen-column-count: 4;
+                .group-left {
+                    @include zen-grid-item(1, 1);
+                }
+                .group-right {
+                    @include zen-grid-item(3, 2);
+                }
+                
+            }
         }
     }
     #navigation {

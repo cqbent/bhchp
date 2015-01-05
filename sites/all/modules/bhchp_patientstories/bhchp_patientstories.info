@@ -34,4 +34,4 @@ features[variable][] = field_bundle_settings_node__patient_story
 features[views_view][] = patient_stories
 features_exclude[dependencies][file] = file
 features_exclude[field_base][body] = body
-mtime = 1419045412
+mtime = 1419225407

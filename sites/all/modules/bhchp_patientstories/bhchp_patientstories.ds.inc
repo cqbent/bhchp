@@ -49,17 +49,19 @@ function bhchp_patientstories_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'field_patientstory_subtitle',
-        1 => 'body',
+        0 => 'field_patientstory_mainimage',
       ),
       'right' => array(
-        2 => 'field_story_image',
+        1 => 'title',
+        2 => 'field_patientstory_subtitle',
+        3 => 'body',
       ),
     ),
     'fields' => array(
-      'field_patientstory_subtitle' => 'left',
-      'body' => 'left',
-      'field_story_image' => 'right',
+      'field_patientstory_mainimage' => 'left',
+      'title' => 'right',
+      'field_patientstory_subtitle' => 'right',
+      'body' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
