@@ -286,6 +286,12 @@ bhchp custom styles
                     &.views-row-last {
                         border: none;
                     }
+                    h2 {
+                        margin: 0; line-height: normal;
+                    }
+                    .left, .right {
+                        box-sizing: border-box;
+                    }
                     img { box-sizing: border-box; }
                     .views-field-title, .field-name-title {
                         font-weight: 700; 
@@ -316,24 +322,16 @@ bhchp custom styles
             }
             // leadership staff list view, patient stories list 
             // news list
-            .view-leadership-staff-list, .view-patient-stories, 
-            .view-news-list {
+            .view-leadership-staff-list, .view-patient-stories {
                 .views-row {
-                    h2 {
-                        margin: 0;
-                    }
-                    .left, .right {
-                        box-sizing: border-box;
-                    }
                     .name, .email { font-weight: 700; }
                     .bio, .field-name-body {
-                        margin-top:1em; 
-                        p { margin: 0 0 1em 0; }
                     }
                     @include breakpoint(minsmall) {
                         $zen-column-count: 4;
                         .left, .group-left {
                             @include zen-grid-item(1, 1);
+                            padding-right:20px;
                         }
                         .right, .group-right {
                             @include zen-grid-item(3, 2);
@@ -345,38 +343,39 @@ bhchp custom styles
                 .views-row {
                 }
             }
-            .view-news-list {
-                .views-row {
-                    .field-name-author {
-                        float: left; 
-                        font-style: italic; 
-                        .field-item:after { 
-                            content: ", "; display: inline-block;
-                            padding-right: 5px; margin-left: -2px;
-                        }
+            .view-news-list, .node-article {
+                .field-name-author {
+                    float: left; 
+                    font-style: italic; 
+                    .field-item:after { 
+                        content: ", "; display: inline-block;
+                        padding-right: 5px; margin-left: -2px;
                     }
-                    @include breakpoint(minsmall) {
-                        $zen-column-count: 3;
-                        .left, .group-left {
-                            @include zen-grid-item(1, 1);
-                        }
-                        .right, .group-right {
-                            @include zen-grid-item(2, 2);
-                        }
-                    } 
                 }
+                @include breakpoint(minsmall) {
+                    $zen-column-count: 3;
+                    .left, .group-left {
+                        @include zen-grid-item(1, 1);
+                    }
+                    .right, .group-right {
+                        @include zen-grid-item(2, 2);
+                    }
+                } 
                 .view-footer {
                     .button {
                         display: block; float: right;
                     }
                     @include clearafter();
                 }
-                .front & {
+            }
+            .front & {
+                .views-news-list {
                     border-bottom: 1px $bordergray solid; padding-bottom: 2em;
                     .views-row { 
                         border: none; padding-bottom: 0; margin-bottom: 0;
                     }
                 }
+                
             }
             // publications list
             .view-publications-list {

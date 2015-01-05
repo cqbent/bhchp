@@ -2322,189 +2322,170 @@ bhchp custom styles
   border: none;
 }
 /* line 289, ../sass/_bhchp.scss */
+#page #main #content .view .views-row h2 {
+  margin: 0;
+  line-height: normal;
+}
+/* line 292, ../sass/_bhchp.scss */
+#page #main #content .view .views-row .left, #page #main #content .view .views-row .right {
+  box-sizing: border-box;
+}
+/* line 295, ../sass/_bhchp.scss */
 #page #main #content .view .views-row img {
   box-sizing: border-box;
 }
-/* line 290, ../sass/_bhchp.scss */
+/* line 296, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .views-field-title, #page #main #content .view .views-row .field-name-title {
   font-weight: 700;
 }
-/* line 292, ../sass/_bhchp.scss */
+/* line 298, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .views-field-title a, #page #main #content .view .views-row .field-name-title a {
   text-decoration: none;
 }
-/* line 294, ../sass/_bhchp.scss */
+/* line 300, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .views-field-title a:hover, #page #main #content .view .views-row .field-name-title a:hover {
   text-decoration: underline;
 }
-/* line 297, ../sass/_bhchp.scss */
+/* line 303, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .views-label {
   float: left;
   padding-right: 5px;
   font-weight: 700;
 }
-/* line 300, ../sass/_bhchp.scss */
+/* line 306, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .field-name-body {
   margin-top: 10px;
 }
-/* line 302, ../sass/_bhchp.scss */
+/* line 308, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .field-name-body p {
   margin: 0;
   display: inline;
 }
-/* line 303, ../sass/_bhchp.scss */
+/* line 309, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .field-name-body a {
   font-weight: 700;
 }
-/* line 306, ../sass/_bhchp.scss */
+/* line 312, ../sass/_bhchp.scss */
 #page #main #content .view .views-row .field-name-node-link a {
   font-weight: 700;
 }
-/* line 312, ../sass/_bhchp.scss */
+/* line 318, ../sass/_bhchp.scss */
 #page #main #content .node-patient-story .field-name-body {
   margin-top: 1em;
 }
-/* line 314, ../sass/_bhchp.scss */
+/* line 320, ../sass/_bhchp.scss */
 #page #main #content .node-patient-story .field-name-body p {
   margin: 0 0 1em 0;
 }
-/* line 322, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row h2, #page #main #content .view-patient-stories .views-row h2,
-#page #main #content .view-news-list .views-row h2 {
-  margin: 0;
-}
-/* line 325, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .right,
-#page #main #content .view-news-list .views-row .left,
-#page #main #content .view-news-list .views-row .right {
-  box-sizing: border-box;
-}
-/* line 328, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row .name, #page #main #content .view-leadership-staff-list .views-row .email, #page #main #content .view-patient-stories .views-row .name, #page #main #content .view-patient-stories .views-row .email,
-#page #main #content .view-news-list .views-row .name,
-#page #main #content .view-news-list .views-row .email {
+/* line 327, ../sass/_bhchp.scss */
+#page #main #content .view-leadership-staff-list .views-row .name, #page #main #content .view-leadership-staff-list .views-row .email, #page #main #content .view-patient-stories .views-row .name, #page #main #content .view-patient-stories .views-row .email {
   font-weight: 700;
 }
-/* line 329, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row .bio, #page #main #content .view-leadership-staff-list .views-row .field-name-body, #page #main #content .view-patient-stories .views-row .bio, #page #main #content .view-patient-stories .views-row .field-name-body,
-#page #main #content .view-news-list .views-row .bio,
-#page #main #content .view-news-list .views-row .field-name-body {
-  margin-top: 1em;
-}
-/* line 331, ../sass/_bhchp.scss */
-#page #main #content .view-leadership-staff-list .views-row .bio p, #page #main #content .view-leadership-staff-list .views-row .field-name-body p, #page #main #content .view-patient-stories .views-row .bio p, #page #main #content .view-patient-stories .views-row .field-name-body p,
-#page #main #content .view-news-list .views-row .bio p,
-#page #main #content .view-news-list .views-row .field-name-body p {
-  margin: 0 0 1em 0;
-}
 @media (min-width: 780px) {
-  /* line 335, ../sass/_bhchp.scss */
-  #page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .group-left, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .group-left,
-  #page #main #content .view-news-list .views-row .left,
-  #page #main #content .view-news-list .views-row .group-left {
+  /* line 332, ../sass/_bhchp.scss */
+  #page #main #content .view-leadership-staff-list .views-row .left, #page #main #content .view-leadership-staff-list .views-row .group-left, #page #main #content .view-patient-stories .views-row .left, #page #main #content .view-patient-stories .views-row .group-left {
     float: left;
     width: 25%;
     margin-left: 0%;
     margin-right: -25%;
+    padding-right: 20px;
   }
-  /* line 338, ../sass/_bhchp.scss */
-  #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-leadership-staff-list .views-row .group-right, #page #main #content .view-patient-stories .views-row .right, #page #main #content .view-patient-stories .views-row .group-right,
-  #page #main #content .view-news-list .views-row .right,
-  #page #main #content .view-news-list .views-row .group-right {
+  /* line 336, ../sass/_bhchp.scss */
+  #page #main #content .view-leadership-staff-list .views-row .right, #page #main #content .view-leadership-staff-list .views-row .group-right, #page #main #content .view-patient-stories .views-row .right, #page #main #content .view-patient-stories .views-row .group-right {
     float: left;
     width: 75%;
     margin-left: 25%;
     margin-right: -100%;
   }
 }
-/* line 350, ../sass/_bhchp.scss */
-#page #main #content .view-news-list .views-row .field-name-author {
+/* line 347, ../sass/_bhchp.scss */
+#page #main #content .view-news-list .field-name-author, #page #main #content .node-article .field-name-author {
   float: left;
   font-style: italic;
 }
-/* line 353, ../sass/_bhchp.scss */
-#page #main #content .view-news-list .views-row .field-name-author .field-item:after {
+/* line 350, ../sass/_bhchp.scss */
+#page #main #content .view-news-list .field-name-author .field-item:after, #page #main #content .node-article .field-name-author .field-item:after {
   content: ", ";
   display: inline-block;
   padding-right: 5px;
   margin-left: -2px;
 }
 @media (min-width: 780px) {
-  /* line 360, ../sass/_bhchp.scss */
-  #page #main #content .view-news-list .views-row .left, #page #main #content .view-news-list .views-row .group-left {
+  /* line 357, ../sass/_bhchp.scss */
+  #page #main #content .view-news-list .left, #page #main #content .view-news-list .group-left, #page #main #content .node-article .left, #page #main #content .node-article .group-left {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 363, ../sass/_bhchp.scss */
-  #page #main #content .view-news-list .views-row .right, #page #main #content .view-news-list .views-row .group-right {
+  /* line 360, ../sass/_bhchp.scss */
+  #page #main #content .view-news-list .right, #page #main #content .view-news-list .group-right, #page #main #content .node-article .right, #page #main #content .node-article .group-right {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
 }
-/* line 369, ../sass/_bhchp.scss */
-#page #main #content .view-news-list .view-footer .button {
+/* line 365, ../sass/_bhchp.scss */
+#page #main #content .view-news-list .view-footer .button, #page #main #content .node-article .view-footer .button {
   display: block;
   float: right;
 }
 /* line 40, ../sass/_mixins.scss */
-#page #main #content .view-news-list .view-footer:after {
+#page #main #content .view-news-list .view-footer:after, #page #main #content .node-article .view-footer:after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 374, ../sass/_bhchp.scss */
-.front #page #main #content .view-news-list {
+/* line 372, ../sass/_bhchp.scss */
+.front #page #main #content .views-news-list {
   border-bottom: 1px #d8dad9 solid;
   padding-bottom: 2em;
 }
-/* line 376, ../sass/_bhchp.scss */
-.front #page #main #content .view-news-list .views-row {
+/* line 374, ../sass/_bhchp.scss */
+.front #page #main #content .views-news-list .views-row {
   border: none;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* line 383, ../sass/_bhchp.scss */
+/* line 382, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row {
   border-bottom: none;
 }
-/* line 385, ../sass/_bhchp.scss */
+/* line 384, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column {
   padding: 0 20px 0 0;
   box-sizing: border-box;
 }
-/* line 388, ../sass/_bhchp.scss */
+/* line 387, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column .views-field-field-image img {
   box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.4);
 }
-/* line 392, ../sass/_bhchp.scss */
+/* line 391, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column .views-field-title {
   margin-top: 10px;
   font-weight: 700;
 }
-/* line 394, ../sass/_bhchp.scss */
+/* line 393, ../sass/_bhchp.scss */
 #page #main #content .view-publications-list .views-row .views-column .views-field-title a {
   text-decoration: none;
 }
 @media (min-width: 780px) {
-  /* line 399, ../sass/_bhchp.scss */
+  /* line 398, ../sass/_bhchp.scss */
   #page #main #content .view-publications-list .views-row .views-column-1 {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 402, ../sass/_bhchp.scss */
+  /* line 401, ../sass/_bhchp.scss */
   #page #main #content .view-publications-list .views-row .views-column-2 {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 405, ../sass/_bhchp.scss */
+  /* line 404, ../sass/_bhchp.scss */
   #page #main #content .view-publications-list .views-row .views-column-3 {
     float: left;
     width: 33.33333%;
@@ -2512,33 +2493,33 @@ bhchp custom styles
     margin-right: -100%;
   }
 }
-/* line 414, ../sass/_bhchp.scss */
+/* line 413, ../sass/_bhchp.scss */
 #page #main .breadcrumb {
   padding: 0 10px;
   margin-bottom: 50px;
   color: #3e4543;
 }
-/* line 417, ../sass/_bhchp.scss */
+/* line 416, ../sass/_bhchp.scss */
 #page #main .breadcrumb a {
   color: #3e4543;
   text-decoration: none;
 }
-/* line 422, ../sass/_bhchp.scss */
+/* line 421, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-block, #page #main .region-sidebar-first .block-views {
   background-color: whitesmoke;
   padding: 20px;
 }
-/* line 427, ../sass/_bhchp.scss */
+/* line 426, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block h2 {
   font-size: 13px;
   text-transform: uppercase;
 }
-/* line 430, ../sass/_bhchp.scss */
+/* line 429, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu {
   padding: 0;
   margin: 0;
 }
-/* line 432, ../sass/_bhchp.scss */
+/* line 431, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li {
   list-style: none;
   padding: 0;
@@ -2547,70 +2528,70 @@ bhchp custom styles
   font-weight: 700;
   font-size: 13px;
 }
-/* line 437, ../sass/_bhchp.scss */
+/* line 436, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a {
   display: block;
   padding: 5px 0;
   text-decoration: none;
 }
-/* line 440, ../sass/_bhchp.scss */
+/* line 439, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li a:hover, #page #main .region-sidebar-first .block-menu-block .menu li a.active {
   text-decoration: underline;
 }
-/* line 446, ../sass/_bhchp.scss */
+/* line 445, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded > a:after {
   content: "+";
   float: right;
 }
-/* line 449, ../sass/_bhchp.scss */
+/* line 448, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover > a:after, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail > a:after {
   content: "";
 }
-/* line 450, ../sass/_bhchp.scss */
+/* line 449, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded:hover .menu, #page #main .region-sidebar-first .block-menu-block .menu li.is-expanded.active-trail .menu {
   display: block;
 }
-/* line 453, ../sass/_bhchp.scss */
+/* line 452, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu {
   margin-left: 20px;
   display: none;
 }
-/* line 455, ../sass/_bhchp.scss */
+/* line 454, ../sass/_bhchp.scss */
 #page #main .region-sidebar-first .block-menu-block .menu li .menu li {
   border: none;
   font-weight: normal;
 }
-/* line 466, ../sass/_bhchp.scss */
+/* line 465, ../sass/_bhchp.scss */
 #page #footer {
   background-color: whitesmoke;
 }
-/* line 468, ../sass/_bhchp.scss */
+/* line 467, ../sass/_bhchp.scss */
 #page #footer .inner {
   padding: 0 10px;
   box-sizing: border-box;
 }
-/* line 469, ../sass/_bhchp.scss */
+/* line 468, ../sass/_bhchp.scss */
 #page #footer .footer-address {
   float: left;
   width: 35%;
 }
-/* line 472, ../sass/_bhchp.scss */
+/* line 471, ../sass/_bhchp.scss */
 #page #footer .footer-email-signup {
   float: left;
   width: 40%;
 }
-/* line 475, ../sass/_bhchp.scss */
+/* line 474, ../sass/_bhchp.scss */
 #page #footer .social-icons {
   float: right;
 }
-/* line 478, ../sass/_bhchp.scss */
+/* line 477, ../sass/_bhchp.scss */
 #page #footer .block-menu-block {
   clear: both;
   padding: 10px 0;
   border-top: 1px #d8dad9 solid;
   border-bottom: 1px #d8dad9 solid;
 }
-/* line 481, ../sass/_bhchp.scss */
+/* line 480, ../sass/_bhchp.scss */
 #page #footer .block-menu-block .menu {
   margin: 0;
   padding: 0;
@@ -2621,7 +2602,7 @@ bhchp custom styles
   display: block;
   clear: both;
 }
-/* line 484, ../sass/_bhchp.scss */
+/* line 483, ../sass/_bhchp.scss */
 #page #footer .block-menu-block .menu li {
   float: left;
   list-style: none;
@@ -2630,27 +2611,27 @@ bhchp custom styles
   margin: 0 20px 0 0;
   padding: 0;
 }
-/* line 487, ../sass/_bhchp.scss */
+/* line 486, ../sass/_bhchp.scss */
 #page #footer .block-menu-block .menu li a {
   text-decoration: none;
 }
 
-/* line 498, ../sass/_bhchp.scss */
+/* line 497, ../sass/_bhchp.scss */
 .front #page .breadcrumb, .front #page h1.title {
   display: none;
 }
-/* line 499, ../sass/_bhchp.scss */
+/* line 498, ../sass/_bhchp.scss */
 .front #page #navigation {
   background: none;
   position: relative;
   padding: 0;
   margin: 0;
 }
-/* line 501, ../sass/_bhchp.scss */
+/* line 500, ../sass/_bhchp.scss */
 .front #page #navigation:before {
   display: none;
 }
-/* line 502, ../sass/_bhchp.scss */
+/* line 501, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu {
   max-width: 1200px;
   background: #003594;
@@ -2661,32 +2642,32 @@ bhchp custom styles
   box-sizing: border-box;
   height: 375px;
 }
-/* line 508, ../sass/_bhchp.scss */
+/* line 507, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links {
   text-align: left;
 }
-/* line 510, ../sass/_bhchp.scss */
+/* line 509, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li {
   display: block;
   border-bottom: 1px #0066cc solid;
   border-right: none;
 }
-/* line 513, ../sass/_bhchp.scss */
+/* line 512, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li a {
   padding: 50px 30px;
 }
-/* line 516, ../sass/_bhchp.scss */
+/* line 515, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li.last {
   border-bottom: none;
 }
-/* line 522, ../sass/_bhchp.scss */
+/* line 521, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation {
   width: 100%;
   box-sizing: border-box;
   padding: 0 245px 0 0;
   margin: 0;
 }
-/* line 525, ../sass/_bhchp.scss */
+/* line 524, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider {
   padding: 0;
   border: 0;
@@ -2694,35 +2675,35 @@ bhchp custom styles
   box-shadow: none;
   margin: 0;
 }
-/* line 528, ../sass/_bhchp.scss */
+/* line 527, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .home_bk_img {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position-y: center;
 }
-/* line 532, ../sass/_bhchp.scss */
+/* line 531, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .home_bk_img .title {
   display: none;
 }
-/* line 535, ../sass/_bhchp.scss */
+/* line 534, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav {
   right: 20px;
   width: auto;
   bottom: 20px;
   z-index: 3;
 }
-/* line 539, ../sass/_bhchp.scss */
+/* line 538, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav li a {
   color: #868687;
   background: #868687;
 }
-/* line 541, ../sass/_bhchp.scss */
+/* line 540, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav li a.flex-active {
   color: #fff;
   background: #fff;
 }
-/* line 550, ../sass/_bhchp.scss */
+/* line 549, ../sass/_bhchp.scss */
 .front #page #main #content #thirty-years {
   float: left;
   margin-top: -80px;
@@ -2731,18 +2712,18 @@ bhchp custom styles
   z-index: 2;
   border: none;
 }
-/* line 556, ../sass/_bhchp.scss */
+/* line 555, ../sass/_bhchp.scss */
 .front #page #main #content article.node .field-name-body {
   font-size: 15px;
   line-height: 25px;
 }
-/* line 559, ../sass/_bhchp.scss */
+/* line 558, ../sass/_bhchp.scss */
 .front #page #main #content article.node .feature {
   color: #3e4543;
   font-style: normal;
   font-size: 19px;
 }
-/* line 565, ../sass/_bhchp.scss */
+/* line 564, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title {
   color: #3e4543;
   text-transform: uppercase;
@@ -2751,7 +2732,7 @@ bhchp custom styles
   margin-bottom: 20px;
   overflow-x: hidden;
 }
-/* line 569, ../sass/_bhchp.scss */
+/* line 568, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title:after {
   content: "";
   height: 2px;
@@ -2761,38 +2742,38 @@ bhchp custom styles
   border-top: 1px #d8dad9 solid;
   margin-left: 10px;
 }
-/* line 577, ../sass/_bhchp.scss */
+/* line 576, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field {
   margin: 0 0 5px 0;
 }
-/* line 579, ../sass/_bhchp.scss */
+/* line 578, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field h2, .front #page #main #content .block .view-news-list .field p {
   margin: 0;
   display: inline;
   line-height: normal;
 }
-/* line 580, ../sass/_bhchp.scss */
+/* line 579, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field a {
   text-decoration: none;
   font-weight: 700;
 }
-/* line 584, ../sass/_bhchp.scss */
+/* line 583, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-sponsor-logos {
   overflow-x: hidden;
 }
-/* line 589, ../sass/_bhchp.scss */
+/* line 588, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li {
   display: table;
   height: 100px;
 }
-/* line 591, ../sass/_bhchp.scss */
+/* line 590, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li .views-field {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
 }
 
-/* line 608, ../sass/_bhchp.scss */
+/* line 607, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -2806,57 +2787,57 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 620, ../sass/_bhchp.scss */
+/* line 619, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 621, ../sass/_bhchp.scss */
+/* line 620, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 622, ../sass/_bhchp.scss */
+/* line 621, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 623, ../sass/_bhchp.scss */
+/* line 622, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 624, ../sass/_bhchp.scss */
+/* line 623, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 625, ../sass/_bhchp.scss */
+/* line 624, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e605";
 }
 
-/* line 626, ../sass/_bhchp.scss */
+/* line 625, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 627, ../sass/_bhchp.scss */
+/* line 626, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 628, ../sass/_bhchp.scss */
+/* line 627, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 629, ../sass/_bhchp.scss */
+/* line 628, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e609";
 }
 
-/* line 630, ../sass/_bhchp.scss */
+/* line 629, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }

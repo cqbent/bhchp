@@ -94,10 +94,10 @@ function bhchp_users_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="left">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="group-left">
 <div class="image img-border">[field_image]</div>
 </div>
-<div class="right">
+<div class="group-right">
 <div class="name">[field_first_name] [field_last_name][field_credentials]</div>
 <div class="position">[field_position]</div>
 <div class="email">[mail]</div>

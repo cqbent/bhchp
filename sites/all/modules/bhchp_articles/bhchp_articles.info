@@ -43,4 +43,4 @@ features[variable][] = node_submitted_article
 features[views_view][] = news_list
 features_exclude[dependencies][views] = views
 features_exclude[field_base][body] = body
-mtime = 1419355586
+mtime = 1420419354

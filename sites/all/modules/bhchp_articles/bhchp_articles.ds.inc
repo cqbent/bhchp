@@ -85,25 +85,28 @@ function bhchp_articles_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'left' => array(
         0 => 'field_image',
+      ),
+      'right' => array(
         1 => 'author',
         2 => 'post_date',
         3 => 'body',
       ),
     ),
     'fields' => array(
-      'field_image' => 'ds_content',
-      'author' => 'ds_content',
-      'post_date' => 'ds_content',
-      'body' => 'ds_content',
+      'field_image' => 'left',
+      'author' => 'right',
+      'post_date' => 'right',
+      'body' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
