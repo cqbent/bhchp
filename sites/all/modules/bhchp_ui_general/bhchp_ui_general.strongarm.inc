@@ -186,6 +186,7 @@ function bhchp_ui_general_strongarm() {
     0 => 1,
     1 => 2,
     2 => 3,
+    3 => 4,
   );
   $export['menu_block_ids'] = $strongarm;
 

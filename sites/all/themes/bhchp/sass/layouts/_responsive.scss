@@ -51,31 +51,52 @@ $zen-auto-include-item-base: false;
 /* Containers for grid items and flow items. */
 #header,
 #main,
-#footer, #navigation #main-menu {
+#footer .inner, #navigation #main-menu {
   @include zen-grid-container();
   max-width: 980px;
   margin: 0 auto;
 }
 
 /* Navigation bar */
-@media all and (min-width: 480px) {
-  #main {
-    /* Move all the children of #main down to make room. */
-    padding-top: 20px;
-    position: relative;
-  }
-  #navigation {
-    /* Move the navbar up inside #main's padding. */
-    /* disable
-    position: absolute;
-    top: 0;
-    height: $nav-height;
-    width: $zen-grid-width;
-    */
-    #main-menu {
-        
+@media all and (min-width: 780px) {
+    #main {
+        /* Move all the children of #main down to make room. */
+        padding-top: 20px;
+        position: relative;
+        #content {
+            .view-mode-full {
+                $zen-column-count: 4;
+                .group-left {
+                    @include zen-grid-item(1, 1);
+                }
+                .group-right {
+                    @include zen-grid-item(3, 2);
+                }
+                
+            }
+        }
     }
-  }
+    #navigation {
+        /* Move the navbar up inside #main's padding. */
+        /* disable
+        position: absolute;
+        top: 0;
+        height: $nav-height;
+        width: $zen-grid-width;
+        */
+        #main-menu {
+
+        }
+    }
+    // default styling for views responsive grid items
+    .views-responsive-grid {
+        .views-column {
+            box-sizing: border-box; padding: 0 20px 0 0;
+            &.views-column-last { padding-right: 0; }
+        }
+        @include responsive-grid(3);
+        @include responsive-grid(4);
+    }
 }
 
 } // End of @if $zen-reverse-all-floats == true
@@ -83,7 +104,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (min-width: 780px) and (max-width: 959px) {
 
   $zen-column-count: 3;
 

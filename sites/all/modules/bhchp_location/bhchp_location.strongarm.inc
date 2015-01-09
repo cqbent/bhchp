@@ -42,7 +42,7 @@ function bhchp_location_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_location';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_location'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -58,6 +58,44 @@ function bhchp_location_strongarm() {
   $strongarm->name = 'comment_subject_field_location';
   $strongarm->value = 1;
   $export['comment_subject_field_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__location';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'token' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -81,7 +119,6 @@ function bhchp_location_strongarm() {
   $strongarm->name = 'node_options_location';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_location'] = $strongarm;
 
@@ -96,7 +133,7 @@ function bhchp_location_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_location';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_submitted_location'] = $strongarm;
 
   return $export;

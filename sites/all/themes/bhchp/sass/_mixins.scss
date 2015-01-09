@@ -35,3 +35,38 @@
     @include element-invisible-off;
   }
 }
+
+@mixin clearafter {
+    &:after {
+        content: ""; display: block;
+        clear: both;
+    }
+}
+
+@mixin breakpoint($point) {
+    @if $point == maxsmall {
+        @media (max-width: 779px) { @content; }
+    }
+    @if $point == minsmall {
+        @media (min-width: 780px) { @content; }
+    }
+    @if $point == smallmed {
+        @media (min-width: 780px) and (max-width: 960px) { @content; }
+    }
+    @if $point == minlarge {
+        @media (min-width: 960px) { @content; }
+    }
+}
+
+@mixin responsive-grid($columns) {
+    $i: 1;
+    &.views-columns-#{$columns} { 
+        $zen-column-count: $columns; 
+        @while $i <= $columns {
+            .views-column-#{$i} { @include zen-grid-item(1, $i); }
+            $i: $i+1;
+        }
+    }
+    
+    
+}

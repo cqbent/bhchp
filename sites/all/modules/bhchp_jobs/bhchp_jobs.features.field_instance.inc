@@ -10,31 +10,184 @@
 function bhchp_jobs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-job_posting-field_job_department'
-  $field_instances['node-job_posting-field_job_department'] = array(
+  // Exported field_instance: 'node-job_posting-field_date_posted'
+  $field_instances['node-job_posting-field_date_posted'] = array(
+    'bundle' => 'job_posting',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'month_day_year',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date_posted',
+    'label' => 'Date Posted',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-job_posting-field_department'
+  $field_instances['node-job_posting-field_department'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'i.e Housekeeping, BMC Clinic',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_department',
+    'label' => 'Department',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-job_posting-field_experience_education'
+  $field_instances['node-job_posting-field_experience_education'] = array(
+    'bundle' => 'job_posting',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_experience_education',
+    'label' => 'Experience & Education',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-job_posting-field_grade_and_status'
+  $field_instances['node-job_posting-field_grade_and_status'] = array(
+    'bundle' => 'job_posting',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_job_department',
-    'label' => 'Department',
+    'field_name' => 'field_grade_and_status',
+    'label' => 'Grade and Status',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -47,7 +200,7 @@ function bhchp_jobs_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -63,7 +216,7 @@ function bhchp_jobs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -71,10 +224,16 @@ function bhchp_jobs_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_duties',
-    'label' => 'Job duties',
+    'label' => 'Primary Duties and Responsibilities',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -87,7 +246,7 @@ function bhchp_jobs_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 7,
     ),
   );
 
@@ -99,11 +258,11 @@ function bhchp_jobs_field_default_field_instances() {
     'description' => 'full time, part time, per diem, days, hrs.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -111,6 +270,12 @@ function bhchp_jobs_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 4,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -144,7 +309,7 @@ function bhchp_jobs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -152,10 +317,16 @@ function bhchp_jobs_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_job_qualifications',
-    'label' => 'Qualifications',
+    'label' => 'Basic Knowledge / Skills',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -168,7 +339,7 @@ function bhchp_jobs_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 8,
     ),
   );
 
@@ -181,16 +352,21 @@ function bhchp_jobs_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -208,47 +384,7 @@ function bhchp_jobs_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -1,
-    ),
-  );
-
-  // Exported field_instance: 'node-job_posting-field_job_summary'
-  $field_instances['node-job_posting-field_job_summary'] = array(
-    'bundle' => 'job_posting',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Text for the job summary. Select filtered HTML if you need clickable links.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_job_summary',
-    'label' => 'Job summary',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 10,
     ),
   );
 
@@ -260,13 +396,13 @@ function bhchp_jobs_field_default_field_instances() {
     'description' => 'Pick an existing location on the site.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -277,8 +413,59 @@ function bhchp_jobs_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 3,
       ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'node',
+    'field_name' => 'field_location',
+    'label' => 'Site',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-department-field_location'
+  $field_instances['taxonomy_term-department-field_location'] = array(
+    'bundle' => 'department',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
     'field_name' => 'field_location',
     'label' => 'Location',
     'required' => 0,
@@ -290,25 +477,26 @@ function bhchp_jobs_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -3,
+      'weight' => 32,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Basic Knowledge / Skills');
+  t('Date Posted');
   t('Department');
+  t('Experience & Education');
+  t('Grade and Status');
   t('HTML is ok.');
   t('Hours');
-  t('Job duties');
   t('Job duties. HTML is ok.');
-  t('Job summary');
   t('Location');
   t('Pick an existing location on the site.');
-  t('Qualifications');
+  t('Primary Duties and Responsibilities');
   t('Reports to');
-  t('Text for the job summary. Select filtered HTML if you need clickable links.');
+  t('Site');
   t('full time, part time, per diem, days, hrs.');
-  t('i.e Housekeeping, BMC Clinic');
   t('person/role to report to . text field.');
 
   return $field_instances;

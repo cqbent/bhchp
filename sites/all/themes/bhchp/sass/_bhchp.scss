@@ -3,31 +3,32 @@ bhchp custom styles
 */
 
 #page {
+    color: $textgray;
     a {
         color: $blue;
+    }
+    .social-icons { 
+        ul {
+            margin: 0; padding: 0; font-size: 24px;
+            li {
+                list-style: none; float: left; 
+                padding: 0; margin: 0;
+                a { 
+                    text-decoration: none; 
+                    &:hover { color: $lightblue; }
+                }
+            }
+        }
     }
     #header {
         position:relative;
         padding-bottom:20px; 
         #logo { 
-            float: left;
+            margin-top:13px;
             img { width: 215px; }
         }
         .region-header {
-            float: right; clear: none;
             margin-top:20px;
-            .social-icons {
-                float: right; font-size: 24px;
-                margin: 0;
-                ul {
-                    margin: 0; padding: 0;
-                    li {
-                        list-style: none; float: left; 
-                        padding: 0; margin: 0;
-                        a { text-decoration: none; }
-                    }
-                }
-            }
             .block-search {
                 float: right; 
                 padding-left: 10px; 
@@ -45,7 +46,6 @@ bhchp custom styles
                 }
             }
             .block-menu-block {
-                position: absolute; bottom: 20px; right: 10px; 
                 margin:0;
                 .menu {
                     li {
@@ -65,11 +65,45 @@ bhchp custom styles
                                     content: "\f015"; font-family: 'FontAwesome';
                                     font-size:24px; color: $blue;
                                 }
+                                &:hover:before { color: $lightblue; }
+                            }
+                        }
+                        &#patient-portal {
+                            a {
+                                background-color: $green; padding: 5px 10px;
+                                color: #fff; 
                             }
                         }
                     }
                 }
             }
+        }
+        @include breakpoint(maxsmall) {
+            margin-bottom:0;
+            #logo { float: none; display: block; }
+            .region-header {
+                .block-search { display: none; }
+                .social-icons { float:left; }
+                .block-menu-block {
+                    float: right; margin-top:-20px;
+                    li {
+                        display: none; 
+                        &#patient-portal { display: block; }
+                    }
+                }
+            }
+        }
+        @include breakpoint(minsmall) {
+            .region-header {
+                float: right; clear: none;
+                .social-icons {
+                    float: right;
+                }
+            }
+            .block-menu-block {
+                position: absolute; bottom: 20px; right: 10px; 
+            }
+            
         }
     }
     #navigation {
@@ -107,10 +141,275 @@ bhchp custom styles
             }
         }
     }
+    .entityform {
+        .form-type-radios {
+            .form-disabled {
+                display: none;
+            }
+        }
+        input[type=submit], button {
+            background-color: $blue; border: none;
+            color: #fff; text-transform: uppercase;
+            padding: 5px 10px;
+        }
+        input[type=text] {
+            border: 1px $bordergray solid;
+            padding: 5px 10px;
+        }
+        fieldset {
+            padding: 0; margin: 0; border: none;
+            legend {
+                font-weight: 700; color: $textgray; 
+                a { text-decoration: none; color: $textgray; }
+            }
+        }
+    }
     #main {
         h1, h2 {
             color: $blue;
         }
+        h2, h3 {
+            font-size:1rem; margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+        h1.page__title { margin-bottom: 1em; }
+        #content {
+            padding-bottom: 20px;
+            a { 
+                text-decoration: none;
+                &:hover { text-decoration: underline; }
+            }
+            // image styling in content
+            img.img-border, .img-border img, .view-patient-stories img,
+            .field-name-field-patientstory-mainimage img
+            {
+                padding: 5px;
+                border: 1px #d8dad9 solid;
+                box-sizing: border-box;
+            }
+            .img-left {
+                float: left; margin: 0 20px 0px 0;
+            }
+            .img-right {
+                float: right; margin: 0 0 0 20px;
+            }
+            .node {
+                .group-left, .group-right {
+                    box-sizing: border-box;
+                }
+                .group-left {
+                    padding-right: 20px; 
+                }
+                &.node-job-posting {
+                    .field {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .feature {
+                font-size: 15px; line-height: 22px; color: $blue;
+                font-style: italic; font-weight: 700;
+            }
+            .quote {
+                color: $blue; font-weight: 700;
+                margin-left:20px; border-left: 1px $textgray solid;
+                padding-left: 20px; font-style: italic;
+            }
+            .border-list {
+                padding: 0; margin: 0;
+                li {
+                    list-style:none; 
+                    padding: 10px 0; border-bottom: 1px $bordergray solid;
+                    &.last { border: none; }
+                }
+            }
+            .bigtext {
+                font-size: 17px; font-weight: 700; 
+            }
+            .bhchp-icons {
+                font-size: 24px; color: $lightblue;
+            }
+            .button {
+                border: 1px $bordergray solid; border-radius: 0;
+                padding: 5px 10px; 
+                font-weight: 700; 
+                text-transform: uppercase;
+                background: #fff;
+                -webkit-appearance: none; -moz-appearance: none;
+                text-decoration: none;
+            }
+            // event gala stuff
+            .view-eventslist {
+                h2 { margin-top: 0; }
+                .group-left {
+                    width: 33%;
+                }
+                .group-right {
+                    width: 67%; 
+                }
+            }
+            .node-type-event & {
+                .field-name-field-event-mainimage {
+                    position: relative; margin-bottom: 20px;
+                    img {
+                        width: 100%;
+                    }
+                    .caption {
+                        position: absolute; bottom: 0;
+                        background: rgba(0,0,0,.8);
+                        color: #fff; padding: 10px 20px; 
+                        width: 100%; box-sizing: border-box;
+                    }
+                }
+                .field-name-field-event-datelocation {
+                    font-weight: 700; margin-bottom:1em;
+                }
+                .field-name-field-sponsor-logos {
+                    border-top: 1px $lightgray solid;
+                    .field-items {
+                        display: table;
+                        .field-item {
+                            display: table-cell;
+                            padding-right:20px;
+                        }
+                    }
+                }
+            }
+            // standard content view list styling
+            .view {
+                .views-row {
+                    padding-bottom: 1em; border-bottom: 1px $bordergray solid;
+                    margin-bottom: 2em; clear: both;
+                    @include clearafter();
+                    &.views-row-last {
+                        border: none;
+                    }
+                    h2 {
+                        margin: 0; line-height: normal;
+                    }
+                    .left, .right {
+                        box-sizing: border-box;
+                    }
+                    img { box-sizing: border-box; }
+                    .views-field-title, .field-name-title {
+                        font-weight: 700; 
+                        a { 
+                            text-decoration: none; 
+                            &:hover { text-decoration: underline; }
+                        }
+                    }
+                    .views-label {
+                        float: left; padding-right: 5px; font-weight: 700;
+                    }
+                    .field-name-body {
+                        margin-top:10px;
+                        p { margin: 0; display: inline; }
+                        a { font-weight: 700; }
+                    }
+                    .field-name-node-link {
+                        a { font-weight: 700; }
+                    }
+                }
+                
+            }
+            .node-patient-story {
+                .field-name-body {
+                    margin-top:1em; 
+                    p { margin: 0 0 1em 0; }
+                }
+            }
+            // leadership staff list view, patient stories list 
+            // news list
+            .view-leadership-staff-list, .view-patient-stories {
+                .views-row {
+                    .name, .email { font-weight: 700; }
+                    .bio, .field-name-body {
+                    }
+                    @include breakpoint(minsmall) {
+                        $zen-column-count: 4;
+                        .left, .group-left {
+                            @include zen-grid-item(1, 1);
+                            padding-right:20px;
+                        }
+                        .right, .group-right {
+                            @include zen-grid-item(3, 2);
+                        }
+                    } 
+                }
+            }
+            .view-locationlist {
+                .views-row {
+                }
+            }
+            .view-news-list, .node-article {
+                .field-name-author {
+                    float: left; 
+                    font-style: italic; 
+                    .field-item:after { 
+                        content: ", "; display: inline-block;
+                        padding-right: 5px; margin-left: -2px;
+                    }
+                }
+                @include breakpoint(minsmall) {
+                    $zen-column-count: 3;
+                    .left, .group-left {
+                        @include zen-grid-item(1, 1);
+                    }
+                    .right, .group-right {
+                        @include zen-grid-item(2, 2);
+                    }
+                } 
+                .view-footer {
+                    .button {
+                        display: block; float: right;
+                    }
+                    @include clearafter();
+                }
+            }
+            .front & {
+                .views-news-list {
+                    border-bottom: 1px $bordergray solid; padding-bottom: 2em;
+                    .views-row { 
+                        border: none; padding-bottom: 0; margin-bottom: 0;
+                    }
+                }
+                
+            }
+            // publications list
+            .view-publications-list {
+                .views-row {
+                    border-bottom: none;
+                    .views-column {
+                        padding: 0 20px 0 0; box-sizing: border-box;
+                        .views-field-field-image {
+                            img {
+                                box-shadow: 5px 5px 5px rgba(102, 102, 102, 0.4);
+                            }
+                        }
+                        .views-field-title {
+                            margin-top: 10px; font-weight: 700; 
+                            a { text-decoration: none; }
+                        }
+                    }
+                    @include breakpoint(minsmall) {
+                        $zen-column-count: 3;
+                        .views-column-1 {
+                            @include zen-grid-item(1, 1);
+                        }
+                        .views-column-2 {
+                            @include zen-grid-item(1, 2);
+                        }
+                        .views-column-3 {
+                            @include zen-grid-item(1, 3);
+                        }
+                    } 
+                }
+            }
+        }
+        
+        
         .breadcrumb {
             padding: 0 10px; margin-bottom: 50px;
             color: $textgray;
@@ -119,6 +418,10 @@ bhchp custom styles
             }
         }
         .region-sidebar-first {
+            .block-block, .block-views {
+                background-color: $lightgray;
+                padding:20px;
+            }
             .block-menu-block {
                 h2 {
                     font-size:13px; text-transform: uppercase;
@@ -163,8 +466,146 @@ bhchp custom styles
         width: 24%;
         vertical-align: top;
     }
+    #footer {
+        background-color: $lightgray; 
+        .inner { padding: 0 10px; box-sizing: border-box; }
+        .footer-address {
+            float: left; width: 35%;
+        }
+        .footer-email-signup {
+            float: left; width: 40%;
+        }
+        .social-icons { 
+            float: right; 
+        }
+        .block-menu-block {
+            clear: both; padding: 10px 0; 
+            border-top: 1px $bordergray solid; border-bottom: 1px $bordergray solid;
+            .menu {
+                margin: 0; padding: 0;
+                @include clearafter();
+                li { 
+                    float: left; list-style: none; text-transform: uppercase; 
+                    font-weight: 700; margin: 0 20px 0 0; padding: 0;
+                    a { 
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }
-
+// home page styles
+.front {
+    #page {
+        .breadcrumb, h1.title { display: none; }
+        #navigation {
+            background: none; position: relative; padding: 0; margin: 0;
+            &:before { display: none; }
+            #main-menu {
+                max-width: 1200px;
+                background: $blue;
+                position: absolute; right: 0; top: 0;
+                width: 245px; box-sizing: border-box;
+                height:375px;
+                .links {
+                    text-align: left;
+                    li {
+                        display: block; border-bottom: 1px #0066cc solid;
+                        border-right: none;
+                        a {
+                            padding: 50px 30px;
+                        }
+                        &.last {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .region-navigation {
+                width: 100%; box-sizing: border-box; 
+                padding: 0 245px 0 0; margin: 0;
+                .flexslider {
+                    padding: 0; border: 0; border-radius: 0; box-shadow: none;
+                    margin: 0;
+                    .home_bk_img {
+                        height:100%;
+                        width:100%;
+                        background-size: cover; background-position-y: center;
+                        .title { display: none; }
+                    }
+                    
+                    .flex-control-nav {
+                        right: 20px; width: auto;
+                        bottom: 20px; z-index: 3;
+                        li {
+                            a { 
+                                color: #868687; background: #868687;
+                                &.flex-active { color: #fff; background: #fff; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #main {
+            #content {
+                #thirty-years {
+                    float:left; margin-top:-80px; margin-left:-40px;
+                    position:relative; z-index:2;
+                    border: none;
+                }
+                article.node {
+                    .field-name-body {
+                        font-size: 15px; line-height: 25px;
+                    }
+                    .feature {
+                        color: $textgray; font-style: normal; font-size: 19px;
+                    }
+                }
+                
+                .block {
+                    .block__title {
+                        color: $textgray; text-transform: uppercase;
+                        font-size:17px; position: relative; margin-bottom: 20px;
+                        overflow-x: hidden;
+                        &:after { 
+                            content: ""; height: 2px; position: absolute;
+                            width: 100%; top:15px; border-top:1px $bordergray solid;
+                            margin-left: 10px;
+                        }
+                    }
+                    // homepage news stying
+                    .view-news-list {
+                        .field {
+                            margin: 0 0 5px 0;
+                            h2, p { margin: 0; display: inline; line-height: normal; }
+                            a { text-decoration: none; font-weight: 700; }
+                        }
+                    }
+                    // sponsor styling
+                    .view-sponsor-logos {
+                        overflow-x: hidden; 
+                    }
+                    .jcarousel-container {
+                        ul {
+                            li {
+                                display: table; height:100px;
+                                .views-field { 
+                                    display: table-cell; vertical-align: middle;
+                                    padding: 0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+>>>>>>> 120f0c6e8fde06c67bbdcf637f0f90597f458273
+}
 
 
 // icon styles

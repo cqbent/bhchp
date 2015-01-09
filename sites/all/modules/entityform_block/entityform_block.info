@@ -1,0 +1,14 @@
+name = Entityforms Block
+description = Allows to load a specified entity form as a block
+dependencies[] = entityform
+package = Entityforms
+core = 7.x
+files[] = entityform_block.module
+files[] = entityform_block.test
+
+; Information added by Drupal.org packaging script on 2014-05-09
+version = "7.x-1.1"
+core = "7.x"
+project = "entityform_block"
+datestamp = "1399673629"
+
