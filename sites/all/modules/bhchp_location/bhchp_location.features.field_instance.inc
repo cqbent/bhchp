@@ -19,10 +19,10 @@ function bhchp_location_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'custom_formatters',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'custom_formatters_teaser_text_body',
-        'weight' => 3,
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -32,12 +32,6 @@ function bhchp_location_field_default_field_instances() {
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -56,7 +50,7 @@ function bhchp_location_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 
@@ -79,7 +73,7 @@ function bhchp_location_field_default_field_instances() {
     'description' => 'Postal address for location.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'addressfield',
         'settings' => array(
           'format_handlers' => array(
@@ -88,24 +82,12 @@ function bhchp_location_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'hidden',
-        'module' => 'addressfield',
-        'settings' => array(
-          'format_handlers' => array(
-            0 => 'address',
-          ),
-          'use_widget_handlers' => 1,
-        ),
-        'type' => 'addressfield_default',
         'weight' => 0,
       ),
     ),
@@ -132,7 +114,7 @@ function bhchp_location_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => -2,
+      'weight' => 3,
     ),
   );
 
@@ -145,24 +127,64 @@ function bhchp_location_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'geofield',
+        'module' => 'leaflet',
         'settings' => array(
-          'data' => 'full',
+          'height' => 200,
+          'icon' => array(
+            'html' => '',
+            'htmlClass' => '',
+            'iconAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconImageStyle' => '',
+            'iconSize' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconType' => 'marker',
+            'iconUrl' => '',
+            'popupAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowUrl' => '',
+          ),
+          'leaflet_map' => 'google-roadmap',
+          'popup' => array(
+            'show' => 1,
+            'text' => '<a href="[node:url]">[node:title]</a>',
+          ),
+          'vector_display' => array(
+            'clickable' => 0,
+            'color' => '',
+            'dashArray' => '',
+            'fill' => 0,
+            'fillColor' => '',
+            'fillOpacity' => '',
+            'opacity' => '',
+            'stroke' => 0,
+            'stroke_override' => 0,
+            'weight' => '',
+          ),
+          'zoom' => array(
+            'initialZoom' => -1,
+            'maxZoom' => -1,
+            'minZoom' => 1,
+          ),
         ),
-        'type' => 'geofield_wkt',
-        'weight' => 0,
+        'type' => 'geofield_leaflet',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -193,7 +215,7 @@ function bhchp_location_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -206,22 +228,16 @@ function bhchp_location_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'custom_formatters',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'custom_formatters_date_plus_location',
-        'weight' => 2,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -239,7 +255,46 @@ function bhchp_location_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -1,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-location-field_location_phone'
+  $field_instances['node-location-field_location_phone'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Phone number',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location_phone',
+    'label' => 'Phone',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'telephone',
+      'settings' => array(
+        'placeholder' => '',
+      ),
+      'type' => 'telephone_default',
+      'weight' => 4,
     ),
   );
 
@@ -251,6 +306,8 @@ function bhchp_location_field_default_field_instances() {
   t('Hours per week of service');
   t('Hours/wk');
   t('Main location of address of service, as generated by geocoder from postal address');
+  t('Phone');
+  t('Phone number');
   t('Postal address for location.');
 
   return $field_instances;

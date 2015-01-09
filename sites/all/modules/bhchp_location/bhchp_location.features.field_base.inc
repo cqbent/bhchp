@@ -135,5 +135,21 @@ function bhchp_location_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_location_phone'
+  $field_bases['field_location_phone'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_location_phone',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'telephone',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'telephone',
+  );
+
   return $field_bases;
 }

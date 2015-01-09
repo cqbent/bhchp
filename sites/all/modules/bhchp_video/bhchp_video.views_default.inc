@@ -22,7 +22,6 @@ function bhchp_video_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Videos';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -47,8 +46,8 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
   $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+    'image_style' => 'video_thumb140',
+    'image_link' => 'source',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -85,7 +84,8 @@ function bhchp_video_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $export['videos_gallery'] = $view;
 
   return $export;

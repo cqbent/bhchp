@@ -22,21 +22,20 @@ function bhchp_location_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'locationlist';
-  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['title'] = 'List of service locations (text)';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '70';
   $handler->display->display_options['style_plugin'] = 'table';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Location Name';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Address - Administrative area (i.e. State / Province) */
@@ -64,6 +63,7 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['fields']['field_geolocation']['table'] = 'field_data_field_geolocation';
   $handler->display->display_options['fields']['field_geolocation']['field'] = 'field_geolocation';
   $handler->display->display_options['fields']['field_geolocation']['label'] = 'Geo';
+  $handler->display->display_options['fields']['field_geolocation']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_geolocation']['click_sort_column'] = 'geom';
   $handler->display->display_options['fields']['field_geolocation']['type'] = 'geofield_latlon';
   $handler->display->display_options['fields']['field_geolocation']['settings'] = array(
@@ -71,6 +71,10 @@ function bhchp_location_views_default_views() {
     'format' => 'decimal_degrees',
     'labels' => 1,
   );
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_location_phone']['id'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['table'] = 'field_data_field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -100,54 +104,6 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
-    'field_address_locality' => 'field_address_locality',
-    'field_address_administrative_area' => 'field_address_administrative_area',
-    'field_address_postal_code' => 'field_address_postal_code',
-  );
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
-  $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
-  $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
-  $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
-  $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Locality (i.e. City) */
-  $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
-  $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
-  $handler->display->display_options['fields']['field_address_locality']['label'] = '';
-  $handler->display->display_options['fields']['field_address_locality']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Administrative area (i.e. State / Province) */
-  $handler->display->display_options['fields']['field_address_administrative_area']['id'] = 'field_address_administrative_area';
-  $handler->display->display_options['fields']['field_address_administrative_area']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
-  $handler->display->display_options['fields']['field_address_administrative_area']['label'] = '';
-  $handler->display->display_options['fields']['field_address_administrative_area']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Postal code */
-  $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
-  $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
-  $handler->display->display_options['fields']['field_address_postal_code']['label'] = '';
-  $handler->display->display_options['fields']['field_address_postal_code']['element_label_colon'] = FALSE;
   $export['locationlist'] = $view;
 
   $view = new view();
@@ -168,14 +124,14 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'leaflet';
   $handler->display->display_options['style_options']['data_source'] = 'field_geolocation';
   $handler->display->display_options['style_options']['name_field'] = 'title';
-  $handler->display->display_options['style_options']['description_field'] = 'title';
+  $handler->display->display_options['style_options']['description_field'] = 'field_address_thoroughfare';
   $handler->display->display_options['style_options']['map'] = 'google-roadmap';
-  $handler->display->display_options['style_options']['height'] = '300';
+  $handler->display->display_options['style_options']['height'] = '500';
   $handler->display->display_options['style_options']['hide_empty'] = 0;
   $handler->display->display_options['style_options']['zoom']['initialZoom'] = '-1';
   $handler->display->display_options['style_options']['zoom']['minZoom'] = '0';
@@ -183,6 +139,12 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['style_options']['vector_display']['stroke'] = 0;
   $handler->display->display_options['style_options']['vector_display']['fill'] = 0;
   $handler->display->display_options['style_options']['vector_display']['clickable'] = 0;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = 'Map not working? <a href="/locationlist">Click here for a text list of all service locations, addresses &amp; phone numbers</a>.';
+  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -190,10 +152,26 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_location_phone']['id'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['table'] = 'field_data_field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
+  $handler->display->display_options['fields']['field_location_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_location_phone']['element_label_colon'] = FALSE;
   /* Field: Content: Geolocation */
   $handler->display->display_options['fields']['field_geolocation']['id'] = 'field_geolocation';
   $handler->display->display_options['fields']['field_geolocation']['table'] = 'field_data_field_geolocation';
   $handler->display->display_options['fields']['field_geolocation']['field'] = 'field_geolocation';
+  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
+  $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['text'] = '[title]<br />
+[field_address_thoroughfare]<br />
+[field_location_phone]';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -220,9 +198,6 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Locations';
   $handler->display->display_options['menu']['name'] = 'main-menu';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
   $export['locations'] = $view;
 
   return $export;
