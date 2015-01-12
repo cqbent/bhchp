@@ -92,7 +92,7 @@ bhchp custom styles
                             a {
                                 background-color: $green; padding: 5px 10px;
                                 color: #fff; 
-                                &:hover { background-color: #6abe45; }
+                                &:hover { background-color: #6abe45; text-decoration: none; }
                             }
                         }
                     }
@@ -433,6 +433,10 @@ bhchp custom styles
             .block-block, .block-views {
                 background-color: $lightgray;
                 padding:20px;
+            }
+            .testimonial {
+                .block__title { color: $textgray; }
+                .views-field-field-testimonial-name { font-weight: bold; }
             }
             .block-menu-block {
                 h2 {
