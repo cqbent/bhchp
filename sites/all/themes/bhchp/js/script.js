@@ -18,6 +18,16 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
     // Place your code here.
+    // get window height, set min-height of main div: height - header height - footer height
+    $(document).ready(function() {
+        var h_height = $('#header').height();
+        var f_height = $('#footer').height();
+        var n_height = $('#navigation').height();
+        var main_min_height = $(window).height() - h_height - f_height - n_height - 40;
+        $('#main').css('min-height', main_min_height+'px');
+        console.log('h_height: '+h_height+', f_height: '+f_height+', n_height: '+n_height);
+    })
+      
 
   }
 };

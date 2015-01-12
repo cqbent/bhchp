@@ -1,0 +1,48 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+function bhchp_backtoparent_block_info() {
+    $blocks['bhchp_backtoparent_block'] = array(
+        'info' => t('block containing link to parent page'),
+        'cache' => DRUPAL_CACHE_PER_ROLE, // default
+        'region' => 'content',
+    );
+    return $blocks;
+}
+
+function bhchp_backtoparent_block_view($delta = '') {
+    switch ($delta) {
+        case 'bhchp_backtoparent_block':
+            $plinktitle = get_parent_link_title();
+            //dsm($plinktitle);
+            $block['subject'] = t('');
+            $block['content'] = t('<a href="@link">Back to @title</a>', array('@link'=>url($plinktitle['link_path']),'@title'=>$plinktitle['link_title']));	// now render the damn thing
+            break;
+    }
+    return $block;
+}
+
+function get_parent_link_title() {
+    $menutrail = menu_get_active_trail(); // get the menu trail of this page to find the parent menu item
+    if (isset($menutrail[1]['menu_name']) && $menutrail[1]['menu_name'] != 'navigation') { // deterime if page has a menu parent item
+        $result = array(
+            'link_title' => $menutrail[1]['link_title'],
+            'link_path' => $menutrail[1]['link_path']
+        );
+    }
+    else { // if not then get the root path of the page and find the menu item of the path's page
+        $path = explode('/',request_uri());
+        $menuanc = drupal_get_normal_path($path[1]);
+        $result = db_select('menu_links' , 'ml')
+          ->condition('ml.link_path' , $menuanc)
+          ->fields('ml' , array('link_title','link_path'))
+          ->execute()
+          ->fetchAssoc();
+    }
+    return $result;
+}

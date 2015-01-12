@@ -95,7 +95,7 @@ function bhchp_articles_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a class="button" href="/news">More News</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="button white" href="/news">More News</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $export['news_list'] = $view;
 

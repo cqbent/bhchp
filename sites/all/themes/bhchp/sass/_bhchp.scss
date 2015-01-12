@@ -26,6 +26,9 @@ bhchp custom styles
         padding: 5px 10px;
         -webkit-appearance: none; -moz-appearance: none;
         text-decoration: none;
+        &:hover {
+            background-color: #4f71b7;
+        }
         &.white {
             border: 1px $bordergray solid; 
             font-weight: 700; 
@@ -70,7 +73,7 @@ bhchp custom styles
                         margin-left: 20px; text-transform: uppercase;
                         a {
                             text-decoration: none;
-                            &.active {
+                            &.active, &:hover {
                                 text-decoration: underline;
                             }
                         }
@@ -89,6 +92,7 @@ bhchp custom styles
                             a {
                                 background-color: $green; padding: 5px 10px;
                                 color: #fff; 
+                                &:hover { background-color: #6abe45; }
                             }
                         }
                     }
@@ -193,6 +197,9 @@ bhchp custom styles
             a { 
                 text-decoration: none;
                 &:hover { text-decoration: underline; }
+            }
+            .block-bhchp-backtoparent {
+                margin-top: 40px; font-weight: bold;
             }
             // image styling in content
             img.img-border, .img-border img, .view-patient-stories img,
@@ -494,6 +501,9 @@ bhchp custom styles
                     font-weight: 700; margin: 0 20px 0 0; padding: 0;
                     a { 
                         text-decoration: none;
+                        &.active, &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }

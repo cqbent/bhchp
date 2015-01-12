@@ -86,6 +86,12 @@ function bhchp_articles_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'list_fields_mode' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -116,6 +122,7 @@ function bhchp_articles_strongarm() {
   $strongarm->name = 'node_options_article';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'promote',
   );
   $export['node_options_article'] = $strongarm;
 
