@@ -97,11 +97,56 @@ function bhchp_video_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-video-field_video_featured_'
+  $field_instances['node-video-field_video_featured_'] = array(
+    'bundle' => 'video',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check the box if this video should be "featured" as the main video. If multiple videos are checked, only the newest one of those is displayed.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_featured_',
+    'label' => 'Video Featured?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 31,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Check the box if this video should be "featured" as the main video. If multiple videos are checked, only the newest one of those is displayed.');
   t('Post a video URL for youtube or vimeo.');
   t('Video');
+  t('Video Featured?');
 
   return $field_instances;
 }
