@@ -432,6 +432,32 @@ bhchp custom styles
                             display: inline-block; margin-left:5px;
                         }
                     }
+                    .t_node_desc { background: $blue; }
+                    a.t_line_node { 
+                        background: none;
+                        &:before { 
+                            content: "\f111"; font-family: 'FontAwesome'; color: $textgray; 
+                            font-size:10px; position: absolute; top:21px;
+                            &:hover {
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+                .timeline_items_wrapper {
+                    .t_controles {
+                        color: $blue;
+                        .t_left, .t_right { 
+                            background: none; font-family: 'FontAwesome';  
+                            font-size:60px;
+                        }
+                        .t_left:before {
+                            content: "\f104"; 
+                        }
+                        .t_right:before {
+                            content: "\f105"; 
+                        }
+                    }
                 }
                 
                 
