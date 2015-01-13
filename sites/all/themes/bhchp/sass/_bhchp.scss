@@ -419,6 +419,23 @@ bhchp custom styles
                     } 
                 }
             }
+            .timelineCard {
+                .timeline_line {
+                    width: 90%;
+                    .t_line_view {
+                        width: 460px;
+                        .t_line_m { 
+                            width: 229px;
+                            &.right { left: 229px; }
+                        }
+                        .t_line_month_year {
+                            display: inline-block; margin-left:5px;
+                        }
+                    }
+                }
+                
+                
+            }
         }
         
         

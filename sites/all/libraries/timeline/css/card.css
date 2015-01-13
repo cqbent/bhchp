@@ -1,0 +1,339 @@
+.timelineCard {
+	display:none;
+}
+
+.timelineLoader {
+	width:100%;
+	text-align:center;
+	padding:150px 0;
+}
+
+
+
+/* fixed line holder */
+.timelineCard .timeline_line {
+	margin-top:10px;
+	margin-bottom:10px;
+	width:920px;
+}
+
+/* full (including months that are not shown) line holder */
+.timelineCard .t_line_holder {
+	height:80px;
+	background:url('../images/timeline/light/line.jpg') repeat-x 0px 39px;
+}
+
+/* 2 months are stored in one view */
+.timelineCard .t_line_view {
+	height:20px;
+	width:920px;
+}
+
+/* holder for year number */
+.timelineCard h3.t_line_year {
+	margin:0;
+	color:#545454;
+}
+
+/* holder for 1 month (constist of nodes and month caption) - we use borders to separate months thats why it has width 2px less then 50% */
+.timelineCard .t_line_m {
+	margin-top:35px;
+	height:10px;
+	border-left:1px solid #545454;
+	border-right:1px solid #545454;
+	width:458px;
+}
+
+/* month on the right side - has left set at 459 so border would overlap border from first element (to evade duplicated borders) */
+.timelineCard .t_line_m.right {
+	left:459px;
+	width:459px;
+}
+
+/* month caption */
+.timelineCard h4.t_line_month {
+	margin:-30px 0 0;
+	color:#545454;
+}
+
+/* used in responsive layout when only one month is shown (it is span containing year) */
+.t_line_month_year {
+	display:none;
+}
+
+/* node on the timeline */
+.timelineCard a.t_line_node {
+	text-decoration:none;
+	padding:38px 0 4px;
+	height:10px;
+	font-size:12px;
+	top:-25px;
+	background:url('../images/timeline/light/dot.png') no-repeat center 24px;
+	color:#141817;
+}
+.timelineCard a.t_line_node:hover {
+	background:url('../images/timeline/light/dot-rollover.png') no-repeat center 24px;
+}
+.timelineCard a.t_line_node.active {
+	background:url('../images/timeline/light/dot-selected.png') no-repeat center 24px;
+}
+
+/* node description */
+.timelineCard .t_node_desc {
+	background: rgba(26,134,172,0.9);
+	top:0;
+	color:#fff;
+	padding:1px 5px;
+}
+
+/* descriptions on right side go from right to left */
+.timelineLight .t_line_m.right .t_node_desc {
+	right:0;
+}
+
+/* line arrow left */
+.timelineCard #t_line_left {
+	cursor:pointer;
+	left:-30px;
+	top:30px;
+	width:14px;
+	height:19px;
+	background:url('../images/timeline/light/arrow.png') no-repeat left top;
+}
+
+.timelineCard #t_line_left:hover {
+	background:url('../images/timeline/light/arrow.png') no-repeat left bottom;
+}
+
+/* line arrow right */
+.timelineCard #t_line_right {
+	cursor:pointer;
+	right:-30px;
+	top:30px;
+	width:14px;
+	height:19px;
+	background:url('../images/timeline/light/arrow.png') no-repeat right top;
+}
+
+.timelineCard #t_line_right:hover {
+	background:url('../images/timeline/light/arrow.png') no-repeat right bottom;
+}
+
+/* items container */
+.timelineCard .timeline_items {
+	padding:10px 0;
+}
+
+/* single item (margines set from javascript) */
+.timelineCard .item {
+	height:360px;
+	text-align:center;
+	background:url('../images/timeline/light/background-white.jpg') repeat; 
+	color:#545454;
+	-moz-box-shadow: -3px 1px 6px rgba(0,0,0,0.5);
+	-webkit-box-shadow: -3px 1px 6px rgba(0,0,0,0.5);
+	box-shadow: -3px 1px 6px rgba(0,0,0,0.5);
+	width:240px;
+}
+.timelineCard .item.item_node_hover {
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+}
+
+/* ----- content - non-plugin elements ----- */
+.timelineCard .item img {
+	margin-top:0;
+}
+
+.timelineCard .item span{
+	display:block;
+	margin:0px 20px 10px;
+	font-style:italic;
+	font-size:14px;
+	line-height:17px;
+	height:97px;
+}
+.timelineCard .item .read_more {
+	padding:2px 8px 2px 10px;
+	font-family: 'BebasNeueRegular';
+	font-size:20px;
+	color:#ffffff;
+	background: rgba(0,0,0,0.25);
+	cursor:pointer;
+}
+.timelineCard .item .read_more:hover {
+	color:#313131;
+}
+/* ----------------------------------------- */
+
+/* item details (margines set from javascript) */
+.timelineCard .item_open {
+	height:360px;
+	background:url('../images/timeline/light/background.jpg') repeat;
+	position:relative;
+	color:#545454;
+	z-index:2; 
+	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+	width:490px;
+	
+}
+
+/* item details content wrapper (used for animation - shuld have same width as .item_open) */
+.timelineCard .item_open_cwrapper {
+	width:490px;
+}
+
+/* ----- content - non-plugin elements ----- */
+.timelineCard .timeline_open_content {
+	padding:20px;
+}
+
+.timelineCard .item_open h2 {
+	margin-top:10px;
+	padding-top:0;
+	font-size:28px;
+}
+.timelineCard .item_open .t_close {
+	position:absolute;
+	top:10px;
+	right:10px;
+	padding:2px 8px 2px 10px;
+	font-family: 'BebasNeueRegular';
+	font-size:20px;
+	color:#dddddd;
+	background: rgba(0,0,0,0.25);
+	cursor:pointer;
+}
+.timelineCard .item_open .t_close:hover {
+	color:#545454;
+}
+/* ----------------------------------------- */
+
+/* left/right controles */
+.timelineCard .t_controles {
+	margin:10px auto;
+	text-align:center;
+}
+.timelineCard .t_left,
+.timelineCard .t_right {
+	display:inline-block;
+	height:50px;
+	width:29px;
+	margin:10px;
+	cursor:pointer;
+}
+.timelineCard .t_left,  
+.timelineCard .t_left:hover:active {
+	background: url('../images/timeline/light/big-arrow.png') no-repeat left top;
+}
+.timelineCard .t_left:hover {
+	background: url('../images/timeline/light/big-arrow.png') no-repeat left bottom;
+}
+
+.timelineCard .t_right, 
+.timelineCard .t_right:hover:active{
+	background: url('../images/timeline/light/big-arrow.png') no-repeat right top;
+}
+
+.timelineCard .t_right:hover {
+	background: url('../images/timeline/light/big-arrow.png') no-repeat right bottom;
+}
+
+/* -----------------------------------------------------------------------*/
+/* ------------------------------ RESPONSIVE -----------------------------*/
+/* -----------------------------------------------------------------------*/
+
+
+
+/* --- 768px --- */
+@media screen and (max-width:959px) {
+	
+	.timelineCard .timeline_line {
+		width:728px;
+	}
+	
+	.timelineCard .t_line_view {
+		width:728px;
+	}
+	
+	.timelineCard .t_line_m {
+		width: 362px;
+	}
+	.timelineCard .t_line_m.right {
+		left: 363px;
+		width: 363px;
+	}
+}
+
+
+/* --- 610px --- */
+@media screen and (max-width:767px) {
+	
+	.timelineCard .timeline_line {
+		width:570px;
+	}
+	
+	.timelineCard .t_line_view {
+		width:1140px;
+	}
+	
+	.timelineCard .t_line_m {
+		width: 568px;
+	}
+	.timelineCard .t_line_m.right {
+		left: 570px;
+		width: 568px;
+	}
+	.timelineCard .t_line_year {
+		opacity:0;
+		filter:alpha(opacity=0)
+	}
+	.timelineCard .t_line_month_year {
+		display:inline;
+	}
+	
+	.timelineCard .t_line_node span {
+		
+	}
+	.timelineCard .t_node_desc {
+		font-size:8px;
+	}
+	.timelineLight .t_line_m.right .t_node_desc {
+		right:auto;
+		left:0;
+	}
+}
+
+
+/* --- 300px --- */
+@media screen and (max-width:609px) {
+	.timelineCard .timeline_line {
+		width:260px;
+	}
+	
+	.timelineCard .t_line_view {
+		width:520px;
+	}
+	
+	.timelineCard .t_line_m {
+		width: 258px;
+	}
+	.timelineCard .t_line_m.right {
+		left: 260px;
+		width: 258px;
+	}
+	
+	.timelineCard .item_open {
+		width:290px;
+		height:390px;
+	}
+	.timelineCard .item_open_cwrapper {
+		width:290px;
+	}
+}
+
+
+
