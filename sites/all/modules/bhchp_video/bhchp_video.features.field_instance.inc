@@ -22,7 +22,7 @@ function bhchp_video_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -62,7 +62,7 @@ function bhchp_video_field_default_field_instances() {
     'description' => 'Post a video URL for youtube or vimeo.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'video_embed_field',
         'settings' => array(
           'description' => 1,
@@ -70,7 +70,7 @@ function bhchp_video_field_default_field_instances() {
           'video_style' => 'normal',
         ),
         'type' => 'video_embed_field',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
