@@ -1,0 +1,152 @@
+<?php
+
+/**
+ * Implements hook_schema()
+ */
+function tweet_feed_schema() {
+  $schema = array();
+  $schema['tweet_feeds'] = array(
+    'fields'=> array(
+      'fid' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE),
+      'aid' => array(
+        'type' => 'int',
+        'size' => 'small',
+        'not null' => TRUE),
+      'feed_name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE),
+      'query_type' => array(
+        'type' => 'int',
+        'size' => 'small',
+        'not null' => TRUE),
+      'timeline_id' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE),
+      'search_term' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE),
+      'list_name' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE),
+      'pull_count' => array(
+        'type' => 'int',
+        'size' => 'medium',
+        'not null' => TRUE),
+      'clear_prior' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE),
+      'new_window' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE),
+    ),
+    'primary key' => array('fid'),
+  );
+  
+  $schema['tweet_accounts'] = array(
+    'fields'=> array(
+      'aid' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE),
+      'account_name' => array(
+        'type' => 'varchar',
+        'length' => 96,
+        'not null' => TRUE),
+      'consumer_key' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE),
+      'consumer_secret' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE),
+      'oauth_token' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE),
+      'oauth_token_secret' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE),
+    ),
+    'primary key' => array('aid'),
+  );
+  $schema['tweet_hashes'] = array(
+    'fields'=> array(
+      'nid' => array(
+      'type' => 'int',
+      'length' => 11,
+      'not null' => TRUE),
+    'tid' => array(
+      'type' => 'int',
+      'size' => 'big',
+      'not null' => TRUE),
+    'hash' => array(
+      'type' => 'varchar',
+      'length' => 64,
+      'not null' => TRUE),
+    ),
+    'primary key' => array('nid'),
+  );  
+  $schema['tweet_user_hashes'] = array(
+    'fields'=> array(
+      'nid' => array(
+      'type' => 'int',
+      'length' => 11,
+      'not null' => TRUE),
+    'tuid' => array(
+      'type' => 'int',
+      'size' => 'big',
+      'not null' => TRUE),
+    'hash' => array(
+      'type' => 'varchar',
+      'length' => 64,
+      'not null' => TRUE),
+    ),
+    'primary key' => array('nid'),
+  );  
+  return $schema;
+}
+
+/**
+ * Implements hook_field_schema
+ */
+function tweet_feed_field_schema($field) {
+  if($field['type'] == 'tweet_feed_user_mention') {
+    $schema['columns']['tweet_feed_mention_name'] = array(
+      'description' => 'Name of user mentioned in tweet',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'sortable' => FALSE,
+      'views' => TRUE,
+    );
+    $schema['columns']['tweet_feed_mention_screen_name'] = array(
+      'description' => 'Screen Name of user mentioned in tweet',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'sortable' => FALSE,
+      'views' => TRUE,
+    );
+    $schema['columns']['tweet_feed_mention_id'] = array(
+      'description' => 'ID of user mentioned in tweet.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'sortable' => FALSE,
+      'views' => TRUE,
+    );
+  }
+  return $schema;
+}
+
