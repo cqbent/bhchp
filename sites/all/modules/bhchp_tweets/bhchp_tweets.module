@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the bhchp_tweets feature.
+ */
+
+include_once 'bhchp_tweets.features.inc';
