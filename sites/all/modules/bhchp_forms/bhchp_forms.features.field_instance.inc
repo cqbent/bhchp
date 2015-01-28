@@ -550,7 +550,18 @@ function bhchp_forms_field_default_field_instances() {
   $field_instances['entityform-volunteer_internship_form-field_letter_of_reference'] = array(
     'bundle' => 'volunteer_internship_form',
     'deleted' => 0,
-    'description' => 'Please upload two letters of reference in txt, pdf, docx, doc, xls or rtf format. ',
+    'description' => '*In addition to completing this application form, you must also submit two letters of reference from people who know you well (other than family). Emailed references will suffice. Email references may be sent tovolunteer@bhchp.org.
+
+**Further, volunteers & interns will also be required to complete the following: Orientation, CORI check, immunization records, any necessary training.
+
+***Please note:  Our internship opportunities are customized based on the applicant’s interest, BHCHP’s needs, and open positions.  We will do our best to create an internship that is varied and meets your needs, but cannot always guarantee a position.
+
+If you cannot complete this application on line, please feel free to fax to (857) 654-1096 or mail to:
+
+Volunteer Programs
+Boston Health Care for the Homeless Program
+780 Albany Street
+Boston, MA 02118',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1252,6 +1263,18 @@ function bhchp_forms_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('*In addition to completing this application form, you must also submit two letters of reference from people who know you well (other than family). Emailed references will suffice. Email references may be sent tovolunteer@bhchp.org.
+
+**Further, volunteers & interns will also be required to complete the following: Orientation, CORI check, immunization records, any necessary training.
+
+***Please note:  Our internship opportunities are customized based on the applicant’s interest, BHCHP’s needs, and open positions.  We will do our best to create an internship that is varied and meets your needs, but cannot always guarantee a position.
+
+If you cannot complete this application on line, please feel free to fax to (857) 654-1096 or mail to:
+
+Volunteer Programs
+Boston Health Care for the Homeless Program
+780 Albany Street
+Boston, MA 02118');
   t('Date Birth');
   t('Date you are available to start');
   t('Do you have a car');
@@ -1281,7 +1304,6 @@ function bhchp_forms_field_default_field_instances() {
   t('Phone Eve');
   t('Please check all of the volunteer/internship opportunities that interest you:');
   t('Please select which you are applying for');
-  t('Please upload two letters of reference in txt, pdf, docx, doc, xls or rtf format. ');
   t('Prior Volunteer/Internship Experience');
   t('Relationship');
   t('Retired');

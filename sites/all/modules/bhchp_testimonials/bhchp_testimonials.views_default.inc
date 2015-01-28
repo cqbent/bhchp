@@ -170,6 +170,14 @@ function bhchp_testimonials_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'testimonial' => 'testimonial',
   );
+  /* Filter criterion: Content: Show Testimonial (field_page_testimonial) */
+  $handler->display->display_options['filters']['field_page_testimonial_value']['id'] = 'field_page_testimonial_value';
+  $handler->display->display_options['filters']['field_page_testimonial_value']['table'] = 'field_data_field_page_testimonial';
+  $handler->display->display_options['filters']['field_page_testimonial_value']['field'] = 'field_page_testimonial_value';
+  $handler->display->display_options['filters']['field_page_testimonial_value']['relationship'] = 'reverse_field_page_testimonial_entity_node';
+  $handler->display->display_options['filters']['field_page_testimonial_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

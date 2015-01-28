@@ -245,7 +245,6 @@ function bhchp_tweets_views_default_views() {
   $handler = $view->new_display('block', 'Twitter FrontBlock', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -255,10 +254,6 @@ function bhchp_tweets_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
-    'text' => 'text',
-    'created_time' => 'created_time',
-  );
   $handler->display->display_options['row_options']['separator'] = ' &#8212; ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
@@ -267,9 +262,25 @@ function bhchp_tweets_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'follow';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="https://twitter.com/bhchp">Follow us on Twitter</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="https://twitter.com/bhchp" class="button white">Follow us on Twitter</a>';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="https://www.twitter.com/BHCHP" target="_blank"><span class="bhchp_icons_twitter">&nbsp;</span></a>';
+  $handler->display->display_options['fields']['nothing']['element_class'] = 'icon';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Twitter: Created time */
+  $handler->display->display_options['fields']['created_time']['id'] = 'created_time';
+  $handler->display->display_options['fields']['created_time']['table'] = 'twitter';
+  $handler->display->display_options['fields']['created_time']['field'] = 'created_time';
+  $handler->display->display_options['fields']['created_time']['label'] = '';
+  $handler->display->display_options['fields']['created_time']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created_time']['date_format'] = 'month_day_year';
+  $handler->display->display_options['fields']['created_time']['second_date_format'] = 'long';
   /* Field: Twitter: Message text */
   $handler->display->display_options['fields']['text']['id'] = 'text';
   $handler->display->display_options['fields']['text']['table'] = 'twitter';
@@ -280,14 +291,8 @@ function bhchp_tweets_views_default_views() {
   $handler->display->display_options['fields']['text']['link_usernames'] = 1;
   $handler->display->display_options['fields']['text']['link_hashtags'] = 1;
   $handler->display->display_options['fields']['text']['link_attributes'] = 1;
-  /* Field: Twitter: Created time */
-  $handler->display->display_options['fields']['created_time']['id'] = 'created_time';
-  $handler->display->display_options['fields']['created_time']['table'] = 'twitter';
-  $handler->display->display_options['fields']['created_time']['field'] = 'created_time';
-  $handler->display->display_options['fields']['created_time']['label'] = '';
-  $handler->display->display_options['fields']['created_time']['date_format'] = 'time ago';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  $handler->display->display_options['block_description'] = 'Tweets';
+  $handler->display->display_options['block_description'] = 'Tweets front';
 
   /* Display: Tweets */
   $handler = $view->new_display('page', 'Tweets', 'page_2');
@@ -402,7 +407,7 @@ function bhchp_tweets_views_default_views() {
   $handler->display->display_options['fields']['created_time']['custom_date_format'] = 'M j, Y';
   $handler->display->display_options['fields']['created_time']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  $handler->display->display_options['block_description'] = 'Tweets';
+  $handler->display->display_options['block_description'] = 'Tweets side';
   $export['bhchp_tweets'] = $view;
 
   return $export;

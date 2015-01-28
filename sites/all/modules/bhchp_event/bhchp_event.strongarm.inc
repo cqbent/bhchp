@@ -96,6 +96,9 @@ function bhchp_event_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'list_fields_mode' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

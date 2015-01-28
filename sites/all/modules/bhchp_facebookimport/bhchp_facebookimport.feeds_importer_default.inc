@@ -35,33 +35,38 @@ function bhchp_facebookimport_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'expire' => '-1',
-        'author' => 0,
+        'expire' => '604800',
+        'author' => '1',
         'authorize' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'message',
-            'target' => 'body',
-            'unique' => FALSE,
-          ),
-          1 => array(
-            'source' => 'message',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          2 => array(
-            'source' => 'entry_url',
-            'target' => 'field_facebook_link:url',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'post_id',
             'target' => 'guid',
             'unique' => 1,
           ),
-          4 => array(
+          1 => array(
             'source' => 'created_time',
             'target' => 'created',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'name',
+            'target' => 'title',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'description',
+            'target' => 'body',
+            'format' => 'plain_text',
+          ),
+          4 => array(
+            'source' => 'message',
+            'target' => 'body:summary',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'link',
+            'target' => 'url',
             'unique' => FALSE,
           ),
         ),

@@ -73,7 +73,7 @@ class FeedsFacebookParser extends FeedsParser {
           'picture' => (isset($entry->picture) ? $entry->picture : ''),
           'link' => (isset($entry->link)       ? $entry->link : ''),
           'source' => (isset($entry->source)   ? $entry->source : ''),
-          'name' => (isset($entry->name)       ? $entry->name : ''),
+          'name' => (isset($entry->name)       ? $entry->name : substr((string) $entry->message, 0, 255)),
           'caption' => (isset($entry->caption) ? $entry->caption : ''),
           'description' => (isset($entry->description) ? $entry->description : $entry->message),
           'icon' => (isset($entry->icon)       ? $entry->icon : ''),

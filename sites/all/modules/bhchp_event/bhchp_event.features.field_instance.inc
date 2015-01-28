@@ -22,7 +22,7 @@ function bhchp_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -168,7 +168,7 @@ function bhchp_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -204,10 +204,59 @@ function bhchp_event_field_default_field_instances() {
     'description' => 'Auto loads from event address.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
+        'label' => 'hidden',
+        'module' => 'leaflet',
+        'settings' => array(
+          'height' => 200,
+          'icon' => array(
+            'html' => '',
+            'htmlClass' => '',
+            'iconAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconImageStyle' => '',
+            'iconSize' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconType' => 'marker',
+            'iconUrl' => '',
+            'popupAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowUrl' => '',
+          ),
+          'leaflet_map' => 'google-roadmap',
+          'popup' => array(
+            'show' => 0,
+            'text' => '',
+          ),
+          'vector_display' => array(
+            'clickable' => 0,
+            'color' => '',
+            'dashArray' => '',
+            'fill' => 0,
+            'fillColor' => '',
+            'fillOpacity' => '',
+            'opacity' => '',
+            'stroke' => 0,
+            'stroke_override' => 0,
+            'weight' => '',
+          ),
+          'zoom' => array(
+            'initialZoom' => -1,
+            'maxZoom' => -1,
+            'minZoom' => 1,
+          ),
+        ),
+        'type' => 'geofield_leaflet',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -260,7 +309,7 @@ function bhchp_event_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -355,7 +404,7 @@ function bhchp_event_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -463,7 +512,7 @@ function bhchp_event_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',

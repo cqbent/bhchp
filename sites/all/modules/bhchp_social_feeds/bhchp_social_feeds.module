@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the BHCHP Social Feeds feature.
+ */
+
+include_once 'bhchp_social_feeds.features.inc';

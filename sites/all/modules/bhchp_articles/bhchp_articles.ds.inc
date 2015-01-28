@@ -95,6 +95,7 @@ function bhchp_articles_ds_layout_settings_info() {
         1 => 'author',
         2 => 'post_date',
         3 => 'body',
+        4 => 'field_tags',
       ),
     ),
     'fields' => array(
@@ -102,6 +103,7 @@ function bhchp_articles_ds_layout_settings_info() {
       'author' => 'right',
       'post_date' => 'right',
       'body' => 'right',
+      'field_tags' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(

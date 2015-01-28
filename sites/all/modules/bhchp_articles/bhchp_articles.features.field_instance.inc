@@ -154,10 +154,11 @@ function bhchp_articles_field_default_field_instances() {
     'description' => 'Enter a comma-separated list of words to describe your content.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
       ),
       'list_fields_mode' => array(
         'label' => 'above',
@@ -174,12 +175,13 @@ function bhchp_articles_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_tags',
-    'label' => 'Tags',
-    'required' => FALSE,
+    'label' => 'Category',
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'taxonomy',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
@@ -193,9 +195,9 @@ function bhchp_articles_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Category');
   t('Enter a comma-separated list of words to describe your content.');
   t('Image');
-  t('Tags');
   t('Upload an image to go with this article.');
 
   return $field_instances;

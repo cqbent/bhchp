@@ -13,6 +13,8 @@ if(typeof(CKEDITOR) !== 'undefined') {
         /* BHCHP custom text classes */
         { name : 'Feature Text'	, element : 'p', attributes : { 'class' : 'feature' } },  
         { name : 'Quote'	, element : 'p', attributes : { 'class' : 'quote' } },    
+        { name : 'Button Link (blue)' , element : 'a', attributes : { 'class' : 'button' } },    
+        { name : 'Button Link (white)' , element : 'a', attributes : { 'class' : 'button white' } },    
         { name : 'Image on Left' , element : 'img', attributes : { 'class' : 'img-left' } },    
         { name : 'Image on Right' , element : 'img', attributes : { 'class' : 'img-right' } }   
         
