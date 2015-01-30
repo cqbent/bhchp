@@ -1,13 +1,12 @@
 <?php
-// $Id: FeedsYoutubeParser.inc,v 1.10 2011/01/31 22:57:28 wojtha Exp $
 
 /**
  * @file
- * Feeds parser class for Youtube
+ * Feeds parser class for YouTube.
  */
 
 /**
- * Class definition for Youtube Parser.
+ * Class definition for YouTube Parser.
  *
  * Parses RSS or Atom feeds returned from YouTube API like.
  */
@@ -26,10 +25,9 @@ class FeedsYoutubeParser extends FeedsParser {
     $youtube_feed = $fetcher_result->getRaw();
     $result = new FeedsParserResult();
 
-
     /**
-    * @see common_syndication_parser_parse()
-    */
+     * @see common_syndication_parser_parse()
+     */
     if (!defined('LIBXML_VERSION') || (version_compare(phpversion(), '5.1.0', '<'))) {
       @$sxml = simplexml_load_string($youtube_feed, NULL);
     }
@@ -45,16 +43,14 @@ class FeedsYoutubeParser extends FeedsParser {
     // Run parsing if the feed is Atom or RSS
     if ($this->isAtomFeed($sxml)) {
       $result = $this->parseAtom($sxml, $source, $fetcher_result);
-			
     }
     elseif ($this->isRssFeed($sxml)) {
       $result = $this->parseRss20($sxml, $source, $fetcher_result);
-			
     }
     else {
       throw new Exception(t('FeedsYoutubeParser: Unknown type of feed.'));
     }
-		return $result;
+    return $result;
   }
 
   /**
@@ -62,7 +58,7 @@ class FeedsYoutubeParser extends FeedsParser {
    *
    * @param SimpleXMLElement $sxml
    *
-   * @return boolen
+   * @return boolean
    *   TRUE if given SimpleXML object is Atom feed or FALSE
    */
   protected function isAtomFeed(SimpleXMLElement $sxml) {
@@ -74,7 +70,7 @@ class FeedsYoutubeParser extends FeedsParser {
    *
    * @param SimpleXMLElement $sxml
    *
-   * @return boolen
+   * @return boolean
    *   TRUE if given SimpleXML object is RSS feed or FALSE
    */
   protected function isRssFeed(SimpleXMLElement $sxml) {
@@ -117,6 +113,12 @@ class FeedsYoutubeParser extends FeedsParser {
       'published_timestamp' => array(
         'name' => t('Published on (Timestamp)'),
       ),
+      'uploaded_datetime' => array(
+        'name' => t('Uploaded on (Datetime)'),
+      ),
+      'uploaded_timestamp' => array(
+        'name' => t('Uploaded on (Timestamp)'),
+      ),
       'description' => array(
         'name' => t('Description'),
       ),
@@ -156,6 +158,15 @@ class FeedsYoutubeParser extends FeedsParser {
       'rating' => array(
         'name' => t('Rating'),
       ),
+      'raters_number' => array(
+        'name' => t('Number of raters'),
+      ),
+      'likes' => array(
+        'name' => t('Number of likes'),
+      ),
+      'dislikes' => array(
+        'name' => t('Number of dislikes'),
+      ),
     );
   }
 
@@ -167,9 +178,9 @@ class FeedsYoutubeParser extends FeedsParser {
    */
   public function secsToTime($seconds) {
     // Number of seconds in an hour.
-    $unith =3600;
+    $unith = 3600;
     // Number of seconds in a minute.
-    $unitm =60;
+    $unitm = 60;
 
     // '/' given value by num sec in hour... output = HOURS
     $hh = intval($seconds / $unith);
@@ -192,14 +203,14 @@ class FeedsYoutubeParser extends FeedsParser {
     }
 
     // Create a safe-for-output MM:SS.
-    $output .= check_plain(sprintf($hh ? "%02d:%02d" : "%d:%02d", $mm, $ss));
+    $output .= sprintf($hh ? "%02d:%02d" : "%d:%02d", $mm, $ss);
 
     return $output;
   }
 
 
   /**
-   * Parse Atom feed
+   * Parse Atom feed.
    *
    * @param SimpleXMLElement $sxml
    * @param FeedsFetcherResult $fetcher_result
@@ -207,45 +218,56 @@ class FeedsYoutubeParser extends FeedsParser {
    */
   private function parseAtom(SimpleXMLElement $sxml, FeedsSource $source, FeedsFetcherResult $fetcher_result) {
 
-
     $fetcher_result->title = $feed_title = (string) $sxml->title;
     $result = new FeedsParserResult();
 
     // Iterate over entries in feed
     // TODO: This is not DRY - extract things which is same in Atom and RSS20 to common method
     foreach ($sxml->entry as $entry) {
-      // get video ID
-      $arr = explode('/', $entry->id);
-      $id = $arr[count($arr)-1];
-
-      // get nodes in media: namespace for media information
+      // Get nodes in media: namespace for media information.
       $media = $entry->children('http://search.yahoo.com/mrss/');
 
-      // get video player URL
+      // Get video player URL.
       $attrs = $media->group->player->attributes();
       $watch = str_replace('&feature=youtube_gdata_player', '', $attrs['url']);
 
-      // get video thumbnail
+      // Get video thumbnail.
       $attrs = $media->group->thumbnail[0]->attributes();
       $thumbnail = (string) $attrs['url'];
 
-      // get <yt:duration> node for video length
+      // Get <yt:duration> node for video length.
       $yt = $media->children('http://gdata.youtube.com/schemas/2007');
       $attrs = $yt->duration->attributes();
       $length = $attrs['seconds'];
 
-      // get <yt:stats> node for viewer statistics
+      // Get video ID.
+      $id = (string) $yt->videoid;
+
+      // Get video uploaded date.
+      $uploaded = (string) $yt->uploaded;
+
+      // Get <yt:statistics> node for viewer statistics.
       $yt = $entry->children('http://gdata.youtube.com/schemas/2007');
       $attrs = $yt->statistics->attributes();
       $viewCount = $attrs['viewCount'];
       $favCount = $attrs['favoriteCount'];
 
-      // get <gd:rating> node for video ratings
+      // Get <yt:rating> node for likes and dislikes statistics.
+      $likes = 0;
+      $dislikes = 0;
+      if (isset($yt->rating) && $attrs = $yt->rating->attributes()) {
+        $likes = (int) $attrs['numLikes'];
+        $dislikes = (int) $attrs['numDislikes'];
+      }
+
+      // Get <gd:rating> node for video ratings.
       $gd = $entry->children('http://schemas.google.com/g/2005');
       $rating = 0;
+      $raters_number = 0;
       if ($gd->rating) {
         $attrs = $gd->rating->attributes();
-        $rating = $attrs['average'];
+        $rating = (float) $attrs['average'];
+        $raters_number = (int) $attrs['numRaters'];
       }
 
       $updated = (string) $entry->updated;
@@ -265,23 +287,30 @@ class FeedsYoutubeParser extends FeedsParser {
         'tags' => explode(',', $media->group->keywords),
         'embedded_player' => '',
         'duration' => $this->secsToTime($length),
-        'duration_raw' => $length,
+        'duration_raw' => (int) $length,
         'view_count' => (string) $viewCount,
-        'fav_count' => (string) $viewCount,
+        'fav_count' => (string) $favCount,
         'rating' => (string) $rating,
+        'raters_number' => $raters_number,
         'updated_datetime' => date('Y-m-d H:i:s', strtotime($updated)),
-        'updated_timestamp' => strtotime($published),
+        'updated_timestamp' => strtotime($updated),
         'published_datetime' => date('Y-m-d H:i:s', strtotime($published)),
-        'published_timestamp' => strtotime($updated),
+        'published_timestamp' => strtotime($published),
+        'uploaded_datetime' => date('Y-m-d H:i:s', strtotime($uploaded)),
+        'uploaded_timestamp' => strtotime($uploaded),
+        'likes' => $likes,
+        'dislikes' => $dislikes,
       );
 
       // Populate the FeedsFetcherResult object with the parsed results.
       $result->items[] = $item;
     }
+
+    return $result;
   }
 
   /**
-   * Parse RSS 2.0 feed
+   * Parse RSS 2.0 feed.
    *
    * @param SimpleXMLElement $sxml
    * @param FeedsFetcherResult $fetcher_result
@@ -289,52 +318,53 @@ class FeedsYoutubeParser extends FeedsParser {
    */
   private function parseRss20(SimpleXMLElement $sxml, FeedsSource $source, FeedsFetcherResult $fetcher_result) {
 
-    // XML was parsed successfully, so we can begin to process items
+    // XML was parsed successfully, so we can begin to process items.
     $result = new FeedsParserResult();
     $fetcher_result->title = (string) $sxml->channel->title;
     $fetcher_result->description = (string) $sxml->channel->description;
     $fetcher_result->link = (string) $sxml->channel->link;
     $feed_title = (string) $sxml->channel->title;
 
-    // Iterate over entries in feed
+    // Iterate over entries in feed.
     // TODO: This is not DRY - extract things which is same in Atom and RSS20 to common method
     foreach ($sxml->xpath('//item') as $entry) {
 
-      // Get atom nodes
+      // Get Atom nodes.
       $atom = $entry->children('http://www.w3.org/2005/Atom');
       $updated = $atom->updated;
 
-      // Get video ID
+      // Get video ID.
       $id = end(explode('/', $entry->guid));
 
-      // Get nodes in media: namespace for media information
+      // Get nodes in media: namespace for media information.
       $media = $entry->children('http://search.yahoo.com/mrss/');
 
       // Get video player URL
       $attrs = $media->group->player->attributes();
       $player = (string) $attrs['url'];
 
-      // Get video thumbnail
+      // Get video thumbnail.
       $attrs = $media->group->thumbnail[0]->attributes();
       $thumbnail = (string) $attrs['url'];
 
-      // Get <yt:duration> node for video length
+      // Get <yt:duration> node for video length.
       $yt = $media->children('http://gdata.youtube.com/schemas/2007');
       $attrs = $yt->duration->attributes();
       $length = (int) $attrs['seconds'];
 
-      // Get <yt:stats> node for viewer statistics
+      // Get <yt:stats> node for viewer statistics.
       $yt = $entry->children('http://gdata.youtube.com/schemas/2007');
       $attrs = $yt->statistics->attributes();
       $viewCount = (int) $attrs['viewCount'];
       $favCount = (int) $attrs['favoriteCount'];
 
-      // Get <gd:rating> node for video ratings
+      // Get <gd:rating> node for video ratings.
       $gd = $entry->children('http://schemas.google.com/g/2005');
       $rating = 0;
       if ($gd->rating) {
         $attrs = $gd->rating->attributes();
-        $rating = (int) $attrs['average'];
+        $rating = (float) $attrs['average'];
+        $raters_number = (int) $attrs['numRaters'];
       }
 
       $item = array(
@@ -355,16 +385,16 @@ class FeedsYoutubeParser extends FeedsParser {
         'view_count' => $viewCount,
         'fav_count' => $favCount,
         'rating' => $rating,
+        'raters_number' => $raters_number,
         'updated_datetime' => date('Y-m-d H:i:s', strtotime($updated)),
         'updated_timestamp' => strtotime($updated),
         'published_datetime' => date('Y-m-d H:i:s', strtotime($entry->pubDate)),
         'published_timestamp' => strtotime($entry->pubDate),
       );
-
       // Populate the FeedsFetcherResult object with the parsed results.
       $result->items[] = $item;
     }
+
     return $result;
   }
-
 }

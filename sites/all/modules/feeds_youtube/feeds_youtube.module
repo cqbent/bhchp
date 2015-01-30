@@ -1,15 +1,15 @@
 <?php 
-// $Id: feeds_youtube.module,v 1.4 2011/01/31 22:57:28 wojtha Exp $
 
 /**
  * @file
- * Adds a Youtube feed processor to the Feeds module.
+ * Adds a YouTube feed processor to the Feeds module.
+ * 
+ * @see http://drupal.org/node/622696
  */
 
 /**
- * Implements ctools_plugin_api().
+ * Implements hook_ctools_plugin_api().
  */
-
 function feeds_youtube_ctools_plugin_api($owner, $api) {
   if ($owner == 'feeds' && $api == 'plugins') {
     return array('version' => 1);
@@ -22,9 +22,9 @@ function feeds_youtube_ctools_plugin_api($owner, $api) {
 function feeds_youtube_feeds_plugins() {
   $info = array();
   $info['FeedsYoutubeParser'] = array(
-    'name' => 'Youtube parser',
-    'description' => 'Parse Youtube feeds.',
-    'help' => 'Use PHP SimpleXML parser to parse Youtube feeds.',
+    'name' => 'YouTube parser',
+    'description' => 'Parse YouTube feeds.',
+    'help' => 'Use PHP SimpleXML parser to parse YouTube feeds.',
     'handler' => array(
       'parent' => 'FeedsParser',
       'class' => 'FeedsYoutubeParser',
