@@ -10,9 +10,9 @@ files[] = views/handlers/views_embed_field_views_handler_field_thumbnail_path.in
 dependencies[] = ctools
 dependencies[] = image
 
-; Information added by Drupal.org packaging script on 2014-11-26
-version = "7.x-2.0-beta8+4-dev"
+; Information added by Drupal.org packaging script on 2014-08-16
+version = "7.x-2.0-beta8"
 core = "7.x"
 project = "video_embed_field"
-datestamp = "1416989584"
+datestamp = "1408177433"
 

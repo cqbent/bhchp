@@ -1,0 +1,12 @@
+name = bhchp_video_youtube_feed
+description = imports feed directly from youtube
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = bhchp_video_youtube_feed
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_youtube
+features[ctools][] = feeds:feeds_importer_default:1
+features[features_api][] = api:2
+features[feeds_importer][] = youtube_feed_importer

@@ -25,6 +25,6 @@
  */
 //dsm($fields);
 ?>
-<div class="home_bk_img" style="width: 100%; height: 375px; background-image:url(<?php print $fields['field_image']->content; ?>)">
+<div class="home_bk_img" style="background-image:url(<?php print $fields['field_image']->content; ?>)">
     <div class="title"><?php print $fields['title']->content; ?></div>
 </div>

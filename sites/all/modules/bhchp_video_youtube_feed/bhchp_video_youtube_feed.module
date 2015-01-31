@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the bhchp_video_youtube_feed feature.
+ */
+
+include_once 'bhchp_video_youtube_feed.features.inc';

@@ -43,6 +43,8 @@ bhchp custom styles
     #header {
         position:relative;
         padding-bottom:20px; 
+        border-bottom: 1px #d8dad9 solid;
+        
         #logo { 
             margin-top:13px;
             img { width: 215px; }
@@ -65,9 +67,19 @@ bhchp custom styles
                     */
                 }
             }
-            .block-menu-block {
-                margin:0;
+            ul.menu {
+                margin: 0;
+                li {
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .top-menu {
+                float: right; 
                 .menu {
+                    margin: 0;
                     li {
                         float: left; list-style: none;
                         margin-left: 20px; text-transform: uppercase;
@@ -98,18 +110,92 @@ bhchp custom styles
                     }
                 }
             }
+            .block.patient-portal {
+                float: right; margin:0 0 0 20px;
+                padding: 0;
+                p { margin: 0; }
+                .button {
+                    background-color: $green;
+                }
+            }
         }
         @include breakpoint(maxsmall) {
-            margin-bottom:0;
+            position:fixed; top:0; z-index:2; background-color:#fff; width:100%;
+            margin-bottom:0; height: 174px; padding: 0 50px;
             #logo { float: none; display: block; }
             .region-header {
                 .block-search { display: none; }
                 .social-icons { float:left; }
-                .block-menu-block {
-                    float: right; margin-top:-20px;
+                .top-menu {
+                    display: none;
+                }
+                .mobile-menu {
+                    position: absolute; top: 0; left: 0;
+                    width: 100%; z-index: 2;
+                    .block-title {
+                        cursor: pointer; visibility: hidden;
+                        &:before {
+                            content: "\f0c9"; font-size: 24px; font-family: 'FontAwesome';
+                            color: $blue; cursor: pointer;
+                            position: absolute; top:20px; right: 20px;
+                            visibility: visible;
+                        }
+                    }
+                    
+                    .inside {
+                        display: none;
+                        position: fixed; top: 0; left: -50px; padding:20px 20px 20px 70px;
+                        width: 100%; height: 100%; background-color: $textgray;
+                        box-sizing: border-box;
+                    }
+                    .close-link {
+                        font-size: 10px; 
+                        color: #ff0000; cursor: pointer;
+                        position: absolute; top:20px; right: 20px;
+                        p { margin: 0; }
+                    }
+                    &.menu-active {
+                        .inside {
+                            display: block;
+                        }
+                    }
+                    ul.menu {
+                        padding: 0;
+                        li {
+                            float: none; list-style: none; text-transform: uppercase;
+                            font-weight: 600;
+                            a { color: #fff; text-decoration: none; }
+                            .menu {
+                                padding-left: 20px;
+                                display: none;
+                                li {
+                                    text-transform: none; 
+                                    ul li {
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                            &.is-expanded {
+                                > a {
+                                    &:after { content: "+"; padding-left:5px; }
+                                }
+                                &:hover, &.active-trail {
+                                    > a:after { content: ""; }
+                                    .menu { display: block; }
+                                }
+                            }
+                            &#home-link {
+                                border-bottom:1px #fff solid;
+                                margin-bottom:5px; padding-bottom: 5px;
+                            }
+                        }  
+                    }
                     li {
-                        display: none; 
                         &#patient-portal { display: block; }
+                    }
+                    .footer-menu-mobile {
+                        margin-top:5px; padding-top: 5px;
+                        border-top:1px #fff solid;
                     }
                 }
             }
@@ -121,25 +207,24 @@ bhchp custom styles
                     float: right;
                 }
             }
-            .block-menu-block {
-                position: absolute; bottom: 20px; right: 10px; 
+            .mobile-menu {
+                display: none; 
+            }
+            .block.patient-portal {
+                clear: both; 
             }
             
         }
     }
     #navigation {
-        background-color:$blue; font-size:17px;
-        &:before {
-            content: ""; display: block; border-top: 1px #d8dad9 solid;
-            height: 10px; background-color: #fff; margin: 0 -10px;
-        }
+        background-color:$blue; font-size:17px; margin-top:10px;
+        padding: 0;
         #main-menu {
             .links {
                 display: block; text-align: center;
                 li {
-                   float: none; display: inline-block; 
-                   border-right: 1px #0066cc solid;
-                   a {
+                    float: none; 
+                    a {
                        display: block; color: #fff; padding:30px;
                        text-decoration: none;
                        text-transform: uppercase; 
@@ -154,13 +239,29 @@ bhchp custom styles
                        &.donate:before { content: "\e601"; }
                        &.get-involved:before { content: "\e602"; }
                        &.services:before { content: "\e600"; }
-                   }
-                   &.last {
+                    }
+                    &.last {
                        border: none;
-                   }
+                    }
                 }
             }
         }
+        @include breakpoint(maxsmall) {
+            margin-top: 184px;
+            .links {
+                li {
+                    display: block; border-bottom: 1px #0066cc solid;
+                }
+            }
+        }
+        @include breakpoint (minsmall) {
+            .links {
+                li {
+                    display: inline-block; border-right: 1px #0066cc solid;
+                }
+            }
+        }
+
     }
     .entityform {
         .form-type-radios {
@@ -182,6 +283,7 @@ bhchp custom styles
         }
     }
     #main {
+        padding-top: 10px;
         h1, h2 {
             color: $blue;
         }
@@ -470,9 +572,8 @@ bhchp custom styles
             }
         }
         
-        
         .breadcrumb {
-            padding: 0 10px; margin-bottom: 50px;
+            padding: 0 10px; 
             color: $textgray;
             a {
                 color: $textgray; text-decoration: none;
@@ -484,10 +585,20 @@ bhchp custom styles
                 padding:20px;
             }
             .testimonial {
+                p { 
+                    margin: 0; 
+                    &:before { content: "\201C"; }
+                    &:after { content: "\201D"; }
+                }
                 .block__title { color: $textgray; }
-                .views-field-field-testimonial-name { font-weight: bold; }
+                .views-field-field-testimonial-name { font-weight: bold; margin-top:10px; }
             }
-            
+            .social-feed-blocks {
+                .block-title { display:none; }
+                .panel-pane:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
             .block-menu-block {
                 h2 {
                     font-size:13px; text-transform: uppercase;
@@ -527,6 +638,14 @@ bhchp custom styles
                 }
             }
         }
+        @include breakpoint(maxsmall) {
+            padding: 20px;
+        }
+        @include breakpoint(minsmall) {
+            .breadcrumb {
+                margin-bottom: 50px;
+            }
+        }
     }
     .view-id-videos_gallery td {
         width: 24%;
@@ -535,15 +654,6 @@ bhchp custom styles
     #footer {
         background-color: $lightgray; 
         .inner { padding: 0 10px; box-sizing: border-box; }
-        .footer-address {
-            float: left; width: 35%;
-        }
-        .footer-email-signup {
-            float: left; width: 40%;
-        }
-        .social-icons { 
-            float: right; 
-        }
         .block-menu-block {
             clear: both; padding: 10px 0; 
             border-top: 1px $bordergray solid; border-bottom: 1px $bordergray solid;
@@ -560,6 +670,22 @@ bhchp custom styles
                         }
                     }
                 }
+            }
+        }
+        @include breakpoint(maxsmall) {
+            .social-icons, .block-menu-block {
+                display: none;
+            }
+        }
+        @include breakpoint(minsmall) {
+            .footer-address {
+                float: left; width: 35%;
+            }
+            .footer-email-signup {
+                float: left; width: 40%;
+            }
+            .social-icons { 
+                float: right; 
             }
         }
     }
@@ -627,22 +753,16 @@ bhchp custom styles
     #page {
         .breadcrumb, h1.title { display: none; }
         #navigation {
-            background: none; position: relative; padding: 0; margin: 0;
+            background: none; position: relative; padding: 0; 
             &:before { display: none; }
             #main-menu {
                 max-width: 1200px;
                 background: $blue;
-                position: absolute; right: 0; top: 0;
-                width: 245px; box-sizing: border-box;
-                height:375px;
                 .links {
                     text-align: left;
                     li {
                         display: block; border-bottom: 1px #0066cc solid;
                         border-right: none;
-                        a {
-                            padding: 50px 30px;
-                        }
                         &.last {
                             border-bottom: none;
                         }
@@ -651,7 +771,7 @@ bhchp custom styles
             }
             .region-navigation {
                 width: 100%; box-sizing: border-box; 
-                padding: 0 245px 0 0; margin: 0;
+                margin: 0;
                 .flexslider {
                     padding: 0; border: 0; border-radius: 0; box-shadow: none;
                     margin: 0;
@@ -670,6 +790,44 @@ bhchp custom styles
                                 color: #868687; background: #868687;
                                 &.flex-active { color: #fff; background: #fff; }
                             }
+                        }
+                    }
+                }
+            }
+            @include breakpoint(maxsmall) {
+                #main-menu {
+                    .links {
+                        margin-top:130px;
+                    }
+                }
+                .region-navigation {
+                    position: absolute; top:0; height:130px;
+                    .flexslider {
+                        .home_bk_img {
+                            height: 130px; width:100%;
+                        }
+                    }
+                }
+            }
+            @include breakpoint(minsmall) {
+                #main-menu {
+                    position: absolute; right: 0; top: 0;
+                    width: 245px; box-sizing: border-box;
+                    height:375px;
+                    .links {
+                        a {
+                            padding: 50px 30px;
+                        }
+                    }
+                }
+                #navigation {
+                    margin: 0;
+                }
+                .region-navigation {
+                    padding: 0 245px 0 0; 
+                    .flexslider {
+                        .home_bk_img {
+                            width: 100%; height: 375px; 
                         }
                     }
                 }
@@ -704,6 +862,9 @@ bhchp custom styles
                     }
                     // homepage news stying
                     .view-news-list {
+                        .views-row {
+                            border: none;
+                        }
                         .field {
                             margin: 0 0 5px 0;
                             h2, p { margin: 0; display: inline; line-height: normal; }

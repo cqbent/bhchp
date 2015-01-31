@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the bhchp_video feature.
- */
-
-include_once 'bhchp_video.features.inc';

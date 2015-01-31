@@ -30,7 +30,7 @@ class draggableviews_handler_fieldapi extends draggableviews_handler {
     // Check all the sortings added to a view. Hope there is
     // better way to determine them. Need to research.
     $sorts = $field->view->display_handler->display->display_options['sorts'];
-    // If no sorts available for current display, use sorts from default display.
+    // If no sorts avaialble for current display, use sorts from default display.
     if (empty($sorts)) {
       $sorts = $field->view->display['default']->display_options['sorts'];
     }
@@ -44,14 +44,14 @@ class draggableviews_handler_fieldapi extends draggableviews_handler {
       // Remove "_value" from field name and try to load the field.
       $field_name = drupal_substr($field_name, 0, drupal_strlen($field_name) - 6);
       if ($field_info = field_info_field($field_name)) {
-        if ($field_info['type'] == 'number_integer' || $field_info['type'] == 'list_integer') {
+        if ($field_info['type'] == 'number_integer') {
           $views_field_data = field_views_field_default_views_data($field_info);
           $options[$sort_option['table'] . ':' . $sort_option['field']] = filter_xss($views_field_data[$sort_option['table']][$sort_option['field']]['title']);
         }
       }
     }
 
-    // If options are empty, show warning message.
+    // If options are emtpy, show warning message.
     if (count($options) == 1) {
       $form['field_warning'] = array(
         '#markup' => '<div class="messages warning">' . t('Add weight integer field to sorts so it can be selected.') . '</div>',
@@ -111,14 +111,11 @@ class draggableviews_handler_fieldapi extends draggableviews_handler {
     // Remove '_value' from column name to get field name.
     $field_name = drupal_substr($field_column, 0, drupal_strlen($field_column) - 6);
 
-    // Give other modules a chance to alter saved arguments.
-    drupal_alter('draggableviews_handler_fieldapi_arguments', $fv['draggableviews'], $view);
-
     // Save the values of the field.
     foreach ($fv['draggableviews'] as $item) {
       if (isset($item['id']) && isset($item['weight'])) {
         $entity_wrapper = entity_metadata_wrapper($entity_type, $item['id']);
-        $entity_wrapper->{$field_name} = $item['weight'];
+        $entity_wrapper->{$field_name}->set($item['weight']);
         $entity_wrapper->save();
       }
     }

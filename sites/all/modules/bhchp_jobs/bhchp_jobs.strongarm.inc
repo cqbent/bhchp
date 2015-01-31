@@ -89,6 +89,9 @@ function bhchp_jobs_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'list_fields_mode' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

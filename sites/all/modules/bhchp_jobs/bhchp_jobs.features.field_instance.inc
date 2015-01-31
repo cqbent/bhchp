@@ -354,7 +354,7 @@ function bhchp_jobs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -224,15 +224,13 @@ function video_embed_field_field_presave($entity_type, $entity, $field, $instanc
 
       $response = drupal_http_request($thumb_url);
       if (!isset($response->error)) {
-        file_save_data($response->data, $local_path, FILE_EXISTS_REPLACE);
+        file_save_data($response->data, $local_path, TRUE);
       }
       else {
         @copy($thumb_url, $local_path);
       }
 
       $items[$delta]['thumbnail_path'] = $local_path;
-      // Delete any image derivatives at the original image path.
-      image_path_flush($local_path);
     }
     // Couldn't get the thumbnail for whatever reason.
     else {
@@ -465,11 +463,6 @@ function video_embed_field_field_formatter_view($entity_type, $entity, $field, $
     elseif ($display['type'] == 'video_embed_field_thumbnail') {
       if (isset($item['thumbnail_path'])) {
         if ($display['settings']['image_link'] == 'source') {
-          if ($ret = parse_url($item['video_url'])) {
-            if (!isset($ret["scheme"])) {
-              $item['video_url'] = "http://{$item['video_url']}";
-            }
-          }
           $path = array(
             'path' => $item['video_url'],
             'options' => array(),
@@ -490,11 +483,6 @@ function video_embed_field_field_formatter_view($entity_type, $entity, $field, $
     }
     elseif ($display['type'] == 'video_embed_field_thumbnail_colorbox') {
       if (isset($item['thumbnail_path'])) {
-        if ($ret = parse_url($item['video_url'])) {
-          if (!isset($ret["scheme"])) {
-            $item['video_url'] = "http://{$item['video_url']}";
-          }
-        }
         $element[$delta] = array(
           array(
             '#theme' => 'video_embed_field_colorbox_code',

@@ -533,10 +533,7 @@ function video_embed_field_get_ajax_url($video_url, $video_style) {
       'html' => TRUE,
       'absolute' => TRUE,
       'attributes' => array(
-        'class' => array(
-          'colorbox-load',
-          'colorbox'
-        ),
+        'class' => array('colorbox-load'),
       ),
       'query' => array(
         'width' => $data['width'],

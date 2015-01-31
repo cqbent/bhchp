@@ -50,8 +50,7 @@ function video_embed_field_set_target($source, $entity, $target, $value) {
   $info = field_info_field($field_name);
 
   // Iterate over all values.
-  //$field = isset($entity->$field_name) ? $entity->$field_name : array(LANGUAGE_NONE => array());
-  $field = isset($entity->$field_name[LANGUAGE_NONE]) ? $entity->$field_name : array(LANGUAGE_NONE => array());
+  $field = isset($entity->$field_name) ? $entity->$field_name : array(LANGUAGE_NONE => array());
 
   // Allow for multiple mappings to the same target.
   $count = call_user_func_array('array_merge_recursive', $field[LANGUAGE_NONE]);

@@ -1,60 +1,62 @@
 <?php
 /**
  * @file
- * bhchp_video.feeds_importer_default.inc
+ * bhchp_video_youtube_feed.feeds_importer_default.inc
  */
 
 /**
  * Implements hook_feeds_importer_default().
  */
-function bhchp_video_feeds_importer_default() {
+function bhchp_video_youtube_feed_feeds_importer_default() {
   $export = array();
 
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'youtube_importer';
+  $feeds_importer->id = 'youtube_feed_importer';
   $feeds_importer->config = array(
-    'name' => 'youtube_importer',
-    'description' => 'Imports CSV of youtube video nodes',
+    'name' => 'youtube feed importer',
+    'description' => 'youtube feeds',
     'fetcher' => array(
-      'plugin_key' => 'FeedsFileFetcher',
+      'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
-        'allowed_extensions' => 'txt csv tsv xml opml',
-        'direct' => FALSE,
-        'directory' => 'public://feeds',
-        'allowed_schemes' => array(
-          0 => 'public',
-        ),
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'FeedsCSVParser',
-      'config' => array(
-        'delimiter' => 'TAB',
-        'no_headers' => 0,
-      ),
+      'plugin_key' => 'FeedsYoutubeParser',
+      'config' => array(),
     ),
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
         'expire' => '-1',
         'author' => 0,
-        'authorize' => 1,
+        'authorize' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'video_title',
+            'source' => 'title',
             'target' => 'title',
             'unique' => FALSE,
           ),
           1 => array(
-            'source' => 'video_url',
-            'target' => 'field_video:video_url',
+            'source' => 'description',
+            'target' => 'body',
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'body',
-            'target' => 'body',
+            'source' => 'guid',
+            'target' => 'guid',
+            'unique' => 1,
+          ),
+          3 => array(
+            'source' => 'watch_page',
+            'target' => 'field_video:video_url',
             'unique' => FALSE,
           ),
         ),
@@ -67,12 +69,12 @@ function bhchp_video_feeds_importer_default() {
     ),
     'content_type' => '',
     'update' => 0,
-    'import_period' => '-1',
+    'import_period' => 1800,
     'expire_period' => 3600,
-    'import_on_create' => 1,
-    'process_in_background' => 0,
+    'import_on_create' => TRUE,
+    'process_in_background' => FALSE,
   );
-  $export['youtube_importer'] = $feeds_importer;
+  $export['youtube_feed_importer'] = $feeds_importer;
 
   return $export;
 }

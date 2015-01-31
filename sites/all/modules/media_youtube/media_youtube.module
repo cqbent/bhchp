@@ -1,9 +1,17 @@
 <?php
 
 /**
- * @file
- * Provides a stream wrapper and formatters appropriate for accessing and
- * displaying YouTube videos.
+ * @file media_youtube/media_youtube.module
+ *
+ * Media: YouTube provides a stream wrapper and formatters for videos provided
+ * by YouTube, available at http://youtube.com/.
+ *
+ * @TODO:
+ * Get the YouTube tab working.
+ *  - Search by video name, user name, and channel.
+ *  - Default to user's channel videos.
+ * Review all code and remove cruft.
+ * Assess if M:YT 3.x could be formatters added on to the OEmbed module.
  */
 
 /**
@@ -12,20 +20,20 @@
  * Avoid using the gdata api url when possible. Too many calls will result in
  * throttling and 403 errors.
  */
-define('MEDIA_YOUTUBE_REST_API', 'http://gdata.youtube.com/feeds/api/videos');
+define('MEDIA_YOUTUBE_REST_API', 'https://gdata.youtube.com/feeds/api/videos');
 
-// Load all YouTube file formatters.
+// Hooks and callbacks for integrating with File Entity module for display.
 require_once dirname(__FILE__) . '/includes/media_youtube.formatters.inc';
 
 /**
  * Implements hook_media_internet_providers().
  */
 function media_youtube_media_internet_providers() {
-  return array(
-    'MediaInternetYouTubeHandler' => array(
-      'title' => t('YouTube'),
-    ),
+  $info['MediaInternetYouTubeHandler'] = array(
+    'title' => t('YouTube'),
   );
+
+  return $info;
 }
 
 /**
@@ -36,7 +44,7 @@ function media_youtube_stream_wrappers() {
     'youtube' => array(
       'name' => t('YouTube videos'),
       'class' => 'MediaYouTubeStreamWrapper',
-      'description' => t('Remote videos hosted on the YouTube video-sharing website.'),
+      'description' => t('Videos provided by YouTube.'),
       'type' => STREAM_WRAPPERS_READ_VISIBLE,
     ),
   );
@@ -70,6 +78,8 @@ function media_youtube_media_parse($embed_code) {
 
 /**
  * Implements hook_file_mimetype_mapping_alter().
+ *
+ * Register the video/youtube mimetype.
  */
 function media_youtube_file_mimetype_mapping_alter(&$mapping) {
   $mapping['mimetypes'][] = 'video/youtube';
@@ -132,10 +142,7 @@ function media_youtube_add($form, &$form_state = array()) {
     $empty = TRUE;
   }
   else {
-    // $search['entry'] is different depending on whether there is a single
-    // result or multiple results. So normalise it.
-    $videos = isset($search['entry']['id']) ? array($search['entry']) : $search['entry'];
-    foreach ($videos as $video) {
+    foreach ($search['entry'] as $video) {
       try {
         $uri = media_parse_to_uri($video['link'][0]['@attributes']['href']);
       }
@@ -150,13 +157,16 @@ function media_youtube_add($form, &$form_state = array()) {
         $file->fid = 0;
       }
       media_browser_build_media_item($file);
-      $attributes = array(
-        'data-uri' => $uri,
-        'class' => array('media-youtube-wrapper'),
-      );
+      $file->preview = l($file->preview, 'media/browser', array(
+        'html' => TRUE,
+        'attributes' => array(
+          'data-uri' => $uri,
+        ),
+        'query' => array('render' => 'media-popup', 'uri' => $uri),
+      ));
       $form['videos'][$uri] = array(
         '#markup' => $file->preview,
-        '#prefix' => '<li' . drupal_attributes($attributes) . '>',
+        '#prefix' => '<li>',
         '#suffix' => '</li>',
       );
       $files[$uri] = $file;
@@ -243,7 +253,7 @@ function media_youtube_add_validate($form, &$form_state) {
     return;
   }
 
-  $validators = isset($form['#validators']) ? $form['#validators'] : array();
+  $validators = $form['#validators'];
   if ($validators) {
     // Check for errors. @see media_add_upload_validate calls file_save_upload().
     // this code is ripped from file_save_upload because we just want the validation part.
@@ -298,7 +308,9 @@ function media_youtube_add_submit($form, &$form_state) {
   }
 
   // Redirect to the file edit page after submission.
-  if (media_youtube_access('update', $file)) {
+  // @TODO: media_access() is a wrapper for file_entity_access(). Switch to the
+  // new function when Media 1.x is deprecated.
+  if (media_access('update', $file)) {
     $destination = array('destination' => 'admin/content/file');
     if (isset($_GET['destination'])) {
       $destination = drupal_get_destination();
@@ -309,32 +321,6 @@ function media_youtube_add_submit($form, &$form_state) {
   else {
     $form_state['redirect'] = 'admin/content/file';
   }
-}
-
-/**
- * Determine if a user may perform the given operation on the specified file.
- *
- * Enables compatibility with Media 1.x and 2.x by providing a wrapper around
- * both media_access() and file_entity_access().
- *
- * @return boolean
- *   TRUE if the operation may be performed, FALSE otherwise.
- *
- * @see media_access()
- * @see file_entity_access()
- */
-function media_youtube_access($op, $file = NULL, $account = NULL) {
-  if (function_exists('file_entity_access')) {
-    $access = file_entity_access($op, $file, $account);
-  }
-  elseif (function_exists('media_access')) {
-    $access = media_access($op, $account);
-  }
-  else {
-    $access = FALSE;
-  }
-
-  return $access;
 }
 
 /**

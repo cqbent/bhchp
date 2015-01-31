@@ -1,13 +1,18 @@
-; $Id: feeds_youtube.info,v 1.2 2011/01/31 22:57:28 wojtha Exp $
-name = Feeds: Youtube
-description = Adds a Youtube feed processor to the Feeds module
+; Basic information
+name = Feeds: YouTube
+description = Adds a YouTube feed processor to the Feeds module.
 core = 7.x
-dependencies[] = "feeds"
 package = Feeds
+dependencies[] = "feeds"
+
+; Files
+files[] = feeds_youtube.install
+files[] = feeds_youtube.module
 files[] = FeedsYoutubeParser.inc
-; Information added by drupal.org packaging script on January 1, 1970 - 00:00
-version = "7.x-2.0-beta1"
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-2.0-beta1+7-dev"
 core = "7.x"
 project = "feeds_youtube"
-datestamp = "1296557232"
+datestamp = "1380578483"
 

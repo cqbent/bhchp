@@ -109,7 +109,7 @@ class FeedsFileFetcher extends FeedsFetcher {
         '#type' => 'file',
         '#title' => empty($this->config['direct']) ? t('File') : NULL,
         '#description' => empty($source_config['source']) ? t('Select a file from your local system.') : t('Select a different file from your local system.'),
-        '#theme_wrappers' => array('feeds_upload'),
+        '#theme' => 'feeds_upload',
         '#file_info' => empty($source_config['fid']) ? NULL : file_load($source_config['fid']),
         '#size' => 10,
       );

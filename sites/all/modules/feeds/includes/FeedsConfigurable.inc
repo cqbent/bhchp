@@ -44,16 +44,15 @@ abstract class FeedsConfigurable {
   protected $disabled;
 
   /**
-   * Instantiates a FeedsConfigurable object.
+   * Instantiate a FeedsConfigurable object.
    *
-   * Don't use directly, use feeds_importer() or feeds_plugin() instead.
-   *
-   * @see feeds_importer()
-   * @see feeds_plugin()
+   * Don't use directly, use feeds_importer() or feeds_plugin()
+   * instead.
    */
   public static function instance($class, $id) {
-    if (!strlen($id)) {
-      throw new InvalidArgumentException(t('Empty configuration identifier.'));
+    // This is useful at least as long as we're developing.
+    if (empty($id)) {
+      throw new Exception(t('Empty configuration identifier.'));
     }
     static $instances = array();
     if (!isset($instances[$class][$id])) {
@@ -168,17 +167,6 @@ abstract class FeedsConfigurable {
    */
   public function configDefaults() {
     return array();
-  }
-
-  /**
-   * Returns whether or not the configurable has a config form.
-   *
-   * @return bool
-   *   True if the configurable has a config form, and false if not.
-   */
-  public function hasConfigForm() {
-    $form_state = array();
-    return (bool) $this->configForm($form_state);
   }
 
   /**

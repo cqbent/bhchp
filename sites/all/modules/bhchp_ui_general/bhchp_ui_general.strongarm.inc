@@ -187,6 +187,8 @@ function bhchp_ui_general_strongarm() {
     1 => 2,
     2 => 3,
     3 => 4,
+    4 => 5,
+    5 => 6,
   );
   $export['menu_block_ids'] = $strongarm;
 
@@ -347,8 +349,10 @@ function bhchp_ui_general_strongarm() {
       'html5' => 'html5',
       'meta' => 'meta',
     ),
-    'zen_rebuild_registry' => 1,
+    'zen_rebuild_registry' => 0,
     'zen_wireframes' => 0,
+    'responsive_tables_medium_priority_max_width' => '',
+    'responsive_tables_low_priority_max_width' => '',
   );
   $export['theme_bhchp_settings'] = $strongarm;
 

@@ -14,7 +14,9 @@ class MediaYouTubeBrowser extends MediaBrowserPlugin {
    * Implements MediaBrowserPluginInterface::access().
    */
   public function access($account = NULL) {
-    return media_youtube_access('create', NULL, $account);
+    // @TODO: media_access() is a wrapper for file_entity_access(). Switch to the
+    // new function when Media 1.x is deprecated.
+    return media_access('create', $account);
   }
 
   /**

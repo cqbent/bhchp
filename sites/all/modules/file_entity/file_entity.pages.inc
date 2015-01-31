@@ -245,54 +245,58 @@ function file_entity_usage_page($file) {
   $rows = array();
   $occured_entities = array();
 
-  // Determine all of the locations where a file is used, then loop through the
-  // occurrences and filter out any duplicates.
-  foreach (file_usage_list($file) as $module => $type) {
-    foreach ($type as $entity_type => $entity_ids) {
-      // There are cases where the actual entity doesn't exist.
-      // We have to handle this.
+  foreach (file_usage_list($file) as $module => $usage) {
+    $info = system_get_info('module', $module);
+
+    // There are cases where the actual entity doesn't exist.
+    // We have to handle this.
+    foreach ($usage as $entity_type => $entity_ids) {
       $entity_info = entity_get_info($entity_type);
       $entities = empty($entity_info) ? NULL : entity_load($entity_type, array_keys($entity_ids));
 
       foreach ($entity_ids as $entity_id => $count) {
-        // If this entity has already been listed in the table, just add any
-        // additional usage to the total count column in the table row and
-        // continue on to the next iteration of the loop.
+        // If some other module already added this entity just sum all counts.
         if (isset($occured_entities[$entity_type][$entity_id])) {
           $rows[$occured_entities[$entity_type][$entity_id]][2] += $count;
           continue;
         }
 
-        // Retrieve the label and the URI of the entity.
         $label = empty($entities[$entity_id]) ? $module : entity_label($entity_type, $entities[$entity_id]);
         $entity_uri = empty($entities[$entity_id]) ? NULL : entity_uri($entity_type, $entities[$entity_id]);
 
-        // Link the label to the URI when possible.
+        // Some entities do not have URL.
         if (empty($entity_uri)) {
-          $entity = check_plain($label);
+          $rows[] = array(check_plain($label), $entity_type, $module, $count);
         }
         else {
-          $entity = l($label, $entity_uri['path']);
+          $uri = $entity_uri['path'];
+          $rows[] = array(l($label, $uri), $entity_type, $module, $count);
         }
 
-        $rows[] = array($entity, $entity_type, $count);
-
-        // Record the occurrence of the entity to ensure that it isn't listed in
-        // the table again.
         $occured_entities[$entity_type][$entity_id] = count($rows) - 1;
       }
     }
   }
-
-  $header = array(t('Entity'), t('Entity type'), t('Use count'));
+  $header[] = array(
+    'data' => t('Entity'),
+  );
+  $header[] = array(
+    'data' => t('Entity type'),
+  );
+  $header[] = array(
+    'data' => t('Registering module'),
+  );
+  $header[] = array(
+    'data' => t('Use count'),
+  );
   $build['usage_table'] = array(
     '#theme' => 'table',
     '#header' => $header,
     '#rows' => $rows,
-    '#caption' => t('This table lists all of the places where @filename is used.', array('@filename' => $file->filename)),
+    '#caption' => t('This table lists all of the places where @filename is used.',
+    array('@filename' => $file->filename)),
     '#empty' => t('This file is not currently used.'),
   );
-
   return $build;
 }
 
@@ -451,13 +455,17 @@ function file_entity_add_upload_submit($form, &$form_state) {
     }
 
     // Figure out destination.
-    if (user_access('administer files')) {
-      $path = 'admin/content/file';
+    if (isset($_GET['destination'])) {
+      $destination = drupal_get_destination();
+      unset($_GET['destination']);
+    }
+    elseif (user_access('administer files')) {
+      $destination = array('destination' => 'admin/content/file');
     }
     else {
-      $path = 'file/' . $file->fid;
+      $destination = array('destination' => 'file/' . $file->fid);
     }
-    $form_state['redirect'] = $path;
+    $form_state['redirect'] = $destination['destination'];
   }
   else {
     $form_state['rebuild'] = TRUE;
@@ -550,6 +558,7 @@ function file_entity_add_upload_multiple_submit($form, &$form_state) {
       $file->status = FILE_STATUS_PERMANENT;
       file_save($file);
 
+      $saved_files[] = $file;
       $form_state['files'][$file->fid] = $file;
     }
     else {
@@ -798,7 +807,7 @@ function file_entity_edit_submit($form, &$form_state) {
   if (!empty($form_state['values']['replace_upload'])) {
     $replacement = $form_state['values']['replace_upload'];
     // Move file from temp to permanent home.
-    $destination_uri = drupal_dirname($file->uri) . '/' . drupal_basename($replacement->uri);
+    $destination_uri = file_uri_scheme($file->uri) . '://' . file_uri_target($replacement->uri);
     $replace_mode = $destination_uri == $file->uri ? FILE_EXISTS_REPLACE : FILE_EXISTS_RENAME;
     if ($new_file_uri = file_unmanaged_copy($replacement->uri, $destination_uri, $replace_mode)) {
       // @todo Add watchdog() about replaced file here?

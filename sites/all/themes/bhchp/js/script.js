@@ -26,7 +26,20 @@ Drupal.behaviors.my_custom_behavior = {
         var main_min_height = $(window).height() - h_height - f_height - n_height - 40;
         $('#main').css('min-height', main_min_height+'px');
         console.log('h_height: '+h_height+', f_height: '+f_height+', n_height: '+n_height);
-    })
+    });
+    
+     /* mobile menu - add action */
+    $('.mobile-menu .block-title').click(function() {
+        if ($('.mobile-menu').hasClass('menu-active')) {
+            $('.mobile-menu').removeClass('menu-active');
+        }
+        else {
+            $('.mobile-menu').addClass('menu-active');
+        }
+    });
+    $('.mobile-menu .close-link').click(function() {
+        $('.mobile-menu').removeClass('menu-active');
+    });
       
 
   }

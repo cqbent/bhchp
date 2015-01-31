@@ -49,7 +49,7 @@ $zen-auto-include-item-base: false;
 }
 
 /* Containers for grid items and flow items. */
-#header,
+#header .inner,
 #main,
 #footer .inner, #navigation #main-menu {
   @include zen-grid-container();

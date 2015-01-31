@@ -873,11 +873,12 @@ class MediaElementSettingsTestCase extends MediaFileFieldTestCase {
           '#edit-' . $field_name . '-' . LANGUAGE_NONE . '-0' => array(
             'global' => array(
               'types' => array(
-                'image' => 'image',
+                0 => 'image',
               ),
               'enabledPlugins' => array(),
               'schemes' => array(
-                'public' => 'public',
+                0 => 'public',
+                1 => 'private',
               ),
               'file_directory' => '',
               'file_extensions' => 'txt',

@@ -15,7 +15,7 @@ function bhchp_social_feeds_default_panels_mini() {
   $mini->api_version = 1;
   $mini->name = 'social_feed_blocks';
   $mini->category = '';
-  $mini->admin_title = 'Social Feed Blocks';
+  $mini->admin_title = 'Follow Us';
   $mini->admin_description = '';
   $mini->requiredcontexts = array();
   $mini->contexts = array();
@@ -30,7 +30,7 @@ function bhchp_social_feeds_default_panels_mini() {
     ),
   );
   $display->cache = array();
-  $display->title = 'social feed blocks';
+  $display->title = 'Follow Us';
   $display->uuid = '207ead3b-c47e-4dd2-837c-6cf26beb728c';
   $display->content = array();
   $display->panels = array();
