@@ -120,7 +120,7 @@ bhchp custom styles
             }
         }
         @include breakpoint(maxsmall) {
-            position:fixed; top:0; z-index:2; background-color:#fff; width:100%;
+            position:fixed; top:0; z-index:4; background-color:#fff; width:100%;
             margin-bottom:0; height: 174px; padding: 0 50px;
             #logo { float: none; display: block; }
             .region-header {
