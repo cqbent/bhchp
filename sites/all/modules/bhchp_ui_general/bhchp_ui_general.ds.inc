@@ -39,6 +39,30 @@ function bhchp_ui_general_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function bhchp_ui_general_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'back_to_parent';
+  $ds_field->label = 'back to parent';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'bhchp_backtoparent|bhchp_backtoparent_block',
+    'block_render' => '1',
+  );
+  $export['back_to_parent'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function bhchp_ui_general_ds_layout_settings_info() {

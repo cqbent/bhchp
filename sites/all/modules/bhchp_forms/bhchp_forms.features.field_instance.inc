@@ -1166,17 +1166,7 @@ Boston, MA 02118',
   // Exported field_instance: 'entityform-volunteer_internship_form-field_test_address'
   $field_instances['entityform-volunteer_internship_form-field_test_address'] = array(
     'bundle' => 'volunteer_internship_form',
-    'default_value' => array(
-      0 => array(
-        'thoroughfare' => '',
-        'premise' => '',
-        'dependent_locality' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'postal_code' => '',
-        'country' => 'US',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1207,6 +1197,7 @@ Boston, MA 02118',
         'available_countries' => array(
           'US' => 'US',
         ),
+        'default_country' => 'US',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 'address-hide-country',
@@ -1215,6 +1206,7 @@ Boston, MA 02118',
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
+          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',

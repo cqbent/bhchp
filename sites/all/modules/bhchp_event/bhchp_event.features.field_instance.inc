@@ -56,15 +56,7 @@ function bhchp_event_field_default_field_instances() {
   // Exported field_instance: 'node-event-field_event_address'
   $field_instances['node-event-field_event_address'] = array(
     'bundle' => 'event',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|event|field_event_address|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Optional: address for event.',
     'display' => array(
@@ -95,12 +87,16 @@ function bhchp_event_field_default_field_instances() {
         'available_countries' => array(
           'US' => 'US',
         ),
+        'default_country' => 'US',
         'format_handlers' => array(
           'address' => 'address',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
+          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
@@ -576,6 +572,43 @@ function bhchp_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_tags'
+  $field_instances['node-event-field_tags'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tags',
+    'label' => 'Event Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 32,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Auto loads from event address.');
@@ -585,6 +618,7 @@ function bhchp_event_field_default_field_instances() {
   t('Event Link external signup');
   t('Event Location');
   t('Event Supporter list content');
+  t('Event Type');
   t('Event datelocation');
   t('Event geomap');
   t('Event main image');

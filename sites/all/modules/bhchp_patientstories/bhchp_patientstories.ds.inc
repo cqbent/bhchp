@@ -55,7 +55,7 @@ function bhchp_patientstories_ds_layout_settings_info() {
         1 => 'title',
         2 => 'field_patientstory_subtitle',
         3 => 'body',
-        4 => 'back_to_patient_stories',
+        4 => 'back_to_parent',
       ),
     ),
     'fields' => array(
@@ -63,7 +63,7 @@ function bhchp_patientstories_ds_layout_settings_info() {
       'title' => 'right',
       'field_patientstory_subtitle' => 'right',
       'body' => 'right',
-      'back_to_patient_stories' => 'right',
+      'back_to_parent' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
