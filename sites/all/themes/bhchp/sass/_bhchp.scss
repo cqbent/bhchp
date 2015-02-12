@@ -55,6 +55,7 @@ bhchp custom styles
                 float: right; 
                 padding-left: 10px; 
                 border-left: 1px $blue solid;
+                margin-bottom:35px;
                 button {
                     background: none; border: none;
                     font-size:18px; padding-top:0;
@@ -77,7 +78,7 @@ bhchp custom styles
                 }
             }
             .top-menu {
-                float: right; 
+                float: right; margin: 0;
                 .menu {
                     margin: 0;
                     li {
@@ -386,13 +387,27 @@ bhchp custom styles
                 .field-name-field-event-datelocation {
                     font-weight: 700; margin-bottom:1em;
                 }
-                .field-name-field-sponsor-logos {
+                .field-name-field-sponsor-logos, .field-name-field-event-geomap {
                     border-top: 1px $lightgray solid;
+                    margin: 0; padding: 20px 0;
+                }
+                .field-name-field-sponsor-logos {
                     .field-items {
                         display: table;
                         .field-item {
                             display: table-cell;
-                            padding-right:20px;
+                            padding-right:20px; vertical-align: middle;
+                            img {
+                                max-width: 200px;
+                            }
+                            
+                        }
+                        /* four items */
+                        .field-item:nth-child(1):nth-last-child(4) img,
+                        .field-item:nth-child(2):nth-last-child(3) img,
+                        .field-item:nth-child(3):nth-last-child(2) img,
+                        .field-item:nth-child(4):nth-last-child(1) img {
+                            max-width: 150px;
                         }
                     }
                 }
