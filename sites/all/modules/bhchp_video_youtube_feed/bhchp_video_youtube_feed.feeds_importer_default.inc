@@ -62,6 +62,11 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
             'target' => 'field_video_thumbnail',
             'unique' => FALSE,
           ),
+          5 => array(
+            'source' => 'published_datetime',
+            'target' => 'created',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
