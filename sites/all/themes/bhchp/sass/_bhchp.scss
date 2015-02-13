@@ -738,7 +738,7 @@ bhchp custom styles
             display: none;
         }
         .view-videos-gallery {
-            .views-field-field-video { width: 40%; float: left; margin-right:-60%; }
+            .views-field-field-video, .views-field-field-video-thumbnail { width: 40%; float: left; margin-right:-60%; }
             .views-field-body, .views-field-view-node {
                 clear: none; width: 60%; margin-left:40%; float: left;
                 padding-left:10px; box-sizing: border-box;

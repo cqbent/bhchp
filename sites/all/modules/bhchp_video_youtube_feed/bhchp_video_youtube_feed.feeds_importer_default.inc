@@ -24,8 +24,6 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
         'use_pubsubhubbub' => FALSE,
         'designated_hub' => '',
         'request_timeout' => NULL,
-        'auto_scheme' => 'http',
-        'accept_invalid_cert' => FALSE,
       ),
     ),
     'parser' => array(
@@ -59,9 +57,13 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
             'target' => 'field_video:video_url',
             'unique' => FALSE,
           ),
+          4 => array(
+            'source' => 'thumbnail',
+            'target' => 'field_video_thumbnail',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
-        'update_non_existent' => 'skip',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'video',

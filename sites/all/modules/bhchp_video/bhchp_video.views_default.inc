@@ -34,6 +34,17 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Video Thumbnail */
+  $handler->display->display_options['fields']['field_video_thumbnail']['id'] = 'field_video_thumbnail';
+  $handler->display->display_options['fields']['field_video_thumbnail']['table'] = 'field_data_field_video_thumbnail';
+  $handler->display->display_options['fields']['field_video_thumbnail']['field'] = 'field_video_thumbnail';
+  $handler->display->display_options['fields']['field_video_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_video_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_video_thumbnail']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -41,21 +52,6 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Video */
-  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
-  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['label'] = '';
-  $handler->display->display_options['fields']['field_video']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['alter']['path'] = '[field_video-video_url]';
-  $handler->display->display_options['fields']['field_video']['alter']['external'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
-  $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
-  $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'video_thumb140',
-    'image_link' => 'source',
-  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -85,32 +81,10 @@ function bhchp_video_views_default_views() {
   /* Display: GridBlock */
   $handler = $view->new_display('block', 'GridBlock', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Video */
-  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
-  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['label'] = '';
-  $handler->display->display_options['fields']['field_video']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['alter']['path'] = '[field_video-video_url]';
-  $handler->display->display_options['fields']['field_video']['alter']['external'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
-  $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
-  $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'video_thumb140',
-    'image_link' => 'content',
-  );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['pager']['options']['id'] = '0';
 
   /* Display: FeatBlock */
   $handler = $view->new_display('block', 'FeatBlock', 'block_1');
@@ -169,11 +143,9 @@ function bhchp_video_views_default_views() {
   /* Display: sidebar featured */
   $handler = $view->new_display('block', 'sidebar featured', 'block_2');
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -197,19 +169,15 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'month_day_year';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Content: Video */
-  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
-  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['label'] = '';
-  $handler->display->display_options['fields']['field_video']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['alter']['path'] = '[field_video-video_url]';
-  $handler->display->display_options['fields']['field_video']['alter']['external'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
-  $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
-  $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'video_thumb140',
+  /* Field: Content: Video Thumbnail */
+  $handler->display->display_options['fields']['field_video_thumbnail']['id'] = 'field_video_thumbnail';
+  $handler->display->display_options['fields']['field_video_thumbnail']['table'] = 'field_data_field_video_thumbnail';
+  $handler->display->display_options['fields']['field_video_thumbnail']['field'] = 'field_video_thumbnail';
+  $handler->display->display_options['fields']['field_video_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_video_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_video_thumbnail']['settings'] = array(
+    'image_style' => 'medium',
     'image_link' => 'content',
   );
   /* Field: Content: Body */

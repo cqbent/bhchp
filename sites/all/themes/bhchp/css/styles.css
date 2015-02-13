@@ -2980,7 +2980,7 @@ bhchp custom styles
   display: none;
 }
 /* line 741, ../sass/_bhchp.scss */
-.front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-field-video {
+.front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-field-video, .front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-field-video-thumbnail {
   width: 40%;
   float: left;
   margin-right: -60%;
