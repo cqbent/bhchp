@@ -112,7 +112,7 @@ bhchp custom styles
                 }
             }
             .block.patient-portal {
-                float: right; margin:0;
+                float: right; margin:0 0 0 20px;
                 padding: 0;
                 p { margin: 0; }
                 .button {
@@ -129,9 +129,15 @@ bhchp custom styles
             #logo { float: none; display: block; }
             .region-header {
                 .block-search { display: none; }
-                .social-icons { float:left; }
+                .social-icons { 
+                    float:left; 
+                    ul { font-size: 22px; }
+                }
                 .top-menu {
                     display: none;
+                }
+                .block.patient-portal {
+                    clear: both; margin:0; font-size:.95em;
                 }
                 .mobile-menu {
                     position: absolute; top: 0; left: 0;
@@ -210,13 +216,12 @@ bhchp custom styles
                 .social-icons {
                     float: right;
                 }
+                
             }
             .mobile-menu {
                 display: none; 
             }
-            .block.patient-portal {
-                clear: both; margin:0 0 0 20px;
-            }
+            
             
         }
     }
