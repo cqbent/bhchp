@@ -112,7 +112,7 @@ bhchp custom styles
                 }
             }
             .block.patient-portal {
-                float: right; margin:0 0 0 20px;
+                float: right; margin:0;
                 padding: 0;
                 p { margin: 0; }
                 .button {
@@ -120,8 +120,11 @@ bhchp custom styles
                 }
             }
         }
+        @media screen and (max-width: 779px) and (orientation: portrait) {
+            position:fixed; top:0; z-index:4; 
+        }
         @include breakpoint(maxsmall) {
-            position:fixed; top:0; z-index:4; background-color:#fff; width:100%;
+            background-color:#fff; width:100%;
             margin-bottom:0; height: 174px; padding: 0 50px;
             #logo { float: none; display: block; }
             .region-header {
@@ -212,7 +215,7 @@ bhchp custom styles
                 display: none; 
             }
             .block.patient-portal {
-                clear: both; 
+                clear: both; margin:0 0 0 20px;
             }
             
         }
@@ -921,7 +924,6 @@ bhchp custom styles
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
 }
 .bhchp_icons_stethoscope:before { content: "\e600"; }
 .bhchp_icons_heart:before { content: "\e601"; }
@@ -934,3 +936,27 @@ bhchp custom styles
 .bhchp_icons_twitter:before { content: "\e608"; }
 .bhchp_icons_gift:before { content: "\e609"; }
 .bhchp_icons_apple:before { content: "\e60a"; }
+
+[class^="bhchp_social_"], [class*=" bhchp_social_"] {
+    font-family: 'bhchp_social';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    &:after {
+        position: absolute; left: 0; color: #fff;
+    }
+}
+.bhchp_social_fb:before { content: "\e600"; }
+.bhchp_social_fb:after { content: "\e601"; }
+.bhchp_social_video:before { content: "\e602"; }
+.bhchp_social_video:after { content: "\e603"; }
+.bhchp_social_twitter:before { content: "\e604"; }
+.bhchp_social_twitter:after { content: "\e605"; }
+
