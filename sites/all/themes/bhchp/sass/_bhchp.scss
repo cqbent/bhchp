@@ -112,7 +112,7 @@ bhchp custom styles
                 }
             }
             .block.patient-portal {
-                float: right; margin:0 0 0 20px;
+                float: right; 
                 padding: 0;
                 p { margin: 0; }
                 .button {
@@ -137,7 +137,7 @@ bhchp custom styles
                     display: none;
                 }
                 .block.patient-portal {
-                    clear: both; margin:0; font-size:.95em;
+                    margin:0; font-size:.95em;
                 }
                 .mobile-menu {
                     position: absolute; top: 0; left: 0;
@@ -216,6 +216,9 @@ bhchp custom styles
                 .social-icons {
                     float: right;
                 }
+                .block.patient-portal {
+                    clear: both; margin:0 0 0 20px; 
+                }
                 
             }
             .mobile-menu {
@@ -255,8 +258,10 @@ bhchp custom styles
                 }
             }
         }
-        @include breakpoint(maxsmall) {
+        @media screen and (max-width: 779px) and (orientation: portrait) {
             margin-top: 184px;
+        }
+        @include breakpoint(maxsmall) {
             .links {
                 li {
                     display: block; border-bottom: 1px #0066cc solid;
