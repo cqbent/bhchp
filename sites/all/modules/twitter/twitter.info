@@ -10,9 +10,9 @@ dependencies[] = oauth_common
 dependencies[] = views
 configure = admin/config/services/twitter
 
-; Information added by Drupal.org packaging script on 2014-11-21
-version = "7.x-5.8+12-dev"
+; Information added by Drupal.org packaging script on 2015-07-14
+version = "7.x-5.8+36-dev"
 core = "7.x"
 project = "twitter"
-datestamp = "1416595178"
+datestamp = "1436871271"
 

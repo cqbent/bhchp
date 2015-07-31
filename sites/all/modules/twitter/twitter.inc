@@ -69,18 +69,30 @@ function twitter_account_save($twitter_user, $save_auth = FALSE) {
  * Load a Twitter account from {twitter_account}.
  *
  * @param mixed $id
- *   int Twitter User id or string Twitter user screen name.
+ *   Either the Twitter User ID or screen name.
+ * @param boolean $type
+ *   By default the $id is assumed to be a Twitter UID, set to FALSE if $id is a
+ *   screen name.
  *
  * @return
  *   TwitterUser object or NULL.
  */
-function twitter_account_load($id) {
-  $values = db_query('SELECT *
-                      FROM {twitter_account}
-                      WHERE twitter_uid = :id_1
-                      OR screen_name  = :id_2',
-                      array(':id_1' => $id, ':id_2' => $id))
-              ->fetchAssoc();
+function twitter_account_load($id, $is_uid = TRUE) {
+  // The ID is the Twitter UID.
+  if ($is_uid) {
+    $query = db_query('SELECT *
+                       FROM {twitter_account}
+                       WHERE twitter_uid = :twitter_uid',
+                       array(':twitter_uid' => $id));
+  }
+  // Otherwise use the screen name.
+  else {
+    $query = db_query('SELECT *
+                       FROM {twitter_account}
+                       WHERE screen_name = :screen_name',
+                       array(':screen_name' => $id));
+  }
+  $values = $query->fetchAssoc();
   if (!empty($values)) {
     $values['id'] = $values['twitter_uid'];
     $account = new TwitterUser($values);
@@ -152,14 +164,22 @@ function twitter_status_load($status_id) {
  * Saves a TwitterStatus object to {twitter}
  */
 function twitter_status_save($status) {
+  // RT's get special handling.
+  if (!empty($status->retweeted_status)) {
+    $text = 'RT @' . $status->retweeted_status->user->screen_name . ': ' . $status->retweeted_status->text;
+  }
+  else {
+    $text = $status->text;
+  }
+
   $row = array(
     'twitter_id' => $status->id,
     'screen_name' => $status->user->screen_name,
     'created_time' => strtotime($status->created_at),
-    'text' => $status->text,
+    'text' => $text,
     'source' => $status->source,
     'in_reply_to_status_id' => ($status->in_reply_to_status_id > 0) ? (string) $status->in_reply_to_status_id : NULL,
-    'in_reply_to_user_id' => (int) $status->in_reply_to_user_id,
+    'in_reply_to_user_id' => $status->in_reply_to_user_id,
     'in_reply_to_screen_name' => $status->in_reply_to_screen_name,
     'truncated' => (int) $status->truncated,
     'entities' => isset($status->entities) ? serialize($status->entities) : NULL,

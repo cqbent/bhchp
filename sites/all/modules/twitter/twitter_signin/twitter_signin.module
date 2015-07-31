@@ -69,9 +69,20 @@ function twitter_signin_theme() {
  * Themable function for an image link for signing in with Twitter.
  */
 function theme_twitter_signin_button() {
-  $img = drupal_get_path('module', 'twitter_signin') . '/images/' . variable_get('twitter_signin_button', 'Sign-in-with-Twitter-lighter-small.png');
-
-  return l(theme('image', array('path' => $img, 'alt' => t('Sign in with Twitter'))), 'twitter/redirect', array('html' => TRUE));
+  $button = variable_get('twitter_signin_button', 'Sign-in-with-Twitter-lighter-small.png');
+  $class = array('twitter-signin-menuitem');
+  if ($button == 'just-text') {
+    $item = t('Sign in with Twitter');
+    $class[] = 'twitter-signin-menuitem-just-text';
+    $link = l($item, 'twitter/redirect', array('attributes' => array('class' => $class)));
+  }
+  else {
+    $img = drupal_get_path('module', 'twitter_signin') . '/images/' . $button;
+    $item = theme('image', array('path' => $img, 'alt' => t('Sign in with Twitter')));
+    $class[] = 'twitter-signin-menuitem-image';
+    $link = l($item, 'twitter/redirect', array('html' => TRUE, 'attributes' => array('class' => $class)));
+  }
+  return $link;
 }
 
 /**
@@ -104,7 +115,9 @@ function twitter_signin_form_alter(&$form, $form_state, $form_id) {
     $items[] = twitter_signin_button();
 
     $form['twitter_signin'] = array(
-      '#markup' => theme('item_list', array('items' => $items)),
+      '#theme' => 'item_list',
+      '#items' => $items,
+      '#attributes' => array('class' => array('twitter_signin')),
     );
   }
   elseif ($form_id == 'user_register_form' && isset($_SESSION['twitter']['values'])) {

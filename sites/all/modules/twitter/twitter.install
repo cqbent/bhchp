@@ -19,10 +19,11 @@ function twitter_requirements($phase) {
     if (empty($consumer_key) || empty($consumer_secret)) {
       $requirements['twitter_keys']['value'] = $t('Missing');
       $requirements['twitter_keys']['description'] =
-        $t('In order to interact with Twitter, you need to create an application at ' .
-           '<a href="http://dev.twitter.com" target="_blank">http://dev.twitter.com</a> ' .
-           'and set the generated Application keys at the ' .
-           '<a href="/admin/config/services/twitter">Twitter settings page</a>');
+        $t('In order to interact with Twitter, you need to create an application at !twitter_dev and set the generated Application keys at the !twitter_settings_page.',
+          array(
+            '!twitter_dev' => l('http://dev.twitter.com', 'http://dev.twitter.com'),
+            '!twitter_settings_page' => l($t('Twitter settings page'), 'admin/config/services/twitter'),
+          ));
       $requirements['twitter_keys']['severity'] = REQUIREMENT_ERROR;
     }
     else {
@@ -377,14 +378,16 @@ function twitter_update_7301() {
  * Adds field mentions to twitter_account table.
  */
 function twitter_update_7400() {
-  $data = array(
-    'description' => "Boolean flag indicating whether the {twitter_user}'s mentions should be pulled in by the site.",
-    'type' => 'int',
-    'unsigned' => TRUE,
-    'not null' => TRUE,
-    'default' => 0,
-  );
-  db_add_field('twitter_account', 'mentions', $data);
+  if (db_field_exists('twitter_account', 'mentions') === FALSE) {
+    $data = array(
+      'description' => "Boolean flag indicating whether the {twitter_user}'s mentions should be pulled in by the site.",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    );
+    db_add_field('twitter_account', 'mentions', $data);
+  }
 }
 
 /**
@@ -456,14 +459,13 @@ function twitter_update_7502(&$sandbox) {
   }
 }
 
-
 /**
- * Update the twitter_id column to a big int, rather than a float-type value
+ * Update the twitter_id column to a big int, rather than a float-type value.
  */
 function twitter_update_7503() {
   db_drop_primary_key('twitter');
   $spec = array(
-    'description' => "Unique identifier for each {twitter} post.",
+    'description' => 'Unique identifier for each {twitter} post.',
     'type' => 'int',
     'unsigned' => TRUE,
     'size' => 'big',
@@ -472,10 +474,6 @@ function twitter_update_7503() {
   );
   $index_spec = array(
     'primary key' => array('twitter_id'),
-    );
-  db_change_field('twitter',
-    'twitter_id',
-    'twitter_id',
-    $spec,
-    $index_spec);
+  );
+  db_change_field('twitter', 'twitter_id', 'twitter_id', $spec, $index_spec);
 }

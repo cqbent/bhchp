@@ -97,6 +97,9 @@ function twitter_theme() {
       'variables' => array(
         'status' => NULL,
         'author' => NULL,
+        'reply' => NULL,
+        'retweet' => NULL,
+        'favorite' => NULL,
       ),
       'template' => 'tweet',
       'path' => drupal_get_path('module', 'twitter'),
@@ -261,7 +264,7 @@ function _twitter_filter_username($text, $filter) {
 }
 
 /**
- * Callback for twitter #hashtag converter.
+ * Callback for Twitter #hashtag converter.
  */
 function _twitter_filter_hashtag($text, $filter) {
   $prefix = '#';
@@ -313,10 +316,15 @@ function twitter_user_load($accounts) {
 /**
  * Implements hook_twitter_accounts().
  *
- * @return
- *   array with Twitter accounts
+ * @return array
+ *   All Twitter accounts for this user; the anonymous user will return an
+ *   empty array.
  */
 function twitter_twitter_accounts($account) {
+  if ($account->uid == 0) {
+    return array();
+  }
+
   module_load_include('inc', 'twitter');
 
   $query = db_select('twitter_account', 'ta')
@@ -360,6 +368,23 @@ function twitter_user_view_alter(&$build) {
 }
 
 /**
+ * Implements hook_field_extra_fields().
+ */
+function twitter_field_extra_fields() {
+  $extra['user']['user'] = array(
+    'display' => array(
+      'twitter' => array(
+        'label' => t('Twitter'),
+        'description' => t('Twitter account'),
+        'weight' => 0,
+      )
+    )
+  );
+
+  return $extra;
+}
+
+/**
  * Checks if the Twitter Application keys are set.
  *
  * @return
@@ -376,4 +401,14 @@ function twitter_api_keys() {
  */
 function _twitter_user_profile($screen_name) {
   return l('@' . $screen_name, TWITTER_HOST . '/' . $screen_name);
+}
+
+/**
+ * Helper to build a Twitter status URL.
+ *
+ * @param object $status
+ *   A TwitterStatus object.
+ */
+function _twitter_status_url($status) {
+  return TWITTER_HOST . '/' . $status->user->screen_name . '/status/' . $status->id;
 }

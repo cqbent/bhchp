@@ -30,7 +30,7 @@ function entityform_block_block_view($delta = '') {
   // Hide existing blocks if disabled
   if (entityform_block_exists($types, $delta)) {
     $entity_form = entityform_block_get_entity($delta);
-    if ($entity_form) {
+    if ($entity_form && entityform_access('submit', $entity_form)) {
       $subject = $entity_form->label;
       $block = array();
       module_load_include('inc', 'entityform', 'entityform.admin');
@@ -188,3 +188,20 @@ function entityform_block_get_entity($type){
     return FALSE;
   }
 }
+/**
+ * Implements hook_entity_type_delete().
+ *
+ * Deletes blocks if the entity type is deleted.
+ */
+function entityform_block_entity_delete($entity, $entity_type) {
+  $type = $entity->type;
+  if ($entity_type == "entityform_type") {
+    $types = variable_get('entityform_block_types');
+    if (entityform_block_exists($types, $type)) {
+      $key = array_search($type, $types);
+      unset($types[$key]);
+      variable_set('entityform_block_types', $types);
+    }
+  }
+}
+

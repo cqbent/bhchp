@@ -181,7 +181,10 @@ function _twitter_account_list_row($account) {
   );
 
   $form['image'] = array(
-    '#markup' => theme('image', array('path' => $account->profile_image_url)),
+    '#theme' => 'image',
+    '#path' => $account->profile_image_url,
+    '#width' => 48,
+    '#height' => 48,
   );
 
   $form['visible_name'] = array(
@@ -488,7 +491,7 @@ function twitter_non_auth_account_form($form, $form_state) {
  */
 function twitter_non_auth_account_form_validate($form, &$form_state) {
   $screen_name = $form_state['values']['screen_name'];
-  if (twitter_account_load($screen_name)) {
+  if (twitter_account_load($screen_name, FALSE)) {
     form_set_error('screen_name', t('The Twitter account <em>@screen_name</em> has been added already.',
       array('@screen_name' => $screen_name)));
   }

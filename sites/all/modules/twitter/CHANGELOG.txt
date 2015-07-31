@@ -1,0 +1,129 @@
+Twitter 7.x-5.x-dev, xxxx-xx-xx
+-------------------------------
+#2005516 by Elijah Lynn: Fix invalid arg to foreach @
+  admin/config/services/twitter/post.
+#2182945 by alexdmccabe, jacobsdan, juampy: Update search to Twitter API v1.1.
+#2015965 by Jaypan, juampy: Twitter settings page cannot be overridden.
+By juampy: Improved the error message when a Twitter account is not set for
+  drush tws.
+#2068649 by VladimirAus, psacc, juampy: Failed status updates triggered by rules
+  actions show a success message.
+#2068649 by VladimirAus, psacc, juampy: Twitter API exceptions now bubble up.
+#2135743 by juampy: Fixed logic to avoid PHP warnings when signing in with a
+  Twitter acount.
+#2135743 by divadu, juampy: User password not encrypted.
+#1936598 by recrit, hughworm, juampy: Add support for tweet images.
+#2055951 by leewillis77: BIGINT issues with Twitter data storage.
+#1637380 by peterpoe: Warning and notices in
+  twitter_signin_oauth_callback_submit().
+By DamienMcKenna: Initial CHANGELOG.txt file.
+#2402317 by helmo: A permission was renamed which caused tests to fail.
+#2369833 by Jorrit: twitter_twitter_accounts() shouldn't return any accounts
+  for the anonymous user.
+#2337219 by dysproseum: Update 7400 fails if the 'mentions' field already
+  exists.
+#604530 by DamienMcKenna: Implement hook_field_extra_fields() so the Twitter
+  Post fieldset on node forms can be controlled.
+#2457169 by DamienMcKenna: Allow Twitter Post option to be controlled via the
+  content type edit form.
+#1884064 by jgSnell, e0ipso: Link path to configure is wrong in
+  hook_requirements().
+#2402317 by DamienMcKenna, helmo: (temporarily) Fixed the 7.x-5.x branch tests.
+#2205277 by AdamPS: Do not convert in_reply_to_user_id field to integer when it
+  must allow larger values.
+#1996606 by rdtome: [screen_name] token in Views display not available for use
+  with the "name" field.
+#1929126 by colin_vanarts, leewillis77, AdamPS, DamienMcKenna: Store the entire
+  message for retweets.
+#1985708 by DamienMcKenna, ingaro: Internal API incorrectly assumed numeric
+  screen names were actually account IDs.
+#1895320 by Drave Robber, DamienMcKenna: Update API documentation for
+  hook_twitter_account_save().
+#1943728 by frankdk, plopesc: Some text strings weren't translated.
+#969454 by caligari, DamienMcKenna: New text-only option for Twitter signin
+  button.
+#1899594 by Jaypan: Change login element into a render array.
+#1825680 by lyricnz, DamienMcKenna: Add width/height attributes to the profile
+  images.
+#2354555 by Owen Barton: Tweets should place alt text on img, not link.
+#1929126 by DamienMcKenna: Remove redundant RT: bit from retweets.
+#1929126 by AdamPS, DamienMcKenna: Fix RT text.
+#2022485 by Elijah Lynn: Improve status message upon posting to Twitter.
+#2322683 by DamienMcKenna: Add Twitter to node extra fields list.
+
+
+Twitter 7.x-5.8, 2013-06-03
+---------------------------
+
+
+Twitter 7.x-5.7, 2013-04-11
+---------------------------
+
+
+Twitter 7.x-5.6, 2013-05-12
+---------------------------
+
+
+Twitter 7.x-5.5, 2013-02-02
+---------------------------
+
+
+Twitter 7.x-5.4, 2013-01-21
+---------------------------
+
+
+Twitter 7.x-5.3, 2013-01-08
+---------------------------
+
+
+Twitter 7.x-5.2, 2012-12-31
+---------------------------
+
+
+Twitter 7.x-5.1, 2012-12-24
+---------------------------
+
+
+Twitter 7.x-5.0, 2012-12-23
+---------------------------
+
+
+Twitter 7.x-4.1, 2012-11-18
+---------------------------
+
+
+Twitter 7.x-4.0, 2012-11-18
+---------------------------
+
+
+Twitter 7.x-3.3, 2012-10-24
+---------------------------
+
+
+Twitter 7.x-3.2, 2012-08-10
+---------------------------
+
+
+Twitter 7.x-3.1, 2012-06-10
+---------------------------
+
+
+Twitter 7.x-3.0, 2012-06-02
+---------------------------
+
+
+Twitter 7.x-3.0-beta4, 2011-12-03
+---------------------------------
+
+
+Twitter 7.x-3.0-beta3, 2011-11-03
+---------------------------------
+
+
+Twitter 7.x-3.0-beta2, 2011-10-18
+---------------------------------
+
+
+Twitter 7.x-3.0-beta1, 2011-10-14
+---------------------------------
+First port of D7 module.

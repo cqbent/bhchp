@@ -17,6 +17,7 @@ function twitter_signin_admin_settings($form, &$form_state) {
   foreach ($results as $image) {
     $options[$image->filename] = theme('image', array('path' => $image->uri));
   }
+  $options['just-text'] = t('Just the text "Sign in with Twitter"');
 
   $form['twitter_signin_button'] = array(
     '#type' => 'radios',

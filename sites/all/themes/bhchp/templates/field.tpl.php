@@ -57,7 +57,7 @@
           // event image display with caption on event page (not on event list page
           if ($field_name_css == 'field-event-mainimage' && !$item['#path'] && $item['#item']['title']) {
               print render($item);
-              print '<div class="caption">'.$item['#item']['alt'].'</div>';
+              print '<div class="caption">'.$item['#item']['title'].'</div>';
           }
           else {
             print render($item); 

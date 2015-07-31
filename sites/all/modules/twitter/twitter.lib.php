@@ -180,7 +180,7 @@ class Twitter {
   protected function parse_response($response) {
     // http://drupal.org/node/985544 - json_decode large integer issue
     $length = strlen(PHP_INT_MAX);
-    $response = preg_replace('/"(id|in_reply_to_status_id)":(\d{' . $length . ',})/', '"\1":"\2"', $response);
+    $response = preg_replace('/"(id|in_reply_to_status_id|in_reply_to_user_id)":(\d{' . $length . ',})/', '"\1":"\2"', $response);
     return json_decode($response, TRUE);
   }
   /**
@@ -1271,6 +1271,8 @@ class TwitterStatus {
 
   public $entities;
 
+  public $retweeted_status;
+
   /**
    * Constructor for TwitterStatus
    */
@@ -1287,6 +1289,11 @@ class TwitterStatus {
     $this->entities = $values['entities'];
     if (isset($values['user'])) {
       $this->user = new TwitterUser($values['user']);
+    }
+
+    // Load full retweeted_status (original tweet) if retweet detected.
+    if (isset($values['retweeted_status'])) {
+      $this->retweeted_status = new TwitterStatus($values['retweeted_status']);
     }
   }
 

@@ -83,7 +83,7 @@ class twitter_views_handler_field_xss extends views_handler_field {
 class twitter_views_handler_field_profile_image extends views_handler_field {
   function render($values) {
     $value = $values->{$this->field_alias};
-    return theme('image', array('path' => $value));
+    return theme('image', array('path' => $value, 'width' => 48, 'height' => 48));
   }
 }
 
@@ -108,9 +108,9 @@ class twitter_views_handler_field_web_intents extends views_handler_field {
 
   function render($values) {
     drupal_add_js('//platform.twitter.com/widgets.js', 'external');
-    return '<span><a href="https://twitter.com/intent/tweet?in_reply_to=' . $values->twitter_id . '">Reply</a></span> ' .
-      '<span><a href="https://twitter.com/intent/retweet?tweet_id=' . $values->twitter_id . '">Retweet</a></span> ' .
-      '<span><a href="https://twitter.com/intent/favorite?tweet_id=' . $values->twitter_id . '">Favorite</a></span>';
+    return '<span><a href="https://twitter.com/intent/tweet?in_reply_to=' . $values->twitter_id . '">' . t('Reply') . '</a></span> ' .
+      '<span><a href="https://twitter.com/intent/retweet?tweet_id=' . $values->twitter_id . '">' . t('Retweet') . '</a></span> ' .
+      '<span><a href="https://twitter.com/intent/favorite?tweet_id=' . $values->twitter_id . '">' . t('Favorite') . '</a></span>';
   }
 }
 
@@ -124,7 +124,7 @@ class twitter_views_handler_field_follow extends views_handler_field {
 
   function render($values) {
     drupal_add_js('//platform.twitter.com/widgets.js', 'external');
-    return '<span><a href="https://twitter.com/intent/user?screen_name=' . $values->twitter_screen_name . '">Follow</a></span>';
+    return '<span><a href="https://twitter.com/intent/user?screen_name=' . $values->twitter_screen_name . '">' . t('Follow') . '</a></span>';
   }
 }
 
@@ -143,7 +143,7 @@ class twitter_views_handler_field_formatted_tweet extends views_handler_field {
 
     // Load tweet and author.
     $status = twitter_status_load($values->twitter_id);
-    $author = twitter_account_load($status->screen_name);
+    $author = twitter_account_load($status->screen_name, FALSE);
 
     // Format the timestamp.
     $time_diff = REQUEST_TIME - $values->twitter_created_time;
@@ -191,10 +191,10 @@ class twitter_views_handler_field_image extends views_handler_field {
       '#title' => t('Image size'),
       '#default_value' => $this->options['size'],
       '#options' => array(
-        'thumb'  => 'Thumb',
-        'small'  => 'Small',
-        'medium' => 'Medium',
-        'large'  => 'Large',
+        'thumb'  => t('Thumb'),
+        'small'  => t('Small'),
+        'medium' => t('Medium'),
+        'large'  => t('Large'),
       ),
       '#description' => t('Choose an image size from the ones that Twitter has created for this image.'),
       '#weight' => -10,
