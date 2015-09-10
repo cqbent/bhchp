@@ -9,13 +9,15 @@ bhchp custom styles
     }
     .social-icons { 
         ul {
-            margin: 0; padding: 0; font-size: 24px;
+            margin: 0; padding: 0; font-size: 28px;
             li {
                 list-style: none; float: left; 
-                padding: 0; margin: 0;
+                padding: 0; margin: 0 12px 0 0;
                 a { 
                     text-decoration: none; 
                     &:hover { color: $lightblue; }
+                }
+                &:last-child {
                 }
             }
         }

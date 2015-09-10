@@ -18,11 +18,11 @@
 
   <div class="name-handle">
     <div class="name">
-      <a href="http://twitter.com/<?php print $author->screen_name; ?>"><?php print $author->name; ?></a>
+      <a href="https://twitter.com/<?php print $author->screen_name; ?>"><?php print $author->name; ?></a>
     </div>
 
     <div class="handle">
-      <a href="http://twitter.com/<?php print $author->screen_name; ?>">@<?php print $author->screen_name; ?></a>
+      <a href="https://twitter.com/<?php print $author->screen_name; ?>">@<?php print $author->screen_name; ?></a>
     </div>
   </div>
 

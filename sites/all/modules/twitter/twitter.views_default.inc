@@ -4,6 +4,10 @@
  * Default views for Twitter module.
  */
 function twitter_views_default_views() {
+  if (!variable_get('twitter_use_default_views', TRUE)) {
+    return;
+  }
+
   $view = new view();
   $view->name = 'tweets';
   $view->description = 'Displays Twitter.com status messages for users who have associated Twitter accounts.';

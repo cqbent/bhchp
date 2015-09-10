@@ -311,7 +311,7 @@ function diff_block_view($delta) {
  */
 function diff_node_view_alter(&$build) {
   $node = $build['#node'];
-  if (user_access('view revisions') && in_array($node->type, variable_get('diff_show_diff_inline_node_bundles', array()))) {
+  if (user_access('view revisions') && in_array($node->type, variable_get('diff_show_diff_inline_node_bundles', array()), TRUE)) {
     // Ugly but cheap way to check that we are viewing a node's revision page.
     if (arg(2) === 'revisions' && arg(3) === $node->vid) {
       module_load_include('inc', 'diff', 'diff.pages');
