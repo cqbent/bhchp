@@ -16,8 +16,6 @@ function bhchp_ui_general_flexslider_default_presets() {
   $preset->name = 'bhchp_flexslider_settings';
   $preset->title = 'BHCHP Settings';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = '';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',

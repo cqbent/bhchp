@@ -10,6 +10,20 @@
  */
 function leaflet_more_maps_admin_configure() {
 
+  // First a global setting to enter the Google sat map version number
+  $form['global_settings'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#title' => t('Global settings'),
+  );
+  $form['global_settings']['google_satellite_version'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google satellite map version'),
+    '#default_value' => variable_get('google_satellite_version', '178'),
+    '#description' => t('If you find that tiles have gone missing, it is time to increase this number.'),
+  );
+
   $map_info = array();
   // @todo call hook_leaflet_map_info() ?
   _leaflet_more_maps_assemble_default_map_info($map_info);
@@ -84,6 +98,9 @@ function leaflet_more_maps_admin_configure() {
 function leaflet_more_maps_admin_configure_form_submit($form, &$form_state) {
 
   // form_state_values_clean($form_state);
+
+  variable_set('google_satellite_version', $form_state['values']['google_satellite_version']);
+
   $custom_maps = $form_state['values']['map'];
 
   // Clear out the unticked boxes.

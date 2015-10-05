@@ -633,7 +633,7 @@ function theme_views_bulk_operations_confirmation($variables) {
   // Load the entities from the current page, and show their titles.
   $entities = _views_bulk_operations_entity_load($entity_type, array_values($rows), $vbo->revision);
   foreach ($entities as $entity) {
-    $items[] = check_plain(_views_bulk_operations_entity_label($entity_type, $entity));
+    $items[] = check_plain(entity_label($entity_type, $entity));
   }
   // All rows on all pages have been selected, so show a count of additional items.
   if ($select_all_pages) {
@@ -1080,7 +1080,7 @@ function views_bulk_operations_queue_item_process($queue_item_data, &$log = NULL
       $arguments = array(
         '%operation' => $operation->label(),
         '@type' => $entity_type,
-        '%title' => _views_bulk_operations_entity_label($entity_type, $entity),
+        '%title' => entity_label($entity_type, $entity),
       );
 
       if ($log) {
@@ -1166,7 +1166,7 @@ function views_bulk_operations_direct_process($operation, $rows, $options) {
         $context['results']['log'][] = t('Skipped %operation on @type %title due to insufficient permissions.', array(
           '%operation' => $operation->label(),
           '@type' => $entity_type,
-          '%title' => _views_bulk_operations_entity_label($entity_type, $entity),
+          '%title' => entity_label($entity_type, $entity),
         ));
         unset($entities[$id]);
       }
@@ -1272,29 +1272,6 @@ function _views_bulk_operations_entity_load($entity_type, $ids, $revision = FALS
   }
 
   return $entities;
-}
-
-/**
- * Label function for entities.
- * Core entities don't declare the "label" key, so entity_label() fails,
- * and a fallback is needed. This function provides that fallback.
- */
-function _views_bulk_operations_entity_label($entity_type, $entity) {
-  $label = entity_label($entity_type, $entity);
-  if (!$label) {
-    $entity_info = entity_get_info($entity_type);
-    $id_key = $entity_info['entity keys']['id'];
-    // Many entity types (e.g. "user") have a name which fits the label perfectly.
-    if (isset($entity->name)) {
-      $label = $entity->name;
-    }
-    elseif (isset($entity->{$id_key})) {
-      // Fallback to the id key.
-      $label = $entity->{$id_key};
-    }
-  }
-
-  return $label;
 }
 
 /**

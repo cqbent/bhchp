@@ -99,14 +99,14 @@ function bhchp_event_views_default_views() {
   $view->description = 'event supporters block for sidebar w parameter';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Eventsupporters';
+  $view->human_name = 'Gala Committee';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Eventsupporters';
+  $handler->display->display_options['title'] = 'Event supporters';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -116,7 +116,7 @@ function bhchp_event_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Event Supporter list content */
+  /* Field: Content: Event Sidebar Content */
   $handler->display->display_options['fields']['field_event_supporter_list_conte']['id'] = 'field_event_supporter_list_conte';
   $handler->display->display_options['fields']['field_event_supporter_list_conte']['table'] = 'field_data_field_event_supporter_list_conte';
   $handler->display->display_options['fields']['field_event_supporter_list_conte']['field'] = 'field_event_supporter_list_conte';
@@ -147,6 +147,71 @@ function bhchp_event_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $export['eventsupporters'] = $view;
+
+  $view = new view();
+  $view->name = 'image_grid';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Image Grid';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Image Grid';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'responsive_grid';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Event Images */
+  $handler->display->display_options['fields']['field_event_images']['id'] = 'field_event_images';
+  $handler->display->display_options['fields']['field_event_images']['table'] = 'field_data_field_event_images';
+  $handler->display->display_options['fields']['field_event_images']['field'] = 'field_event_images';
+  $handler->display->display_options['fields']['field_event_images']['label'] = '';
+  $handler->display->display_options['fields']['field_event_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_event_images']['type'] = 'fancybox';
+  $handler->display->display_options['fields']['field_event_images']['settings'] = array(
+    'fancybox_image_style_content' => 'medium',
+    'fancybox_image_style_fancybox' => '',
+    'fancybox_gallery' => 'post',
+    'fancybox_gallery_custom' => '',
+    'fancybox_caption' => 'auto',
+    'fancybox_caption_custom' => '',
+  );
+  $handler->display->display_options['fields']['field_event_images']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_event_images']['delta_offset'] = '0';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['image_grid'] = $view;
 
   return $export;
 }

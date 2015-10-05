@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the bhchp_registrations feature.
+ */
+
+include_once 'bhchp_registrations.features.inc';

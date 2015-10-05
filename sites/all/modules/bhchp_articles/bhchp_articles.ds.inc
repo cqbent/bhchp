@@ -96,6 +96,7 @@ function bhchp_articles_ds_layout_settings_info() {
         2 => 'post_date',
         3 => 'body',
         4 => 'field_tags',
+        5 => 'field_news_file',
       ),
     ),
     'fields' => array(
@@ -104,6 +105,7 @@ function bhchp_articles_ds_layout_settings_info() {
       'post_date' => 'right',
       'body' => 'right',
       'field_tags' => 'right',
+      'field_news_file' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -115,6 +117,7 @@ function bhchp_articles_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|article|default'] = $ds_layout;
 

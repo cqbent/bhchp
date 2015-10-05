@@ -30,7 +30,7 @@ function bhchp_social_feeds_context_default_contexts() {
           'module' => 'panels_mini',
           'delta' => 'social_feed_blocks',
           'region' => 'content',
-          'weight' => '-21',
+          'weight' => '-1',
         ),
       ),
     ),

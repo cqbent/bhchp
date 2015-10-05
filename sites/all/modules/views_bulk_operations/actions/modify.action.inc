@@ -82,6 +82,11 @@ function views_bulk_operations_modify_action($entity, $context) {
     // The wrapper will automatically modify $entity itself.
     $wrapper = entity_metadata_wrapper($context['entity_type'], $entity);
     foreach ($context['selected']['properties'] as $key) {
+      if (!$wrapper->$key->access('update')) {
+        // No access.
+        continue;
+      }
+
       if (in_array($key, $context['append']['properties'])) {
         $old_values = $wrapper->$key->value();
         $wrapper->$key->set($context['properties'][$key]);

@@ -84,6 +84,12 @@ function bhchp_video_field_default_field_instances() {
     'label' => 'Video',
     'required' => 0,
     'settings' => array(
+      'allowed_providers' => array(
+        0 => 'brightcove',
+        1 => 'facebook',
+        2 => 'youtube',
+        3 => 'vimeo',
+      ),
       'description_field' => 0,
       'description_length' => 128,
       'user_register_form' => FALSE,

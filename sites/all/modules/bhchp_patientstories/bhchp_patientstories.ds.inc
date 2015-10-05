@@ -112,6 +112,7 @@ function bhchp_patientstories_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|patient_story|teaser'] = $ds_layout;
 

@@ -40,7 +40,6 @@ function bhchp_ui_general_image_default_styles() {
 
   // Exported image style: homepage_images.
   $styles['homepage_images'] = array(
-    'name' => 'homepage_images',
     'label' => 'Homepage Images',
     'effects' => array(),
   );

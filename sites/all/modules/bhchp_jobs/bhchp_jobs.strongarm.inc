@@ -96,10 +96,10 @@ function bhchp_jobs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
       ),
       'display' => array(),

@@ -13,12 +13,15 @@ class leaflet_views_plugin_style extends views_plugin_style {
    */
   function init(&$view, &$display, $options = NULL) {
     parent::init($view, $display, $options);
-
-    foreach (entity_get_info() as $key => $info) {
-      if ($view->base_table == $info['base table']) {
-        $this->entity_type = $key;
+    $this->entity_type = $this->options['entity_type'];
+    $this->entity_info = entity_get_info($this->entity_type);
+    // Fallback for views that do not have entity_type set, for example
+    // because the view was created before this option got introduced.
+    if (empty($this->entity_type)) {
+      $info = entity_get_info($view->base_table);
+      if (!empty($info)) {
+        $this->entity_type = $view->base_table;
         $this->entity_info = $info;
-        break;
       }
     }
   }
@@ -28,6 +31,7 @@ class leaflet_views_plugin_style extends views_plugin_style {
    */
   function option_definition() {
     $options = parent::option_definition();
+    $options['entity_type'] = array('default' => '');
     $options['data_source'] = array('default' => '');
     $options['name_field'] = array('default' => '');
     $options['description_field'] = array('default' => '');
@@ -43,6 +47,7 @@ class leaflet_views_plugin_style extends views_plugin_style {
       'initialZoom' => array('default' => ''),
       'minZoom' => array('default' => 0),
       'maxZoom' => array('default' => 18),
+      'scrollWheelZoom' => array('default' => 1),
     );
     $options['icon']['contains'] = array(
       'iconType' => array('default' => 'marker'),
@@ -112,6 +117,32 @@ class leaflet_views_plugin_style extends views_plugin_style {
         '#markup' => t('Please add at least one geofield to the view'),
       );
       return;
+    }
+
+    // Get available entity types for selection.
+    $default_type = empty($this->options['entity_type']) ? '' : $this->options['entity_type'];
+    $entity_types = array('');
+    foreach (entity_get_info() as $key => $info) {
+      $entity_types[$key] = $info['label'];
+      if ($this->view->base_table == $info['base table']) {
+        // If this entity type matches the view base table, use it.
+        $default_type = $key;
+      }
+    }
+
+    // Entity type selection.
+    $form['entity_type'] = array(
+      '#type' => 'select',
+      '#title' => t('Entity Type'),
+      '#description' => t('Which type of entity is this view based on?'),
+      '#options' => $entity_types,
+      '#default_value' => $default_type,
+      '#required' => TRUE,
+    );
+
+    // Only allow users to choose the entity type if it cannot be detected.
+    if (!empty($default_type)) {
+      $form['entity_type']['#access'] = FALSE;
     }
 
     // Map preset.
@@ -229,7 +260,7 @@ class leaflet_views_plugin_style extends views_plugin_style {
    */
   function render() {
     if (!empty($this->view->live_preview)) {
-      return t('No preview available');
+      return t('No preview available.');
     }
     $data = array();
     $map = leaflet_map_get_info($this->options['map']);
@@ -242,16 +273,23 @@ class leaflet_views_plugin_style extends views_plugin_style {
         if (!empty($geofield)) {
           $entity = FALSE;
           // Render the entity with the selected view mode:
-          if ($this->options['description_field'] === '#rendered_entity' && is_object($result)) {
-            $entity = entity_load_single($this->entity_type, $result->{$this->entity_info['entity keys']['id']});
-            $build = entity_view($this->entity_type, array($entity), $this->options['view_mode']);
-            $description = drupal_render($build);
+          if (is_object($result)) {
+            if (!empty($result->{$this->entity_info['entity keys']['id']})) {
+              $entity_id = $result->{$this->entity_info['entity keys']['id']};
+            }
+            elseif ($result->entity) {
+              $entity_id = $result->entity;
+            }
+            $entity = entity_load_single($this->entity_type, $entity_id);
+            if ($this->options['description_field'] === '#rendered_entity') {
+              $build = entity_view($this->entity_type, array($entity), $this->options['view_mode']);
+              $description = drupal_render($build);
+            }
+            // Normal rendering via fields:
+            elseif ($this->options['description_field']) {
+              $description = $this->rendered_fields[$id][$this->options['description_field']];
+            }
           }
-          // Normal rendering via fields:
-          elseif ($this->options['description_field']) {
-            $description = $this->rendered_fields[$id][$this->options['description_field']];
-          }
-
           $points = leaflet_process_geofield($geofield);
           // Attach pop-ups if we have rendered into $description:
           if (isset($description)) {
@@ -262,10 +300,16 @@ class leaflet_views_plugin_style extends views_plugin_style {
           // Attach also titles & entities, they might be used later on.
           if ($this->options['name_field']) {
             foreach ($points as &$point) {
-              $point['label'] = $this->rendered_fields[$id][$this->options['name_field']];
+              $point['label'] = htmlspecialchars_decode(strip_tags($this->rendered_fields[$id][$this->options['name_field']]));
               if ($entity !== FALSE) {
                 $point['entity'] = $entity;
               }
+            }
+          }
+          if ($this->options['icon']['iconType'] == 'html') {
+            foreach ($points as &$point) {
+              $target_field = $this->options['icon']['html'];
+              $point['rendered_html'] = isset($this->rendered_fields[$id][$target_field]) ? $this->rendered_fields[$id][$target_field] : '';
             }
           }
           // Let modules modify the points data.
@@ -276,10 +320,10 @@ class leaflet_views_plugin_style extends views_plugin_style {
       }
       leaflet_apply_map_settings($map, $data, $this->options, $this->entity_type);
       if (empty($data) && !empty($this->options['hide_empty'])) {
-        return '';
+        return;
       }
       return leaflet_build_map($map, $data, $this->options['height'] . 'px');
     }
-    return '';
+    return;
   }
 }

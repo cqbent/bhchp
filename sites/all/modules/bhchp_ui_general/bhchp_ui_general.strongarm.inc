@@ -364,7 +364,9 @@ function bhchp_ui_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_expanded';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
   $export['menu_expanded'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -496,14 +498,14 @@ function bhchp_ui_general_strongarm() {
     'toggle_slogan' => 0,
     'toggle_node_user_picture' => 0,
     'toggle_comment_user_picture' => 0,
-    'toggle_favicon' => 0,
+    'toggle_favicon' => 1,
     'toggle_main_menu' => 1,
     'toggle_secondary_menu' => 0,
     'default_logo' => 0,
     'logo_path' => 'public://bhchp_logo.png',
     'logo_upload' => '',
-    'default_favicon' => 1,
-    'favicon_path' => '',
+    'default_favicon' => 0,
+    'favicon_path' => 'public://bhchp_favicon.png',
     'favicon_upload' => '',
     'zen_breadcrumb' => 'yes',
     'zen_breadcrumb_separator' => ' › ',
@@ -519,8 +521,8 @@ function bhchp_ui_general_strongarm() {
     ),
     'zen_rebuild_registry' => 0,
     'zen_wireframes' => 0,
-    'responsive_tables_medium_priority_max_width' => '',
-    'responsive_tables_low_priority_max_width' => '',
+    'jquery_update_jquery_version' => '',
+    'favicon_mimetype' => 'image/png',
   );
   $export['theme_bhchp_settings'] = $strongarm;
 

@@ -1,0 +1,53 @@
+diff --git a/entity.module b/entity.module
+index 006c481..dc17ab8 100644
+--- a/entity.module
++++ b/entity.module
+@@ -1441,3 +1441,24 @@ function entity_ctools_plugin_directory($module, $plugin) {
+     return 'ctools/content_types';
+   }
+ }
++
++/**
++ * Implements hook_entity_insert().
++ */
++function entity_entity_insert($entity, $entity_type) {
++  // Create field for entity if need.
++  $entity_info = entity_get_info($entity_type);
++  // Make sure entity_type is entity manage bundle (e.g: profile2_type).
++  if (empty($entity_info['bundle of'])) {
++    return;
++  }
++
++  // Make sure entity is cloning this have field.
++  if (!empty($entity->_field_instances)) {
++    foreach ($entity->_field_instances as $field_instance) {
++      $field_instance['bundle'] = $entity->{$entity_info['entity keys']['name']};
++      $field = field_create_instance($field_instance);
++      field_update_field($field);
++    }
++  }
++}
+diff --git a/includes/entity.ui.inc b/includes/entity.ui.inc
+index 6819459..d1f491b 100644
+--- a/includes/entity.ui.inc
++++ b/includes/entity.ui.inc
+@@ -662,6 +662,19 @@ function entity_ui_clone_entity($entity_type, $entity) {
+   $entity_info = entity_get_info($entity_type);
+   $entity->{$entity_info['entity keys']['id']} = FALSE;
+   if (!empty($entity_info['entity keys']['name'])) {
++    // Save entity key name value (e.g. type) where this entity is cloned from.
++    // This value is handy for cloning other parts of the entity like field groups.
++    $entity->cloned_from = $entity->{$entity_info['entity keys']['name']};
++
++    // Make sure entity_type is entity manage bundle (e.g: profile2_type).
++    if (!empty($entity_info['bundle of'])) {
++      $bundle = $entity->{$entity_info['entity keys']['name']};
++      $field_instances = field_info_instances($entity_info['bundle of'], $bundle);
++
++      // set info field_instances for entity and save it in hook_entity_insert.
++      $entity->_field_instances = $field_instances;
++    }
++
+     $entity->{$entity_info['entity keys']['name']} = FALSE;
+   }
+   $entity->is_new = TRUE;

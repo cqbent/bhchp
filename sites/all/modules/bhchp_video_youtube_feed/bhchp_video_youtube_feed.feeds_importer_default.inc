@@ -24,6 +24,8 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
         'use_pubsubhubbub' => FALSE,
         'designated_hub' => '',
         'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
       ),
     ),
     'parser' => array(
@@ -59,7 +61,7 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
           ),
           4 => array(
             'source' => 'thumbnail',
-            'target' => 'field_video_thumbnail',
+            'target' => 'field_video_thumbnail:uri',
             'unique' => FALSE,
           ),
           5 => array(
@@ -72,14 +74,15 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'video',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',
     'update' => 0,
-    'import_period' => 1800,
+    'import_period' => '86400',
     'expire_period' => 3600,
-    'import_on_create' => TRUE,
-    'process_in_background' => FALSE,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
   );
   $export['youtube_feed_importer'] = $feeds_importer;
 

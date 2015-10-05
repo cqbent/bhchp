@@ -29,9 +29,11 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'table';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -39,28 +41,22 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Location Phone */
-  $handler->display->display_options['fields']['field_location_phone']['id'] = 'field_location_phone';
-  $handler->display->display_options['fields']['field_location_phone']['table'] = 'field_data_field_location_phone';
-  $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
-  $handler->display->display_options['fields']['field_location_phone']['label'] = 'Phone';
-  $handler->display->display_options['fields']['field_location_phone']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Administrative area (i.e. State / Province) */
+  /* Field: Field: Address - Administrative area (i.e. State / Province) */
   $handler->display->display_options['fields']['field_address_administrative_area']['id'] = 'field_address_administrative_area';
   $handler->display->display_options['fields']['field_address_administrative_area']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
   $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'State';
-  /* Field: Content: Address - Locality (i.e. City) */
+  /* Field: Field: Address - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['label'] = 'City';
-  /* Field: Content: Address - Postal code */
+  /* Field: Field: Address - Postal code */
   $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['label'] = 'Postal';
-  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
+  /* Field: Field: Address - Thoroughfare (i.e. Street address) */
   $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
@@ -130,36 +126,30 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
+  /* Field: Field: Address - Thoroughfare (i.e. Street address) */
   $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Locality (i.e. City) */
+  /* Field: Field: Address - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['label'] = '';
   $handler->display->display_options['fields']['field_address_locality']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Administrative area (i.e. State / Province) */
+  /* Field: Field: Address - Administrative area (i.e. State / Province) */
   $handler->display->display_options['fields']['field_address_administrative_area']['id'] = 'field_address_administrative_area';
   $handler->display->display_options['fields']['field_address_administrative_area']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
   $handler->display->display_options['fields']['field_address_administrative_area']['label'] = '';
   $handler->display->display_options['fields']['field_address_administrative_area']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Postal code */
+  /* Field: Field: Address - Postal code */
   $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['label'] = '';
   $handler->display->display_options['fields']['field_address_postal_code']['element_label_colon'] = FALSE;
-  /* Field: Content: Location Phone */
-  $handler->display->display_options['fields']['field_location_phone']['id'] = 'field_location_phone';
-  $handler->display->display_options['fields']['field_location_phone']['table'] = 'field_data_field_location_phone';
-  $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
-  $handler->display->display_options['fields']['field_location_phone']['label'] = '';
-  $handler->display->display_options['fields']['field_location_phone']['element_label_colon'] = FALSE;
   $export['locationlist'] = $view;
 
   $view = new view();
@@ -202,6 +192,8 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Geolocation */
   $handler->display->display_options['fields']['field_geolocation']['id'] = 'field_geolocation';
   $handler->display->display_options['fields']['field_geolocation']['table'] = 'field_data_field_geolocation';
@@ -212,7 +204,7 @@ function bhchp_location_views_default_views() {
   $handler->display->display_options['fields']['field_location_phone']['field'] = 'field_location_phone';
   $handler->display->display_options['fields']['field_location_phone']['label'] = '';
   $handler->display->display_options['fields']['field_location_phone']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
+  /* Field: Field: Address - Thoroughfare (i.e. Street address) */
   $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
@@ -251,6 +243,20 @@ function bhchp_location_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
+
+  /* Display: Locations by Service */
+  $handler = $view->new_display('block', 'Locations by Service', 'block_2');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['block_description'] = 'Locations By Service';
   $export['locations'] = $view;
 
   return $export;

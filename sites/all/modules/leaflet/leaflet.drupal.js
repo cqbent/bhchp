@@ -156,8 +156,10 @@
           case 'polygon':
             lFeature = Drupal.leaflet.create_polygon(feature, lMap);
             break;
-          case 'multipolygon':
           case 'multipolyline':
+            feature.multipolyline = true;
+            // no break;
+          case 'multipolygon':
             lFeature = Drupal.leaflet.create_multipoly(feature, lMap);
             break;
           case 'json':
@@ -168,6 +170,12 @@
             break;
           case 'circle':
             lFeature = Drupal.leaflet.create_circle(feature, lMap);
+            break;
+          case 'circlemarker':
+            lFeature = Drupal.leaflet.create_circlemarker(feature, lMap);
+            break;
+          case 'rectangle':
+            lFeature = Drupal.leaflet.create_rectangle(feature, lMap);
             break;
         }
 
@@ -232,6 +240,27 @@
       }
     },
 
+    create_circlemarker: function(circle, lMap) {
+      var latLng = new L.LatLng(circle.lat, circle.lon);
+      latLng = latLng.wrap();
+      lMap.bounds.push(latLng);
+      if (circle.options) {
+        return new L.CircleMarker(latLng, circle.options);
+      }
+      else {
+        return new L.CircleMarker(latLng, circle.radius);
+      }
+    },
+
+    create_rectangle: function(box, lMap) {
+      var bounds = box.bounds,
+        southWest = new L.LatLng(bounds.s, bounds.w),
+        northEast = new L.LatLng(bounds.n, bounds.e),
+        latLng = new L.LatLngBounds(southWest, northEast);
+      lMap.bounds.push(latLng);
+      return new L.Rectangle(latLng, box.settings);
+    },
+
     create_point: function(marker, lMap) {
       var latLng = new L.LatLng(marker.lat, marker.lon);
       latLng = latLng.wrap();
@@ -278,6 +307,9 @@
         }
         if (marker.icon.zIndexOffset) {
           icon.options.zIndexOffset = marker.icon.zIndexOffset;
+        }
+        if (marker.icon.className) {
+          icon.options.className = marker.icon.className;
         }
         var options = {icon:icon};
         if (marker.zIndexOffset) {

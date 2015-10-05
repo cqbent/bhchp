@@ -196,6 +196,7 @@ function _leaflet_more_maps_assemble_default_map_info(&$map_info, $default_setti
   }
 
   $attr_google = 'Map data &copy; <a target="attr" href="http://googlemaps.com">Google</a>';
+  $v = variable_get('google_satellite_version', 178);
   $map_info['google-satellite'] = array(
     'label' => 'Google satellite (zoom 0..21)',
     'description' => t('Google satellite'),
@@ -203,7 +204,7 @@ function _leaflet_more_maps_assemble_default_map_info(&$map_info, $default_setti
     'layers' => array(
       'satellite' => array(
         'type' => 'google',
-        'urlTemplate' => $prot . 'khms{s}.googleapis.com/kh?v=172&x={x}&y={y}&z={z}',
+        'urlTemplate' => $prot . 'khms{s}.googleapis.com/kh?x={x}&y={y}&z={z}' . (empty($v) ? '' : "&v=$v"),
         'options' => array(
           'attribution' => $attr_google,
           // 'detectRetina' => TRUE, // has bad effect
@@ -285,7 +286,7 @@ function _leaflet_more_maps_assemble_default_map_info(&$map_info, $default_setti
     // 'Zenburn',
     'Warden',
   );
-  $attr_mapbox = 'Tiles by <a target="attr" href="http://mapbox.com">MapBox</a>. Map data &copy; <a href="http://openstreetap.org">OpenStreetMap</a> and contributors';
+  $attr_mapbox = 'Tiles by <a target="attr" href="http://mapbox.com">MapBox</a>. Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> and contributors';
   foreach ($mapbox_names as $mapbox_name) {
     $code = drupal_strtolower($mapbox_name);
     $label = "MapBox $mapbox_name (zoom 0..19)";

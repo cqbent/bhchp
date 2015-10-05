@@ -118,6 +118,8 @@ audio:not([controls]) {
 	font-style: normal;
 }
 
+/*
+
 @font-face {
     font-family: 'Mono Social Icons Font';
     src: url('../fonts/MonoSocialIconsFont-1.10.eot');
@@ -129,6 +131,29 @@ audio:not([controls]) {
     font-weight: normal;
     font-style: normal;
 }
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+*/
+
+@include font-face("Mono Social Icons Font", font-files("MonoSocialIconsFont-1.10.woff", "MonoSocialIconsFont-1.10.ttf", "MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont"), "MonoSocialIconsFont-1.10.eot", normal, normal);
 
 .symbol, a.symbol:before {
     font-family: 'Mono Social Icons Font';

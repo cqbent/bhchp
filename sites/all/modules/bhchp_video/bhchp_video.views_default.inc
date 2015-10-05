@@ -158,7 +158,7 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="http://www.youtube.com/watch?v=doLwbPcbSrk"><span class="bhchp_icons_video">&nbsp;</span></a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="http://www.youtube.com/watch?v=doLwbPcbSrk" target="_blank"><span class="symbol">&#xe299;</span></a>';
   $handler->display->display_options['fields']['nothing']['element_class'] = 'icon';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Post date */
@@ -167,7 +167,8 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'month_day_year';
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'F d, Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   /* Field: Content: Video Thumbnail */
   $handler->display->display_options['fields']['field_video_thumbnail']['id'] = 'field_video_thumbnail';

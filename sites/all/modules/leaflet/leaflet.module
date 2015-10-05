@@ -27,11 +27,11 @@ function leaflet_libraries_info() {
     // Only used in administrative UI of Libraries API.
     'name' => 'Leaflet JavaScript Library',
     'vendor url' => 'http://leafletjs.com/',
-    'download url' => 'http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.1.zip',
-    // .7: version="0.7"
+    'download url' => 'http://cdn.leafletjs.com/downloads/leaflet-0.7.3.zip',
     'version arguments' => array(
       'file' => 'leaflet.js',
-      'pattern' => '/version="([\d+\.]*\d+)"/',
+      // Better pattern, see [#2535054]
+      'pattern' => '/version[=:] *[\'"]([\d+\.]+)[-\w]*[\'"]/',
     ),
     'files' => array(
       'js' => array(
@@ -40,12 +40,15 @@ function leaflet_libraries_info() {
           'type' => 'inline',
           'data' => 'L_ROOT_URL = "' . base_path() . libraries_get_path('leaflet') . '/";',
           'group' => JS_LIBRARY,
-          'preprocess' => FALSE,
         ),
         'leaflet.js' => array(
           'type' => 'file',
           'group' => JS_LIBRARY,
-          'preprocess' => FALSE,
+        ),
+        // For AdvAgg module. See [#2294639] This runs after leaflet.js.
+        'leaflet_imagepath' => array(
+          'type' => 'inline',
+          'data' => 'L.Icon.Default.imagePath = "' . base_path() . libraries_get_path('leaflet') . '/images";',
         ),
       ),
       'css' => array(
@@ -121,14 +124,16 @@ function leaflet_build_map($map, $features = array(), $height = '400px') {
   );
 
   // Load the leaflet library, which includes integration files.
-  libraries_load('leaflet');
+  // libraries_load('leaflet');
+  // See [2460643]
+  $build['#attached']['libraries_load'][] = array('leaflet');
 
   return $build;
 }
 
 /**
  * DEPRECATED. Use leaflet_build_map() instead.
- * 
+ *
  * Load all Leaflet required client files and return markup for a map.
  *
  * @param array $map
@@ -192,7 +197,7 @@ function leaflet_leaflet_map_info() {
       array(
         'label' => 'OSM Mapnik',
         'description' => t('Leaflet default map.'),
-        // Center is used when the map contains no items, or every time the map
+        // 'center' is used when map contains no features, or every time the map
         // is loaded if "force" is TRUE. Otherwise, the map will center itself
         // intelligently based on the features in the map.
         // RdB: bad things happen when 'center' is specified and Leaflet
@@ -223,7 +228,7 @@ function leaflet_leaflet_map_info() {
         ),
         'layers' => array(
           'earth' => array(
-            'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            'urlTemplate' => '//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             'options' => array(
               'attribution' => 'OSM Mapnik',
             ),

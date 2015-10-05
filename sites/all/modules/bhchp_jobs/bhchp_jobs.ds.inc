@@ -17,13 +17,13 @@ function bhchp_jobs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'job_posting';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'back_to_parent' => array(
-      'weight' => '10',
+    'contact_email' => array(
+      'weight' => '9',
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'contact_email' => array(
-      'weight' => '9',
+    'back_to_parent' => array(
+      'weight' => '10',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -82,10 +82,10 @@ function bhchp_jobs_ds_layout_settings_info() {
         2 => 'field_location',
         3 => 'field_job_hours',
         4 => 'field_grade_and_status',
-        5 => 'body',
-        6 => 'field_job_duties',
-        7 => 'field_job_qualifications',
-        8 => 'field_experience_education',
+        5 => 'field_job_duties',
+        6 => 'field_job_qualifications',
+        7 => 'field_experience_education',
+        8 => 'field_how_to_apply',
         9 => 'contact_email',
         10 => 'back_to_parent',
       ),
@@ -96,10 +96,10 @@ function bhchp_jobs_ds_layout_settings_info() {
       'field_location' => 'ds_content',
       'field_job_hours' => 'ds_content',
       'field_grade_and_status' => 'ds_content',
-      'body' => 'ds_content',
       'field_job_duties' => 'ds_content',
       'field_job_qualifications' => 'ds_content',
       'field_experience_education' => 'ds_content',
+      'field_how_to_apply' => 'ds_content',
       'contact_email' => 'ds_content',
       'back_to_parent' => 'ds_content',
     ),

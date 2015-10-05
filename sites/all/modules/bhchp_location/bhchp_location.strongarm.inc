@@ -42,7 +42,7 @@ function bhchp_location_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_location';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['comment_location'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -87,6 +87,9 @@ function bhchp_location_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'list_fields_mode' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -140,7 +143,7 @@ function bhchp_location_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_location';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_location'] = $strongarm;
 
   return $export;

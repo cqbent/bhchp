@@ -22,7 +22,7 @@ bhchp custom styles
             }
         }
     }
-    input[type=submit], button, a.button, .button a  {
+    input[type=submit], button, a.button, .button a, .field-name-field-registration a  {
         background-color: $blue; border: none;
         color: #fff; text-transform: uppercase; border-radius: 0;
         padding: 5px 10px;
@@ -740,6 +740,7 @@ bhchp custom styles
     .sidebar-first & {
         .views-field-nothing {
             float: left; 
+            margin-right: 10px;
         }
     }
     .front #page #main #content & {

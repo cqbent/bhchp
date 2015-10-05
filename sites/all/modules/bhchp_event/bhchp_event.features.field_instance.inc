@@ -64,7 +64,7 @@ function bhchp_event_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -201,58 +201,9 @@ function bhchp_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'leaflet',
-        'settings' => array(
-          'height' => 200,
-          'icon' => array(
-            'html' => '',
-            'htmlClass' => '',
-            'iconAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconImageStyle' => '',
-            'iconSize' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconType' => 'marker',
-            'iconUrl' => '',
-            'popupAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowUrl' => '',
-          ),
-          'leaflet_map' => 'google-roadmap',
-          'popup' => array(
-            'show' => 0,
-            'text' => '',
-          ),
-          'vector_display' => array(
-            'clickable' => 0,
-            'color' => '',
-            'dashArray' => '',
-            'fill' => 0,
-            'fillColor' => '',
-            'fillOpacity' => '',
-            'opacity' => '',
-            'stroke' => 0,
-            'stroke_override' => 0,
-            'weight' => '',
-          ),
-          'zoom' => array(
-            'initialZoom' => -1,
-            'maxZoom' => -1,
-            'minZoom' => 1,
-          ),
-        ),
-        'type' => 'geofield_leaflet',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -290,6 +241,67 @@ function bhchp_event_field_default_field_instances() {
       ),
       'type' => 'geocoder',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_event_images'
+  $field_instances['node-event-field_event_images'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_images',
+    'label' => 'Event Images',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'event',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '1 MB',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 'upload',
+        ),
+        'label_help_description' => '',
+      ),
+      'type' => 'media_generic',
+      'weight' => 34,
     ),
   );
 
@@ -459,13 +471,13 @@ function bhchp_event_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The html list for supporters list.',
+    'description' => 'Sidebar content for event',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -476,7 +488,7 @@ function bhchp_event_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_event_supporter_list_conte',
-    'label' => 'Event Supporter list content',
+    'label' => 'Event Sidebar Content',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -486,10 +498,85 @@ function bhchp_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'rows' => 5,
       ),
       'type' => 'text_textarea',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_registration'
+  $field_instances['node-event-field_registration'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'registration_type' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'registration',
+        'settings' => array(
+          'i18n_string_key' => NULL,
+          'label' => NULL,
+        ),
+        'type' => 'registration_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_registration',
+    'label' => 'Registration',
+    'required' => 0,
+    'settings' => array(
+      'default_registration_settings' => array(
+        'capacity' => 0,
+        'reminder' => array(
+          'reminder_settings' => array(
+            'reminder_date' => NULL,
+            'reminder_template' => '',
+          ),
+          'send_reminder' => 0,
+        ),
+        'scheduling' => array(
+          'close' => NULL,
+          'open' => NULL,
+        ),
+        'settings' => array(
+          'confirmation' => 'Registration has been saved.',
+          'confirmation_redirect' => '',
+          'from_address' => 'cqbent@gmail.com',
+          'maximum_spaces' => 1,
+          'multiple_registrations' => 0,
+          'registration_entity_access_roles' => array(
+            2 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+        ),
+        'status' => 0,
+      ),
+      'hide_register_tab' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'registration',
+      'settings' => array(
+        'label_help_description' => '',
+      ),
+      'type' => 'registration_select',
+      'weight' => 33,
     ),
   );
 
@@ -508,7 +595,7 @@ function bhchp_event_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -581,9 +668,8 @@ function bhchp_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -615,9 +701,10 @@ function bhchp_event_field_default_field_instances() {
   t('Date');
   t('Details');
   t('Event Address');
+  t('Event Images');
   t('Event Link external signup');
   t('Event Location');
-  t('Event Supporter list content');
+  t('Event Sidebar Content');
   t('Event Type');
   t('Event datelocation');
   t('Event geomap');
@@ -628,9 +715,10 @@ function bhchp_event_field_default_field_instances() {
   t('Main body text & optional Summary field also available - for shorter teasers.');
   t('Optional. Select a location node as the spot for the event. ');
   t('Optional: address for event.');
+  t('Registration');
   t('Set a date and optional end date.');
+  t('Sidebar content for event');
   t('Sponsor logos');
-  t('The html list for supporters list.');
   t('text string for the preferred presentation of date/location. plain text');
 
   return $field_instances;
