@@ -59,7 +59,8 @@ Project demo: http://shindiristudio.com/timeline
 				'hideTimeline'           : false,          //hides the timeline line
 				'hideControles'          : false,          //hides the prev/next controles
 				'closeItemOnTransition'	 : false,           //if ture, closes the item after transition
-				'ajaxFailMessage'		 : 'Ajax request has failed.'
+				'ajaxFailMessage'		 : 'Ajax request has failed.',
+				'segmentOffset'          : 0			// CQB: added offset option for displaying a year within a decade or century category
    			}, options); // Setings
 			
 				
@@ -731,6 +732,8 @@ Project demo: http://shindiristudio.com/timeline
 				});
 				minY -= 10;
 				maxY += 10;
+				console.log(minY);
+				console.log(maxY);
 			}
 			// find timeline date range and make node elements	
 			$items.each(function(index){
@@ -747,12 +750,15 @@ Project demo: http://shindiristudio.com/timeline
 				if(typeof yearsArr[y][m] == 'undefined') yearsArr[y][m] = {};
 				yearsArr[y][m][d] = dataId;
 				var isActive = (index == data.currentIndex ? ' active' : '');
+				// CQB: added offset functionality for setting position and display of years within a decade on the timeline line
+				var dWithOffset = parseInt(d.toString().substr(data.options.segmentOffset),10);
 				if(data.options.categories) {
-					var leftPos = (100/monthsDays[m])*d;
+					var leftPos = (100/monthsDays[m])*dWithOffset;
 				}
 				else {
-					var leftPos = (100/(maxY-minY))*(d-minY);
+					var leftPos = (100/(maxY-minY))*(dWithOffset-minY);
 				}
+				// CQB: end of added functionality
 				var nName = ((typeof nodeName != 'undefined') ? nodeName : d);
 				// Store node element
 				nodes[dataId] = '<a href="#'+dataId+'" class="t_line_node'+isActive+'" style="left: '+leftPos+'%; position:absolute; text-align:center;">'+nName;

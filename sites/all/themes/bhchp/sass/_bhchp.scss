@@ -561,24 +561,30 @@ bhchp custom styles
                 .timeline_line {
                     width: 90%;
                     .t_line_view {
-                        width: 460px;
+                        //width: 100%;
                         .t_line_m { 
-                            width: 229px;
-                            &.right { left: 229px; }
+                            //width: 50%;
+                            &.right { 
+                                //left: 50%; 
+                            }
                         }
                         .t_line_month_year {
-                            display: inline-block; margin-left:5px;
+                            //display: inline-block; margin-left:5px;
                         }
                     }
                     .t_node_desc { background: $blue; }
                     a.t_line_node { 
                         background: none;
+                        padding: 20px 0 4px;
                         &:before { 
                             content: "\f111"; font-family: 'FontAwesome'; color: $textgray; 
-                            font-size:10px; position: absolute; top:21px;
+                            font-size:10px; display: block;
                             &:hover {
                                 color: $blue;
                             }
+                        }
+                        &:hover {
+                            text-decoration: none;
                         }
                     }
                 }
@@ -594,6 +600,24 @@ bhchp custom styles
                         }
                         .t_right:before {
                             content: "\f105"; 
+                        }
+                    }
+                    .item {
+                        height: 420px;
+                        .read_more {
+                            font-family: $opensans;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-size: 1.25em;
+                        }
+                    }
+                    .item_open, .item_open_cwrapper {
+                        width: 400px;
+                        height: 420px;
+                        .t_close {
+                            font-family: $opensans;
+                            text-transform: lowercase;
+                            font-size: 1em;
                         }
                     }
                 }
