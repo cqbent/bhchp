@@ -604,6 +604,10 @@ bhchp custom styles
                     }
                     .item {
                         height: 420px;
+                        span {
+                            height: auto;
+                            min-height: 120px;
+                        }
                         .read_more {
                             font-family: $opensans;
                             font-weight: bold;
@@ -967,12 +971,14 @@ bhchp custom styles
 .bhchp_icons_people:before { content: "\e602"; }
 .bhchp_icons_meds:before { content: "\e603"; }
 .bhchp_icons_medical:before { content: "\e604"; }
-.bhchp_icons_sox:before { content: "\e605"; }
+.bhchp_icons_sox:before { content: "\e803"; }
 .bhchp_icons_fb:before { content: "\e606"; }
 .bhchp_icons_video:before { content: "\e607"; }
 .bhchp_icons_twitter:before { content: "\e608"; }
-.bhchp_icons_gift:before { content: "\e609"; }
+.bhchp_icons_gift:before { content: "\e802"; }
 .bhchp_icons_apple:before { content: "\e60a"; }
+.bhchp_icons_friends:before { content: "\e800"; }
+.bhchp_icons_clipboard:before { content: "\e801"; }
 
 [class^="bhchp_social_"], [class*=" bhchp_social_"] {
     font-family: 'bhchp_social';
