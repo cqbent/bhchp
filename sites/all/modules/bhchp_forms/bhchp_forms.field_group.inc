@@ -129,6 +129,78 @@ Authorization and Release',
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_nominator_information|entityform|emerging_leader_form|form';
+  $field_group->group_name = 'group_nominator_information';
+  $field_group->entity_type = 'entityform';
+  $field_group->bundle = 'emerging_leader_form';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Nominator Information',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_nominator_name',
+      1 => 'field_nominator_email',
+      2 => 'field_nominator_address',
+      3 => 'field_nominator_phone',
+      4 => 'field_nominator_how_hear',
+      5 => 'field_nominator_occupation',
+      6 => 'field_nominator_employer',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Nominator Information',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-nominator-information field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_nominator_information|entityform|emerging_leader_form|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_nominee_information|entityform|emerging_leader_form|form';
+  $field_group->group_name = 'group_nominee_information';
+  $field_group->entity_type = 'entityform';
+  $field_group->bundle = 'emerging_leader_form';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Nominee Information',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_date_birth',
+      1 => 'field_employer',
+      2 => 'field_full_name',
+      3 => 'field_occupation',
+      4 => 'field_prior_experience',
+      5 => 'field_address',
+      6 => 'field_application_email',
+      7 => 'field_phone',
+      8 => 'field_how_benefit',
+      9 => 'field_fundraising_experience',
+      10 => 'field_nominee_how_hear',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Nominee Information',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-nominee-information field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_nominee_information|entityform|emerging_leader_form|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_notify|entityform|volunteer_internship_form|form';
   $field_group->group_name = 'group_notify';
   $field_group->entity_type = 'entityform';
@@ -172,10 +244,9 @@ Authorization and Release',
       1 => 'field_first_name',
       2 => 'field_last_name',
       3 => 'field_social_security',
-      4 => 'field_email',
-      5 => 'field_application_email',
-      6 => 'field_phone_day',
-      7 => 'field_other_names_used',
+      4 => 'field_application_email',
+      5 => 'field_phone_day',
+      6 => 'field_other_names_used',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -215,6 +286,34 @@ Authorization and Release',
     ),
   );
   $export['group_personal_references|entityform|employment_application|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_references|entityform|emerging_leader_form|form';
+  $field_group->group_name = 'group_references';
+  $field_group->entity_type = 'entityform';
+  $field_group->bundle = 'emerging_leader_form';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'References',
+    'weight' => '14',
+    'children' => array(
+      0 => 'field_personal_references',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'References',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-references field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_references|entityform|emerging_leader_form|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -266,6 +365,7 @@ Authorization and Release',
       7 => 'field_previously_employed_date',
       8 => 'field_how_referred',
       9 => 'field_name_of_employee_source',
+      10 => 'field_job_position',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

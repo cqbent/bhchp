@@ -33,7 +33,7 @@ function bhchp_registrations_field_default_field_instances() {
     'entity_type' => 'registration',
     'field_name' => 'field_address',
     'label' => 'Address',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -55,9 +55,10 @@ function bhchp_registrations_field_default_field_instances() {
           'name-oneline' => 0,
           'address-optional' => 0,
         ),
+        'label_help_description' => '',
       ),
       'type' => 'addressfield_standard',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
@@ -98,7 +99,7 @@ function bhchp_registrations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -138,7 +139,74 @@ function bhchp_registrations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'registration-bhchp_drive-field_organization'
+  $field_instances['registration-bhchp_drive-field_organization'] = array(
+    'bundle' => 'bhchp_drive',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'registration',
+    'field_name' => 'field_organization',
+    'label' => 'Organization Name',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'registration-bhchp_drive-field_phone'
+  $field_instances['registration-bhchp_drive-field_phone'] = array(
+    'bundle' => 'bhchp_drive',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'registration',
+    'field_name' => 'field_phone',
+    'label' => 'Phone',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'telephone',
+      'settings' => array(
+        'placeholder' => '',
+      ),
+      'type' => 'telephone_default',
+      'weight' => 5,
     ),
   );
 
@@ -147,6 +215,8 @@ function bhchp_registrations_field_default_field_instances() {
   t('Address');
   t('First Name');
   t('Last Name');
+  t('Organization Name');
+  t('Phone');
 
   return $field_instances;
 }

@@ -4,9 +4,12 @@ bhchp custom styles
 
 #page {
     color: $textgray;
-    a {
+    a { 
         color: $blue;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
     }
+    
     .social-icons { 
         ul {
             margin: 0; padding: 0; font-size: 28px;
@@ -22,14 +25,17 @@ bhchp custom styles
             }
         }
     }
-    input[type=submit], button, a.button, .button a, .field-name-field-registration a  {
+    input[type=submit], button, a.button, .button a, .field-name-field-registration a, a#edit-cancel  {
         background-color: $blue; border: none;
         color: #fff; text-transform: uppercase; border-radius: 0;
         padding: 5px 10px;
         -webkit-appearance: none; -moz-appearance: none;
         text-decoration: none;
+        border-radius: 5px;
+        margin-right: 20px;
         &:hover {
             background-color: #4f71b7;
+            text-decoration: none;
         }
     }
     a.button.white, .button.white a {
@@ -279,7 +285,7 @@ bhchp custom styles
         }
 
     }
-    .entityform {
+    .entityform, #registration-form {
         .form-type-radios {
             .form-disabled {
                 display: none;
@@ -294,7 +300,17 @@ bhchp custom styles
             padding: 0; margin: 0; border: none;
             legend {
                 font-weight: 700; color: $textgray; 
+                
                 a { text-decoration: none; color: $textgray; }
+            }
+            &.field-group-fieldset > legend {
+                color: $blue;
+                text-transform: uppercase;
+            }
+        }
+        .addressfield-container-inline {
+            .form-item {
+                width: 30%;
             }
         }
     }
@@ -312,11 +328,8 @@ bhchp custom styles
         h1.page__title { margin-bottom: 1em; }
         #content {
             padding-bottom: 20px;
-            a { 
-                text-decoration: none;
-                &:hover { text-decoration: underline; }
-            }
-            a.button, .button a {
+            
+            a.button, .button a, .field-name-field-registration a {
                 &:hover { text-decoration: none; }
             }
             .icon a {

@@ -24,6 +24,13 @@ function bhchp_event_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'module' => 'custom_formatters',
+        'settings' => array(),
+        'type' => 'custom_formatters_teaser_text_body',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'custom_formatters',
@@ -65,6 +72,12 @@ function bhchp_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -116,6 +129,12 @@ function bhchp_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -166,6 +185,12 @@ function bhchp_event_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -204,6 +229,12 @@ function bhchp_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -255,6 +286,12 @@ function bhchp_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -319,6 +356,12 @@ function bhchp_event_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 3,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -375,6 +418,12 @@ function bhchp_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -410,6 +459,16 @@ function bhchp_event_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -479,6 +538,12 @@ function bhchp_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -518,14 +583,20 @@ function bhchp_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'registration',
         'settings' => array(
-          'i18n_string_key' => NULL,
-          'label' => NULL,
+          'i18n_string_key' => 'node:event:default:field_registration',
+          'label' => 'Register Your Drive',
         ),
         'type' => 'registration_link',
         'weight' => 4,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -596,6 +667,12 @@ function bhchp_event_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 5,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -671,6 +748,12 @@ function bhchp_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',

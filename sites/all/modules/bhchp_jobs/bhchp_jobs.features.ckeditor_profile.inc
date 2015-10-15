@@ -108,7 +108,7 @@ function bhchp_jobs_ckeditor_profile_defaults() {
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
         'font_format' => 'p;div;pre;address;h1;h2;h3;h4;h5;h6',
-        'custom_formatting' => 'f',
+        'custom_formatting' => 't',
         'formatting' => array(
           'custom_formatting_options' => array(
             'indent' => 'indent',

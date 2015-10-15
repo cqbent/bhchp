@@ -97,7 +97,7 @@ function bhchp_event_strongarm() {
         'custom_settings' => FALSE,
       ),
       'list_fields_mode' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(

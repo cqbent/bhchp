@@ -55,18 +55,18 @@ function bhchp_video_youtube_feed_feeds_importer_default() {
             'unique' => 1,
           ),
           3 => array(
-            'source' => 'watch_page',
-            'target' => 'field_video:video_url',
-            'unique' => FALSE,
-          ),
-          4 => array(
             'source' => 'thumbnail',
             'target' => 'field_video_thumbnail:uri',
             'unique' => FALSE,
           ),
-          5 => array(
+          4 => array(
             'source' => 'published_datetime',
             'target' => 'created',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'url',
+            'target' => 'field_video:video_url',
             'unique' => FALSE,
           ),
         ),

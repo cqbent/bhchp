@@ -169,7 +169,7 @@ function bhchp_event_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Event Images */
+  /* Field: Content: News Images */
   $handler->display->display_options['fields']['field_event_images']['id'] = 'field_event_images';
   $handler->display->display_options['fields']['field_event_images']['table'] = 'field_data_field_event_images';
   $handler->display->display_options['fields']['field_event_images']['field'] = 'field_event_images';

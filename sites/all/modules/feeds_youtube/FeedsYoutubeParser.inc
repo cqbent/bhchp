@@ -236,18 +236,20 @@ class FeedsYoutubeParser extends FeedsParser {
       $thumbnail = (string) $attrs['url'];
 
       // Get <yt:duration> node for video length.
-      $yt = $media->children('http://gdata.youtube.com/schemas/2007');
+      //$yt = $media->children('http://gdata.youtube.com/schemas/2007');
+      $yt = $entry->children('http://www.youtube.com/xml/schemas/2015');
       $attrs = $yt->duration->attributes();
       $length = $attrs['seconds'];
 
       // Get video ID.
-      $id = (string) $yt->videoid;
+      $id = (string) $yt->videoId;
 
       // Get video uploaded date.
       $uploaded = (string) $yt->uploaded;
 
       // Get <yt:statistics> node for viewer statistics.
-      $yt = $entry->children('http://gdata.youtube.com/schemas/2007');
+      //$yt = $entry->children('http://gdata.youtube.com/schemas/2007');
+      $yt = $entry->children('http://www.youtube.com/xml/schemas/2015');
       $attrs = $yt->statistics->attributes();
       $viewCount = $attrs['viewCount'];
       $favCount = $attrs['favoriteCount'];
