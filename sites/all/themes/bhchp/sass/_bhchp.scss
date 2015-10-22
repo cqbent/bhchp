@@ -1015,7 +1015,7 @@ bhchp custom styles
 
 .bhchp-social-icon  {
     font-size: 14px;
-    background-color: #003594;
+    background-color: $blue;
     color: #fff !important;
     //padding: 3px 2px 3px 5px;
     line-height: 10px;
@@ -1025,8 +1025,11 @@ bhchp custom styles
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    &:hover {
+        background-color: $lightblue;
+    }
     .fa {
-        margin-right: -3px;
+        //margin-right: -3px;
     }
     .social-feed-blocks & {
         height: 18px;

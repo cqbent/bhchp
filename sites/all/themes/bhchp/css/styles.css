@@ -3454,10 +3454,10 @@ bhchp custom styles
   vertical-align: middle;
 }
 /* line 1028, ../sass/_bhchp.scss */
-.bhchp-social-icon .fa {
-  margin-right: -3px;
+.bhchp-social-icon:hover {
+  background-color: #b3c2df;
 }
-/* line 1031, ../sass/_bhchp.scss */
+/* line 1034, ../sass/_bhchp.scss */
 .social-feed-blocks .bhchp-social-icon {
   height: 18px;
   width: 18px;
