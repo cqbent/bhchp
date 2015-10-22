@@ -3084,17 +3084,21 @@ bhchp custom styles
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 787, ../sass/_bhchp.scss */
+/* line 786, ../sass/_bhchp.scss */
+.front #page #main #content .social-feed-blocks .views-field-nothing span.icon {
+  display: inline-block;
+}
+/* line 790, ../sass/_bhchp.scss */
 .front #page #main #content .social-feed-blocks .views-field-created, .front #page #main #content .social-feed-blocks .views-field-created-time {
   display: none;
 }
-/* line 791, ../sass/_bhchp.scss */
+/* line 794, ../sass/_bhchp.scss */
 .front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-field-video, .front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-field-video-thumbnail {
   width: 40%;
   float: left;
   margin-right: -60%;
 }
-/* line 792, ../sass/_bhchp.scss */
+/* line 795, ../sass/_bhchp.scss */
 .front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-body, .front #page #main #content .social-feed-blocks .view-videos-gallery .views-field-view-node {
   clear: none;
   width: 60%;
@@ -3104,59 +3108,59 @@ bhchp custom styles
   box-sizing: border-box;
 }
 @media (min-width: 780px) {
-  /* line 801, ../sass/_bhchp.scss */
+  /* line 804, ../sass/_bhchp.scss */
   .front #page #main #content .social-feed-blocks .inside .panel-pane {
     width: 33%;
     float: left;
     box-sizing: border-box;
     padding-right: 20px;
   }
-  /* line 804, ../sass/_bhchp.scss */
+  /* line 807, ../sass/_bhchp.scss */
   .front #page #main #content .social-feed-blocks .inside .panel-pane:last-child {
     padding: 0;
   }
 }
 
-/* line 819, ../sass/_bhchp.scss */
+/* line 822, ../sass/_bhchp.scss */
 .front #page .breadcrumb, .front #page h1.title {
   display: none;
 }
-/* line 820, ../sass/_bhchp.scss */
+/* line 823, ../sass/_bhchp.scss */
 .front #page #navigation {
   background: none;
   position: relative;
   padding: 0;
 }
-/* line 822, ../sass/_bhchp.scss */
+/* line 825, ../sass/_bhchp.scss */
 .front #page #navigation:before {
   display: none;
 }
-/* line 823, ../sass/_bhchp.scss */
+/* line 826, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu {
   max-width: 1200px;
   background: #003594;
 }
-/* line 826, ../sass/_bhchp.scss */
+/* line 829, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links {
   text-align: left;
 }
-/* line 828, ../sass/_bhchp.scss */
+/* line 831, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li {
   display: block;
   border-bottom: 1px #0066cc solid;
   border-right: none;
 }
-/* line 831, ../sass/_bhchp.scss */
+/* line 834, ../sass/_bhchp.scss */
 .front #page #navigation #main-menu .links li.last {
   border-bottom: none;
 }
-/* line 837, ../sass/_bhchp.scss */
+/* line 840, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
 }
-/* line 840, ../sass/_bhchp.scss */
+/* line 843, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider {
   padding: 0;
   border: 0;
@@ -3164,53 +3168,53 @@ bhchp custom styles
   box-shadow: none;
   margin: 0;
 }
-/* line 843, ../sass/_bhchp.scss */
+/* line 846, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .home_bk_img {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position-y: center;
 }
-/* line 847, ../sass/_bhchp.scss */
+/* line 850, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .home_bk_img .title {
   display: none;
 }
-/* line 850, ../sass/_bhchp.scss */
+/* line 853, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav {
   right: 20px;
   width: auto;
   bottom: 20px;
   z-index: 3;
 }
-/* line 854, ../sass/_bhchp.scss */
+/* line 857, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav li a {
   color: #868687;
   background: #868687;
 }
-/* line 856, ../sass/_bhchp.scss */
+/* line 859, ../sass/_bhchp.scss */
 .front #page #navigation .region-navigation .flexslider .flex-control-nav li a.flex-active {
   color: #fff;
   background: #fff;
 }
 @media (max-width: 779px) {
-  /* line 864, ../sass/_bhchp.scss */
+  /* line 867, ../sass/_bhchp.scss */
   .front #page #navigation #main-menu .links {
     margin-top: 130px;
   }
-  /* line 868, ../sass/_bhchp.scss */
+  /* line 871, ../sass/_bhchp.scss */
   .front #page #navigation .region-navigation {
     position: absolute;
     top: 0;
     height: 130px;
   }
-  /* line 871, ../sass/_bhchp.scss */
+  /* line 874, ../sass/_bhchp.scss */
   .front #page #navigation .region-navigation .flexslider .home_bk_img {
     height: 130px;
     width: 100%;
   }
 }
 @media (min-width: 780px) {
-  /* line 878, ../sass/_bhchp.scss */
+  /* line 881, ../sass/_bhchp.scss */
   .front #page #navigation #main-menu {
     position: absolute;
     right: 0;
@@ -3219,25 +3223,25 @@ bhchp custom styles
     box-sizing: border-box;
     height: 375px;
   }
-  /* line 883, ../sass/_bhchp.scss */
+  /* line 886, ../sass/_bhchp.scss */
   .front #page #navigation #main-menu .links a {
     padding: 50px 30px;
   }
-  /* line 888, ../sass/_bhchp.scss */
+  /* line 891, ../sass/_bhchp.scss */
   .front #page #navigation #navigation {
     margin: 0;
   }
-  /* line 891, ../sass/_bhchp.scss */
+  /* line 894, ../sass/_bhchp.scss */
   .front #page #navigation .region-navigation {
     padding: 0 245px 0 0;
   }
-  /* line 894, ../sass/_bhchp.scss */
+  /* line 897, ../sass/_bhchp.scss */
   .front #page #navigation .region-navigation .flexslider .home_bk_img {
     width: 100%;
     height: 375px;
   }
 }
-/* line 903, ../sass/_bhchp.scss */
+/* line 906, ../sass/_bhchp.scss */
 .front #page #main #content #thirty-years {
   float: left;
   margin-right: 20px;
@@ -3245,18 +3249,18 @@ bhchp custom styles
   z-index: 2;
   border: none;
 }
-/* line 909, ../sass/_bhchp.scss */
+/* line 912, ../sass/_bhchp.scss */
 .front #page #main #content article.node .field-name-body {
   font-size: 15px;
   line-height: 25px;
 }
-/* line 912, ../sass/_bhchp.scss */
+/* line 915, ../sass/_bhchp.scss */
 .front #page #main #content article.node .feature {
   color: #3e4543;
   font-style: normal;
   font-size: 19px;
 }
-/* line 918, ../sass/_bhchp.scss */
+/* line 921, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title {
   color: #3e4543;
   text-transform: uppercase;
@@ -3265,7 +3269,7 @@ bhchp custom styles
   margin-bottom: 20px;
   overflow-x: hidden;
 }
-/* line 922, ../sass/_bhchp.scss */
+/* line 925, ../sass/_bhchp.scss */
 .front #page #main #content .block .block__title:after {
   content: "";
   height: 2px;
@@ -3275,42 +3279,42 @@ bhchp custom styles
   border-top: 1px #d8dad9 solid;
   margin-left: 10px;
 }
-/* line 931, ../sass/_bhchp.scss */
+/* line 934, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .views-row {
   border: none;
 }
-/* line 934, ../sass/_bhchp.scss */
+/* line 937, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field {
   margin: 0 0 5px 0;
 }
-/* line 936, ../sass/_bhchp.scss */
+/* line 939, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field h2, .front #page #main #content .block .view-news-list .field p {
   margin: 0;
   display: inline;
   line-height: normal;
 }
-/* line 937, ../sass/_bhchp.scss */
+/* line 940, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-news-list .field a {
   text-decoration: none;
   font-weight: 700;
 }
-/* line 944, ../sass/_bhchp.scss */
+/* line 947, ../sass/_bhchp.scss */
 .front #page #main #content .block .view-sponsor-logos {
   overflow-x: hidden;
 }
-/* line 949, ../sass/_bhchp.scss */
+/* line 952, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li {
   display: table;
   height: 100px;
 }
-/* line 951, ../sass/_bhchp.scss */
+/* line 954, ../sass/_bhchp.scss */
 .front #page #main #content .block .jcarousel-container ul li .views-field {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
 }
 
-/* line 967, ../sass/_bhchp.scss */
+/* line 970, ../sass/_bhchp.scss */
 [class^="bhchp_icons_"], [class*=" bhchp_icons_"] {
   font-family: 'bhchp_icons';
   speak: none;
@@ -3324,72 +3328,72 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 979, ../sass/_bhchp.scss */
+/* line 982, ../sass/_bhchp.scss */
 .bhchp_icons_stethoscope:before {
   content: "\e600";
 }
 
-/* line 980, ../sass/_bhchp.scss */
+/* line 983, ../sass/_bhchp.scss */
 .bhchp_icons_heart:before {
   content: "\e601";
 }
 
-/* line 981, ../sass/_bhchp.scss */
+/* line 984, ../sass/_bhchp.scss */
 .bhchp_icons_people:before {
   content: "\e602";
 }
 
-/* line 982, ../sass/_bhchp.scss */
+/* line 985, ../sass/_bhchp.scss */
 .bhchp_icons_meds:before {
   content: "\e603";
 }
 
-/* line 983, ../sass/_bhchp.scss */
+/* line 986, ../sass/_bhchp.scss */
 .bhchp_icons_medical:before {
   content: "\e604";
 }
 
-/* line 984, ../sass/_bhchp.scss */
+/* line 987, ../sass/_bhchp.scss */
 .bhchp_icons_sox:before {
   content: "\e803";
 }
 
-/* line 985, ../sass/_bhchp.scss */
+/* line 988, ../sass/_bhchp.scss */
 .bhchp_icons_fb:before {
   content: "\e606";
 }
 
-/* line 986, ../sass/_bhchp.scss */
+/* line 989, ../sass/_bhchp.scss */
 .bhchp_icons_video:before {
   content: "\e607";
 }
 
-/* line 987, ../sass/_bhchp.scss */
+/* line 990, ../sass/_bhchp.scss */
 .bhchp_icons_twitter:before {
   content: "\e608";
 }
 
-/* line 988, ../sass/_bhchp.scss */
+/* line 991, ../sass/_bhchp.scss */
 .bhchp_icons_gift:before {
   content: "\e802";
 }
 
-/* line 989, ../sass/_bhchp.scss */
+/* line 992, ../sass/_bhchp.scss */
 .bhchp_icons_apple:before {
   content: "\e60a";
 }
 
-/* line 990, ../sass/_bhchp.scss */
+/* line 993, ../sass/_bhchp.scss */
 .bhchp_icons_friends:before {
   content: "\e800";
 }
 
-/* line 991, ../sass/_bhchp.scss */
+/* line 994, ../sass/_bhchp.scss */
 .bhchp_icons_clipboard:before {
   content: "\e801";
 }
 
-/* line 993, ../sass/_bhchp.scss */
+/* line 996, ../sass/_bhchp.scss */
 [class^="bhchp_social_"], [class*=" bhchp_social_"] {
   font-family: 'bhchp_social';
   speak: none;
@@ -3403,44 +3407,44 @@ bhchp custom styles
   -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
-/* line 1005, ../sass/_bhchp.scss */
+/* line 1008, ../sass/_bhchp.scss */
 [class^="bhchp_social_"]:after, [class*=" bhchp_social_"]:after {
   position: absolute;
   left: 0;
   color: #fff;
 }
 
-/* line 1009, ../sass/_bhchp.scss */
+/* line 1012, ../sass/_bhchp.scss */
 .bhchp_social_fb:before {
   content: "\e600";
 }
 
-/* line 1010, ../sass/_bhchp.scss */
+/* line 1013, ../sass/_bhchp.scss */
 .bhchp_social_fb:after {
   content: "\e601";
 }
 
-/* line 1011, ../sass/_bhchp.scss */
+/* line 1014, ../sass/_bhchp.scss */
 .bhchp_social_video:before {
   content: "\e602";
 }
 
-/* line 1012, ../sass/_bhchp.scss */
+/* line 1015, ../sass/_bhchp.scss */
 .bhchp_social_video:after {
   content: "\e603";
 }
 
-/* line 1013, ../sass/_bhchp.scss */
+/* line 1016, ../sass/_bhchp.scss */
 .bhchp_social_twitter:before {
   content: "\e604";
 }
 
-/* line 1014, ../sass/_bhchp.scss */
+/* line 1017, ../sass/_bhchp.scss */
 .bhchp_social_twitter:after {
   content: "\e605";
 }
 
-/* line 1016, ../sass/_bhchp.scss */
+/* line 1019, ../sass/_bhchp.scss */
 .bhchp-social-icon {
   font-size: 14px;
   background-color: #003594;
@@ -3453,11 +3457,11 @@ bhchp custom styles
   text-align: center;
   vertical-align: middle;
 }
-/* line 1028, ../sass/_bhchp.scss */
+/* line 1031, ../sass/_bhchp.scss */
 .bhchp-social-icon:hover {
   background-color: #b3c2df;
 }
-/* line 1034, ../sass/_bhchp.scss */
+/* line 1037, ../sass/_bhchp.scss */
 .social-feed-blocks .bhchp-social-icon {
   height: 18px;
   width: 18px;
