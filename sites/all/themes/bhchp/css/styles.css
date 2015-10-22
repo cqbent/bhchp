@@ -3440,6 +3440,30 @@ bhchp custom styles
   content: "\e605";
 }
 
+/* line 1016, ../sass/_bhchp.scss */
+.bhchp-social-icon {
+  font-size: 14px;
+  background-color: #003594;
+  color: #fff !important;
+  line-height: 10px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 1028, ../sass/_bhchp.scss */
+.bhchp-social-icon .fa {
+  margin-right: -3px;
+}
+/* line 1031, ../sass/_bhchp.scss */
+.social-feed-blocks .bhchp-social-icon {
+  height: 18px;
+  width: 18px;
+  font-size: 10px;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */

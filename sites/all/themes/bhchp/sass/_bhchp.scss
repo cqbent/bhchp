@@ -1013,3 +1013,25 @@ bhchp custom styles
 .bhchp_social_twitter:before { content: "\e604"; }
 .bhchp_social_twitter:after { content: "\e605"; }
 
+.bhchp-social-icon  {
+    font-size: 14px;
+    background-color: #003594;
+    color: #fff !important;
+    //padding: 3px 2px 3px 5px;
+    line-height: 10px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    .fa {
+        margin-right: -3px;
+    }
+    .social-feed-blocks & {
+        height: 18px;
+        width: 18px;
+        font-size: 10px;
+    }
+    
+}
