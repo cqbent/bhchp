@@ -76,6 +76,7 @@ features[variable][] = menu_parent_event
 features[variable][] = node_options_event
 features[variable][] = node_preview_event
 features[variable][] = node_submitted_event
+features[variable][] = pathauto_node_event_pattern
 features[views_view][] = eventslist
 features[views_view][] = eventsupporters
 features[views_view][] = image_grid

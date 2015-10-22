@@ -186,13 +186,6 @@ $zen-auto-include-item-base: false;
 
   $zen-column-count: 4 !global;
   
-  #page {
-      #main {
-          #content {
-              padding-left:50px;
-          }
-      }
-  }
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -201,6 +194,7 @@ $zen-auto-include-item-base: false;
     /* Span 4 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(3, 2);
+      padding-left: 50px;
     }
 
     /* Span 1 column, starting in 1st column from left. */
@@ -231,6 +225,7 @@ $zen-auto-include-item-base: false;
     /* Span 3 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(2, 2);
+      padding-left: 50px;
     }
 
     /* Span 1 column, starting in 1st column from left. */

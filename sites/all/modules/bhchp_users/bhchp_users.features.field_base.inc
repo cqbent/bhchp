@@ -10,7 +10,7 @@
 function bhchp_users_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_bio'
+  // Exported field_base: 'field_bio'.
   $field_bases['field_bio'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function bhchp_users_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_credentials'
+  // Exported field_base: 'field_credentials'.
   $field_bases['field_credentials'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function bhchp_users_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_first_name'
+  // Exported field_base: 'field_first_name'.
   $field_bases['field_first_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -71,7 +71,7 @@ function bhchp_users_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_last_name'
+  // Exported field_base: 'field_last_name'.
   $field_bases['field_last_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -92,7 +92,7 @@ function bhchp_users_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_organizational_role'
+  // Exported field_base: 'field_organizational_role'.
   $field_bases['field_organizational_role'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -119,7 +119,7 @@ function bhchp_users_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_position'
+  // Exported field_base: 'field_position'.
   $field_bases['field_position'] = array(
     'active' => 1,
     'cardinality' => 1,

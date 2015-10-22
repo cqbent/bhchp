@@ -120,6 +120,7 @@ features[variable][] = pathauto_node_page_pattern
 features[variable][] = pathauto_node_pattern
 features[variable][] = pathauto_node_video_pattern
 features[variable][] = pathauto_punctuation_hyphen
+features[variable][] = pathauto_taxonomy_term_image_category_pattern
 features[variable][] = pathauto_taxonomy_term_pattern
 features[variable][] = pathauto_taxonomy_term_tags_pattern
 features[variable][] = pathauto_user_pattern

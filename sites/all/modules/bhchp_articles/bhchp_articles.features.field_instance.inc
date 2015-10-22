@@ -10,7 +10,7 @@
 function bhchp_articles_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-article-body'
+  // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -61,7 +61,7 @@ function bhchp_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_event_images'
+  // Exported field_instance: 'node-article-field_event_images'.
   $field_instances['node-article-field_event_images'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -132,7 +132,7 @@ function bhchp_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_image'
+  // Exported field_instance: 'node-article-field_image'.
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -217,7 +217,7 @@ function bhchp_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_news_file'
+  // Exported field_instance: 'node-article-field_news_file'.
   $field_instances['node-article-field_news_file'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -281,7 +281,7 @@ function bhchp_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_tags'
+  // Exported field_instance: 'node-article-field_tags'.
   $field_instances['node-article-field_tags'] = array(
     'bundle' => 'article',
     'default_value' => NULL,

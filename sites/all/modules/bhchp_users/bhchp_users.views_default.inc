@@ -197,13 +197,6 @@ function bhchp_users_views_default_views() {
   $handler->display->display_options['fields']['field_position']['element_type'] = '0';
   $handler->display->display_options['fields']['field_position']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_position']['element_wrapper_type'] = 'div';
-  /* Field: User: E-mail */
-  $handler->display->display_options['fields']['mail']['id'] = 'mail';
-  $handler->display->display_options['fields']['mail']['table'] = 'users';
-  $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  $handler->display->display_options['fields']['mail']['label'] = '';
-  $handler->display->display_options['fields']['mail']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
   /* Field: User: Bio */
   $handler->display->display_options['fields']['field_bio']['id'] = 'field_bio';
   $handler->display->display_options['fields']['field_bio']['table'] = 'field_data_field_bio';
@@ -222,7 +215,6 @@ function bhchp_users_views_default_views() {
 <div class="group-right">
 <div class="name">[field_first_name] [field_last_name][field_credentials]</div>
 <div class="position">[field_position]</div>
-<div class="email">[mail]</div>
 <div class="bio">[field_bio]</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;

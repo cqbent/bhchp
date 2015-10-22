@@ -10,7 +10,7 @@
 function bhchp_ui_general_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_image_category'
+  // Exported field_base: 'field_image_category'.
   $field_bases['field_image_category'] = array(
     'active' => 1,
     'cardinality' => 1,

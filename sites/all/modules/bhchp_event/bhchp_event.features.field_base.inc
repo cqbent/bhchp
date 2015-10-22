@@ -10,7 +10,7 @@
 function bhchp_event_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_event_address'
+  // Exported field_base: 'field_event_address'.
   $field_bases['field_event_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -25,7 +25,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_event_date'
+  // Exported field_base: 'field_event_date'.
   $field_bases['field_event_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -55,7 +55,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_event_datelocation'
+  // Exported field_base: 'field_event_datelocation'.
   $field_bases['field_event_datelocation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -76,7 +76,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_event_geomap'
+  // Exported field_base: 'field_event_geomap'.
   $field_bases['field_event_geomap'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -126,7 +126,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_event_images'
+  // Exported field_base: 'field_event_images'.
   $field_bases['field_event_images'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -148,7 +148,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_event_link_external_signup'
+  // Exported field_base: 'field_event_link_external_signup'.
   $field_bases['field_event_link_external_signup'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -177,7 +177,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_event_location'
+  // Exported field_base: 'field_event_location'.
   $field_bases['field_event_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -212,7 +212,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_event_mainimage'
+  // Exported field_base: 'field_event_mainimage'.
   $field_bases['field_event_mainimage'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -234,7 +234,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_event_supporter_list_conte'
+  // Exported field_base: 'field_event_supporter_list_conte'.
   $field_bases['field_event_supporter_list_conte'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -253,7 +253,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_registration'
+  // Exported field_base: 'field_registration'.
   $field_bases['field_registration'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -272,7 +272,7 @@ function bhchp_event_field_default_field_bases() {
     'type' => 'registration',
   );
 
-  // Exported field_base: 'field_sponsor_logos'
+  // Exported field_base: 'field_sponsor_logos'.
   $field_bases['field_sponsor_logos'] = array(
     'active' => 1,
     'cardinality' => -1,

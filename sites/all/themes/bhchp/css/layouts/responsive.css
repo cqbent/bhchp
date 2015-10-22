@@ -204,6 +204,11 @@
   /**
    * The layout when there is only one sidebar, the left one.
    */
+  .no-sidebars {
+      #content {
+          padding-left: 0;
+      }
+  }
 
   /* Span 4 columns, starting in 2nd column from left. */
   .sidebar-first #content {

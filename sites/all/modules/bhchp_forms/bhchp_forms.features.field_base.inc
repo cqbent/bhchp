@@ -10,7 +10,7 @@
 function bhchp_forms_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_application_conditions'
+  // Exported field_base: 'field_application_conditions'.
   $field_bases['field_application_conditions'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -35,7 +35,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_application_email'
+  // Exported field_base: 'field_application_email'.
   $field_bases['field_application_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_applied_date'
+  // Exported field_base: 'field_applied_date'.
   $field_bases['field_applied_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -79,7 +79,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_consent'
+  // Exported field_base: 'field_consent'.
   $field_bases['field_consent'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -100,7 +100,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_consent_date'
+  // Exported field_base: 'field_consent_date'.
   $field_bases['field_consent_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -129,7 +129,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_date_birth'
+  // Exported field_base: 'field_date_birth'.
   $field_bases['field_date_birth'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -158,7 +158,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_dates_attended'
+  // Exported field_base: 'field_dates_attended'.
   $field_bases['field_dates_attended'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -187,7 +187,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_description_of_duties'
+  // Exported field_base: 'field_description_of_duties'.
   $field_bases['field_description_of_duties'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -206,7 +206,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_did_graduate'
+  // Exported field_base: 'field_did_graduate'.
   $field_bases['field_did_graduate'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -231,7 +231,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_diplomas_degree'
+  // Exported field_base: 'field_diplomas_degree'.
   $field_bases['field_diplomas_degree'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -252,7 +252,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_documentation'
+  // Exported field_base: 'field_documentation'.
   $field_bases['field_documentation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -277,7 +277,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_email'
+  // Exported field_base: 'field_email'.
   $field_bases['field_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -298,7 +298,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_emergency_phone_number'
+  // Exported field_base: 'field_emergency_phone_number'.
   $field_bases['field_emergency_phone_number'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -319,7 +319,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_employed'
+  // Exported field_base: 'field_employed'.
   $field_bases['field_employed'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -344,7 +344,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_employer'
+  // Exported field_base: 'field_employer'.
   $field_bases['field_employer'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -365,7 +365,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_employer_address'
+  // Exported field_base: 'field_employer_address'.
   $field_bases['field_employer_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -386,7 +386,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_employer_telephone_number'
+  // Exported field_base: 'field_employer_telephone_number'.
   $field_bases['field_employer_telephone_number'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -407,7 +407,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_employment_dates'
+  // Exported field_base: 'field_employment_dates'.
   $field_bases['field_employment_dates'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -436,7 +436,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_employment_history'
+  // Exported field_base: 'field_employment_history'.
   $field_bases['field_employment_history'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -458,7 +458,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_ending_position'
+  // Exported field_base: 'field_ending_position'.
   $field_bases['field_ending_position'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -479,7 +479,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ending_salary'
+  // Exported field_base: 'field_ending_salary'.
   $field_bases['field_ending_salary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -500,7 +500,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ethnicity'
+  // Exported field_base: 'field_ethnicity'.
   $field_bases['field_ethnicity'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -528,7 +528,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_ethnicity_other'
+  // Exported field_base: 'field_ethnicity_other'.
   $field_bases['field_ethnicity_other'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -549,7 +549,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_experience_skills'
+  // Exported field_base: 'field_experience_skills'.
   $field_bases['field_experience_skills'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -568,7 +568,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_experience_to_gain'
+  // Exported field_base: 'field_experience_to_gain'.
   $field_bases['field_experience_to_gain'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -587,7 +587,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_field_of_study'
+  // Exported field_base: 'field_field_of_study'.
   $field_bases['field_field_of_study'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -608,7 +608,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_former_occupation'
+  // Exported field_base: 'field_former_occupation'.
   $field_bases['field_former_occupation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -629,7 +629,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_full_name'
+  // Exported field_base: 'field_full_name'.
   $field_bases['field_full_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -650,7 +650,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_fundraising_experience'
+  // Exported field_base: 'field_fundraising_experience'.
   $field_bases['field_fundraising_experience'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -671,7 +671,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_gender'
+  // Exported field_base: 'field_gender'.
   $field_bases['field_gender'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -696,7 +696,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_have_car'
+  // Exported field_base: 'field_have_car'.
   $field_bases['field_have_car'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -721,7 +721,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_hours_available'
+  // Exported field_base: 'field_hours_available'.
   $field_bases['field_hours_available'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -748,7 +748,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_how_benefit'
+  // Exported field_base: 'field_how_benefit'.
   $field_bases['field_how_benefit'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -767,7 +767,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_how_hear'
+  // Exported field_base: 'field_how_hear'.
   $field_bases['field_how_hear'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -794,7 +794,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_how_referred'
+  // Exported field_base: 'field_how_referred'.
   $field_bases['field_how_referred'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -823,7 +823,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_is_student'
+  // Exported field_base: 'field_is_student'.
   $field_bases['field_is_student'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -848,7 +848,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_job_position'
+  // Exported field_base: 'field_job_position'.
   $field_bases['field_job_position'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -883,7 +883,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_languages'
+  // Exported field_base: 'field_languages'.
   $field_bases['field_languages'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -904,7 +904,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_letter_of_reference'
+  // Exported field_base: 'field_letter_of_reference'.
   $field_bases['field_letter_of_reference'] = array(
     'active' => 1,
     'cardinality' => 2,
@@ -927,7 +927,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_major'
+  // Exported field_base: 'field_major'.
   $field_bases['field_major'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -948,7 +948,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_may_contact_employ'
+  // Exported field_base: 'field_may_contact_employ'.
   $field_bases['field_may_contact_employ'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -973,7 +973,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_monday_hours'
+  // Exported field_base: 'field_monday_hours'.
   $field_bases['field_monday_hours'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -988,7 +988,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_name_and_location'
+  // Exported field_base: 'field_name_and_location'.
   $field_bases['field_name_and_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1009,7 +1009,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_name_of_employee_source'
+  // Exported field_base: 'field_name_of_employee_source'.
   $field_bases['field_name_of_employee_source'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1030,7 +1030,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nominator_address'
+  // Exported field_base: 'field_nominator_address'.
   $field_bases['field_nominator_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1045,7 +1045,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_nominator_email'
+  // Exported field_base: 'field_nominator_email'.
   $field_bases['field_nominator_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1060,7 +1060,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_nominator_employer'
+  // Exported field_base: 'field_nominator_employer'.
   $field_bases['field_nominator_employer'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1081,7 +1081,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nominator_how_hear'
+  // Exported field_base: 'field_nominator_how_hear'.
   $field_bases['field_nominator_how_hear'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1102,7 +1102,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nominator_name'
+  // Exported field_base: 'field_nominator_name'.
   $field_bases['field_nominator_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1123,7 +1123,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nominator_occupation'
+  // Exported field_base: 'field_nominator_occupation'.
   $field_bases['field_nominator_occupation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1144,7 +1144,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nominator_phone'
+  // Exported field_base: 'field_nominator_phone'.
   $field_bases['field_nominator_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1159,7 +1159,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'telephone',
   );
 
-  // Exported field_base: 'field_nominee_how_hear'
+  // Exported field_base: 'field_nominee_how_hear'.
   $field_bases['field_nominee_how_hear'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1180,7 +1180,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_notify_name'
+  // Exported field_base: 'field_notify_name'.
   $field_bases['field_notify_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1201,7 +1201,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_occupation'
+  // Exported field_base: 'field_occupation'.
   $field_bases['field_occupation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1222,7 +1222,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_opportunity_interest'
+  // Exported field_base: 'field_opportunity_interest'.
   $field_bases['field_opportunity_interest'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1252,7 +1252,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_other_names_used'
+  // Exported field_base: 'field_other_names_used'.
   $field_bases['field_other_names_used'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1273,7 +1273,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_participation_hours'
+  // Exported field_base: 'field_participation_hours'.
   $field_bases['field_participation_hours'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1294,7 +1294,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_participation_length'
+  // Exported field_base: 'field_participation_length'.
   $field_bases['field_participation_length'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1315,7 +1315,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_personal_references'
+  // Exported field_base: 'field_personal_references'.
   $field_bases['field_personal_references'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1337,7 +1337,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_phone'
+  // Exported field_base: 'field_phone'.
   $field_bases['field_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1352,7 +1352,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'telephone',
   );
 
-  // Exported field_base: 'field_phone_cell'
+  // Exported field_base: 'field_phone_cell'.
   $field_bases['field_phone_cell'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1373,7 +1373,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_phone_day'
+  // Exported field_base: 'field_phone_day'.
   $field_bases['field_phone_day'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1394,7 +1394,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_phone_eve'
+  // Exported field_base: 'field_phone_eve'.
   $field_bases['field_phone_eve'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1415,7 +1415,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_position_type'
+  // Exported field_base: 'field_position_type'.
   $field_bases['field_position_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1440,7 +1440,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_previous_employer'
+  // Exported field_base: 'field_previous_employer'.
   $field_bases['field_previous_employer'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1461,7 +1461,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_previously_applied'
+  // Exported field_base: 'field_previously_applied'.
   $field_bases['field_previously_applied'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1486,7 +1486,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_previously_employed_date'
+  // Exported field_base: 'field_previously_employed_date'.
   $field_bases['field_previously_employed_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1515,7 +1515,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_prior_experience'
+  // Exported field_base: 'field_prior_experience'.
   $field_bases['field_prior_experience'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1534,7 +1534,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_reason_for_leaving'
+  // Exported field_base: 'field_reason_for_leaving'.
   $field_bases['field_reason_for_leaving'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1555,7 +1555,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_reference_business'
+  // Exported field_base: 'field_reference_business'.
   $field_bases['field_reference_business'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1576,7 +1576,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_reference_email_address'
+  // Exported field_base: 'field_reference_email_address'.
   $field_bases['field_reference_email_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1597,7 +1597,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_reference_name_and_title'
+  // Exported field_base: 'field_reference_name_and_title'.
   $field_bases['field_reference_name_and_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1618,7 +1618,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_reference_relationship'
+  // Exported field_base: 'field_reference_relationship'.
   $field_bases['field_reference_relationship'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1639,7 +1639,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_reference_telephone'
+  // Exported field_base: 'field_reference_telephone'.
   $field_bases['field_reference_telephone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1660,7 +1660,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_relationship'
+  // Exported field_base: 'field_relationship'.
   $field_bases['field_relationship'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1681,7 +1681,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_retired'
+  // Exported field_base: 'field_retired'.
   $field_bases['field_retired'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1706,7 +1706,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_reviously_employed'
+  // Exported field_base: 'field_reviously_employed'.
   $field_bases['field_reviously_employed'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1731,7 +1731,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_salary'
+  // Exported field_base: 'field_salary'.
   $field_bases['field_salary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1752,7 +1752,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_school'
+  // Exported field_base: 'field_school'.
   $field_bases['field_school'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1773,7 +1773,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_social_security'
+  // Exported field_base: 'field_social_security'.
   $field_bases['field_social_security'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1794,7 +1794,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_start_date'
+  // Exported field_base: 'field_start_date'.
   $field_bases['field_start_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1823,7 +1823,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_starting_position'
+  // Exported field_base: 'field_starting_position'.
   $field_bases['field_starting_position'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1844,7 +1844,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_starting_salary'
+  // Exported field_base: 'field_starting_salary'.
   $field_bases['field_starting_salary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1865,7 +1865,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_supervisor_manager'
+  // Exported field_base: 'field_supervisor_manager'.
   $field_bases['field_supervisor_manager'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1886,7 +1886,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_test_address'
+  // Exported field_base: 'field_test_address'.
   $field_bases['field_test_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1901,7 +1901,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_training_and_education'
+  // Exported field_base: 'field_training_and_education'.
   $field_bases['field_training_and_education'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -1923,7 +1923,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_tuesday_hours'
+  // Exported field_base: 'field_tuesday_hours'.
   $field_bases['field_tuesday_hours'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1938,7 +1938,7 @@ function bhchp_forms_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_work_availability'
+  // Exported field_base: 'field_work_availability'.
   $field_bases['field_work_availability'] = array(
     'active' => 1,
     'cardinality' => -1,

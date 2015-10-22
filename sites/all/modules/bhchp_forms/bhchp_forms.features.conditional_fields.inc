@@ -10,7 +10,7 @@
 function bhchp_forms_conditional_fields_default_fields() {
   $items = array();
 
-  $items[] = array(
+  $items["entityform:volunteer_internship_form:0"] = array(
     'entity' => 'entityform',
     'bundle' => 'volunteer_internship_form',
     'dependent' => 'field_major',
@@ -83,7 +83,7 @@ function bhchp_forms_conditional_fields_default_fields() {
     ),
   );
 
-  $items[] = array(
+  $items["entityform:volunteer_internship_form:1"] = array(
     'entity' => 'entityform',
     'bundle' => 'volunteer_internship_form',
     'dependent' => 'field_participation_hours',
@@ -156,7 +156,7 @@ function bhchp_forms_conditional_fields_default_fields() {
     ),
   );
 
-  $items[] = array(
+  $items["entityform:volunteer_internship_form:2"] = array(
     'entity' => 'entityform',
     'bundle' => 'volunteer_internship_form',
     'dependent' => 'field_participation_length',
@@ -229,7 +229,7 @@ function bhchp_forms_conditional_fields_default_fields() {
     ),
   );
 
-  $items[] = array(
+  $items["entityform:volunteer_internship_form:3"] = array(
     'entity' => 'entityform',
     'bundle' => 'volunteer_internship_form',
     'dependent' => 'field_school',

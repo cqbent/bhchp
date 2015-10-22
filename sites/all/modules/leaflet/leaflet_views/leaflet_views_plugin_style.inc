@@ -170,7 +170,7 @@ class leaflet_views_plugin_style extends views_plugin_style {
     ), $fields);
 
     // Add an option to render the entire entity using a view mode.
-    if ($this->entity_type) {
+    if (isset($this->entity_type)) {
       $desc_options += array(
         '#rendered_entity' => '<' . t('!entity entity', array('!entity' => $this->entity_type)) . '>',
       );
@@ -187,7 +187,7 @@ class leaflet_views_plugin_style extends views_plugin_style {
 
     // Taken from openlayers_views_style_data::options_form().
     // Create view mode options:
-    if ($this->entity_type) {
+    if (isset($this->entity_type)) {
 
       // Get the labels (human readable) of the view modes:
       $view_mode_options = array();
@@ -266,6 +266,7 @@ class leaflet_views_plugin_style extends views_plugin_style {
     $map = leaflet_map_get_info($this->options['map']);
     // Is there a geofield selected?
     if ($this->options['data_source']) {
+      $name_field = empty($this->options['name_field']) ? NULL : $this->options['name_field'];
       $this->render_fields($this->view->result);
       foreach ($this->view->result as $id => $result) {
         $geofield = $this->get_field_value($id, $this->options['data_source']);
@@ -286,8 +287,14 @@ class leaflet_views_plugin_style extends views_plugin_style {
               $description = drupal_render($build);
             }
             // Normal rendering via fields:
-            elseif ($this->options['description_field']) {
-              $description = $this->rendered_fields[$id][$this->options['description_field']];
+            else {
+              $description = '';
+              if ($name_field) {
+                $description = $this->rendered_fields[$id][$name_field];
+              }
+              if ($this->options['description_field']) {
+                $description .= $this->rendered_fields[$id][$this->options['description_field']];
+              }
             }
           }
           $points = leaflet_process_geofield($geofield);
@@ -298,9 +305,11 @@ class leaflet_views_plugin_style extends views_plugin_style {
             }
           }
           // Attach also titles & entities, they might be used later on.
-          if ($this->options['name_field']) {
+          if ($name_field) {
             foreach ($points as &$point) {
-              $point['label'] = htmlspecialchars_decode(strip_tags($this->rendered_fields[$id][$this->options['name_field']]));
+              if (isset($this->rendered_fields[$id][$name_field])) {
+                $point['label'] = htmlspecialchars_decode(strip_tags($this->rendered_fields[$id][$name_field]));
+              }
               if ($entity !== FALSE) {
                 $point['entity'] = $entity;
               }
@@ -318,7 +327,8 @@ class leaflet_views_plugin_style extends views_plugin_style {
           $data = array_merge($data, $points);
         }
       }
-      leaflet_apply_map_settings($map, $data, $this->options, $this->entity_type);
+      $entity_type = isset($this->entity_type) ? $this->entity_type : '';
+      leaflet_apply_map_settings($map, $data, $this->options, $entity_type);
       if (empty($data) && !empty($this->options['hide_empty'])) {
         return;
       }

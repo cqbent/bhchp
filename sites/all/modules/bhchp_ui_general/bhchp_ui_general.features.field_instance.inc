@@ -10,7 +10,7 @@
 function bhchp_ui_general_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'file-image-field_image_category'
+  // Exported field_instance: 'file-image-field_image_category'.
   $field_instances['file-image-field_image_category'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
@@ -34,7 +34,7 @@ function bhchp_ui_general_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'file',

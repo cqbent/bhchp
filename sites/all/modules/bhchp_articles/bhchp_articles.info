@@ -5,6 +5,7 @@ package = Features
 version = 7.x-1.5
 project = bhchp_articles
 dependencies[] = bhchp_location
+dependencies[] = bhchp_ui_general
 dependencies[] = custom_formatters
 dependencies[] = ds
 dependencies[] = features

@@ -571,20 +571,13 @@ bhchp custom styles
                 }
             }
             .timelineCard {
-                .timeline_line {
-                    width: 90%;
-                    .t_line_view {
-                        //width: 100%;
-                        .t_line_m { 
-                            //width: 50%;
-                            &.right { 
-                                //left: 50%; 
-                            }
-                        }
-                        .t_line_month_year {
-                            //display: inline-block; margin-left:5px;
-                        }
-                    }
+                #t_line_left {
+                    left: -20px;
+                }
+                #t_line_right {
+                    right: -20px;
+                }
+                .timeline_line {                       
                     .t_node_desc { background: $blue; }
                     a.t_line_node { 
                         background: none;
@@ -934,6 +927,7 @@ bhchp custom styles
                     }
                     // homepage news stying
                     .view-news-list {
+                        
                         .views-row {
                             border: none;
                         }
@@ -942,6 +936,9 @@ bhchp custom styles
                             h2, p { margin: 0; display: inline; line-height: normal; }
                             a { text-decoration: none; font-weight: 700; }
                         }
+                        
+                        
+                        
                     }
                     // sponsor styling
                     .view-sponsor-logos {

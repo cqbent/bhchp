@@ -196,7 +196,7 @@ function _leaflet_more_maps_assemble_default_map_info(&$map_info, $default_setti
   }
 
   $attr_google = 'Map data &copy; <a target="attr" href="http://googlemaps.com">Google</a>';
-  $v = variable_get('google_satellite_version', 178);
+  $v = variable_get('google_satellite_version', 183);
   $map_info['google-satellite'] = array(
     'label' => 'Google satellite (zoom 0..21)',
     'description' => t('Google satellite'),

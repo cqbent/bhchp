@@ -27,6 +27,5 @@ function bhchp_ui_general_menu_default_menu_custom() {
   t('Footer Menu');
   t('Top Menu');
 
-
   return $menus;
 }

@@ -10,7 +10,7 @@
 function bhchp_forms_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'entityform-email_signup_form-field_address'
+  // Exported field_instance: 'entityform-email_signup_form-field_address'.
   $field_instances['entityform-email_signup_form-field_address'] = array(
     'bundle' => 'email_signup_form',
     'default_value' => NULL,
@@ -63,7 +63,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-email_signup_form-field_application_email'
+  // 'entityform-email_signup_form-field_application_email'.
   $field_instances['entityform-email_signup_form-field_application_email'] = array(
     'bundle' => 'email_signup_form',
     'default_value' => NULL,
@@ -95,7 +95,7 @@ function bhchp_forms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-email_signup_form-field_full_name'
+  // Exported field_instance: 'entityform-email_signup_form-field_full_name'.
   $field_instances['entityform-email_signup_form-field_full_name'] = array(
     'bundle' => 'email_signup_form',
     'default_value' => NULL,
@@ -130,7 +130,7 @@ function bhchp_forms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-emerging_leader_form-field_address'
+  // Exported field_instance: 'entityform-emerging_leader_form-field_address'.
   $field_instances['entityform-emerging_leader_form-field_address'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -182,7 +182,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_application_email'
+  // 'entityform-emerging_leader_form-field_application_email'.
   $field_instances['entityform-emerging_leader_form-field_application_email'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -214,7 +214,8 @@ function bhchp_forms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-emerging_leader_form-field_date_birth'
+  // Exported field_instance:
+  // 'entityform-emerging_leader_form-field_date_birth'.
   $field_instances['entityform-emerging_leader_form-field_date_birth'] = array(
     'bundle' => 'emerging_leader_form',
     'deleted' => 0,
@@ -262,7 +263,7 @@ function bhchp_forms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-emerging_leader_form-field_employer'
+  // Exported field_instance: 'entityform-emerging_leader_form-field_employer'.
   $field_instances['entityform-emerging_leader_form-field_employer'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -295,7 +296,7 @@ function bhchp_forms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-emerging_leader_form-field_full_name'
+  // Exported field_instance: 'entityform-emerging_leader_form-field_full_name'.
   $field_instances['entityform-emerging_leader_form-field_full_name'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -330,7 +331,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_fundraising_experience'
+  // 'entityform-emerging_leader_form-field_fundraising_experience'.
   $field_instances['entityform-emerging_leader_form-field_fundraising_experience'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -364,7 +365,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_how_benefit'
+  // 'entityform-emerging_leader_form-field_how_benefit'.
   $field_instances['entityform-emerging_leader_form-field_how_benefit'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -398,7 +399,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_address'
+  // 'entityform-emerging_leader_form-field_nominator_address'.
   $field_instances['entityform-emerging_leader_form-field_nominator_address'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -451,7 +452,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_email'
+  // 'entityform-emerging_leader_form-field_nominator_email'.
   $field_instances['entityform-emerging_leader_form-field_nominator_email'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -484,7 +485,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_employer'
+  // 'entityform-emerging_leader_form-field_nominator_employer'.
   $field_instances['entityform-emerging_leader_form-field_nominator_employer'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -518,7 +519,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_how_hear'
+  // 'entityform-emerging_leader_form-field_nominator_how_hear'.
   $field_instances['entityform-emerging_leader_form-field_nominator_how_hear'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -552,7 +553,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_name'
+  // 'entityform-emerging_leader_form-field_nominator_name'.
   $field_instances['entityform-emerging_leader_form-field_nominator_name'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -586,7 +587,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_occupation'
+  // 'entityform-emerging_leader_form-field_nominator_occupation'.
   $field_instances['entityform-emerging_leader_form-field_nominator_occupation'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -620,7 +621,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominator_phone'
+  // 'entityform-emerging_leader_form-field_nominator_phone'.
   $field_instances['entityform-emerging_leader_form-field_nominator_phone'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -653,7 +654,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_nominee_how_hear'
+  // 'entityform-emerging_leader_form-field_nominee_how_hear'.
   $field_instances['entityform-emerging_leader_form-field_nominee_how_hear'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -686,7 +687,8 @@ function bhchp_forms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-emerging_leader_form-field_occupation'
+  // Exported field_instance:
+  // 'entityform-emerging_leader_form-field_occupation'.
   $field_instances['entityform-emerging_leader_form-field_occupation'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -720,7 +722,7 @@ function bhchp_forms_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_personal_references'
+  // 'entityform-emerging_leader_form-field_personal_references'.
   $field_instances['entityform-emerging_leader_form-field_personal_references'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -780,7 +782,7 @@ Employment Authorization:
     ),
   );
 
-  // Exported field_instance: 'entityform-emerging_leader_form-field_phone'
+  // Exported field_instance: 'entityform-emerging_leader_form-field_phone'.
   $field_instances['entityform-emerging_leader_form-field_phone'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -813,7 +815,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-emerging_leader_form-field_prior_experience'
+  // 'entityform-emerging_leader_form-field_prior_experience'.
   $field_instances['entityform-emerging_leader_form-field_prior_experience'] = array(
     'bundle' => 'emerging_leader_form',
     'default_value' => NULL,
@@ -847,7 +849,7 @@ Employment Authorization:
     ),
   );
 
-  // Exported field_instance: 'entityform-employment_application-field_address'
+  // Exported field_instance: 'entityform-employment_application-field_address'.
   $field_instances['entityform-employment_application-field_address'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -899,7 +901,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_application_conditions'
+  // 'entityform-employment_application-field_application_conditions'.
   $field_instances['entityform-employment_application-field_application_conditions'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -940,7 +942,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_application_email'
+  // 'entityform-employment_application-field_application_email'.
   $field_instances['entityform-employment_application-field_application_email'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -973,7 +975,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_applied_date'
+  // 'entityform-employment_application-field_applied_date'.
   $field_instances['entityform-employment_application-field_applied_date'] = array(
     'bundle' => 'employment_application',
     'deleted' => 0,
@@ -1020,7 +1022,7 @@ I hereby release and agree to hold harmless any individual, company, business en
     ),
   );
 
-  // Exported field_instance: 'entityform-employment_application-field_consent'
+  // Exported field_instance: 'entityform-employment_application-field_consent'.
   $field_instances['entityform-employment_application-field_consent'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1056,7 +1058,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_consent_date'
+  // 'entityform-employment_application-field_consent_date'.
   $field_instances['entityform-employment_application-field_consent_date'] = array(
     'bundle' => 'employment_application',
     'deleted' => 0,
@@ -1107,7 +1109,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_documentation'
+  // 'entityform-employment_application-field_documentation'.
   $field_instances['entityform-employment_application-field_documentation'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1165,7 +1167,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_employment_history'
+  // 'entityform-employment_application-field_employment_history'.
   $field_instances['entityform-employment_application-field_employment_history'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1203,7 +1205,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_first_name'
+  // 'entityform-employment_application-field_first_name'.
   $field_instances['entityform-employment_application-field_first_name'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1245,7 +1247,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_hours_available'
+  // 'entityform-employment_application-field_hours_available'.
   $field_instances['entityform-employment_application-field_hours_available'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1277,7 +1279,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_how_referred'
+  // 'entityform-employment_application-field_how_referred'.
   $field_instances['entityform-employment_application-field_how_referred'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1308,7 +1310,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_job_position'
+  // 'entityform-employment_application-field_job_position'.
   $field_instances['entityform-employment_application-field_job_position'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1341,7 +1343,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_last_name'
+  // 'entityform-employment_application-field_last_name'.
   $field_instances['entityform-employment_application-field_last_name'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1382,7 +1384,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_name_of_employee_source'
+  // 'entityform-employment_application-field_name_of_employee_source'.
   $field_instances['entityform-employment_application-field_name_of_employee_source'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1416,7 +1418,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_other_names_used'
+  // 'entityform-employment_application-field_other_names_used'.
   $field_instances['entityform-employment_application-field_other_names_used'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1450,7 +1452,7 @@ I hereby release and agree to hold harmless any individual, company, business en
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_personal_references'
+  // 'entityform-employment_application-field_personal_references'.
   $field_instances['entityform-employment_application-field_personal_references'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1511,7 +1513,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_phone_day'
+  // 'entityform-employment_application-field_phone_day'.
   $field_instances['entityform-employment_application-field_phone_day'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1545,7 +1547,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_previously_applied'
+  // 'entityform-employment_application-field_previously_applied'.
   $field_instances['entityform-employment_application-field_previously_applied'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1576,7 +1578,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_previously_employed_date'
+  // 'entityform-employment_application-field_previously_employed_date'.
   $field_instances['entityform-employment_application-field_previously_employed_date'] = array(
     'bundle' => 'employment_application',
     'deleted' => 0,
@@ -1624,7 +1626,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_reviously_employed'
+  // 'entityform-employment_application-field_reviously_employed'.
   $field_instances['entityform-employment_application-field_reviously_employed'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1655,7 +1657,7 @@ Employment Authorization:
     ),
   );
 
-  // Exported field_instance: 'entityform-employment_application-field_salary'
+  // Exported field_instance: 'entityform-employment_application-field_salary'.
   $field_instances['entityform-employment_application-field_salary'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1690,7 +1692,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_social_security'
+  // 'entityform-employment_application-field_social_security'.
   $field_instances['entityform-employment_application-field_social_security'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1725,7 +1727,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_start_date'
+  // 'entityform-employment_application-field_start_date'.
   $field_instances['entityform-employment_application-field_start_date'] = array(
     'bundle' => 'employment_application',
     'deleted' => 0,
@@ -1774,7 +1776,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_training_and_education'
+  // 'entityform-employment_application-field_training_and_education'.
   $field_instances['entityform-employment_application-field_training_and_education'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1812,7 +1814,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-employment_application-field_work_availability'
+  // 'entityform-employment_application-field_work_availability'.
   $field_instances['entityform-employment_application-field_work_availability'] = array(
     'bundle' => 'employment_application',
     'default_value' => NULL,
@@ -1844,7 +1846,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_date_birth'
+  // 'entityform-volunteer_internship_form-field_date_birth'.
   $field_instances['entityform-volunteer_internship_form-field_date_birth'] = array(
     'bundle' => 'volunteer_internship_form',
     'deleted' => 0,
@@ -1892,7 +1894,8 @@ Employment Authorization:
     ),
   );
 
-  // Exported field_instance: 'entityform-volunteer_internship_form-field_email'
+  // Exported field_instance:
+  // 'entityform-volunteer_internship_form-field_email'.
   $field_instances['entityform-volunteer_internship_form-field_email'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -1927,7 +1930,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_emergency_phone_number'
+  // 'entityform-volunteer_internship_form-field_emergency_phone_number'.
   $field_instances['entityform-volunteer_internship_form-field_emergency_phone_number'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -1961,7 +1964,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_employed'
+  // 'entityform-volunteer_internship_form-field_employed'.
   $field_instances['entityform-volunteer_internship_form-field_employed'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -1993,7 +1996,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_employer'
+  // 'entityform-volunteer_internship_form-field_employer'.
   $field_instances['entityform-volunteer_internship_form-field_employer'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2027,7 +2030,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_ethnicity'
+  // 'entityform-volunteer_internship_form-field_ethnicity'.
   $field_instances['entityform-volunteer_internship_form-field_ethnicity'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2059,7 +2062,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_ethnicity_other'
+  // 'entityform-volunteer_internship_form-field_ethnicity_other'.
   $field_instances['entityform-volunteer_internship_form-field_ethnicity_other'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2094,7 +2097,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_experience_skills'
+  // 'entityform-volunteer_internship_form-field_experience_skills'.
   $field_instances['entityform-volunteer_internship_form-field_experience_skills'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2129,7 +2132,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_experience_to_gain'
+  // 'entityform-volunteer_internship_form-field_experience_to_gain'.
   $field_instances['entityform-volunteer_internship_form-field_experience_to_gain'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2163,7 +2166,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_former_occupation'
+  // 'entityform-volunteer_internship_form-field_former_occupation'.
   $field_instances['entityform-volunteer_internship_form-field_former_occupation'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2197,7 +2200,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_full_name'
+  // 'entityform-volunteer_internship_form-field_full_name'.
   $field_instances['entityform-volunteer_internship_form-field_full_name'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2232,7 +2235,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_gender'
+  // 'entityform-volunteer_internship_form-field_gender'.
   $field_instances['entityform-volunteer_internship_form-field_gender'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2264,7 +2267,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_have_car'
+  // 'entityform-volunteer_internship_form-field_have_car'.
   $field_instances['entityform-volunteer_internship_form-field_have_car'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2296,7 +2299,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_how_hear'
+  // 'entityform-volunteer_internship_form-field_how_hear'.
   $field_instances['entityform-volunteer_internship_form-field_how_hear'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2328,7 +2331,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_is_student'
+  // 'entityform-volunteer_internship_form-field_is_student'.
   $field_instances['entityform-volunteer_internship_form-field_is_student'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => array(),
@@ -2362,7 +2365,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_languages'
+  // 'entityform-volunteer_internship_form-field_languages'.
   $field_instances['entityform-volunteer_internship_form-field_languages'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2396,7 +2399,7 @@ Employment Authorization:
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_letter_of_reference'
+  // 'entityform-volunteer_internship_form-field_letter_of_reference'.
   $field_instances['entityform-volunteer_internship_form-field_letter_of_reference'] = array(
     'bundle' => 'volunteer_internship_form',
     'deleted' => 0,
@@ -2464,7 +2467,8 @@ Boston, MA 02118',
     ),
   );
 
-  // Exported field_instance: 'entityform-volunteer_internship_form-field_major'
+  // Exported field_instance:
+  // 'entityform-volunteer_internship_form-field_major'.
   $field_instances['entityform-volunteer_internship_form-field_major'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2498,7 +2502,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_monday_hours'
+  // 'entityform-volunteer_internship_form-field_monday_hours'.
   $field_instances['entityform-volunteer_internship_form-field_monday_hours'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2538,7 +2542,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_notify_name'
+  // 'entityform-volunteer_internship_form-field_notify_name'.
   $field_instances['entityform-volunteer_internship_form-field_notify_name'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2573,7 +2577,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_occupation'
+  // 'entityform-volunteer_internship_form-field_occupation'.
   $field_instances['entityform-volunteer_internship_form-field_occupation'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2607,7 +2611,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_opportunity_interest'
+  // 'entityform-volunteer_internship_form-field_opportunity_interest'.
   $field_instances['entityform-volunteer_internship_form-field_opportunity_interest'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2639,7 +2643,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_participation_hours'
+  // 'entityform-volunteer_internship_form-field_participation_hours'.
   $field_instances['entityform-volunteer_internship_form-field_participation_hours'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2674,7 +2678,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_participation_length'
+  // 'entityform-volunteer_internship_form-field_participation_length'.
   $field_instances['entityform-volunteer_internship_form-field_participation_length'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2709,7 +2713,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_phone_cell'
+  // 'entityform-volunteer_internship_form-field_phone_cell'.
   $field_instances['entityform-volunteer_internship_form-field_phone_cell'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2744,7 +2748,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_phone_day'
+  // 'entityform-volunteer_internship_form-field_phone_day'.
   $field_instances['entityform-volunteer_internship_form-field_phone_day'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2779,7 +2783,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_phone_eve'
+  // 'entityform-volunteer_internship_form-field_phone_eve'.
   $field_instances['entityform-volunteer_internship_form-field_phone_eve'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2814,7 +2818,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_position_type'
+  // 'entityform-volunteer_internship_form-field_position_type'.
   $field_instances['entityform-volunteer_internship_form-field_position_type'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2846,7 +2850,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_prior_experience'
+  // 'entityform-volunteer_internship_form-field_prior_experience'.
   $field_instances['entityform-volunteer_internship_form-field_prior_experience'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2881,7 +2885,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_relationship'
+  // 'entityform-volunteer_internship_form-field_relationship'.
   $field_instances['entityform-volunteer_internship_form-field_relationship'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2915,7 +2919,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_retired'
+  // 'entityform-volunteer_internship_form-field_retired'.
   $field_instances['entityform-volunteer_internship_form-field_retired'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2946,7 +2950,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_school'
+  // 'entityform-volunteer_internship_form-field_school'.
   $field_instances['entityform-volunteer_internship_form-field_school'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -2981,7 +2985,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_start_date'
+  // 'entityform-volunteer_internship_form-field_start_date'.
   $field_instances['entityform-volunteer_internship_form-field_start_date'] = array(
     'bundle' => 'volunteer_internship_form',
     'deleted' => 0,
@@ -3030,7 +3034,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_test_address'
+  // 'entityform-volunteer_internship_form-field_test_address'.
   $field_instances['entityform-volunteer_internship_form-field_test_address'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -3082,7 +3086,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'entityform-volunteer_internship_form-field_tuesday_hours'
+  // 'entityform-volunteer_internship_form-field_tuesday_hours'.
   $field_instances['entityform-volunteer_internship_form-field_tuesday_hours'] = array(
     'bundle' => 'volunteer_internship_form',
     'default_value' => NULL,
@@ -3122,7 +3126,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_description_of_duties'
+  // 'field_collection_item-field_employment_history-field_description_of_duties'.
   $field_instances['field_collection_item-field_employment_history-field_description_of_duties'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3156,7 +3160,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_employer_address'
+  // 'field_collection_item-field_employment_history-field_employer_address'.
   $field_instances['field_collection_item-field_employment_history-field_employer_address'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3190,7 +3194,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_employer_telephone_number'
+  // 'field_collection_item-field_employment_history-field_employer_telephone_number'.
   $field_instances['field_collection_item-field_employment_history-field_employer_telephone_number'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3224,7 +3228,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_employment_dates'
+  // 'field_collection_item-field_employment_history-field_employment_dates'.
   $field_instances['field_collection_item-field_employment_history-field_employment_dates'] = array(
     'bundle' => 'field_employment_history',
     'deleted' => 0,
@@ -3274,7 +3278,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_ending_position'
+  // 'field_collection_item-field_employment_history-field_ending_position'.
   $field_instances['field_collection_item-field_employment_history-field_ending_position'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3308,7 +3312,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_ending_salary'
+  // 'field_collection_item-field_employment_history-field_ending_salary'.
   $field_instances['field_collection_item-field_employment_history-field_ending_salary'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3342,7 +3346,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_may_contact_employ'
+  // 'field_collection_item-field_employment_history-field_may_contact_employ'.
   $field_instances['field_collection_item-field_employment_history-field_may_contact_employ'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3373,7 +3377,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_previous_employer'
+  // 'field_collection_item-field_employment_history-field_previous_employer'.
   $field_instances['field_collection_item-field_employment_history-field_previous_employer'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3407,7 +3411,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_reason_for_leaving'
+  // 'field_collection_item-field_employment_history-field_reason_for_leaving'.
   $field_instances['field_collection_item-field_employment_history-field_reason_for_leaving'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3441,7 +3445,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_starting_position'
+  // 'field_collection_item-field_employment_history-field_starting_position'.
   $field_instances['field_collection_item-field_employment_history-field_starting_position'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3475,7 +3479,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_starting_salary'
+  // 'field_collection_item-field_employment_history-field_starting_salary'.
   $field_instances['field_collection_item-field_employment_history-field_starting_salary'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3509,7 +3513,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_employment_history-field_supervisor_manager'
+  // 'field_collection_item-field_employment_history-field_supervisor_manager'.
   $field_instances['field_collection_item-field_employment_history-field_supervisor_manager'] = array(
     'bundle' => 'field_employment_history',
     'default_value' => NULL,
@@ -3543,7 +3547,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_personal_references-field_reference_business'
+  // 'field_collection_item-field_personal_references-field_reference_business'.
   $field_instances['field_collection_item-field_personal_references-field_reference_business'] = array(
     'bundle' => 'field_personal_references',
     'default_value' => NULL,
@@ -3577,7 +3581,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_personal_references-field_reference_email_address'
+  // 'field_collection_item-field_personal_references-field_reference_email_address'.
   $field_instances['field_collection_item-field_personal_references-field_reference_email_address'] = array(
     'bundle' => 'field_personal_references',
     'default_value' => NULL,
@@ -3611,7 +3615,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_personal_references-field_reference_name_and_title'
+  // 'field_collection_item-field_personal_references-field_reference_name_and_title'.
   $field_instances['field_collection_item-field_personal_references-field_reference_name_and_title'] = array(
     'bundle' => 'field_personal_references',
     'default_value' => NULL,
@@ -3645,7 +3649,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_personal_references-field_reference_relationship'
+  // 'field_collection_item-field_personal_references-field_reference_relationship'.
   $field_instances['field_collection_item-field_personal_references-field_reference_relationship'] = array(
     'bundle' => 'field_personal_references',
     'default_value' => NULL,
@@ -3680,7 +3684,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_personal_references-field_reference_telephone'
+  // 'field_collection_item-field_personal_references-field_reference_telephone'.
   $field_instances['field_collection_item-field_personal_references-field_reference_telephone'] = array(
     'bundle' => 'field_personal_references',
     'default_value' => NULL,
@@ -3714,7 +3718,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_training_and_education-field_dates_attended'
+  // 'field_collection_item-field_training_and_education-field_dates_attended'.
   $field_instances['field_collection_item-field_training_and_education-field_dates_attended'] = array(
     'bundle' => 'field_training_and_education',
     'deleted' => 0,
@@ -3764,7 +3768,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_training_and_education-field_did_graduate'
+  // 'field_collection_item-field_training_and_education-field_did_graduate'.
   $field_instances['field_collection_item-field_training_and_education-field_did_graduate'] = array(
     'bundle' => 'field_training_and_education',
     'default_value' => NULL,
@@ -3795,7 +3799,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_training_and_education-field_diplomas_degree'
+  // 'field_collection_item-field_training_and_education-field_diplomas_degree'.
   $field_instances['field_collection_item-field_training_and_education-field_diplomas_degree'] = array(
     'bundle' => 'field_training_and_education',
     'default_value' => NULL,
@@ -3829,7 +3833,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_training_and_education-field_field_of_study'
+  // 'field_collection_item-field_training_and_education-field_field_of_study'.
   $field_instances['field_collection_item-field_training_and_education-field_field_of_study'] = array(
     'bundle' => 'field_training_and_education',
     'default_value' => NULL,
@@ -3863,7 +3867,7 @@ Boston, MA 02118',
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_training_and_education-field_name_and_location'
+  // 'field_collection_item-field_training_and_education-field_name_and_location'.
   $field_instances['field_collection_item-field_training_and_education-field_name_and_location'] = array(
     'bundle' => 'field_training_and_education',
     'default_value' => NULL,

@@ -61,12 +61,10 @@
 @mixin responsive-grid($columns) {
     $i: 1;
     &.views-columns-#{$columns} { 
-        $zen-column-count: $columns; 
+        $zen-column-count: $columns !global; 
         @while $i <= $columns {
             .views-column-#{$i} { @include zen-grid-item(1, $i); }
             $i: $i+1;
         }
-    }
-    
-    
+    }    
 }
