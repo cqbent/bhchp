@@ -12,6 +12,46 @@ function bhchp_patientstories_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|event|list_fields_mode';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'event';
+  $ds_fieldsetting->view_mode = 'list_fields_mode';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|event|list_fields_mode'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|patient_story|list_fields_mode';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'patient_story';
+  $ds_fieldsetting->view_mode = 'list_fields_mode';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|patient_story|list_fields_mode'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|patient_story|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'patient_story';
@@ -38,6 +78,38 @@ function bhchp_patientstories_ds_field_settings_info() {
  */
 function bhchp_patientstories_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|event|list_fields_mode';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'event';
+  $ds_layout->view_mode = 'list_fields_mode';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_event_thumbnail',
+        1 => 'title',
+        2 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'field_event_thumbnail' => 'ds_content',
+      'title' => 'ds_content',
+      'body' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|event|list_fields_mode'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -78,6 +150,38 @@ function bhchp_patientstories_ds_layout_settings_info() {
     'layout_disable_css' => 0,
   );
   $export['node|patient_story|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|patient_story|list_fields_mode';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'patient_story';
+  $ds_layout->view_mode = 'list_fields_mode';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_patientstory_mainimage',
+        1 => 'title',
+        2 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'field_patientstory_mainimage' => 'ds_content',
+      'title' => 'ds_content',
+      'body' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|patient_story|list_fields_mode'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
