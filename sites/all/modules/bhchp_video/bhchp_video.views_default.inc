@@ -158,7 +158,7 @@ function bhchp_video_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="http://www.youtube.com/watch?v=doLwbPcbSrk" target="_blank"><span class="symbol">&#xe299;</span></a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="bhchp-social-icon" href="http://www.youtube.com/watch?v=doLwbPcbSrk" target="_blank"><i class="fa fa-youtube-play"></i></a>';
   $handler->display->display_options['fields']['nothing']['element_class'] = 'icon';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Post date */

@@ -313,6 +313,11 @@ bhchp custom styles
                 width: 30%;
             }
         }
+        .field-type-addressfield {
+            legend {
+                display: none;
+            }
+        }
     }
     #main {
         padding-top: 10px;
@@ -522,6 +527,12 @@ bhchp custom styles
                     }
                     .right, .group-right {
                         @include zen-grid-item(2, 2);
+                    }
+                    .field-name-field-image {
+                        float: left;
+                        width: 33%;
+                        padding-right: 20px;
+                        box-sizing: border-box;
                     }
                 } 
                 .view-footer {
@@ -938,6 +949,10 @@ bhchp custom styles
                             margin: 0 0 5px 0;
                             h2, p { margin: 0; display: inline; line-height: normal; }
                             a { text-decoration: none; font-weight: 700; }
+                            &.field-name-field-image {
+                                width: 100%;
+                                float: none;
+                            }
                         }
                         
                         

@@ -51,11 +51,6 @@ function bhchp_jobs_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Content: Department */
-  $handler->display->display_options['fields']['field_department']['id'] = 'field_department';
-  $handler->display->display_options['fields']['field_department']['table'] = 'field_data_field_department';
-  $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
-  $handler->display->display_options['fields']['field_department']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Field: Address */
   $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
   $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
@@ -76,6 +71,10 @@ function bhchp_jobs_views_default_views() {
   $handler->display->display_options['fields']['field_job_hours']['id'] = 'field_job_hours';
   $handler->display->display_options['fields']['field_job_hours']['table'] = 'field_data_field_job_hours';
   $handler->display->display_options['fields']['field_job_hours']['field'] = 'field_job_hours';
+  /* Field: Content: Job summary */
+  $handler->display->display_options['fields']['field_job_summary']['id'] = 'field_job_summary';
+  $handler->display->display_options['fields']['field_job_summary']['table'] = 'field_data_field_job_summary';
+  $handler->display->display_options['fields']['field_job_summary']['field'] = 'field_job_summary';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -105,7 +104,7 @@ function bhchp_jobs_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';

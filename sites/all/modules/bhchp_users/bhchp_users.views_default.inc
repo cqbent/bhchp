@@ -162,7 +162,7 @@ function bhchp_users_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'medium',
     'image_link' => '',
   );
   /* Field: Field: First Name */
@@ -223,7 +223,8 @@ function bhchp_users_views_default_views() {
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'leadership_staff_list:block_4';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'leadership_staff_list:exec_admin';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 0;
 
   /* Display: Board of Directors */

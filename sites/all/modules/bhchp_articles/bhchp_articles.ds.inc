@@ -127,13 +127,11 @@ function bhchp_articles_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'ds_2col_fluid';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'ds_content' => array(
         0 => 'field_image',
-      ),
-      'right' => array(
         1 => 'title',
         2 => 'author',
         3 => 'post_date',
@@ -142,17 +140,16 @@ function bhchp_articles_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'field_image' => 'left',
-      'title' => 'right',
-      'author' => 'right',
-      'post_date' => 'right',
-      'body' => 'right',
-      'node_link' => 'right',
+      'field_image' => 'ds_content',
+      'title' => 'ds_content',
+      'author' => 'ds_content',
+      'post_date' => 'ds_content',
+      'body' => 'ds_content',
+      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

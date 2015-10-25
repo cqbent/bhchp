@@ -140,6 +140,7 @@ function bhchp_preprocess_block(&$variables, $hook) {
 
 // alter search block form
 function bhchp_form_alter (&$form, &$form_state, $form_id) {
+    //dsm($form);
     if ($form_id == 'search_block_form') {
         $form['actions']['submit'] = array(
             '#type' => 'submit',
@@ -149,6 +150,15 @@ function bhchp_form_alter (&$form, &$form_state, $form_id) {
             '#suffix' => '</i></button>',
         );
     }
+}
+// alter country display on addressfield widget
+function bhchp_field_widget_form_alter(&$element, $form_state, $context) {
+  if(!empty($element['#addressfield'])) {
+    //$element['#title'] = '&nbsp;';
+    $element['country']['#weight'] = 100;
+    $element['street_block']['thoroughfare']['#title'] = 'Street Address';
+    $element['street_block']['premise']['#title'] = 'Street Address 2';
+  }
 }
 
 // disable the N/A option in radio fields to trigger hiding them

@@ -48,22 +48,22 @@ function bhchp_patientstories_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
-        0 => 'field_patientstory_mainimage',
-      ),
       'right' => array(
-        1 => 'title',
-        2 => 'field_patientstory_subtitle',
-        3 => 'body',
-        4 => 'back_to_parent',
+        0 => 'back_to_parent',
+        2 => 'title',
+        3 => 'field_patientstory_subtitle',
+        4 => 'body',
+      ),
+      'left' => array(
+        1 => 'field_patientstory_mainimage',
       ),
     ),
     'fields' => array(
+      'back_to_parent' => 'right',
       'field_patientstory_mainimage' => 'left',
       'title' => 'right',
       'field_patientstory_subtitle' => 'right',
       'body' => 'right',
-      'back_to_parent' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -75,6 +75,7 @@ function bhchp_patientstories_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|patient_story|default'] = $ds_layout;
 

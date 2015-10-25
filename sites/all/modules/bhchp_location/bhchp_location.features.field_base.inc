@@ -10,7 +10,7 @@
 function bhchp_location_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function bhchp_location_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_address'
+  // Exported field_base: 'field_address'.
   $field_bases['field_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -46,7 +46,7 @@ function bhchp_location_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_geolocation'
+  // Exported field_base: 'field_geolocation'.
   $field_bases['field_geolocation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -96,7 +96,7 @@ function bhchp_location_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_hours_wk'
+  // Exported field_base: 'field_hours_wk'.
   $field_bases['field_hours_wk'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -117,7 +117,7 @@ function bhchp_location_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_location_phone'
+  // Exported field_base: 'field_location_phone'.
   $field_bases['field_location_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -132,7 +132,7 @@ function bhchp_location_field_default_field_bases() {
     'type' => 'telephone',
   );
 
-  // Exported field_base: 'field_patient_services'
+  // Exported field_base: 'field_patient_services'.
   $field_bases['field_patient_services'] = array(
     'active' => 1,
     'cardinality' => -1,

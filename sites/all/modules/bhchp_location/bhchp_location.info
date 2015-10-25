@@ -5,6 +5,7 @@ package = Features
 version = 7.x-1.7
 project = bhchp_location
 dependencies[] = addressfield
+dependencies[] = bhchp_ui_general
 dependencies[] = ctools
 dependencies[] = custom_formatters
 dependencies[] = features

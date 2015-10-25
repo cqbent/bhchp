@@ -10,7 +10,7 @@
 function bhchp_video_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_video'
+  // Exported field_base: 'field_video'.
   $field_bases['field_video'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -25,7 +25,7 @@ function bhchp_video_field_default_field_bases() {
     'type' => 'video_embed_field',
   );
 
-  // Exported field_base: 'field_video_featured_'
+  // Exported field_base: 'field_video_featured_'.
   $field_bases['field_video_featured_'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function bhchp_video_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_video_thumbnail'
+  // Exported field_base: 'field_video_thumbnail'.
   $field_bases['field_video_thumbnail'] = array(
     'active' => 1,
     'cardinality' => 1,

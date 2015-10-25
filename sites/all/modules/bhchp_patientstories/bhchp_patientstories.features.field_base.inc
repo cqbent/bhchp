@@ -10,7 +10,7 @@
 function bhchp_patientstories_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_patientstory_mainimage'
+  // Exported field_base: 'field_patientstory_mainimage'.
   $field_bases['field_patientstory_mainimage'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function bhchp_patientstories_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_patientstory_subtitle'
+  // Exported field_base: 'field_patientstory_subtitle'.
   $field_bases['field_patientstory_subtitle'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -53,7 +53,7 @@ function bhchp_patientstories_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_story_image'
+  // Exported field_base: 'field_story_image'.
   $field_bases['field_story_image'] = array(
     'active' => 1,
     'cardinality' => 1,

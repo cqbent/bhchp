@@ -51,6 +51,7 @@ features[flexslider_optionset][] = bhchp_flexslider_settings
 features[formatters][] = location_address
 features[formatters][] = teaser_text_body
 features[image][] = homepage_images
+features[image][] = image_grid_thumbnails
 features[menu_custom][] = menu-footer-menu
 features[menu_custom][] = menu-top-menu
 features[panels_mini][] = mobile_menu

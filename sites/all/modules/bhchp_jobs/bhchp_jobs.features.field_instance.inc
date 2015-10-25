@@ -10,7 +10,7 @@
 function bhchp_jobs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-job_posting-field_date_posted'
+  // Exported field_instance: 'node-job_posting-field_date_posted'.
   $field_instances['node-job_posting-field_date_posted'] = array(
     'bundle' => 'job_posting',
     'deleted' => 0,
@@ -70,50 +70,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_department'
-  $field_instances['node-job_posting-field_department'] = array(
-    'bundle' => 'job_posting',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_department',
-    'label' => 'Department',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-job_posting-field_experience_education'
+  // Exported field_instance: 'node-job_posting-field_experience_education'.
   $field_instances['node-job_posting-field_experience_education'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -142,7 +99,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_experience_education',
-    'label' => 'Experience & Education',
+    'label' => 'Qualifications and Requirements',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -152,6 +109,7 @@ function bhchp_jobs_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -159,7 +117,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_grade_and_status'
+  // Exported field_instance: 'node-job_posting-field_grade_and_status'.
   $field_instances['node-job_posting-field_grade_and_status'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -205,7 +163,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_how_to_apply'
+  // Exported field_instance: 'node-job_posting-field_how_to_apply'.
   $field_instances['node-job_posting-field_how_to_apply'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -252,7 +210,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_job_duties'
+  // Exported field_instance: 'node-job_posting-field_job_duties'.
   $field_instances['node-job_posting-field_job_duties'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -298,7 +256,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_job_hours'
+  // Exported field_instance: 'node-job_posting-field_job_hours'.
   $field_instances['node-job_posting-field_job_hours'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -345,53 +303,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_job_qualifications'
-  $field_instances['node-job_posting-field_job_qualifications'] = array(
-    'bundle' => 'job_posting',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'HTML is ok.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_job_qualifications',
-    'label' => 'Basic Knowledge / Skills',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-job_posting-field_job_reports_to'
+  // Exported field_instance: 'node-job_posting-field_job_reports_to'.
   $field_instances['node-job_posting-field_job_reports_to'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -436,7 +348,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_job_summary'
+  // Exported field_instance: 'node-job_posting-field_job_summary'.
   $field_instances['node-job_posting-field_job_summary'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -481,7 +393,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_location'
+  // Exported field_instance: 'node-job_posting-field_location'.
   $field_instances['node-job_posting-field_location'] = array(
     'bundle' => 'job_posting',
     'default_value' => NULL,
@@ -532,7 +444,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-job_posting-field_post_end_date'
+  // Exported field_instance: 'node-job_posting-field_post_end_date'.
   $field_instances['node-job_posting-field_post_end_date'] = array(
     'bundle' => 'job_posting',
     'deleted' => 0,
@@ -586,7 +498,7 @@ function bhchp_jobs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-department-field_location'
+  // Exported field_instance: 'taxonomy_term-department-field_location'.
   $field_instances['taxonomy_term-department-field_location'] = array(
     'bundle' => 'department',
     'default_value' => NULL,
@@ -630,12 +542,8 @@ function bhchp_jobs_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Basic Knowledge / Skills');
   t('Date Posted');
-  t('Department');
-  t('Experience & Education');
   t('Grade and Status');
-  t('HTML is ok.');
   t('Hours');
   t('How to Apply');
   t('Job duties. HTML is ok.');
@@ -644,6 +552,7 @@ function bhchp_jobs_field_default_field_instances() {
   t('Pick an existing location on the site.');
   t('Post End Date');
   t('Primary Duties and Responsibilities');
+  t('Qualifications and Requirements');
   t('Reports to');
   t('Site');
   t('Text for the job summary. Select filtered HTML if you need clickable links.');

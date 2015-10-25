@@ -10,7 +10,7 @@
 function bhchp_location_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-location-body'
+  // Exported field_instance: 'node-location-body'.
   $field_instances['node-location-body'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
@@ -57,7 +57,7 @@ function bhchp_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_address'
+  // Exported field_instance: 'node-location-field_address'.
   $field_instances['node-location-field_address'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
@@ -126,7 +126,7 @@ function bhchp_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_geolocation'
+  // Exported field_instance: 'node-location-field_geolocation'.
   $field_instances['node-location-field_geolocation'] = array(
     'bundle' => 'location',
     'default_value' => array(),
@@ -234,7 +234,7 @@ function bhchp_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_hours_wk'
+  // Exported field_instance: 'node-location-field_hours_wk'.
   $field_instances['node-location-field_hours_wk'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
@@ -281,7 +281,7 @@ function bhchp_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_location_phone'
+  // Exported field_instance: 'node-location-field_location_phone'.
   $field_instances['node-location-field_location_phone'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
@@ -329,7 +329,7 @@ function bhchp_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-location-field_patient_services'
+  // Exported field_instance: 'node-location-field_patient_services'.
   $field_instances['node-location-field_patient_services'] = array(
     'bundle' => 'location',
     'default_value' => NULL,

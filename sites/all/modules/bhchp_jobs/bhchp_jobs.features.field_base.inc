@@ -10,7 +10,7 @@
 function bhchp_jobs_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_date_posted'
+  // Exported field_base: 'field_date_posted'.
   $field_bases['field_date_posted'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -39,33 +39,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_department'
-  $field_bases['field_department'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_department',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'department',
-          'parent' => 0,
-        ),
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
-  );
-
-  // Exported field_base: 'field_experience_education'
+  // Exported field_base: 'field_experience_education'.
   $field_bases['field_experience_education'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -84,7 +58,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_grade_and_status'
+  // Exported field_base: 'field_grade_and_status'.
   $field_bases['field_grade_and_status'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -105,7 +79,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_how_to_apply'
+  // Exported field_base: 'field_how_to_apply'.
   $field_bases['field_how_to_apply'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -124,7 +98,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_job_duties'
+  // Exported field_base: 'field_job_duties'.
   $field_bases['field_job_duties'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -143,7 +117,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_job_hours'
+  // Exported field_base: 'field_job_hours'.
   $field_bases['field_job_hours'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -164,26 +138,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_job_qualifications'
-  $field_bases['field_job_qualifications'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_job_qualifications',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
-  // Exported field_base: 'field_job_reports_to'
+  // Exported field_base: 'field_job_reports_to'.
   $field_bases['field_job_reports_to'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -204,7 +159,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_job_summary'
+  // Exported field_base: 'field_job_summary'.
   $field_bases['field_job_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -223,7 +178,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_location'
+  // Exported field_base: 'field_location'.
   $field_bases['field_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -258,7 +213,7 @@ function bhchp_jobs_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_post_end_date'
+  // Exported field_base: 'field_post_end_date'.
   $field_bases['field_post_end_date'] = array(
     'active' => 1,
     'cardinality' => 1,

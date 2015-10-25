@@ -44,5 +44,20 @@ function bhchp_ui_general_image_default_styles() {
     'effects' => array(),
   );
 
+  // Exported image style: image_grid_thumbnails.
+  $styles['image_grid_thumbnails'] = array(
+    'label' => 'Image Grid Thumbnails',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 300,
+          'height' => 200,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }

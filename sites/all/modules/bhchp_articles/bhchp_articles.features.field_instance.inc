@@ -132,6 +132,56 @@ function bhchp_articles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_feature_on_home'.
+  $field_instances['node-article-field_feature_on_home'] = array(
+    'bundle' => 'article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 7,
+      ),
+      'list_fields_mode' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_feature_on_home',
+    'label' => 'Feature on Home',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+        'label_help_description' => '',
+      ),
+      'type' => 'options_onoff',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_image'.
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
@@ -332,6 +382,7 @@ function bhchp_articles_field_default_field_instances() {
   t('Body');
   t('Category');
   t('Enter a comma-separated list of words to describe your content.');
+  t('Feature on Home');
   t('Image');
   t('News File');
   t('News Images');
