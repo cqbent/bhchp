@@ -126,3 +126,4 @@ features[variable][] = pathauto_taxonomy_term_pattern
 features[variable][] = pathauto_taxonomy_term_tags_pattern
 features[variable][] = pathauto_user_pattern
 features[variable][] = theme_bhchp_settings
+features[views_view][] = sponsor_logos
