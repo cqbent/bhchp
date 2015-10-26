@@ -78,12 +78,16 @@ function bhchp_ui_general_views_default_views() {
   $handler->display->display_options['relationships']['feed_nid']['id'] = 'feed_nid';
   $handler->display->display_options['relationships']['feed_nid']['table'] = 'feeds_item';
   $handler->display->display_options['relationships']['feed_nid']['field'] = 'feed_nid';
+  /* Relationship: File: Content using Sponsor logos */
+  $handler->display->display_options['relationships']['reverse_field_sponsor_logos_node']['id'] = 'reverse_field_sponsor_logos_node';
+  $handler->display->display_options['relationships']['reverse_field_sponsor_logos_node']['table'] = 'file_managed';
+  $handler->display->display_options['relationships']['reverse_field_sponsor_logos_node']['field'] = 'reverse_field_sponsor_logos_node';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['relationship'] = 'feed_nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_sponsor_logos_node';
   $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';

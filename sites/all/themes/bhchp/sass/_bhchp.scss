@@ -643,7 +643,21 @@ bhchp custom styles
                     }
                 }
                 
-                
+            }
+            // sponsor styling
+            .view-sponsor-logos {
+                overflow-x: hidden; 
+            }
+            .jcarousel-container {
+                ul {
+                    li {
+                        display: table; height:100px;
+                        .views-field { 
+                            display: table-cell; vertical-align: middle;
+                            padding: 0 10px;
+                        }
+                    }
+                }
             }
         }
         
@@ -958,21 +972,7 @@ bhchp custom styles
                         
                         
                     }
-                    // sponsor styling
-                    .view-sponsor-logos {
-                        overflow-x: hidden; 
-                    }
-                    .jcarousel-container {
-                        ul {
-                            li {
-                                display: table; height:100px;
-                                .views-field { 
-                                    display: table-cell; vertical-align: middle;
-                                    padding: 0 10px;
-                                }
-                            }
-                        }
-                    }
+                    
                 }
             }
         }
